@@ -996,6 +996,7 @@ def define_eol_sdd():
         "wpt5": Waypoint(title=""),
         "OtherOutputs": Waypoint(title="Other outputs"),
         "Waste": Waypoint(),
+        "RecycledPolymers": Waypoint(title="Recycled polymers"),
     }
     bundles_eol = [
         Bundle("Production", "Products"),
@@ -1005,7 +1006,7 @@ def define_eol_sdd():
         Bundle("EOLProcessing", "EOLMixing"),
         Bundle("EOLMixing", "ChemicalRecycling"),
         Bundle("EOLMixing", "FinalTreatment"),
-        Bundle(Elsewhere, "FinalTreatment", waypoints=["OtherInputs"]),
+        # Bundle(Elsewhere, "FinalTreatment", waypoints=["OtherInputs"]),
         Bundle(Elsewhere, "ChemicalRecycling", waypoints=["OtherInputs"]),
         Bundle(
             "ChemicalRecycling",
@@ -1013,14 +1014,32 @@ def define_eol_sdd():
             waypoints=["Naphtha"],
             flow_selection="material == 'Naphtha'",
         ),
+        Bundle(
+            "ChemicalRecycling",
+            Elsewhere,
+            waypoints=["Waste"],
+            flow_selection="material in ['PyrolysisResidue', 'MiscRefineryProducts', 'WasteOtherChemicals']",
+        ),
+        Bundle(
+            "MechanicalRecycling",
+            Elsewhere,
+            waypoints=["RecycledPolymers"],
+            flow_selection="material not in ['Waste']",
+        ),
+        Bundle(
+            "MechanicalRecycling",
+            Elsewhere,
+            waypoints=["Waste"],
+            flow_selection="material in ['Waste']",
+        ),
     ]
     order_eol = [
         [[], ["Production"], [], []],
         [[], ["Products"], [], ["wpt3"]],
         [[], ["EOLProcessing"], [], ["wpt4"]],
         [["OtherInputs"], ["EOLMixing"], [], []],
-        [["ChemicalRecycling"], ["MechanicalRecycling", "FinalTreatment"], [], []],
-        [["Naphtha"], [], [], []],
+        [[], ["ChemicalRecycling", "MechanicalRecycling", "FinalTreatment"], [], []],
+        [["Waste"], ["Naphtha", "RecycledPolymers"], [], [], []],
     ]
     sdd_eol = SankeyDefinition(
         nodes_eol, bundles_eol, order_eol, flow_partition=flow_partition
@@ -1495,6 +1514,9 @@ def define_feedstock_sdd():
                             "MethylAlcoholToOlefins",
                             "MethylAlcoholToAromatics",
                             "DehydrationOfEthylAlcohol",
+                            "CatalyticReformingOfNaphthaForXylenes",
+                            "DealkylationOfTolueneForBenzene",
+                            "DisproportionationOfTolueneForXylenes",
                         ]
                     ),
                     (
