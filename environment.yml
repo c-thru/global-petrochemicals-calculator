@@ -25,3 +25,4 @@ dependencies:
       - https://github.com/ukfires/probs-runner/archive/e13f5510ff59236827900d3185f0bd32594f4554.zip
       - git+https://github.com/probs-lab/flowprog.git@8720b12087bf44dc784c00120b3a146460b14601#egg=flowprog
       - oxrdflib==0.3.*
+      - lxml_html_clean==0.1.*
