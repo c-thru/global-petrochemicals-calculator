@@ -67,6 +67,8 @@ These are the processes that produce and use them:
 ```{end-sub-processes}
 ```
 
+The composition of different polymers used for packaging materials is estimated using the global average composition in 2020, from the study by {cite}`gao_evaluating_2024`. The same method applies for other products, such as transportation products, building and construction products, and so on.
+
 ```{system:process} UseOfProducts
 :become_parent: true
 ```
