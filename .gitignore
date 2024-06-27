@@ -8,3 +8,4 @@ __pycache__
 /model/rdf_data_store/
 .jupyter_cache/
 .auctex-auto/
+/outputs/
