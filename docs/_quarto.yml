@@ -1,6 +1,10 @@
 project:
   type: book
 
+  # Include the Jupyter Book "system definitions" within this build
+  post-render:
+    - "cp -vr ../system-definitions/_build/html _book/system-definitions"
+
 execute:
   echo: false
   cache: true
@@ -13,6 +17,7 @@ book:
   date: "12/01/2024"
   chapters:
   - index.md
+  - system-definitions.md
   - part: "Fertilisers"
     chapters:
     - lever/fertiliser_demand.qmd
@@ -63,5 +68,3 @@ format:
     fig-height: 2
   pdf:
     documentclass: scrreport
-  epub:
-    cover-image: cover.png
