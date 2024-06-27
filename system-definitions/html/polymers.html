@@ -1,0 +1,906 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>5. Polymers &#8212; C-THRU Calculator system</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/system-definitions.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Products" href="products.html" />
+    <link rel="prev" title="4. Organic chemicals" href="organic-chemicals.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">C-THRU Calculator system</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    C-THRU global petrochemicals calculator: system definitions
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System structure
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="fertilisers.html">
+   1. Fertilisers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="upstream.html">
+   2. Upstream processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="primary-chemicals.html">
+   3. Primary chemicals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="organic-chemicals.html">
+   4. Organic chemicals
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Polymers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="products.html">
+   6. Products
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="end-of-life-processes.html">
+   7. End-of-life processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recycling-processes.html">
+   8. Recycling processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="final-treatment-processes.html">
+   9. Final treatment processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="other-chemical-demand.html">
+   10. Other demand for chemicals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="misc-processes.html">
+   11. Other chemical synthesis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   12. References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/polymers.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Polymers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="polymers">
+<h1><span class="section-number">5. </span>Polymers<a class="headerlink" href="#polymers" title="Permalink to this headline">#</a></h1>
+<div class="system object toggle nested-0 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-Polymers"><em>Object: </em><span class="sig-name descname">Polymers</span></p>
+<div class="docutils container">
+<p>Children: <a class="reference internal" href="#http-ukfires.org-probs-system-LDPEPolyethylene" title="http://ukfires.org/probs/system/LDPEPolyethylene"><span>ukf:LDPEPolyethylene</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-HDPEPolyethylene" title="http://ukfires.org/probs/system/HDPEPolyethylene"><span>ukf:HDPEPolyethylene</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-PPPolypropylene" title="http://ukfires.org/probs/system/PPPolypropylene"><span>ukf:PPPolypropylene</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-PSPolystyrene" title="http://ukfires.org/probs/system/PSPolystyrene"><span>ukf:PSPolystyrene</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-PVCPolyvinylChloride" title="http://ukfires.org/probs/system/PVCPolyvinylChloride"><span>ukf:PVCPolyvinylChloride</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-PETPolyethyleneTerephthalatePolyesters" title="http://ukfires.org/probs/system/PETPolyethyleneTerephthalatePolyesters"><span>ukf:PETPolyethyleneTerephthalatePolyesters</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-Polyurethane" title="http://ukfires.org/probs/system/Polyurethane"><span>ukf:Polyurethane</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-SyntheticRubbers" title="http://ukfires.org/probs/system/SyntheticRubbers"><span>ukf:SyntheticRubbers</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-OtherPolymers" title="http://ukfires.org/probs/system/OtherPolymers"><span>ukf:OtherPolymers</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-LLDPE" title="http://c-thru.org/analyses/calculator/system/LLDPE"><span>sys:LLDPE</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-FibrePPA" title="http://c-thru.org/analyses/calculator/system/FibrePPA"><span>sys:FibrePPA</span></a></p>
+</div>
+</div>
+<p>Most of the polymers are already defined in the UK FIRES production system structure <span id="id1">[<a class="reference internal" href="references.html#id18" title="Rick Lupton, José Azevedo, Chris Cleaver, Carla Saunders, Stefano Germano, and Emelue Chukwudi. UK production system map. In preparation, 2024.">Lupton <em>et al.</em>, 2024</a>]</span>:</p>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-LDPEPolyethylene"><em>Object: </em><span class="sig-name descname">ukf:LDPEPolyethylene</span><span class="sig-prename descclassname"> / LDPE, Polyethylene</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-HDPEPolyethylene"><em>Object: </em><span class="sig-name descname">ukf:HDPEPolyethylene</span><span class="sig-prename descclassname"> / HDPE, Polyethylene</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PPPolypropylene"><em>Object: </em><span class="sig-name descname">ukf:PPPolypropylene</span><span class="sig-prename descclassname"> / PP, Polypropylene</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PSPolystyrene"><em>Object: </em><span class="sig-name descname">ukf:PSPolystyrene</span><span class="sig-prename descclassname"> / PS, Polystyrene</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PVCPolyvinylChloride"><em>Object: </em><span class="sig-name descname">ukf:PVCPolyvinylChloride</span><span class="sig-prename descclassname"> / PVC, Polyvinyl chloride</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PETPolyethyleneTerephthalatePolyesters"><em>Object: </em><span class="sig-name descname">ukf:PETPolyethyleneTerephthalatePolyesters</span><span class="sig-prename descclassname"> / PET, Polyethylene terephthalate, polyesters</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-Polyurethane"><em>Object: </em><span class="sig-name descname">ukf:Polyurethane</span><span class="sig-prename descclassname"> / Polyurethane</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-SyntheticRubbers"><em>Object: </em><span class="sig-name descname">ukf:SyntheticRubbers</span><span class="sig-prename descclassname"> / Synthetic rubbers</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-OtherPolymers"><em>Object: </em><span class="sig-name descname">ukf:OtherPolymers</span><span class="sig-prename descclassname"> / Other polymers</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+</div>
+<p>But LLDPE and PPA need to be defined in addition here:</p>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-LLDPE"><em>Object: </em><span class="sig-name descname">LLDPE</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+<p>“Linear low density PE”</p>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-FibrePPA"><em>Object: </em><span class="sig-name descname">FibrePPA</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Polymers" title="http://c-thru.org/analyses/calculator/system/Polymers"><span>sys:Polymers</span></a></p>
+</div>
+<p>“Polyphthalamide”</p>
+</div>
+<p class="system end-sub-objects nested-1">Ending sub objects of “Polymers”</p>
+<div class="system process toggle nested-0 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfPolymers"><em>Process: </em><span class="sig-name descname">ProductionOfPolymers</span></p>
+<div class="docutils container">
+<p>Children: <a class="reference internal" href="#http-ukfires.org-probs-system-PolymerisationOfLDPE" title="http://ukfires.org/probs/system/PolymerisationOfLDPE"><span>ukf:PolymerisationOfLDPE</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-PolymerisationOfHDPE" title="http://ukfires.org/probs/system/PolymerisationOfHDPE"><span>ukf:PolymerisationOfHDPE</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-PolymerisationOfPP" title="http://ukfires.org/probs/system/PolymerisationOfPP"><span>ukf:PolymerisationOfPP</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-PolymerisationOfPolystyrene" title="http://ukfires.org/probs/system/PolymerisationOfPolystyrene"><span>ukf:PolymerisationOfPolystyrene</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-PolymerisationOfPVC" title="http://ukfires.org/probs/system/PolymerisationOfPVC"><span>ukf:PolymerisationOfPVC</span></a> <a class="reference internal" href="#http-ukfires.org-probs-system-PolymerisationOfPET" title="http://ukfires.org/probs/system/PolymerisationOfPET"><span>ukf:PolymerisationOfPET</span></a> <span>ukf:PolymerisationOfPolyurethane</span> <a class="reference internal" href="#http-ukfires.org-probs-system-PolymerisationOfStyreneButadiene" title="http://ukfires.org/probs/system/PolymerisationOfStyreneButadiene"><span>ukf:PolymerisationOfStyreneButadiene</span></a> <span>ukf:PolymerisationOfOtherPolymers</span> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-PolymerisationOfLLDPE" title="http://c-thru.org/analyses/calculator/system/PolymerisationOfLLDPE"><span>sys:PolymerisationOfLLDPE</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-PolymerisationOfFibrePPA" title="http://c-thru.org/analyses/calculator/system/PolymerisationOfFibrePPA"><span>sys:PolymerisationOfFibrePPA</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-PolymerisationOfPUR" title="http://c-thru.org/analyses/calculator/system/PolymerisationOfPUR"><span>sys:PolymerisationOfPUR</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-PolymerisationOfOtherPolymers" title="http://c-thru.org/analyses/calculator/system/PolymerisationOfOtherPolymers"><span>sys:PolymerisationOfOtherPolymers</span></a></p>
+</div>
+</div>
+<p>Most of the polymerisation processes are already defined:</p>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PolymerisationOfLDPE"><em>Process: </em><span class="sig-name descname">ukf:PolymerisationOfLDPE</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="primary-chemicals.html#http-ukfires.org-probs-system-Ethylene" title="http://ukfires.org/probs/system/Ethylene"><span>ukf:Ethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-ukfires.org-probs-system-LDPEPolyethylene" title="http://ukfires.org/probs/system/LDPEPolyethylene"><span>ukf:LDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-WasteOtherChemicals" title="http://ukfires.org/probs/system/WasteOtherChemicals"><span>ukf:WasteOtherChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+<p>The calculations behind this recipe are in <a class="reference download internal" download="" href="_downloads/bdcee473e9b3ddaf60ffcb7ee77e28be/BasicChemicalsAndPlasticsProduction_recipe.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">an</span> <span class="pre">accompanying</span> <span class="pre">spreadsheet</span></code></a>.</p>
+<p>Process yield of 97.1% is calculated based on average tonnages of inputs required directly reported in <span id="id2">[<a class="reference internal" href="references.html#id14" title="Tecnon OrbiChem. Chemical conversion factors. Technical Report, Tecnon OrbiChem, 2016.">Tecnon OrbiChem, 2016</a>]</span>.</p>
+<p>This recipe is from <span id="id3">[<a class="reference internal" href="references.html#id13" title="Peter G. Levi and Jonathan M. Cullen. Mapping Global Flows of Chemicals: From Fossil Fuel Feedstocks to Chemical Products. Environ. Sci. Technol., 52(4):1725–1734, February 2018. doi:10.1021/acs.est.7b04573.">Levi and Cullen, 2018</a>]</span>. This is the global average of capacity for 2013. The polymerisation of LDPE in the UK might have a different recipe.</p>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PolymerisationOfHDPE"><em>Process: </em><span class="sig-name descname">ukf:PolymerisationOfHDPE</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="primary-chemicals.html#http-ukfires.org-probs-system-Ethylene" title="http://ukfires.org/probs/system/Ethylene"><span>ukf:Ethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-ukfires.org-probs-system-HDPEPolyethylene" title="http://ukfires.org/probs/system/HDPEPolyethylene"><span>ukf:HDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-WasteOtherChemicals" title="http://ukfires.org/probs/system/WasteOtherChemicals"><span>ukf:WasteOtherChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+<p>The calculations behind this recipe are in <a class="reference download internal" download="" href="_downloads/bdcee473e9b3ddaf60ffcb7ee77e28be/BasicChemicalsAndPlasticsProduction_recipe.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">an</span> <span class="pre">accompanying</span> <span class="pre">spreadsheet</span></code></a>.</p>
+<p>Process yield of 95.2% is calculated based on average tonnages of inputs required directly reported in <span id="id4">[<a class="reference internal" href="references.html#id14" title="Tecnon OrbiChem. Chemical conversion factors. Technical Report, Tecnon OrbiChem, 2016.">Tecnon OrbiChem, 2016</a>]</span>.</p>
+<p>This recipe is from <span id="id5">[<a class="reference internal" href="references.html#id13" title="Peter G. Levi and Jonathan M. Cullen. Mapping Global Flows of Chemicals: From Fossil Fuel Feedstocks to Chemical Products. Environ. Sci. Technol., 52(4):1725–1734, February 2018. doi:10.1021/acs.est.7b04573.">Levi and Cullen, 2018</a>]</span>. This is the global average of capacity for 2013. The polymerisation of HDPE in the UK might have a different recipe.</p>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PolymerisationOfPP"><em>Process: </em><span class="sig-name descname">ukf:PolymerisationOfPP</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="primary-chemicals.html#http-ukfires.org-probs-system-Propylene" title="http://ukfires.org/probs/system/Propylene"><span>ukf:Propylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-ukfires.org-probs-system-PPPolypropylene" title="http://ukfires.org/probs/system/PPPolypropylene"><span>ukf:PPPolypropylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-WasteOtherChemicals" title="http://ukfires.org/probs/system/WasteOtherChemicals"><span>ukf:WasteOtherChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+<p>The calculations behind this recipe are in <a class="reference download internal" download="" href="_downloads/bdcee473e9b3ddaf60ffcb7ee77e28be/BasicChemicalsAndPlasticsProduction_recipe.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">an</span> <span class="pre">accompanying</span> <span class="pre">spreadsheet</span></code></a>.</p>
+<p>Process yield of 98% is calculated based on average tonnages of inputs required directly reported in <span id="id6">[<a class="reference internal" href="references.html#id14" title="Tecnon OrbiChem. Chemical conversion factors. Technical Report, Tecnon OrbiChem, 2016.">Tecnon OrbiChem, 2016</a>]</span>.</p>
+<p>This recipe is from <span id="id7">[<a class="reference internal" href="references.html#id13" title="Peter G. Levi and Jonathan M. Cullen. Mapping Global Flows of Chemicals: From Fossil Fuel Feedstocks to Chemical Products. Environ. Sci. Technol., 52(4):1725–1734, February 2018. doi:10.1021/acs.est.7b04573.">Levi and Cullen, 2018</a>]</span>. This is the global average of capacity for 2013. The polymerisation of PP in the UK might have a different recipe.</p>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PolymerisationOfPolystyrene"><em>Process: </em><span class="sig-name descname">ukf:PolymerisationOfPolystyrene</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-Styrene" title="http://ukfires.org/probs/system/Styrene"><span>ukf:Styrene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-ukfires.org-probs-system-PSPolystyrene" title="http://ukfires.org/probs/system/PSPolystyrene"><span>ukf:PSPolystyrene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-WasteOtherChemicals" title="http://ukfires.org/probs/system/WasteOtherChemicals"><span>ukf:WasteOtherChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+<p>The calculations behind this recipe are in <a class="reference download internal" download="" href="_downloads/bdcee473e9b3ddaf60ffcb7ee77e28be/BasicChemicalsAndPlasticsProduction_recipe.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">an</span> <span class="pre">accompanying</span> <span class="pre">spreadsheet</span></code></a>.</p>
+<p>Process yield of 98% is calculated based on average tonnages of inputs required directly reported in <span id="id8">[<a class="reference internal" href="references.html#id14" title="Tecnon OrbiChem. Chemical conversion factors. Technical Report, Tecnon OrbiChem, 2016.">Tecnon OrbiChem, 2016</a>]</span> but assume 2% polymerisation loss.</p>
+<p>This recipe is from <span id="id9">[<a class="reference internal" href="references.html#id13" title="Peter G. Levi and Jonathan M. Cullen. Mapping Global Flows of Chemicals: From Fossil Fuel Feedstocks to Chemical Products. Environ. Sci. Technol., 52(4):1725–1734, February 2018. doi:10.1021/acs.est.7b04573.">Levi and Cullen, 2018</a>]</span>. This is the global average of capacity for 2013. The polymerisation of polystyrene in the UK might have a different recipe.</p>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PolymerisationOfPVC"><em>Process: </em><span class="sig-name descname">ukf:PolymerisationOfPVC</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-VinylChloride" title="http://ukfires.org/probs/system/VinylChloride"><span>ukf:VinylChloride</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-ukfires.org-probs-system-PVCPolyvinylChloride" title="http://ukfires.org/probs/system/PVCPolyvinylChloride"><span>ukf:PVCPolyvinylChloride</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-WasteOtherChemicals" title="http://ukfires.org/probs/system/WasteOtherChemicals"><span>ukf:WasteOtherChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+<p>The calculations behind this recipe are in <a class="reference download internal" download="" href="_downloads/bdcee473e9b3ddaf60ffcb7ee77e28be/BasicChemicalsAndPlasticsProduction_recipe.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">an</span> <span class="pre">accompanying</span> <span class="pre">spreadsheet</span></code></a>.</p>
+<p>Process yield of 97.1% is calculated based on average tonnages of inputs required directly reported in <span id="id10">[<a class="reference internal" href="references.html#id14" title="Tecnon OrbiChem. Chemical conversion factors. Technical Report, Tecnon OrbiChem, 2016.">Tecnon OrbiChem, 2016</a>]</span>.</p>
+<p>This recipe is from <span id="id11">[<a class="reference internal" href="references.html#id13" title="Peter G. Levi and Jonathan M. Cullen. Mapping Global Flows of Chemicals: From Fossil Fuel Feedstocks to Chemical Products. Environ. Sci. Technol., 52(4):1725–1734, February 2018. doi:10.1021/acs.est.7b04573.">Levi and Cullen, 2018</a>]</span>. This is the global average of capacity for 2013. The polymerisation of PVC in the UK might have a different recipe.</p>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PolymerisationOfPET"><em>Process: </em><span class="sig-name descname">ukf:PolymerisationOfPET</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-EthyleneGlycol" title="http://ukfires.org/probs/system/EthyleneGlycol"><span>ukf:EthyleneGlycol</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.3</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-TerephthalicAcidPhthalicAnhydrideDioctylPhthalate" title="http://ukfires.org/probs/system/TerephthalicAcidPhthalicAnhydrideDioctylPhthalate"><span>ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.9</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-ukfires.org-probs-system-PETPolyethyleneTerephthalatePolyesters" title="http://ukfires.org/probs/system/PETPolyethyleneTerephthalatePolyesters"><span>ukf:PETPolyethyleneTerephthalatePolyesters</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-Water" title="http://ukfires.org/probs/system/Water"><span>ukf:Water</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-WasteOtherChemicals" title="http://ukfires.org/probs/system/WasteOtherChemicals"><span>ukf:WasteOtherChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+<p>The calculations behind this recipe are in <a class="reference download internal" download="" href="_downloads/bdcee473e9b3ddaf60ffcb7ee77e28be/BasicChemicalsAndPlasticsProduction_recipe.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">an</span> <span class="pre">accompanying</span> <span class="pre">spreadsheet</span></code></a>.</p>
+<p>Process yield of 99.4% for terephthalic acid is calculated based on average tonnages of inputs required directly reported in <span id="id12">[<a class="reference internal" href="references.html#id14" title="Tecnon OrbiChem. Chemical conversion factors. Technical Report, Tecnon OrbiChem, 2016.">Tecnon OrbiChem, 2016</a>]</span> and 95% for ethylene glycol is calcuated based on <span id="id13">[<a class="reference internal" href="references.html#id16" title="ASIACHEM. ASIACHEM: China MEG will still be driven by PET expansion in 2011. 2011. URL: https://www.scribd.com/document/70799050/2011-MEG-PET (visited on 27 February 2022).">ASIACHEM, 2011</a>]</span>.</p>
+<p>This recipe is from <span id="id14">[<a class="reference internal" href="references.html#id13" title="Peter G. Levi and Jonathan M. Cullen. Mapping Global Flows of Chemicals: From Fossil Fuel Feedstocks to Chemical Products. Environ. Sci. Technol., 52(4):1725–1734, February 2018. doi:10.1021/acs.est.7b04573.">Levi and Cullen, 2018</a>]</span>. This is the global average of capacity for 2013. The polymerisation of PET in the UK might have a different recipe.</p>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-ukfires.org-probs-system-PolymerisationOfStyreneButadiene"><em>Process: </em><span class="sig-name descname">ukf:PolymerisationOfStyreneButadiene</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="primary-chemicals.html#http-ukfires.org-probs-system-Butadiene" title="http://ukfires.org/probs/system/Butadiene"><span>ukf:Butadiene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.8</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-Styrene" title="http://ukfires.org/probs/system/Styrene"><span>ukf:Styrene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-ukfires.org-probs-system-SyntheticRubbers" title="http://ukfires.org/probs/system/SyntheticRubbers"><span>ukf:SyntheticRubbers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-WasteOtherChemicals" title="http://ukfires.org/probs/system/WasteOtherChemicals"><span>ukf:WasteOtherChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+<p>The calculations behind this recipe are in <a class="reference download internal" download="" href="_downloads/bdcee473e9b3ddaf60ffcb7ee77e28be/BasicChemicalsAndPlasticsProduction_recipe.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">an</span> <span class="pre">accompanying</span> <span class="pre">spreadsheet</span></code></a>.</p>
+<p>Process yield of 95.2% is calculated assuming an average composition: 25% Styrene, 75% butadiene. Assume 2% polymerisation loss reported in <span id="id15">[<a class="reference internal" href="references.html#id17" title="David R Lide. CRC handbook of chemistry and physics, 97th Edition. Volume 85. CRC press, 2016.">Lide, 2016</a>]</span>.</p>
+<p>This recipe is from <span id="id16">[<a class="reference internal" href="references.html#id13" title="Peter G. Levi and Jonathan M. Cullen. Mapping Global Flows of Chemicals: From Fossil Fuel Feedstocks to Chemical Products. Environ. Sci. Technol., 52(4):1725–1734, February 2018. doi:10.1021/acs.est.7b04573.">Levi and Cullen, 2018</a>]</span>. This is the global average of capacity for 2013. The polymerisation of styrene butadiene in the UK might have a different recipe.</p>
+</div>
+<p>However, these do not cover every polymer we are using here, so here are the two new production processes required:</p>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-PolymerisationOfLLDPE"><em>Process: </em><span class="sig-name descname">PolymerisationOfLLDPE</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="primary-chemicals.html#http-ukfires.org-probs-system-Ethylene" title="http://ukfires.org/probs/system/Ethylene"><span>ukf:Ethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="primary-chemicals.html#http-ukfires.org-probs-system-Butylenes" title="http://ukfires.org/probs/system/Butylenes"><span>ukf:Butylenes</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-LLDPE" title="http://c-thru.org/analyses/calculator/system/LLDPE"><span>sys:LLDPE</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-PolymerisationOfFibrePPA"><em>Process: </em><span class="sig-name descname">PolymerisationOfFibrePPA</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-Hexamethylenediamine" title="http://ukfires.org/probs/system/Hexamethylenediamine"><span>ukf:Hexamethylenediamine</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.5</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-Water" title="http://ukfires.org/probs/system/Water"><span>ukf:Water</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.5</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-TerephthalicAcidPhthalicAnhydrideDioctylPhthalate" title="http://ukfires.org/probs/system/TerephthalicAcidPhthalicAnhydrideDioctylPhthalate"><span>ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.4</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-IsophthalicAcid" title="http://c-thru.org/analyses/calculator/system/IsophthalicAcid"><span>sys:IsophthalicAcid</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-AdipicAcid" title="http://ukfires.org/probs/system/AdipicAcid"><span>ukf:AdipicAcid</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-OtherIntermediateOrganicChemicals" title="http://ukfires.org/probs/system/OtherIntermediateOrganicChemicals"><span>ukf:OtherIntermediateOrganicChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="misc-processes.html#http-ukfires.org-probs-system-OtherInorganicPrimaryChemicals" title="http://ukfires.org/probs/system/OtherInorganicPrimaryChemicals"><span>ukf:OtherInorganicPrimaryChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-FibrePPA" title="http://c-thru.org/analyses/calculator/system/FibrePPA"><span>sys:FibrePPA</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-PolymerisationOfPUR"><em>Process: </em><span class="sig-name descname">PolymerisationOfPUR</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-TolueneDiisocyanate" title="http://c-thru.org/analyses/calculator/system/TolueneDiisocyanate"><span>sys:TolueneDiisocyanate</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.4</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-Polyols" title="http://c-thru.org/analyses/calculator/system/Polyols"><span>sys:Polyols</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.7</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-OtherIntermediateOrganicChemicals" title="http://ukfires.org/probs/system/OtherIntermediateOrganicChemicals"><span>ukf:OtherIntermediateOrganicChemicals</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-ukfires.org-probs-system-Polyurethane" title="http://ukfires.org/probs/system/Polyurethane"><span>ukf:Polyurethane</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+</div>
+<p>Similarly for polymerisation of “other polymers”:</p>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-PolymerisationOfOtherPolymers"><em>Process: </em><span class="sig-name descname">PolymerisationOfOtherPolymers</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-Acrylonitrile" title="http://ukfires.org/probs/system/Acrylonitrile"><span>ukf:Acrylonitrile</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="primary-chemicals.html#http-ukfires.org-probs-system-Butadiene" title="http://ukfires.org/probs/system/Butadiene"><span>ukf:Butadiene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="organic-chemicals.html#http-ukfires.org-probs-system-Styrene" title="http://ukfires.org/probs/system/Styrene"><span>ukf:Styrene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.6</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-ukfires.org-probs-system-OtherPolymers" title="http://ukfires.org/probs/system/OtherPolymers"><span>ukf:OtherPolymers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers" title="http://c-thru.org/analyses/calculator/system/ProductionOfPolymers"><span>sys:ProductionOfPolymers</span></a></p>
+</div>
+<p>Based on the data of Yunhu et al., 80% of the other polymers produced in 2020 are thermoplastic, for which 40% (or about half) is ABS. Hence, the process recipe to for production of <code class="docutils literal notranslate"><span class="pre">OtherPolymers</span></code> is based on ABS production.</p>
+</div>
+<p class="system end-sub-processes nested-1">Ending sub processes of “ProductionOfPolymers”</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="organic-chemicals.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Organic chemicals</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="products.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Products</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Rick Lupton<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

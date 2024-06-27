@@ -1,0 +1,1154 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Process Index &#8212; C-THRU Calculator system</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/system-definitions.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+
+    <script>
+      DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
+    </script>
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">C-THRU Calculator system</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    C-THRU global petrochemicals calculator: system definitions
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System structure
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="fertilisers.html">
+   1. Fertilisers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="upstream.html">
+   2. Upstream processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="primary-chemicals.html">
+   3. Primary chemicals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="organic-chemicals.html">
+   4. Organic chemicals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polymers.html">
+   5. Polymers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="products.html">
+   6. Products
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="end-of-life-processes.html">
+   7. End-of-life processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recycling-processes.html">
+   8. Recycling processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="final-treatment-processes.html">
+   9. Final treatment processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="other-chemical-demand.html">
+   10. Other demand for chemicals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="misc-processes.html">
+   11. Other chemical synthesis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   12. References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+
+   <h1>Process Index</h1>
+
+   <div class="modindex-jumpbox">
+   <a href="#cap-A"><strong>A</strong></a> | 
+   <a href="#cap-B"><strong>B</strong></a> | 
+   <a href="#cap-C"><strong>C</strong></a> | 
+   <a href="#cap-D"><strong>D</strong></a> | 
+   <a href="#cap-E"><strong>E</strong></a> | 
+   <a href="#cap-F"><strong>F</strong></a> | 
+   <a href="#cap-H"><strong>H</strong></a> | 
+   <a href="#cap-I"><strong>I</strong></a> | 
+   <a href="#cap-L"><strong>L</strong></a> | 
+   <a href="#cap-M"><strong>M</strong></a> | 
+   <a href="#cap-N"><strong>N</strong></a> | 
+   <a href="#cap-O"><strong>O</strong></a> | 
+   <a href="#cap-P"><strong>P</strong></a> | 
+   <a href="#cap-R"><strong>R</strong></a> | 
+   <a href="#cap-S"><strong>S</strong></a> | 
+   <a href="#cap-T"><strong>T</strong></a> | 
+   <a href="#cap-U"><strong>U</strong></a> | 
+   <a href="#cap-W"><strong>W</strong></a>
+   </div>
+
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-A"><td></td><td>
+       <strong>A</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="misc-processes.html#http-c-thru.org-analyses-calculator-system-AirSeparation"><code class="xref">AirSeparation</code></a> <em>(misc-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-AcrylonitrileSynthesis"><code class="xref">AcrylonitrileSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-B"><td></td><td>
+       <strong>B</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-BiomassGasificationToSyngas"><code class="xref">BiomassGasificationToSyngas</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-C"><td></td><td>
+       <strong>C</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-CatalyticReformingOfNaphthaForToluene"><code class="xref">CatalyticReformingOfNaphthaForToluene</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-CatalyticReformingOfNaphthaForXylenes"><code class="xref">CatalyticReformingOfNaphthaForXylenes</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-CoalGasificationToSyngas"><code class="xref">CoalGasificationToSyngas</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-CornStoverGasificationToSyngas"><code class="xref">CornStoverGasificationToSyngas</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-CarbonDioxideHydrogenationToMethylAlcohol"><code class="xref">CarbonDioxideHydrogenationToMethylAlcohol</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-ChemicalRecyclingOfMixedPolymersAtEOL"><code class="xref">ChemicalRecyclingOfMixedPolymersAtEOL</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-D"><td></td><td>
+       <strong>D</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-DehydrogenationOfPropane"><code class="xref">DehydrogenationOfPropane</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-DehydrogenationOfButaneForButadiene"><code class="xref">DehydrogenationOfButaneForButadiene</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-DehydrationOfEthylAlcohol"><code class="xref">DehydrationOfEthylAlcohol</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-DistillationOfButylenesForButadiene"><code class="xref">DistillationOfButylenesForButadiene</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-DistillationOfPyrolysisGasolineForBTX"><code class="xref">DistillationOfPyrolysisGasolineForBTX</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-DisproportionationOfTolueneForXylenes"><code class="xref">DisproportionationOfTolueneForXylenes</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-DealkylationOfTolueneForBenzene"><code class="xref">DealkylationOfTolueneForBenzene</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-E"><td></td><td>
+       <strong>E</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-EthyleneOxideSynthesis"><code class="xref">EthyleneOxideSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-EOLProcessingPackagingProducts"><code class="xref">EOLProcessingPackagingProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-EOLProcessingTransportationProducts"><code class="xref">EOLProcessingTransportationProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-EOLProcessingBuildingsAndConstructionProducts"><code class="xref">EOLProcessingBuildingsAndConstructionProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-EOLProcessingElectricalAndElectronicProducts"><code class="xref">EOLProcessingElectricalAndElectronicProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-EOLProcessingConsumerAndInstitutionalProducts"><code class="xref">EOLProcessingConsumerAndInstitutionalProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-EOLProcessingIndustrialMachinery"><code class="xref">EOLProcessingIndustrialMachinery</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-EOLProcessingTextileProducts"><code class="xref">EOLProcessingTextileProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-EOLProcessingOtherProducts"><code class="xref">EOLProcessingOtherProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-EthylAlcoholSynthesisFromBiomass"><code class="xref">EthylAlcoholSynthesisFromBiomass</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-EthylAlcoholSynthesisFromSugarcane"><code class="xref">EthylAlcoholSynthesisFromSugarcane</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-EthylAlcoholSynthesisFromSugarcaneBagasse"><code class="xref">EthylAlcoholSynthesisFromSugarcaneBagasse</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-EthylAlcoholSynthesisFromMaize"><code class="xref">EthylAlcoholSynthesisFromMaize</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-EthylAlcoholSynthesisFromCornStover"><code class="xref">EthylAlcoholSynthesisFromCornStover</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-EthylAlcoholSynthesisFromWheatStraw"><code class="xref">EthylAlcoholSynthesisFromWheatStraw</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-EthylAlcoholSynthesisFromRiceStraw"><code class="xref">EthylAlcoholSynthesisFromRiceStraw</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-F"><td></td><td>
+       <strong>F</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="final-treatment-processes.html#http-c-thru.org-analyses-calculator-system-FinalTreatment"><code class="xref">FinalTreatment</code></a> <em>(final-treatment-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-FluidCatalyticCrackingOfGasOil"><code class="xref">FluidCatalyticCrackingOfGasOil</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-FischerTropschSynthesisOfOlefinsFromSyngas"><code class="xref">FischerTropschSynthesisOfOlefinsFromSyngas</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-H"><td></td><td>
+       <strong>H</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-HexamethylenediamineSynthesisFromButadiene"><code class="xref">HexamethylenediamineSynthesisFromButadiene</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-HydrogenCyanideSynthesis"><code class="xref">HydrogenCyanideSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-HydrogenSynthesis"><code class="xref">HydrogenSynthesis</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-I"><td></td><td>
+       <strong>I</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="final-treatment-processes.html#http-c-thru.org-analyses-calculator-system-Incineration"><code class="xref">Incineration</code></a> <em>(final-treatment-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-IsophthalicAcidSynthesis"><code class="xref">IsophthalicAcidSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-L"><td></td><td>
+       <strong>L</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="final-treatment-processes.html#http-c-thru.org-analyses-calculator-system-Landfilling"><code class="xref">Landfilling</code></a> <em>(final-treatment-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-M"><td></td><td>
+       <strong>M</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingWastePolymerStreams"><code class="xref">MixingWastePolymerStreams</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingLDPEPolyethyleneAtEOL"><code class="xref">MixingLDPEPolyethyleneAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingLLDPEAtEOL"><code class="xref">MixingLLDPEAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingHDPEPolyethyleneAtEOL"><code class="xref">MixingHDPEPolyethyleneAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingPPPolypropyleneAtEOL"><code class="xref">MixingPPPolypropyleneAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingPSPolystyreneAtEOL"><code class="xref">MixingPSPolystyreneAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingPVCPolyvinylChlorideAtEOL"><code class="xref">MixingPVCPolyvinylChlorideAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingPETPolyethyleneTerephthalatePolyestersAtEOL"><code class="xref">MixingPETPolyethyleneTerephthalatePolyestersAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingPolyurethaneAtEOL"><code class="xref">MixingPolyurethaneAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingSyntheticRubbersAtEOL"><code class="xref">MixingSyntheticRubbersAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingFibrePPAAtEOL"><code class="xref">MixingFibrePPAAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-MixingOtherPolymersAtEOL"><code class="xref">MixingOtherPolymersAtEOL</code></a> <em>(end-of-life-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="final-treatment-processes.html#http-c-thru.org-analyses-calculator-system-Mismanagement"><code class="xref">Mismanagement</code></a> <em>(final-treatment-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-MethylAlcoholToOlefins"><code class="xref">MethylAlcoholToOlefins</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-MethylAlcoholToPropylene"><code class="xref">MethylAlcoholToPropylene</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-MethylAlcoholToAromatics"><code class="xref">MethylAlcoholToAromatics</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-MethylAlcoholSynthesis"><code class="xref">MethylAlcoholSynthesis</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-MechanicalRecycling"><code class="xref">MechanicalRecycling</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-MechanicalRecyclingOfLDPEPolyethyleneAtEOL"><code class="xref">MechanicalRecyclingOfLDPEPolyethyleneAtEOL</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-MechanicalRecyclingOfLLDPEAtEOL"><code class="xref">MechanicalRecyclingOfLLDPEAtEOL</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-MechanicalRecyclingOfHDPEPolyethyleneAtEOL"><code class="xref">MechanicalRecyclingOfHDPEPolyethyleneAtEOL</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-MechanicalRecyclingOfPPPolypropyleneAtEOL"><code class="xref">MechanicalRecyclingOfPPPolypropyleneAtEOL</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-MechanicalRecyclingOfPSPolystyreneAtEOL"><code class="xref">MechanicalRecyclingOfPSPolystyreneAtEOL</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-MechanicalRecyclingOfPVCPolyvinylChlorideAtEOL"><code class="xref">MechanicalRecyclingOfPVCPolyvinylChlorideAtEOL</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-MechanicalRecyclingOfPETPolyethyleneTerephthalatePolyestersAtEOL"><code class="xref">MechanicalRecyclingOfPETPolyethyleneTerephthalatePolyestersAtEOL</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="recycling-processes.html#http-c-thru.org-analyses-calculator-system-MechanicalRecyclingOfFibrePPAAtEOL"><code class="xref">MechanicalRecyclingOfFibrePPAAtEOL</code></a> <em>(recycling-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-N"><td></td><td>
+       <strong>N</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-NaturalGasSteamMethaneReformingToSyngas"><code class="xref">NaturalGasSteamMethaneReformingToSyngas</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-NaturalGasSteamMethaneReformingToHydrogen"><code class="xref">NaturalGasSteamMethaneReformingToHydrogen</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-NaturalGasSteamMethaneReformingWithCCSToHydrogen"><code class="xref">NaturalGasSteamMethaneReformingWithCCSToHydrogen</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-O"><td></td><td>
+       <strong>O</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="other-chemical-demand.html#http-c-thru.org-analyses-calculator-system-OtherConsumptionOfBenzene"><code class="xref">OtherConsumptionOfBenzene</code></a> <em>(other-chemical-demand)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="other-chemical-demand.html#http-c-thru.org-analyses-calculator-system-OtherConsumptionOfToluene"><code class="xref">OtherConsumptionOfToluene</code></a> <em>(other-chemical-demand)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="other-chemical-demand.html#http-c-thru.org-analyses-calculator-system-OtherConsumptionOfXylenes"><code class="xref">OtherConsumptionOfXylenes</code></a> <em>(other-chemical-demand)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="other-chemical-demand.html#http-c-thru.org-analyses-calculator-system-OtherConsumptionOfMethylAlcohol"><code class="xref">OtherConsumptionOfMethylAlcohol</code></a> <em>(other-chemical-demand)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-P"><td></td><td>
+       <strong>P</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfNitrogenFertiliser"><code class="xref">ProductionOfNitrogenFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfAmmoniaFertiliser"><code class="xref">ProductionOfAmmoniaFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfAmmoniumSulphate"><code class="xref">ProductionOfAmmoniumSulphate</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfAmmoniumNitrate"><code class="xref">ProductionOfAmmoniumNitrate</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfCalciumAmmoniumNitrate"><code class="xref">ProductionOfCalciumAmmoniumNitrate</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfAmmoniumPhosphate"><code class="xref">ProductionOfAmmoniumPhosphate</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfNKCompound"><code class="xref">ProductionOfNKCompound</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfNPKCompound"><code class="xref">ProductionOfNPKCompound</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfUreaAmmoniumNitrate"><code class="xref">ProductionOfUreaAmmoniumNitrate</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfOtherFertiliserN"><code class="xref">ProductionOfOtherFertiliserN</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfOtherFertiliserNP"><code class="xref">ProductionOfOtherFertiliserNP</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-ProductionOfUrea"><code class="xref">ProductionOfUrea</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="misc-processes.html#http-c-thru.org-analyses-calculator-system-ProducingNitricAcid"><code class="xref">ProducingNitricAcid</code></a> <em>(misc-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-PolyolsSynthesis"><code class="xref">PolyolsSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-PropyleneOxideSynthesis"><code class="xref">PropyleneOxideSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-c-thru.org-analyses-calculator-system-ProductionOfPolymers"><code class="xref">ProductionOfPolymers</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-c-thru.org-analyses-calculator-system-PolymerisationOfLLDPE"><code class="xref">PolymerisationOfLLDPE</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-c-thru.org-analyses-calculator-system-PolymerisationOfFibrePPA"><code class="xref">PolymerisationOfFibrePPA</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-c-thru.org-analyses-calculator-system-PolymerisationOfPUR"><code class="xref">PolymerisationOfPUR</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-c-thru.org-analyses-calculator-system-PolymerisationOfOtherPolymers"><code class="xref">PolymerisationOfOtherPolymers</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-ProductionOfProducts"><code class="xref">ProductionOfProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-ProductionOfPackagingProducts"><code class="xref">ProductionOfPackagingProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-ProductionOfTransportationProducts"><code class="xref">ProductionOfTransportationProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-ProductionOfBuildingsAndConstructionProducts"><code class="xref">ProductionOfBuildingsAndConstructionProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-ProductionOfElectricalAndElectronicProducts"><code class="xref">ProductionOfElectricalAndElectronicProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-ProductionOfConsumerAndInstitutionalProducts"><code class="xref">ProductionOfConsumerAndInstitutionalProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-ProductionOfIndustrialMachinery"><code class="xref">ProductionOfIndustrialMachinery</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-ProductionOfTextileProducts"><code class="xref">ProductionOfTextileProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-ProductionOfOtherProducts"><code class="xref">ProductionOfOtherProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-R"><td></td><td>
+       <strong>R</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-RiceStrawGasificationToSyngas"><code class="xref">RiceStrawGasificationToSyngas</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-S"><td></td><td>
+       <strong>S</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="misc-processes.html#http-c-thru.org-analyses-calculator-system-SodiumChlorideElectrolysisForChlorine"><code class="xref">SodiumChlorideElectrolysisForChlorine</code></a> <em>(misc-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-SteamCrackingOfNaphtha"><code class="xref">SteamCrackingOfNaphtha</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-SteamCrackingOfEthane"><code class="xref">SteamCrackingOfEthane</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="primary-chemicals.html#http-c-thru.org-analyses-calculator-system-SyngasToAmmoniaProduction"><code class="xref">SyngasToAmmoniaProduction</code></a> <em>(primary-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-SugarCaneBagasseGasificationToSyngas"><code class="xref">SugarCaneBagasseGasificationToSyngas</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-T"><td></td><td>
+       <strong>T</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-c-thru.org-analyses-calculator-system-TolueneDiisocyanateSynthesis"><code class="xref">TolueneDiisocyanateSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-U"><td></td><td>
+       <strong>U</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfNitrogenFertiliser"><code class="xref">UseOfNitrogenFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfAmmoniaFertiliser"><code class="xref">UseOfAmmoniaFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfAmmoniumSulphateFertiliser"><code class="xref">UseOfAmmoniumSulphateFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfAmmoniumNitrateFertiliser"><code class="xref">UseOfAmmoniumNitrateFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfCalciumAmmoniumNitrateFertiliser"><code class="xref">UseOfCalciumAmmoniumNitrateFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfAmmoniumPhosphateFertiliser"><code class="xref">UseOfAmmoniumPhosphateFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfNKCompoundFertiliser"><code class="xref">UseOfNKCompoundFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfNPKCompoundFertiliser"><code class="xref">UseOfNPKCompoundFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfUreaAmmoniumNitrateFertiliser"><code class="xref">UseOfUreaAmmoniumNitrateFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfOtherFertiliserN"><code class="xref">UseOfOtherFertiliserN</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfOtherFertiliserNP"><code class="xref">UseOfOtherFertiliserNP</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="fertilisers.html#http-c-thru.org-analyses-calculator-system-UseOfUreaFertiliser"><code class="xref">UseOfUreaFertiliser</code></a> <em>(fertilisers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="misc-processes.html#http-ukfires.org-probs-system-MakingInorganicAcids"><code class="xref">ukf:MakingInorganicAcids</code></a> <em>(misc-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="misc-processes.html#http-ukfires.org-probs-system-MakingOtherInorganicPrimaryChemicals"><code class="xref">ukf:MakingOtherInorganicPrimaryChemicals</code></a> <em>(misc-processes)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-ukfires.org-probs-system-AdipicAcidSynthesis"><code class="xref">ukf:AdipicAcidSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-ukfires.org-probs-system-AceticAcidSynthesis"><code class="xref">ukf:AceticAcidSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-ukfires.org-probs-system-StyreneSynthesis"><code class="xref">ukf:StyreneSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-ukfires.org-probs-system-VinylChlorideSynthesis"><code class="xref">ukf:VinylChlorideSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-ukfires.org-probs-system-EthyleneGlycolSynthesis"><code class="xref">ukf:EthyleneGlycolSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-ukfires.org-probs-system-TerephthalicAcidSynthesis"><code class="xref">ukf:TerephthalicAcidSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-ukfires.org-probs-system-CyclohexaneSynthesis"><code class="xref">ukf:CyclohexaneSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="organic-chemicals.html#http-ukfires.org-probs-system-OtherOrganicChemicalsSynthesis"><code class="xref">ukf:OtherOrganicChemicalsSynthesis</code></a> <em>(organic-chemicals)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-ukfires.org-probs-system-PolymerisationOfLDPE"><code class="xref">ukf:PolymerisationOfLDPE</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-ukfires.org-probs-system-PolymerisationOfHDPE"><code class="xref">ukf:PolymerisationOfHDPE</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-ukfires.org-probs-system-PolymerisationOfPP"><code class="xref">ukf:PolymerisationOfPP</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-ukfires.org-probs-system-PolymerisationOfPolystyrene"><code class="xref">ukf:PolymerisationOfPolystyrene</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-ukfires.org-probs-system-PolymerisationOfPVC"><code class="xref">ukf:PolymerisationOfPVC</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-ukfires.org-probs-system-PolymerisationOfPET"><code class="xref">ukf:PolymerisationOfPET</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="polymers.html#http-ukfires.org-probs-system-PolymerisationOfStyreneButadiene"><code class="xref">ukf:PolymerisationOfStyreneButadiene</code></a> <em>(polymers)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-UseOfProducts"><code class="xref">UseOfProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-UseOfPackagingProducts"><code class="xref">UseOfPackagingProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-UseOfTransportationProducts"><code class="xref">UseOfTransportationProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-UseOfBuildingsAndConstructionProducts"><code class="xref">UseOfBuildingsAndConstructionProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-UseOfElectricalAndElectronicProducts"><code class="xref">UseOfElectricalAndElectronicProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-UseOfConsumerAndInstitutionalProducts"><code class="xref">UseOfConsumerAndInstitutionalProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-UseOfIndustrialMachinery"><code class="xref">UseOfIndustrialMachinery</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-UseOfTextileProducts"><code class="xref">UseOfTextileProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="products.html#http-c-thru.org-analyses-calculator-system-UseOfOtherProducts"><code class="xref">UseOfOtherProducts</code></a> <em>(products)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-ukfires.org-probs-system-OilRefiningButane"><code class="xref">ukf:OilRefiningButane</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-ukfires.org-probs-system-OilRefiningEthane"><code class="xref">ukf:OilRefiningEthane</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-ukfires.org-probs-system-OilRefiningPropane"><code class="xref">ukf:OilRefiningPropane</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-ukfires.org-probs-system-OilRefiningNaphtha"><code class="xref">ukf:OilRefiningNaphtha</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-W"><td></td><td>
+       <strong>W</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-WheatStrawGasificationToSyngas"><code class="xref">WheatStrawGasificationToSyngas</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="upstream.html#http-c-thru.org-analyses-calculator-system-WaterElectrolysisForHydrogen"><code class="xref">WaterElectrolysisForHydrogen</code></a> <em>(upstream)</em></td><td>
+       <em>process</em></td></tr>
+   </table>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Rick Lupton<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

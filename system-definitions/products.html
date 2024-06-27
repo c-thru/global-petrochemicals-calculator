@@ -1,0 +1,1603 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>6. Products &#8212; C-THRU Calculator system</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/system-definitions.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. End-of-life processes" href="end-of-life-processes.html" />
+    <link rel="prev" title="5. Polymers" href="polymers.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">C-THRU Calculator system</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    C-THRU global petrochemicals calculator: system definitions
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System structure
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="fertilisers.html">
+   1. Fertilisers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="upstream.html">
+   2. Upstream processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="primary-chemicals.html">
+   3. Primary chemicals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="organic-chemicals.html">
+   4. Organic chemicals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polymers.html">
+   5. Polymers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. Products
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="end-of-life-processes.html">
+   7. End-of-life processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recycling-processes.html">
+   8. Recycling processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="final-treatment-processes.html">
+   9. Final treatment processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="other-chemical-demand.html">
+   10. Other demand for chemicals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="misc-processes.html">
+   11. Other chemical synthesis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   12. References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/products.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Products</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="products">
+<h1><span class="section-number">6. </span>Products<a class="headerlink" href="#products" title="Permalink to this headline">#</a></h1>
+<p>These are the product types that we are modelling (based on sectors):</p>
+<div class="system object toggle nested-0 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-Products"><em>Object: </em><span class="sig-name descname">Products</span></p>
+<div class="docutils container">
+<p>Children: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-PackagingProducts" title="http://c-thru.org/analyses/calculator/system/PackagingProducts"><span>sys:PackagingProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-TransportationProducts" title="http://c-thru.org/analyses/calculator/system/TransportationProducts"><span>sys:TransportationProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-BuildingsAndConstructionProducts" title="http://c-thru.org/analyses/calculator/system/BuildingsAndConstructionProducts"><span>sys:BuildingsAndConstructionProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ElectricalAndElectronicProducts" title="http://c-thru.org/analyses/calculator/system/ElectricalAndElectronicProducts"><span>sys:ElectricalAndElectronicProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ConsumerAndInstitutionalProducts" title="http://c-thru.org/analyses/calculator/system/ConsumerAndInstitutionalProducts"><span>sys:ConsumerAndInstitutionalProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-IndustrialMachinery" title="http://c-thru.org/analyses/calculator/system/IndustrialMachinery"><span>sys:IndustrialMachinery</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-TextileProducts" title="http://c-thru.org/analyses/calculator/system/TextileProducts"><span>sys:TextileProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-OtherProducts" title="http://c-thru.org/analyses/calculator/system/OtherProducts"><span>sys:OtherProducts</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-PackagingProducts"><em>Object: </em><span class="sig-name descname">PackagingProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Products" title="http://c-thru.org/analyses/calculator/system/Products"><span>sys:Products</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-TransportationProducts"><em>Object: </em><span class="sig-name descname">TransportationProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Products" title="http://c-thru.org/analyses/calculator/system/Products"><span>sys:Products</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-BuildingsAndConstructionProducts"><em>Object: </em><span class="sig-name descname">BuildingsAndConstructionProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Products" title="http://c-thru.org/analyses/calculator/system/Products"><span>sys:Products</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ElectricalAndElectronicProducts"><em>Object: </em><span class="sig-name descname">ElectricalAndElectronicProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Products" title="http://c-thru.org/analyses/calculator/system/Products"><span>sys:Products</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ConsumerAndInstitutionalProducts"><em>Object: </em><span class="sig-name descname">ConsumerAndInstitutionalProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Products" title="http://c-thru.org/analyses/calculator/system/Products"><span>sys:Products</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-IndustrialMachinery"><em>Object: </em><span class="sig-name descname">IndustrialMachinery</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Products" title="http://c-thru.org/analyses/calculator/system/Products"><span>sys:Products</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-TextileProducts"><em>Object: </em><span class="sig-name descname">TextileProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Products" title="http://c-thru.org/analyses/calculator/system/Products"><span>sys:Products</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-OtherProducts"><em>Object: </em><span class="sig-name descname">OtherProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-Products" title="http://c-thru.org/analyses/calculator/system/Products"><span>sys:Products</span></a></p>
+</div>
+</div>
+<p class="system end-sub-objects nested-1">Ending sub objects of “Products”</p>
+<p>And end-of-life versions:</p>
+<div class="system object toggle nested-0 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLProducts"><em>Object: </em><span class="sig-name descname">EOLProducts</span></p>
+<div class="docutils container">
+<p>Children: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLPackagingProducts" title="http://c-thru.org/analyses/calculator/system/EOLPackagingProducts"><span>sys:EOLPackagingProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLTransportationProducts" title="http://c-thru.org/analyses/calculator/system/EOLTransportationProducts"><span>sys:EOLTransportationProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLBuildingsAndConstructionProducts" title="http://c-thru.org/analyses/calculator/system/EOLBuildingsAndConstructionProducts"><span>sys:EOLBuildingsAndConstructionProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLElectricalAndElectronicProducts" title="http://c-thru.org/analyses/calculator/system/EOLElectricalAndElectronicProducts"><span>sys:EOLElectricalAndElectronicProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLConsumerAndInstitutionalProducts" title="http://c-thru.org/analyses/calculator/system/EOLConsumerAndInstitutionalProducts"><span>sys:EOLConsumerAndInstitutionalProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLIndustrialMachinery" title="http://c-thru.org/analyses/calculator/system/EOLIndustrialMachinery"><span>sys:EOLIndustrialMachinery</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLTextileProducts" title="http://c-thru.org/analyses/calculator/system/EOLTextileProducts"><span>sys:EOLTextileProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLOtherProducts" title="http://c-thru.org/analyses/calculator/system/EOLOtherProducts"><span>sys:EOLOtherProducts</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLPackagingProducts"><em>Object: </em><span class="sig-name descname">EOLPackagingProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProducts" title="http://c-thru.org/analyses/calculator/system/EOLProducts"><span>sys:EOLProducts</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLTransportationProducts"><em>Object: </em><span class="sig-name descname">EOLTransportationProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProducts" title="http://c-thru.org/analyses/calculator/system/EOLProducts"><span>sys:EOLProducts</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLBuildingsAndConstructionProducts"><em>Object: </em><span class="sig-name descname">EOLBuildingsAndConstructionProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProducts" title="http://c-thru.org/analyses/calculator/system/EOLProducts"><span>sys:EOLProducts</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLElectricalAndElectronicProducts"><em>Object: </em><span class="sig-name descname">EOLElectricalAndElectronicProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProducts" title="http://c-thru.org/analyses/calculator/system/EOLProducts"><span>sys:EOLProducts</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLConsumerAndInstitutionalProducts"><em>Object: </em><span class="sig-name descname">EOLConsumerAndInstitutionalProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProducts" title="http://c-thru.org/analyses/calculator/system/EOLProducts"><span>sys:EOLProducts</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLIndustrialMachinery"><em>Object: </em><span class="sig-name descname">EOLIndustrialMachinery</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProducts" title="http://c-thru.org/analyses/calculator/system/EOLProducts"><span>sys:EOLProducts</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLTextileProducts"><em>Object: </em><span class="sig-name descname">EOLTextileProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProducts" title="http://c-thru.org/analyses/calculator/system/EOLProducts"><span>sys:EOLProducts</span></a></p>
+</div>
+</div>
+<div class="system object toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLOtherProducts"><em>Object: </em><span class="sig-name descname">EOLOtherProducts</span></p>
+<div class="docutils container">
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProducts" title="http://c-thru.org/analyses/calculator/system/EOLProducts"><span>sys:EOLProducts</span></a></p>
+</div>
+</div>
+<p class="system end-sub-objects nested-1">Ending sub objects of “EOLProducts”</p>
+<p>These are the processes that produce and use them:</p>
+<div class="system process toggle nested-0 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfProducts"><em>Process: </em><span class="sig-name descname">ProductionOfProducts</span></p>
+<div class="docutils container">
+<p>Children: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfPackagingProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfPackagingProducts"><span>sys:ProductionOfPackagingProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfTransportationProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfTransportationProducts"><span>sys:ProductionOfTransportationProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfBuildingsAndConstructionProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfBuildingsAndConstructionProducts"><span>sys:ProductionOfBuildingsAndConstructionProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfElectricalAndElectronicProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfElectricalAndElectronicProducts"><span>sys:ProductionOfElectricalAndElectronicProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfConsumerAndInstitutionalProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfConsumerAndInstitutionalProducts"><span>sys:ProductionOfConsumerAndInstitutionalProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfIndustrialMachinery" title="http://c-thru.org/analyses/calculator/system/ProductionOfIndustrialMachinery"><span>sys:ProductionOfIndustrialMachinery</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfTextileProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfTextileProducts"><span>sys:ProductionOfTextileProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfOtherProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfOtherProducts"><span>sys:ProductionOfOtherProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProcessingPackagingProducts" title="http://c-thru.org/analyses/calculator/system/EOLProcessingPackagingProducts"><span>sys:EOLProcessingPackagingProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProcessingTransportationProducts" title="http://c-thru.org/analyses/calculator/system/EOLProcessingTransportationProducts"><span>sys:EOLProcessingTransportationProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProcessingBuildingsAndConstructionProducts" title="http://c-thru.org/analyses/calculator/system/EOLProcessingBuildingsAndConstructionProducts"><span>sys:EOLProcessingBuildingsAndConstructionProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProcessingElectricalAndElectronicProducts" title="http://c-thru.org/analyses/calculator/system/EOLProcessingElectricalAndElectronicProducts"><span>sys:EOLProcessingElectricalAndElectronicProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProcessingConsumerAndInstitutionalProducts" title="http://c-thru.org/analyses/calculator/system/EOLProcessingConsumerAndInstitutionalProducts"><span>sys:EOLProcessingConsumerAndInstitutionalProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProcessingIndustrialMachinery" title="http://c-thru.org/analyses/calculator/system/EOLProcessingIndustrialMachinery"><span>sys:EOLProcessingIndustrialMachinery</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProcessingTextileProducts" title="http://c-thru.org/analyses/calculator/system/EOLProcessingTextileProducts"><span>sys:EOLProcessingTextileProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLProcessingOtherProducts" title="http://c-thru.org/analyses/calculator/system/EOLProcessingOtherProducts"><span>sys:EOLProcessingOtherProducts</span></a></p>
+</div>
+</div>
+<!-- WARNING: THESE DEFINITIONS ARE GENERATED AUTOMATICALLY -->
+<!--          DO NOT EDIT BY HAND                           -->
+<!--                                                        -->
+<!-- Generated by "Convert product model.ipynb"             -->
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfPackagingProducts"><em>Process: </em><span class="sig-name descname">ProductionOfPackagingProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-LDPEPolyethylene" title="http://ukfires.org/probs/system/LDPEPolyethylene"><span>ukf:LDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-LLDPE" title="http://c-thru.org/analyses/calculator/system/LLDPE"><span>sys:LLDPE</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-HDPEPolyethylene" title="http://ukfires.org/probs/system/HDPEPolyethylene"><span>ukf:HDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PPPolypropylene" title="http://ukfires.org/probs/system/PPPolypropylene"><span>ukf:PPPolypropylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PSPolystyrene" title="http://ukfires.org/probs/system/PSPolystyrene"><span>ukf:PSPolystyrene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PVCPolyvinylChloride" title="http://ukfires.org/probs/system/PVCPolyvinylChloride"><span>ukf:PVCPolyvinylChloride</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PETPolyethyleneTerephthalatePolyesters" title="http://ukfires.org/probs/system/PETPolyethyleneTerephthalatePolyesters"><span>ukf:PETPolyethyleneTerephthalatePolyesters</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-Polyurethane" title="http://ukfires.org/probs/system/Polyurethane"><span>ukf:Polyurethane</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-OtherPolymers" title="http://ukfires.org/probs/system/OtherPolymers"><span>ukf:OtherPolymers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-PackagingProducts" title="http://c-thru.org/analyses/calculator/system/PackagingProducts"><span>sys:PackagingProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfTransportationProducts"><em>Process: </em><span class="sig-name descname">ProductionOfTransportationProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-LLDPE" title="http://c-thru.org/analyses/calculator/system/LLDPE"><span>sys:LLDPE</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-HDPEPolyethylene" title="http://ukfires.org/probs/system/HDPEPolyethylene"><span>ukf:HDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PPPolypropylene" title="http://ukfires.org/probs/system/PPPolypropylene"><span>ukf:PPPolypropylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PVCPolyvinylChloride" title="http://ukfires.org/probs/system/PVCPolyvinylChloride"><span>ukf:PVCPolyvinylChloride</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-Polyurethane" title="http://ukfires.org/probs/system/Polyurethane"><span>ukf:Polyurethane</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-FibrePPA" title="http://c-thru.org/analyses/calculator/system/FibrePPA"><span>sys:FibrePPA</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-SyntheticRubbers" title="http://ukfires.org/probs/system/SyntheticRubbers"><span>ukf:SyntheticRubbers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.3</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-OtherPolymers" title="http://ukfires.org/probs/system/OtherPolymers"><span>ukf:OtherPolymers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-TransportationProducts" title="http://c-thru.org/analyses/calculator/system/TransportationProducts"><span>sys:TransportationProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfBuildingsAndConstructionProducts"><em>Process: </em><span class="sig-name descname">ProductionOfBuildingsAndConstructionProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-LDPEPolyethylene" title="http://ukfires.org/probs/system/LDPEPolyethylene"><span>ukf:LDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-LLDPE" title="http://c-thru.org/analyses/calculator/system/LLDPE"><span>sys:LLDPE</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-HDPEPolyethylene" title="http://ukfires.org/probs/system/HDPEPolyethylene"><span>ukf:HDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PPPolypropylene" title="http://ukfires.org/probs/system/PPPolypropylene"><span>ukf:PPPolypropylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PSPolystyrene" title="http://ukfires.org/probs/system/PSPolystyrene"><span>ukf:PSPolystyrene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PVCPolyvinylChloride" title="http://ukfires.org/probs/system/PVCPolyvinylChloride"><span>ukf:PVCPolyvinylChloride</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.6</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-Polyurethane" title="http://ukfires.org/probs/system/Polyurethane"><span>ukf:Polyurethane</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-OtherPolymers" title="http://ukfires.org/probs/system/OtherPolymers"><span>ukf:OtherPolymers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-BuildingsAndConstructionProducts" title="http://c-thru.org/analyses/calculator/system/BuildingsAndConstructionProducts"><span>sys:BuildingsAndConstructionProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfElectricalAndElectronicProducts"><em>Process: </em><span class="sig-name descname">ProductionOfElectricalAndElectronicProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-LDPEPolyethylene" title="http://ukfires.org/probs/system/LDPEPolyethylene"><span>ukf:LDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-LLDPE" title="http://c-thru.org/analyses/calculator/system/LLDPE"><span>sys:LLDPE</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-HDPEPolyethylene" title="http://ukfires.org/probs/system/HDPEPolyethylene"><span>ukf:HDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PPPolypropylene" title="http://ukfires.org/probs/system/PPPolypropylene"><span>ukf:PPPolypropylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PSPolystyrene" title="http://ukfires.org/probs/system/PSPolystyrene"><span>ukf:PSPolystyrene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PVCPolyvinylChloride" title="http://ukfires.org/probs/system/PVCPolyvinylChloride"><span>ukf:PVCPolyvinylChloride</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-Polyurethane" title="http://ukfires.org/probs/system/Polyurethane"><span>ukf:Polyurethane</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-SyntheticRubbers" title="http://ukfires.org/probs/system/SyntheticRubbers"><span>ukf:SyntheticRubbers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-OtherPolymers" title="http://ukfires.org/probs/system/OtherPolymers"><span>ukf:OtherPolymers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.5</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ElectricalAndElectronicProducts" title="http://c-thru.org/analyses/calculator/system/ElectricalAndElectronicProducts"><span>sys:ElectricalAndElectronicProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfConsumerAndInstitutionalProducts"><em>Process: </em><span class="sig-name descname">ProductionOfConsumerAndInstitutionalProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-LDPEPolyethylene" title="http://ukfires.org/probs/system/LDPEPolyethylene"><span>ukf:LDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-LLDPE" title="http://c-thru.org/analyses/calculator/system/LLDPE"><span>sys:LLDPE</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-HDPEPolyethylene" title="http://ukfires.org/probs/system/HDPEPolyethylene"><span>ukf:HDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PPPolypropylene" title="http://ukfires.org/probs/system/PPPolypropylene"><span>ukf:PPPolypropylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.4</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PSPolystyrene" title="http://ukfires.org/probs/system/PSPolystyrene"><span>ukf:PSPolystyrene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PVCPolyvinylChloride" title="http://ukfires.org/probs/system/PVCPolyvinylChloride"><span>ukf:PVCPolyvinylChloride</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-SyntheticRubbers" title="http://ukfires.org/probs/system/SyntheticRubbers"><span>ukf:SyntheticRubbers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-OtherPolymers" title="http://ukfires.org/probs/system/OtherPolymers"><span>ukf:OtherPolymers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ConsumerAndInstitutionalProducts" title="http://c-thru.org/analyses/calculator/system/ConsumerAndInstitutionalProducts"><span>sys:ConsumerAndInstitutionalProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfIndustrialMachinery"><em>Process: </em><span class="sig-name descname">ProductionOfIndustrialMachinery</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-LDPEPolyethylene" title="http://ukfires.org/probs/system/LDPEPolyethylene"><span>ukf:LDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-LLDPE" title="http://c-thru.org/analyses/calculator/system/LLDPE"><span>sys:LLDPE</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-HDPEPolyethylene" title="http://ukfires.org/probs/system/HDPEPolyethylene"><span>ukf:HDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PPPolypropylene" title="http://ukfires.org/probs/system/PPPolypropylene"><span>ukf:PPPolypropylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PVCPolyvinylChloride" title="http://ukfires.org/probs/system/PVCPolyvinylChloride"><span>ukf:PVCPolyvinylChloride</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-Polyurethane" title="http://ukfires.org/probs/system/Polyurethane"><span>ukf:Polyurethane</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-SyntheticRubbers" title="http://ukfires.org/probs/system/SyntheticRubbers"><span>ukf:SyntheticRubbers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.4</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-OtherPolymers" title="http://ukfires.org/probs/system/OtherPolymers"><span>ukf:OtherPolymers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-IndustrialMachinery" title="http://c-thru.org/analyses/calculator/system/IndustrialMachinery"><span>sys:IndustrialMachinery</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfTextileProducts"><em>Process: </em><span class="sig-name descname">ProductionOfTextileProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-Polyurethane" title="http://ukfires.org/probs/system/Polyurethane"><span>ukf:Polyurethane</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-FibrePPA" title="http://c-thru.org/analyses/calculator/system/FibrePPA"><span>sys:FibrePPA</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-TextileProducts" title="http://c-thru.org/analyses/calculator/system/TextileProducts"><span>sys:TextileProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-ProductionOfOtherProducts"><em>Process: </em><span class="sig-name descname">ProductionOfOtherProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-LDPEPolyethylene" title="http://ukfires.org/probs/system/LDPEPolyethylene"><span>ukf:LDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-LLDPE" title="http://c-thru.org/analyses/calculator/system/LLDPE"><span>sys:LLDPE</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-HDPEPolyethylene" title="http://ukfires.org/probs/system/HDPEPolyethylene"><span>ukf:HDPEPolyethylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PPPolypropylene" title="http://ukfires.org/probs/system/PPPolypropylene"><span>ukf:PPPolypropylene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PSPolystyrene" title="http://ukfires.org/probs/system/PSPolystyrene"><span>ukf:PSPolystyrene</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-PVCPolyvinylChloride" title="http://ukfires.org/probs/system/PVCPolyvinylChloride"><span>ukf:PVCPolyvinylChloride</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-Polyurethane" title="http://ukfires.org/probs/system/Polyurethane"><span>ukf:Polyurethane</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polymers.html#http-c-thru.org-analyses-calculator-system-FibrePPA" title="http://c-thru.org/analyses/calculator/system/FibrePPA"><span>sys:FibrePPA</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.3</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polymers.html#http-ukfires.org-probs-system-OtherPolymers" title="http://ukfires.org/probs/system/OtherPolymers"><span>ukf:OtherPolymers</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.3</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-OtherProducts" title="http://c-thru.org/analyses/calculator/system/OtherProducts"><span>sys:OtherProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<!-- WARNING: THESE DEFINITIONS ARE GENERATED AUTOMATICALLY -->
+<!--          DO NOT EDIT BY HAND                           -->
+<!--                                                        -->
+<!-- Generated by "Convert product model.ipynb"             -->
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLProcessingPackagingProducts"><em>Process: </em><span class="sig-name descname">EOLProcessingPackagingProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLPackagingProducts" title="http://c-thru.org/analyses/calculator/system/EOLPackagingProducts"><span>sys:EOLPackagingProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/LDPEPolyethyleneAtEOL"><span>sys:LDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LLDPEAtEOL" title="http://c-thru.org/analyses/calculator/system/LLDPEAtEOL"><span>sys:LLDPEAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-HDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/HDPEPolyethyleneAtEOL"><span>sys:HDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PPPolypropyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/PPPolypropyleneAtEOL"><span>sys:PPPolypropyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PSPolystyreneAtEOL" title="http://c-thru.org/analyses/calculator/system/PSPolystyreneAtEOL"><span>sys:PSPolystyreneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PVCPolyvinylChlorideAtEOL" title="http://c-thru.org/analyses/calculator/system/PVCPolyvinylChlorideAtEOL"><span>sys:PVCPolyvinylChlorideAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PETPolyethyleneTerephthalatePolyestersAtEOL" title="http://c-thru.org/analyses/calculator/system/PETPolyethyleneTerephthalatePolyestersAtEOL"><span>sys:PETPolyethyleneTerephthalatePolyestersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PolyurethaneAtEOL" title="http://c-thru.org/analyses/calculator/system/PolyurethaneAtEOL"><span>sys:PolyurethaneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-OtherPolymersAtEOL" title="http://c-thru.org/analyses/calculator/system/OtherPolymersAtEOL"><span>sys:OtherPolymersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLProcessingTransportationProducts"><em>Process: </em><span class="sig-name descname">EOLProcessingTransportationProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLTransportationProducts" title="http://c-thru.org/analyses/calculator/system/EOLTransportationProducts"><span>sys:EOLTransportationProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LLDPEAtEOL" title="http://c-thru.org/analyses/calculator/system/LLDPEAtEOL"><span>sys:LLDPEAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-HDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/HDPEPolyethyleneAtEOL"><span>sys:HDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PPPolypropyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/PPPolypropyleneAtEOL"><span>sys:PPPolypropyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PVCPolyvinylChlorideAtEOL" title="http://c-thru.org/analyses/calculator/system/PVCPolyvinylChlorideAtEOL"><span>sys:PVCPolyvinylChlorideAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PolyurethaneAtEOL" title="http://c-thru.org/analyses/calculator/system/PolyurethaneAtEOL"><span>sys:PolyurethaneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-FibrePPAAtEOL" title="http://c-thru.org/analyses/calculator/system/FibrePPAAtEOL"><span>sys:FibrePPAAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-SyntheticRubbersAtEOL" title="http://c-thru.org/analyses/calculator/system/SyntheticRubbersAtEOL"><span>sys:SyntheticRubbersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.3</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-OtherPolymersAtEOL" title="http://c-thru.org/analyses/calculator/system/OtherPolymersAtEOL"><span>sys:OtherPolymersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLProcessingBuildingsAndConstructionProducts"><em>Process: </em><span class="sig-name descname">EOLProcessingBuildingsAndConstructionProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLBuildingsAndConstructionProducts" title="http://c-thru.org/analyses/calculator/system/EOLBuildingsAndConstructionProducts"><span>sys:EOLBuildingsAndConstructionProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/LDPEPolyethyleneAtEOL"><span>sys:LDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LLDPEAtEOL" title="http://c-thru.org/analyses/calculator/system/LLDPEAtEOL"><span>sys:LLDPEAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-HDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/HDPEPolyethyleneAtEOL"><span>sys:HDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PPPolypropyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/PPPolypropyleneAtEOL"><span>sys:PPPolypropyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PSPolystyreneAtEOL" title="http://c-thru.org/analyses/calculator/system/PSPolystyreneAtEOL"><span>sys:PSPolystyreneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PVCPolyvinylChlorideAtEOL" title="http://c-thru.org/analyses/calculator/system/PVCPolyvinylChlorideAtEOL"><span>sys:PVCPolyvinylChlorideAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.6</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PolyurethaneAtEOL" title="http://c-thru.org/analyses/calculator/system/PolyurethaneAtEOL"><span>sys:PolyurethaneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-OtherPolymersAtEOL" title="http://c-thru.org/analyses/calculator/system/OtherPolymersAtEOL"><span>sys:OtherPolymersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLProcessingElectricalAndElectronicProducts"><em>Process: </em><span class="sig-name descname">EOLProcessingElectricalAndElectronicProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLElectricalAndElectronicProducts" title="http://c-thru.org/analyses/calculator/system/EOLElectricalAndElectronicProducts"><span>sys:EOLElectricalAndElectronicProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/LDPEPolyethyleneAtEOL"><span>sys:LDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LLDPEAtEOL" title="http://c-thru.org/analyses/calculator/system/LLDPEAtEOL"><span>sys:LLDPEAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-HDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/HDPEPolyethyleneAtEOL"><span>sys:HDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PPPolypropyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/PPPolypropyleneAtEOL"><span>sys:PPPolypropyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PSPolystyreneAtEOL" title="http://c-thru.org/analyses/calculator/system/PSPolystyreneAtEOL"><span>sys:PSPolystyreneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PVCPolyvinylChlorideAtEOL" title="http://c-thru.org/analyses/calculator/system/PVCPolyvinylChlorideAtEOL"><span>sys:PVCPolyvinylChlorideAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PolyurethaneAtEOL" title="http://c-thru.org/analyses/calculator/system/PolyurethaneAtEOL"><span>sys:PolyurethaneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-SyntheticRubbersAtEOL" title="http://c-thru.org/analyses/calculator/system/SyntheticRubbersAtEOL"><span>sys:SyntheticRubbersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-OtherPolymersAtEOL" title="http://c-thru.org/analyses/calculator/system/OtherPolymersAtEOL"><span>sys:OtherPolymersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.5</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLProcessingConsumerAndInstitutionalProducts"><em>Process: </em><span class="sig-name descname">EOLProcessingConsumerAndInstitutionalProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLConsumerAndInstitutionalProducts" title="http://c-thru.org/analyses/calculator/system/EOLConsumerAndInstitutionalProducts"><span>sys:EOLConsumerAndInstitutionalProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/LDPEPolyethyleneAtEOL"><span>sys:LDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LLDPEAtEOL" title="http://c-thru.org/analyses/calculator/system/LLDPEAtEOL"><span>sys:LLDPEAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-HDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/HDPEPolyethyleneAtEOL"><span>sys:HDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PPPolypropyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/PPPolypropyleneAtEOL"><span>sys:PPPolypropyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.4</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PSPolystyreneAtEOL" title="http://c-thru.org/analyses/calculator/system/PSPolystyreneAtEOL"><span>sys:PSPolystyreneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PVCPolyvinylChlorideAtEOL" title="http://c-thru.org/analyses/calculator/system/PVCPolyvinylChlorideAtEOL"><span>sys:PVCPolyvinylChlorideAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-SyntheticRubbersAtEOL" title="http://c-thru.org/analyses/calculator/system/SyntheticRubbersAtEOL"><span>sys:SyntheticRubbersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-OtherPolymersAtEOL" title="http://c-thru.org/analyses/calculator/system/OtherPolymersAtEOL"><span>sys:OtherPolymersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLProcessingIndustrialMachinery"><em>Process: </em><span class="sig-name descname">EOLProcessingIndustrialMachinery</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLIndustrialMachinery" title="http://c-thru.org/analyses/calculator/system/EOLIndustrialMachinery"><span>sys:EOLIndustrialMachinery</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/LDPEPolyethyleneAtEOL"><span>sys:LDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LLDPEAtEOL" title="http://c-thru.org/analyses/calculator/system/LLDPEAtEOL"><span>sys:LLDPEAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-HDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/HDPEPolyethyleneAtEOL"><span>sys:HDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PPPolypropyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/PPPolypropyleneAtEOL"><span>sys:PPPolypropyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PVCPolyvinylChlorideAtEOL" title="http://c-thru.org/analyses/calculator/system/PVCPolyvinylChlorideAtEOL"><span>sys:PVCPolyvinylChlorideAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PolyurethaneAtEOL" title="http://c-thru.org/analyses/calculator/system/PolyurethaneAtEOL"><span>sys:PolyurethaneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-SyntheticRubbersAtEOL" title="http://c-thru.org/analyses/calculator/system/SyntheticRubbersAtEOL"><span>sys:SyntheticRubbersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.4</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-OtherPolymersAtEOL" title="http://c-thru.org/analyses/calculator/system/OtherPolymersAtEOL"><span>sys:OtherPolymersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLProcessingTextileProducts"><em>Process: </em><span class="sig-name descname">EOLProcessingTextileProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLTextileProducts" title="http://c-thru.org/analyses/calculator/system/EOLTextileProducts"><span>sys:EOLTextileProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PolyurethaneAtEOL" title="http://c-thru.org/analyses/calculator/system/PolyurethaneAtEOL"><span>sys:PolyurethaneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-FibrePPAAtEOL" title="http://c-thru.org/analyses/calculator/system/FibrePPAAtEOL"><span>sys:FibrePPAAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-EOLProcessingOtherProducts"><em>Process: </em><span class="sig-name descname">EOLProcessingOtherProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLOtherProducts" title="http://c-thru.org/analyses/calculator/system/EOLOtherProducts"><span>sys:EOLOtherProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/LDPEPolyethyleneAtEOL"><span>sys:LDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-LLDPEAtEOL" title="http://c-thru.org/analyses/calculator/system/LLDPEAtEOL"><span>sys:LLDPEAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-HDPEPolyethyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/HDPEPolyethyleneAtEOL"><span>sys:HDPEPolyethyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PPPolypropyleneAtEOL" title="http://c-thru.org/analyses/calculator/system/PPPolypropyleneAtEOL"><span>sys:PPPolypropyleneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.2</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PSPolystyreneAtEOL" title="http://c-thru.org/analyses/calculator/system/PSPolystyreneAtEOL"><span>sys:PSPolystyreneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PVCPolyvinylChlorideAtEOL" title="http://c-thru.org/analyses/calculator/system/PVCPolyvinylChlorideAtEOL"><span>sys:PVCPolyvinylChlorideAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-PolyurethaneAtEOL" title="http://c-thru.org/analyses/calculator/system/PolyurethaneAtEOL"><span>sys:PolyurethaneAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-FibrePPAAtEOL" title="http://c-thru.org/analyses/calculator/system/FibrePPAAtEOL"><span>sys:FibrePPAAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.3</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="end-of-life-processes.html#http-c-thru.org-analyses-calculator-system-OtherPolymersAtEOL" title="http://c-thru.org/analyses/calculator/system/OtherPolymersAtEOL"><span>sys:OtherPolymersAtEOL</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">0.3</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ProductionOfProducts" title="http://c-thru.org/analyses/calculator/system/ProductionOfProducts"><span>sys:ProductionOfProducts</span></a></p>
+</div>
+</div>
+<p class="system end-sub-processes nested-1">Ending sub processes of “ProductionOfProducts”</p>
+<div class="system process toggle nested-0 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-UseOfProducts"><em>Process: </em><span class="sig-name descname">UseOfProducts</span></p>
+<div class="docutils container">
+<p>Children: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfPackagingProducts" title="http://c-thru.org/analyses/calculator/system/UseOfPackagingProducts"><span>sys:UseOfPackagingProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfTransportationProducts" title="http://c-thru.org/analyses/calculator/system/UseOfTransportationProducts"><span>sys:UseOfTransportationProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfBuildingsAndConstructionProducts" title="http://c-thru.org/analyses/calculator/system/UseOfBuildingsAndConstructionProducts"><span>sys:UseOfBuildingsAndConstructionProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfElectricalAndElectronicProducts" title="http://c-thru.org/analyses/calculator/system/UseOfElectricalAndElectronicProducts"><span>sys:UseOfElectricalAndElectronicProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfConsumerAndInstitutionalProducts" title="http://c-thru.org/analyses/calculator/system/UseOfConsumerAndInstitutionalProducts"><span>sys:UseOfConsumerAndInstitutionalProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfIndustrialMachinery" title="http://c-thru.org/analyses/calculator/system/UseOfIndustrialMachinery"><span>sys:UseOfIndustrialMachinery</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfTextileProducts" title="http://c-thru.org/analyses/calculator/system/UseOfTextileProducts"><span>sys:UseOfTextileProducts</span></a> <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfOtherProducts" title="http://c-thru.org/analyses/calculator/system/UseOfOtherProducts"><span>sys:UseOfOtherProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-UseOfPackagingProducts"><em>Process: </em><span class="sig-name descname">UseOfPackagingProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-PackagingProducts" title="http://c-thru.org/analyses/calculator/system/PackagingProducts"><span>sys:PackagingProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLPackagingProducts" title="http://c-thru.org/analyses/calculator/system/EOLPackagingProducts"><span>sys:EOLPackagingProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfProducts" title="http://c-thru.org/analyses/calculator/system/UseOfProducts"><span>sys:UseOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-UseOfTransportationProducts"><em>Process: </em><span class="sig-name descname">UseOfTransportationProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-TransportationProducts" title="http://c-thru.org/analyses/calculator/system/TransportationProducts"><span>sys:TransportationProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLTransportationProducts" title="http://c-thru.org/analyses/calculator/system/EOLTransportationProducts"><span>sys:EOLTransportationProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfProducts" title="http://c-thru.org/analyses/calculator/system/UseOfProducts"><span>sys:UseOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-UseOfBuildingsAndConstructionProducts"><em>Process: </em><span class="sig-name descname">UseOfBuildingsAndConstructionProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-BuildingsAndConstructionProducts" title="http://c-thru.org/analyses/calculator/system/BuildingsAndConstructionProducts"><span>sys:BuildingsAndConstructionProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLBuildingsAndConstructionProducts" title="http://c-thru.org/analyses/calculator/system/EOLBuildingsAndConstructionProducts"><span>sys:EOLBuildingsAndConstructionProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfProducts" title="http://c-thru.org/analyses/calculator/system/UseOfProducts"><span>sys:UseOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-UseOfElectricalAndElectronicProducts"><em>Process: </em><span class="sig-name descname">UseOfElectricalAndElectronicProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ElectricalAndElectronicProducts" title="http://c-thru.org/analyses/calculator/system/ElectricalAndElectronicProducts"><span>sys:ElectricalAndElectronicProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLElectricalAndElectronicProducts" title="http://c-thru.org/analyses/calculator/system/EOLElectricalAndElectronicProducts"><span>sys:EOLElectricalAndElectronicProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfProducts" title="http://c-thru.org/analyses/calculator/system/UseOfProducts"><span>sys:UseOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-UseOfConsumerAndInstitutionalProducts"><em>Process: </em><span class="sig-name descname">UseOfConsumerAndInstitutionalProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-ConsumerAndInstitutionalProducts" title="http://c-thru.org/analyses/calculator/system/ConsumerAndInstitutionalProducts"><span>sys:ConsumerAndInstitutionalProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLConsumerAndInstitutionalProducts" title="http://c-thru.org/analyses/calculator/system/EOLConsumerAndInstitutionalProducts"><span>sys:EOLConsumerAndInstitutionalProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfProducts" title="http://c-thru.org/analyses/calculator/system/UseOfProducts"><span>sys:UseOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-UseOfIndustrialMachinery"><em>Process: </em><span class="sig-name descname">UseOfIndustrialMachinery</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-IndustrialMachinery" title="http://c-thru.org/analyses/calculator/system/IndustrialMachinery"><span>sys:IndustrialMachinery</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLIndustrialMachinery" title="http://c-thru.org/analyses/calculator/system/EOLIndustrialMachinery"><span>sys:EOLIndustrialMachinery</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfProducts" title="http://c-thru.org/analyses/calculator/system/UseOfProducts"><span>sys:UseOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-UseOfTextileProducts"><em>Process: </em><span class="sig-name descname">UseOfTextileProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-TextileProducts" title="http://c-thru.org/analyses/calculator/system/TextileProducts"><span>sys:TextileProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLTextileProducts" title="http://c-thru.org/analyses/calculator/system/EOLTextileProducts"><span>sys:EOLTextileProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfProducts" title="http://c-thru.org/analyses/calculator/system/UseOfProducts"><span>sys:UseOfProducts</span></a></p>
+</div>
+</div>
+<div class="system process toggle nested-1 admonition">
+<p class="sig sig-object admonition-title" id="http-c-thru.org-analyses-calculator-system-UseOfOtherProducts"><em>Process: </em><span class="sig-name descname">UseOfOtherProducts</span></p>
+<div class="docutils container">
+<p>Consumes: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-OtherProducts" title="http://c-thru.org/analyses/calculator/system/OtherProducts"><span>sys:OtherProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Produces: </p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><code class="docutils literal notranslate"><span class="pre">Object</span></code></th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-EOLOtherProducts" title="http://c-thru.org/analyses/calculator/system/EOLOtherProducts"><span>sys:EOLOtherProducts</span></a></p></td>
+<td><code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">http://qudt.org/vocab/quantitykind/Mass</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Parents: <a class="reference internal" href="#http-c-thru.org-analyses-calculator-system-UseOfProducts" title="http://c-thru.org/analyses/calculator/system/UseOfProducts"><span>sys:UseOfProducts</span></a></p>
+</div>
+</div>
+<p class="system end-sub-processes nested-1">Ending sub processes of “UseOfProducts”</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="polymers.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Polymers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="end-of-life-processes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>End-of-life processes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Rick Lupton<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

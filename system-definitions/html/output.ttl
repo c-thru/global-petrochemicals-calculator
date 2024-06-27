@@ -1,0 +1,4027 @@
+@prefix probs: <https://ukfires.org/probs/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rec: <https://ukfires.org/probs/ontology/recipe/> .
+@prefix sys: <http://c-thru.org/analyses/calculator/system/> .
+@prefix ukf: <http://ukfires.org/probs/system/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sys:AcrylonitrileSynthesis a probs:Process ;
+    rdfs:label "AcrylonitrileSynthesis" ;
+    probs:consumes ukf:Ammonia,
+        ukf:InorganicAcids,
+        ukf:Propylene ;
+    probs:processName "AcrylonitrileSynthesis" ;
+    probs:produces sys:HydrogenCyanide,
+        ukf:Acrylonitrile ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 1e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 1.09e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ammonia ;
+                    rec:quantity 4.4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HydrogenCyanide ;
+                    rec:quantity 1e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Acrylonitrile ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:AirSeparation a probs:Process ;
+    rdfs:label "AirSeparation" ;
+    probs:consumes ukf:Air ;
+    probs:processName "AirSeparation" ;
+    probs:produces ukf:Nitrogen,
+        ukf:OtherIndustrialGases,
+        ukf:PureOxygen ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Air ;
+                    rec:quantity 5.26e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Nitrogen ;
+                    rec:quantity 4.21e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 5e-02 ] ] .
+
+sys:AmmoniaFertiliser_Market a probs:Process ;
+    rdfs:label "AmmoniaFertiliser" ;
+    probs:marketForObject sys:AmmoniaFertiliser .
+
+sys:AmmoniumNitrate_Market a probs:Process ;
+    rdfs:label "AmmoniumNitrate" ;
+    probs:marketForObject sys:AmmoniumNitrate .
+
+sys:AmmoniumPhosphate_Market a probs:Process ;
+    rdfs:label "AmmoniumPhosphate" ;
+    probs:marketForObject sys:AmmoniumPhosphate .
+
+sys:AmmoniumSulphate_Market a probs:Process ;
+    rdfs:label "AmmoniumSulphate" ;
+    probs:marketForObject sys:AmmoniumSulphate .
+
+sys:BiomassGasificationToSyngas a probs:Process ;
+    rdfs:label "BiomassGasificationToSyngas" ;
+    probs:processComposedOf sys:CornStoverGasificationToSyngas,
+        sys:RiceStrawGasificationToSyngas,
+        sys:SugarCaneBagasseGasificationToSyngas,
+        sys:WheatStrawGasificationToSyngas ;
+    probs:processName "BiomassGasificationToSyngas" .
+
+sys:BuildingsAndConstructionProducts_Market a probs:Process ;
+    rdfs:label "BuildingsAndConstructionProducts" ;
+    probs:marketForObject sys:BuildingsAndConstructionProducts .
+
+sys:CalciumAmmoniumNitrate_Market a probs:Process ;
+    rdfs:label "CalciumAmmoniumNitrate" ;
+    probs:marketForObject sys:CalciumAmmoniumNitrate .
+
+sys:CapturedCarbonDioxide_Market a probs:Process ;
+    rdfs:label "CapturedCarbonDioxide" ;
+    probs:marketForObject sys:CapturedCarbonDioxide .
+
+sys:CarbonDioxideHydrogenationToMethylAlcohol a probs:Process ;
+    rdfs:label "CarbonDioxideHydrogenationToMethylAlcohol" ;
+    probs:consumes sys:CapturedCarbonDioxide,
+        sys:PureHydrogen,
+        ukf:OtherInorganicPrimaryChemicals ;
+    probs:processName "CarbonDioxideHydrogenationToMethylAlcohol" ;
+    probs:produces ukf:MethylAlcohol,
+        ukf:OtherIndustrialGases,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PureHydrogen ;
+                    rec:quantity 2.03e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 1.83e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:CapturedCarbonDioxide ;
+                    rec:quantity 1.441e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 5.78e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MethylAlcohol ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 6.6e-02 ] ] .
+
+sys:CatalyticReformingOfNaphthaForToluene a probs:Process ;
+    rdfs:label "CatalyticReformingOfNaphthaForToluene" ;
+    probs:consumes ukf:Naphtha ;
+    probs:processName "CatalyticReformingOfNaphthaForToluene" ;
+    probs:produces ukf:Benzene,
+        ukf:MiscRefineryProducts,
+        ukf:NaturalGas,
+        ukf:OtherIndustrialGases,
+        ukf:Toluene,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Naphtha ;
+                    rec:quantity 6.75e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 2.5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Toluene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MiscRefineryProducts ;
+                    rec:quantity 4.2e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 1e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 3e-01 ] ] .
+
+sys:CatalyticReformingOfNaphthaForXylenes a probs:Process ;
+    rdfs:label "CatalyticReformingOfNaphthaForXylenes" ;
+    probs:consumes sys:PureHydrogen,
+        ukf:Naphtha ;
+    probs:processName "CatalyticReformingOfNaphthaForXylenes" ;
+    probs:produces ukf:Benzene,
+        ukf:MiscRefineryProducts,
+        ukf:NaturalGas,
+        ukf:OtherIndustrialGases,
+        ukf:WasteOtherChemicals,
+        ukf:Xylenes ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Naphtha ;
+                    rec:quantity 1.85e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PureHydrogen ;
+                    rec:quantity 5e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 1.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 2.4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Xylenes ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 2.2e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MiscRefineryProducts ;
+                    rec:quantity 3e-02 ] ] .
+
+sys:ChemicalRecyclingOfMixedPolymersAtEOL a probs:Process ;
+    rdfs:label "ChemicalRecyclingOfMixedPolymersAtEOL" ;
+    probs:consumes sys:MixedPolymersAtEOL,
+        ukf:OtherInorganicPrimaryChemicals ;
+    probs:processName "ChemicalRecyclingOfMixedPolymersAtEOL" ;
+    probs:produces sys:PyrolysisResidue,
+        ukf:MiscRefineryProducts,
+        ukf:Naphtha,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1.7e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 1e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PyrolysisResidue ;
+                    rec:quantity 1e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Naphtha ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MiscRefineryProducts ;
+                    rec:quantity 4e-01 ] ] .
+
+sys:CleaningAgents_Market a probs:Process ;
+    rdfs:label "CleaningAgents" ;
+    probs:marketForObject sys:CleaningAgents .
+
+sys:CoalGasificationToSyngas a probs:Process ;
+    rdfs:label "CoalGasificationToSyngas" ;
+    probs:consumes ukf:Coal,
+        ukf:PureOxygen ;
+    probs:processName "CoalGasificationToSyngas" ;
+    probs:produces ukf:Syngas ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Coal ;
+                    rec:quantity 1.006e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 9.56e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Syngas ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:ConsumerAndInstitutionalProducts_Market a probs:Process ;
+    rdfs:label "ConsumerAndInstitutionalProducts" ;
+    probs:marketForObject sys:ConsumerAndInstitutionalProducts .
+
+sys:CornStover_Market a probs:Process ;
+    rdfs:label "CornStover" ;
+    probs:marketForObject sys:CornStover .
+
+sys:DealkylationOfTolueneForBenzene a probs:Process ;
+    rdfs:label "DealkylationOfTolueneForBenzene" ;
+    probs:consumes sys:PureHydrogen,
+        ukf:Toluene ;
+    probs:processName "DealkylationOfTolueneForBenzene" ;
+    probs:produces ukf:Benzene,
+        ukf:NaturalGas ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PureHydrogen ;
+                    rec:quantity 3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Toluene ;
+                    rec:quantity 1.19e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 2.2e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:DehydrationOfEthylAlcohol a probs:Process ;
+    rdfs:label "DehydrationOfEthylAlcohol" ;
+    probs:consumes sys:EthylAlcohol ;
+    probs:processName "DehydrationOfEthylAlcohol" ;
+    probs:produces ukf:Ethylene,
+        ukf:NaturalGas ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EthylAlcohol ;
+                    rec:quantity 1.77e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 2e-02 ] ] .
+
+sys:DehydrogenationOfButaneForButadiene a probs:Process ;
+    rdfs:label "DehydrogenationOfButaneForButadiene" ;
+    probs:consumes ukf:Butane ;
+    probs:processName "DehydrogenationOfButaneForButadiene" ;
+    probs:produces ukf:Butadiene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butane ;
+                    rec:quantity 1.7e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butadiene ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:DehydrogenationOfPropane a probs:Process ;
+    rdfs:label "DehydrogenationOfPropane" ;
+    probs:consumes ukf:Propane ;
+    probs:processName "DehydrogenationOfPropane" ;
+    probs:produces ukf:NaturalGas,
+        ukf:Propylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propane ;
+                    rec:quantity 1.2e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 1.6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:DisproportionationOfTolueneForXylenes a probs:Process ;
+    rdfs:label "DisproportionationOfTolueneForXylenes" ;
+    probs:consumes sys:PureHydrogen,
+        ukf:Toluene ;
+    probs:processName "DisproportionationOfTolueneForXylenes" ;
+    probs:produces ukf:Benzene,
+        ukf:MiscRefineryProducts,
+        ukf:NaturalGas,
+        ukf:Xylenes ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Toluene ;
+                    rec:quantity 2.19e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PureHydrogen ;
+                    rec:quantity 1e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MiscRefineryProducts ;
+                    rec:quantity 5e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Xylenes ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 1.5e-01 ] ] .
+
+sys:DistillationOfButylenesForButadiene a probs:Process ;
+    rdfs:label "DistillationOfButylenesForButadiene" ;
+    probs:consumes ukf:Butylenes ;
+    probs:processName "DistillationOfButylenesForButadiene" ;
+    probs:produces ukf:Butadiene,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butylenes ;
+                    rec:quantity 2.3e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 1.3e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butadiene ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:DistillationOfPyrolysisGasolineForBTX a probs:Process ;
+    rdfs:label "DistillationOfPyrolysisGasolineForBTX" ;
+    probs:consumes sys:PyrolysisGasoline ;
+    probs:processName "DistillationOfPyrolysisGasolineForBTX" ;
+    probs:produces ukf:Benzene,
+        ukf:Toluene,
+        ukf:WasteOtherChemicals,
+        ukf:Xylenes ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PyrolysisGasoline ;
+                    rec:quantity 2e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Toluene ;
+                    rec:quantity 5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 1.5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Xylenes ;
+                    rec:quantity 3.5e-01 ] ] .
+
+sys:EOLBuildingsAndConstructionProducts_Market a probs:Process ;
+    rdfs:label "EOLBuildingsAndConstructionProducts" ;
+    probs:marketForObject sys:EOLBuildingsAndConstructionProducts .
+
+sys:EOLConsumerAndInstitutionalProducts_Market a probs:Process ;
+    rdfs:label "EOLConsumerAndInstitutionalProducts" ;
+    probs:marketForObject sys:EOLConsumerAndInstitutionalProducts .
+
+sys:EOLElectricalAndElectronicProducts_Market a probs:Process ;
+    rdfs:label "EOLElectricalAndElectronicProducts" ;
+    probs:marketForObject sys:EOLElectricalAndElectronicProducts .
+
+sys:EOLIndustrialMachinery_Market a probs:Process ;
+    rdfs:label "EOLIndustrialMachinery" ;
+    probs:marketForObject sys:EOLIndustrialMachinery .
+
+sys:EOLOtherProducts_Market a probs:Process ;
+    rdfs:label "EOLOtherProducts" ;
+    probs:marketForObject sys:EOLOtherProducts .
+
+sys:EOLPackagingProducts_Market a probs:Process ;
+    rdfs:label "EOLPackagingProducts" ;
+    probs:marketForObject sys:EOLPackagingProducts .
+
+sys:EOLProducts_Market a probs:Process ;
+    rdfs:label "EOLProducts" ;
+    probs:marketForObject sys:EOLProducts .
+
+sys:EOLTextileProducts_Market a probs:Process ;
+    rdfs:label "EOLTextileProducts" ;
+    probs:marketForObject sys:EOLTextileProducts .
+
+sys:EOLTransportationProducts_Market a probs:Process ;
+    rdfs:label "EOLTransportationProducts" ;
+    probs:marketForObject sys:EOLTransportationProducts .
+
+sys:ElectricalAndElectronicProducts_Market a probs:Process ;
+    rdfs:label "ElectricalAndElectronicProducts" ;
+    probs:marketForObject sys:ElectricalAndElectronicProducts .
+
+sys:EthylAlcoholSynthesisFromBiomass a probs:Process ;
+    rdfs:label "EthylAlcoholSynthesisFromBiomass" ;
+    probs:processComposedOf sys:EthylAlcoholSynthesisFromCornStover,
+        sys:EthylAlcoholSynthesisFromMaize,
+        sys:EthylAlcoholSynthesisFromRiceStraw,
+        sys:EthylAlcoholSynthesisFromSugarcane,
+        sys:EthylAlcoholSynthesisFromSugarcaneBagasse,
+        sys:EthylAlcoholSynthesisFromWheatStraw ;
+    probs:processName "EthylAlcoholSynthesisFromBiomass" .
+
+sys:EthylAlcohol_Market a probs:Process ;
+    rdfs:label "EthylAlcohol" ;
+    probs:marketForObject sys:EthylAlcohol .
+
+sys:EthyleneOxideSynthesis a probs:Process ;
+    rdfs:label "EthyleneOxideSynthesis" ;
+    probs:consumes ukf:Ethylene,
+        ukf:PureOxygen ;
+    probs:processName "EthyleneOxideSynthesis" ;
+    probs:produces sys:EthyleneOxide ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 8e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 8.4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EthyleneOxide ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:EthyleneOxide_Market a probs:Process ;
+    rdfs:label "EthyleneOxide" ;
+    probs:marketForObject sys:EthyleneOxide .
+
+sys:FibrePPAAtEOL_Market a probs:Process ;
+    rdfs:label "FibrePPAAtEOL" ;
+    probs:marketForObject sys:FibrePPAAtEOL .
+
+sys:FibrePPA_Market a probs:Process ;
+    rdfs:label "FibrePPA" ;
+    probs:marketForObject sys:FibrePPA .
+
+sys:FinalTreatment a probs:Process ;
+    rdfs:label "FinalTreatment" ;
+    probs:processComposedOf sys:Incineration,
+        sys:Landfilling,
+        sys:Mismanagement ;
+    probs:processName "FinalTreatment" .
+
+sys:FischerTropschSynthesisOfOlefinsFromSyngas a probs:Process ;
+    rdfs:label "FischerTropschSynthesisOfOlefinsFromSyngas" ;
+    probs:consumes ukf:Syngas ;
+    probs:processName "FischerTropschSynthesisOfOlefinsFromSyngas" ;
+    probs:produces ukf:Butylenes,
+        ukf:Ethylene,
+        ukf:MiscRefineryProducts,
+        ukf:Propylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Syngas ;
+                    rec:quantity 2.889745e+01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 6.67e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MiscRefineryProducts ;
+                    rec:quantity 1.944e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butylenes ;
+                    rec:quantity 3.33e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:FluidCatalyticCrackingOfGasOil a probs:Process ;
+    rdfs:label "FluidCatalyticCrackingOfGasOil" ;
+    probs:consumes sys:GasOil ;
+    probs:processName "FluidCatalyticCrackingOfGasOil" ;
+    probs:produces ukf:Butylenes,
+        ukf:Ethylene,
+        ukf:MiscRefineryProducts,
+        ukf:NaturalGas,
+        ukf:Propane,
+        ukf:Propylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:GasOil ;
+                    rec:quantity 4.4e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 3e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propane ;
+                    rec:quantity 1e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MiscRefineryProducts ;
+                    rec:quantity 1.6e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butylenes ;
+                    rec:quantity 9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 1e-01 ] ] .
+
+sys:GasOil_Market a probs:Process ;
+    rdfs:label "GasOil" ;
+    probs:marketForObject sys:GasOil .
+
+sys:HDPEPolyethyleneAtEOL_Market a probs:Process ;
+    rdfs:label "HDPEPolyethyleneAtEOL" ;
+    probs:marketForObject sys:HDPEPolyethyleneAtEOL .
+
+sys:HexamethylenediamineSynthesisFromButadiene a probs:Process ;
+    rdfs:label "HexamethylenediamineSynthesisFromButadiene" ;
+    probs:consumes sys:HydrogenCyanide,
+        ukf:Butadiene,
+        ukf:OtherIndustrialGases,
+        ukf:OtherInorganicPrimaryChemicals ;
+    probs:processName "HexamethylenediamineSynthesisFromButadiene" ;
+    probs:produces ukf:Hexamethylenediamine,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butadiene ;
+                    rec:quantity 5.4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 1.8e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HydrogenCyanide ;
+                    rec:quantity 5.4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Hexamethylenediamine ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 2e-02 ] ] .
+
+sys:HydrogenCyanideSynthesis a probs:Process ;
+    rdfs:label "HydrogenCyanideSynthesis" ;
+    probs:consumes ukf:Ammonia,
+        ukf:NaturalGas ;
+    probs:processName "HydrogenCyanideSynthesis" ;
+    probs:produces sys:HydrogenCyanide ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 6.5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ammonia ;
+                    rec:quantity 6.5e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HydrogenCyanide ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:HydrogenCyanide_Market a probs:Process ;
+    rdfs:label "HydrogenCyanide" ;
+    probs:marketForObject sys:HydrogenCyanide .
+
+sys:HydrogenSynthesis a probs:Process ;
+    rdfs:label "HydrogenSynthesis" ;
+    probs:processComposedOf sys:NaturalGasSteamMethaneReformingToHydrogen,
+        sys:NaturalGasSteamMethaneReformingWithCCSToHydrogen,
+        sys:WaterElectrolysisForHydrogen ;
+    probs:processName "HydrogenSynthesis" .
+
+sys:IndustrialMachinery_Market a probs:Process ;
+    rdfs:label "IndustrialMachinery" ;
+    probs:marketForObject sys:IndustrialMachinery .
+
+sys:IsophthalicAcidSynthesis a probs:Process ;
+    rdfs:label "IsophthalicAcidSynthesis" ;
+    probs:consumes ukf:AceticAcid,
+        ukf:Water,
+        ukf:Xylenes ;
+    probs:processName "IsophthalicAcidSynthesis" ;
+    probs:produces sys:IsophthalicAcid ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Xylenes ;
+                    rec:quantity 6.8e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 4.2e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:AceticAcid ;
+                    rec:quantity 1e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:IsophthalicAcid ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:IsophthalicAcid_Market a probs:Process ;
+    rdfs:label "IsophthalicAcid" ;
+    probs:marketForObject sys:IsophthalicAcid .
+
+sys:LDPEPolyethyleneAtEOL_Market a probs:Process ;
+    rdfs:label "LDPEPolyethyleneAtEOL" ;
+    probs:marketForObject sys:LDPEPolyethyleneAtEOL .
+
+sys:LLDPEAtEOL_Market a probs:Process ;
+    rdfs:label "LLDPEAtEOL" ;
+    probs:marketForObject sys:LLDPEAtEOL .
+
+sys:LLDPE_Market a probs:Process ;
+    rdfs:label "LLDPE" ;
+    probs:marketForObject sys:LLDPE .
+
+sys:MechanicalRecycling a probs:Process ;
+    rdfs:label "MechanicalRecycling" ;
+    probs:processComposedOf sys:MechanicalRecyclingOfFibrePPAAtEOL,
+        sys:MechanicalRecyclingOfHDPEPolyethyleneAtEOL,
+        sys:MechanicalRecyclingOfLDPEPolyethyleneAtEOL,
+        sys:MechanicalRecyclingOfLLDPEAtEOL,
+        sys:MechanicalRecyclingOfPETPolyethyleneTerephthalatePolyestersAtEOL,
+        sys:MechanicalRecyclingOfPPPolypropyleneAtEOL,
+        sys:MechanicalRecyclingOfPSPolystyreneAtEOL,
+        sys:MechanicalRecyclingOfPVCPolyvinylChlorideAtEOL ;
+    probs:processName "MechanicalRecycling" .
+
+sys:MethylAlcoholSynthesis a probs:Process ;
+    rdfs:label "MethylAlcoholSynthesis" ;
+    probs:consumes ukf:Syngas ;
+    probs:processName "MethylAlcoholSynthesis" ;
+    probs:produces ukf:MethylAlcohol ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Syngas ;
+                    rec:quantity 1.5e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MethylAlcohol ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MethylAlcoholToAromatics a probs:Process ;
+    rdfs:label "MethylAlcoholToAromatics" ;
+    probs:consumes ukf:MethylAlcohol ;
+    probs:processName "MethylAlcoholToAromatics" ;
+    probs:produces ukf:Benzene,
+        ukf:MiscRefineryProducts,
+        ukf:OtherIndustrialGases,
+        ukf:Toluene,
+        ukf:WasteOtherChemicals,
+        ukf:Xylenes ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MethylAlcohol ;
+                    rec:quantity 9.93e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 2.44e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 1.5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MiscRefineryProducts ;
+                    rec:quantity 6.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Toluene ;
+                    rec:quantity 4.9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 5.18e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Xylenes ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MethylAlcoholToOlefins a probs:Process ;
+    rdfs:label "MethylAlcoholToOlefins" ;
+    probs:consumes ukf:MethylAlcohol,
+        ukf:OtherInorganicPrimaryChemicals ;
+    probs:processName "MethylAlcoholToOlefins" ;
+    probs:produces ukf:Butylenes,
+        ukf:Ethane,
+        ukf:Ethylene,
+        ukf:NaturalGas,
+        ukf:Propane,
+        ukf:Propylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MethylAlcohol ;
+                    rec:quantity 4.3e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 1e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propane ;
+                    rec:quantity 3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethane ;
+                    rec:quantity 4e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butylenes ;
+                    rec:quantity 2.3e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 5e-01 ] ] .
+
+sys:MethylAlcoholToPropylene a probs:Process ;
+    rdfs:label "MethylAlcoholToPropylene" ;
+    probs:consumes ukf:MethylAlcohol ;
+    probs:processName "MethylAlcoholToPropylene" ;
+    probs:produces ukf:Ethylene,
+        ukf:MiscRefineryProducts,
+        ukf:Propylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MethylAlcohol ;
+                    rec:quantity 3.46e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 5e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MiscRefineryProducts ;
+                    rec:quantity 3.2e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixedPolymersAtEOL_Market a probs:Process ;
+    rdfs:label "MixedPolymersAtEOL" ;
+    probs:marketForObject sys:MixedPolymersAtEOL .
+
+sys:MixingWastePolymerStreams a probs:Process ;
+    rdfs:label "MixingWastePolymerStreams" ;
+    probs:processComposedOf sys:MixingFibrePPAAtEOL,
+        sys:MixingHDPEPolyethyleneAtEOL,
+        sys:MixingLDPEPolyethyleneAtEOL,
+        sys:MixingLLDPEAtEOL,
+        sys:MixingOtherPolymersAtEOL,
+        sys:MixingPETPolyethyleneTerephthalatePolyestersAtEOL,
+        sys:MixingPPPolypropyleneAtEOL,
+        sys:MixingPSPolystyreneAtEOL,
+        sys:MixingPVCPolyvinylChlorideAtEOL,
+        sys:MixingPolyurethaneAtEOL,
+        sys:MixingSyntheticRubbersAtEOL ;
+    probs:processName "MixingWastePolymerStreams" .
+
+sys:NKCompound_Market a probs:Process ;
+    rdfs:label "NKCompound" ;
+    probs:marketForObject sys:NKCompound .
+
+sys:NPKCompound_Market a probs:Process ;
+    rdfs:label "NPKCompound" ;
+    probs:marketForObject sys:NPKCompound .
+
+sys:NaturalGasSteamMethaneReformingToSyngas a probs:Process ;
+    rdfs:label "NaturalGasSteamMethaneReformingToSyngas" ;
+    probs:consumes ukf:NaturalGas,
+        ukf:PureOxygen,
+        ukf:Water ;
+    probs:processName "NaturalGasSteamMethaneReformingToSyngas" ;
+    probs:produces ukf:Syngas ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 5.66e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 1.32e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 3.29e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Syngas ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:NitrogenFertiliser_Market a probs:Process ;
+    rdfs:label "NitrogenFertiliser" ;
+    probs:marketForObject sys:NitrogenFertiliser .
+
+sys:Nutrients_Market a probs:Process ;
+    rdfs:label "Nutrients" ;
+    probs:marketForObject sys:Nutrients .
+
+sys:OtherConsumptionOfBenzene a probs:Process ;
+    rdfs:label "OtherConsumptionOfBenzene" ;
+    probs:consumes ukf:Benzene ;
+    probs:processName "OtherConsumptionOfBenzene" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:OtherConsumptionOfMethylAlcohol a probs:Process ;
+    rdfs:label "OtherConsumptionOfMethylAlcohol" ;
+    probs:consumes ukf:MethylAlcohol ;
+    probs:processName "OtherConsumptionOfMethylAlcohol" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MethylAlcohol ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:OtherConsumptionOfToluene a probs:Process ;
+    rdfs:label "OtherConsumptionOfToluene" ;
+    probs:consumes ukf:Toluene ;
+    probs:processName "OtherConsumptionOfToluene" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Toluene ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:OtherConsumptionOfXylenes a probs:Process ;
+    rdfs:label "OtherConsumptionOfXylenes" ;
+    probs:consumes ukf:Xylenes ;
+    probs:processName "OtherConsumptionOfXylenes" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Xylenes ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:OtherFertiliserNP_Market a probs:Process ;
+    rdfs:label "OtherFertiliserNP" ;
+    probs:marketForObject sys:OtherFertiliserNP .
+
+sys:OtherFertiliserN_Market a probs:Process ;
+    rdfs:label "OtherFertiliserN" ;
+    probs:marketForObject sys:OtherFertiliserN .
+
+sys:OtherPolymersAtEOL_Market a probs:Process ;
+    rdfs:label "OtherPolymersAtEOL" ;
+    probs:marketForObject sys:OtherPolymersAtEOL .
+
+sys:OtherProducts_Market a probs:Process ;
+    rdfs:label "OtherProducts" ;
+    probs:marketForObject sys:OtherProducts .
+
+sys:PETPolyethyleneTerephthalatePolyestersAtEOL_Market a probs:Process ;
+    rdfs:label "PETPolyethyleneTerephthalatePolyestersAtEOL" ;
+    probs:marketForObject sys:PETPolyethyleneTerephthalatePolyestersAtEOL .
+
+sys:PPPolypropyleneAtEOL_Market a probs:Process ;
+    rdfs:label "PPPolypropyleneAtEOL" ;
+    probs:marketForObject sys:PPPolypropyleneAtEOL .
+
+sys:PSPolystyreneAtEOL_Market a probs:Process ;
+    rdfs:label "PSPolystyreneAtEOL" ;
+    probs:marketForObject sys:PSPolystyreneAtEOL .
+
+sys:PVCPolyvinylChlorideAtEOL_Market a probs:Process ;
+    rdfs:label "PVCPolyvinylChlorideAtEOL" ;
+    probs:marketForObject sys:PVCPolyvinylChlorideAtEOL .
+
+sys:PackagingProducts_Market a probs:Process ;
+    rdfs:label "PackagingProducts" ;
+    probs:marketForObject sys:PackagingProducts .
+
+sys:PolymersAtEOL_Market a probs:Process ;
+    rdfs:label "PolymersAtEOL" ;
+    probs:marketForObject sys:PolymersAtEOL .
+
+sys:Polymers_Market a probs:Process ;
+    rdfs:label "Polymers" ;
+    probs:marketForObject sys:Polymers .
+
+sys:PolyolsSynthesis a probs:Process ;
+    rdfs:label "PolyolsSynthesis" ;
+    probs:consumes sys:EthyleneOxide,
+        sys:PropyleneOxide,
+        ukf:OtherInorganicPrimaryChemicals,
+        ukf:OtherIntermediateOrganicChemicals ;
+    probs:processName "PolyolsSynthesis" ;
+    probs:produces sys:Polyols,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PropyleneOxide ;
+                    rec:quantity 9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 4e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIntermediateOrganicChemicals ;
+                    rec:quantity 3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EthyleneOxide ;
+                    rec:quantity 1e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Polyols ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 1e-02 ] ] .
+
+sys:Polyols_Market a probs:Process ;
+    rdfs:label "Polyols" ;
+    probs:marketForObject sys:Polyols .
+
+sys:PolyurethaneAtEOL_Market a probs:Process ;
+    rdfs:label "PolyurethaneAtEOL" ;
+    probs:marketForObject sys:PolyurethaneAtEOL .
+
+sys:ProducingNitricAcid a probs:Process ;
+    rdfs:label "ProducingNitricAcid" ;
+    probs:consumes ukf:Ammonia,
+        ukf:PureOxygen,
+        ukf:Water ;
+    probs:processName "ProducingNitricAcid" ;
+    probs:produces ukf:NitricAcid,
+        ukf:Water ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ammonia ;
+                    rec:quantity 2.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 1.02e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 1.4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NitricAcid ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 1.22e+00 ] ] .
+
+sys:ProductionOfNitrogenFertiliser a probs:Process ;
+    rdfs:label "ProductionOfNitrogenFertiliser" ;
+    probs:processComposedOf sys:ProductionOfAmmoniaFertiliser,
+        sys:ProductionOfAmmoniumNitrate,
+        sys:ProductionOfAmmoniumPhosphate,
+        sys:ProductionOfAmmoniumSulphate,
+        sys:ProductionOfCalciumAmmoniumNitrate,
+        sys:ProductionOfNKCompound,
+        sys:ProductionOfNPKCompound,
+        sys:ProductionOfOtherFertiliserN,
+        sys:ProductionOfOtherFertiliserNP,
+        sys:ProductionOfUrea,
+        sys:ProductionOfUreaAmmoniumNitrate ;
+    probs:processName "ProductionOfNitrogenFertiliser" .
+
+sys:ProductionOfPolymers a probs:Process ;
+    rdfs:label "ProductionOfPolymers" ;
+    probs:processComposedOf sys:PolymerisationOfFibrePPA,
+        sys:PolymerisationOfLLDPE,
+        sys:PolymerisationOfOtherPolymers,
+        sys:PolymerisationOfPUR,
+        ukf:PolymerisationOfHDPE,
+        ukf:PolymerisationOfLDPE,
+        ukf:PolymerisationOfOtherPolymers,
+        ukf:PolymerisationOfPET,
+        ukf:PolymerisationOfPP,
+        ukf:PolymerisationOfPVC,
+        ukf:PolymerisationOfPolystyrene,
+        ukf:PolymerisationOfPolyurethane,
+        ukf:PolymerisationOfStyreneButadiene ;
+    probs:processName "ProductionOfPolymers" .
+
+sys:ProductionOfProducts a probs:Process ;
+    rdfs:label "ProductionOfProducts" ;
+    probs:processComposedOf sys:EOLProcessingBuildingsAndConstructionProducts,
+        sys:EOLProcessingConsumerAndInstitutionalProducts,
+        sys:EOLProcessingElectricalAndElectronicProducts,
+        sys:EOLProcessingIndustrialMachinery,
+        sys:EOLProcessingOtherProducts,
+        sys:EOLProcessingPackagingProducts,
+        sys:EOLProcessingTextileProducts,
+        sys:EOLProcessingTransportationProducts,
+        sys:ProductionOfBuildingsAndConstructionProducts,
+        sys:ProductionOfConsumerAndInstitutionalProducts,
+        sys:ProductionOfElectricalAndElectronicProducts,
+        sys:ProductionOfIndustrialMachinery,
+        sys:ProductionOfOtherProducts,
+        sys:ProductionOfPackagingProducts,
+        sys:ProductionOfTextileProducts,
+        sys:ProductionOfTransportationProducts ;
+    probs:processName "ProductionOfProducts" .
+
+sys:Products_Market a probs:Process ;
+    rdfs:label "Products" ;
+    probs:marketForObject sys:Products .
+
+sys:PropyleneOxideSynthesis a probs:Process ;
+    rdfs:label "PropyleneOxideSynthesis" ;
+    probs:consumes sys:PureHydrogen,
+        ukf:Propylene,
+        ukf:PureOxygen ;
+    probs:processName "PropyleneOxideSynthesis" ;
+    probs:produces sys:PropyleneOxide ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 8.6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PureHydrogen ;
+                    rec:quantity 7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 8e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PropyleneOxide ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:PropyleneOxide_Market a probs:Process ;
+    rdfs:label "PropyleneOxide" ;
+    probs:marketForObject sys:PropyleneOxide .
+
+sys:PureHydrogen_Market a probs:Process ;
+    rdfs:label "PureHydrogen" ;
+    probs:marketForObject sys:PureHydrogen .
+
+sys:PyrolysisGasoline_Market a probs:Process ;
+    rdfs:label "PyrolysisGasoline" ;
+    probs:marketForObject sys:PyrolysisGasoline .
+
+sys:PyrolysisResidue_Market a probs:Process ;
+    rdfs:label "PyrolysisResidue" ;
+    probs:marketForObject sys:PyrolysisResidue .
+
+sys:RiceStraw_Market a probs:Process ;
+    rdfs:label "RiceStraw" ;
+    probs:marketForObject sys:RiceStraw .
+
+sys:SodiumChlorideElectrolysisForChlorine a probs:Process ;
+    rdfs:label "SodiumChlorideElectrolysisForChlorine" ;
+    probs:consumes ukf:InorganicAcids,
+        ukf:OtherInorganicPrimaryChemicals,
+        ukf:Salt ;
+    probs:processName "SodiumChlorideElectrolysisForChlorine" ;
+    probs:produces ukf:Chlorine,
+        ukf:InorganicAcids,
+        ukf:OtherIndustrialGases,
+        ukf:OtherInorganicPrimaryChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 4e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Salt ;
+                    rec:quantity 1.67e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 1.1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Chlorine ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 1e-02 ] ] .
+
+sys:SteamCrackingOfEthane a probs:Process ;
+    rdfs:label "SteamCrackingOfEthane" ;
+    probs:consumes ukf:Ethane ;
+    probs:processName "SteamCrackingOfEthane" ;
+    probs:produces ukf:Butadiene,
+        ukf:Ethylene,
+        ukf:NaturalGas,
+        ukf:Propylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethane ;
+                    rec:quantity 1.25e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 1.8e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butadiene ;
+                    rec:quantity 4e-02 ] ] .
+
+sys:SteamCrackingOfNaphtha a probs:Process ;
+    rdfs:label "SteamCrackingOfNaphtha" ;
+    probs:consumes ukf:Naphtha ;
+    probs:processName "SteamCrackingOfNaphtha" ;
+    probs:produces sys:PyrolysisGasoline,
+        ukf:Butylenes,
+        ukf:Ethylene,
+        ukf:MiscRefineryProducts,
+        ukf:NaturalGas,
+        ukf:Propylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Naphtha ;
+                    rec:quantity 2.68e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MiscRefineryProducts ;
+                    rec:quantity 3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PyrolysisGasoline ;
+                    rec:quantity 4.6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 4.8e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butylenes ;
+                    rec:quantity 2.1e-01 ] ] .
+
+sys:SugarCaneBagasse_Market a probs:Process ;
+    rdfs:label "SugarCaneBagasse" ;
+    probs:marketForObject sys:SugarCaneBagasse .
+
+sys:SyngasToAmmoniaProduction a probs:Process ;
+    rdfs:label "SyngasToAmmoniaProduction" ;
+    probs:consumes ukf:Syngas ;
+    probs:processName "SyngasToAmmoniaProduction" ;
+    probs:produces ukf:Ammonia,
+        ukf:Nitrogen,
+        ukf:OtherIndustrialGases,
+        ukf:Water ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Syngas ;
+                    rec:quantity 1.61e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 5.9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ammonia ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 8e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Nitrogen ;
+                    rec:quantity 3e-03 ] ] .
+
+sys:SyntheticRubbersAtEOL_Market a probs:Process ;
+    rdfs:label "SyntheticRubbersAtEOL" ;
+    probs:marketForObject sys:SyntheticRubbersAtEOL .
+
+sys:TextileProducts_Market a probs:Process ;
+    rdfs:label "TextileProducts" ;
+    probs:marketForObject sys:TextileProducts .
+
+sys:TolueneDiisocyanateSynthesis a probs:Process ;
+    rdfs:label "TolueneDiisocyanateSynthesis" ;
+    probs:consumes ukf:Chlorine,
+        ukf:NitricAcid,
+        ukf:OtherIndustrialGases,
+        ukf:OtherInorganicPrimaryChemicals,
+        ukf:Toluene ;
+    probs:processName "TolueneDiisocyanateSynthesis" ;
+    probs:produces sys:TolueneDiisocyanate,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Toluene ;
+                    rec:quantity 5.5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NitricAcid ;
+                    rec:quantity 9.6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Chlorine ;
+                    rec:quantity 9.1e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 8.4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:TolueneDiisocyanate ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:TolueneDiisocyanate_Market a probs:Process ;
+    rdfs:label "TolueneDiisocyanate" ;
+    probs:marketForObject sys:TolueneDiisocyanate .
+
+sys:TransportationProducts_Market a probs:Process ;
+    rdfs:label "TransportationProducts" ;
+    probs:marketForObject sys:TransportationProducts .
+
+sys:UreaAmmoniumNitrate_Market a probs:Process ;
+    rdfs:label "UreaAmmoniumNitrate" ;
+    probs:marketForObject sys:UreaAmmoniumNitrate .
+
+sys:Urea_Market a probs:Process ;
+    rdfs:label "Urea" ;
+    probs:marketForObject sys:Urea .
+
+sys:UseOfNitrogenFertiliser a probs:Process ;
+    rdfs:label "UseOfNitrogenFertiliser" ;
+    probs:processComposedOf sys:UseOfAmmoniaFertiliser,
+        sys:UseOfAmmoniumNitrateFertiliser,
+        sys:UseOfAmmoniumPhosphateFertiliser,
+        sys:UseOfAmmoniumSulphateFertiliser,
+        sys:UseOfCalciumAmmoniumNitrateFertiliser,
+        sys:UseOfNKCompoundFertiliser,
+        sys:UseOfNPKCompoundFertiliser,
+        sys:UseOfOtherFertiliserN,
+        sys:UseOfOtherFertiliserNP,
+        sys:UseOfUreaAmmoniumNitrateFertiliser,
+        sys:UseOfUreaFertiliser ;
+    probs:processName "UseOfNitrogenFertiliser" .
+
+sys:UseOfProducts a probs:Process ;
+    rdfs:label "UseOfProducts" ;
+    probs:processComposedOf sys:UseOfBuildingsAndConstructionProducts,
+        sys:UseOfConsumerAndInstitutionalProducts,
+        sys:UseOfElectricalAndElectronicProducts,
+        sys:UseOfIndustrialMachinery,
+        sys:UseOfOtherProducts,
+        sys:UseOfPackagingProducts,
+        sys:UseOfTextileProducts,
+        sys:UseOfTransportationProducts ;
+    probs:processName "UseOfProducts" .
+
+sys:Waste_Market a probs:Process ;
+    rdfs:label "Waste" ;
+    probs:marketForObject sys:Waste .
+
+sys:WheatStraw_Market a probs:Process ;
+    rdfs:label "WheatStraw" ;
+    probs:marketForObject sys:WheatStraw .
+
+ukf:AceticAcidSynthesis a probs:Process ;
+    rdfs:label "ukf:AceticAcidSynthesis" ;
+    probs:consumes ukf:MethylAlcohol,
+        ukf:OtherIndustrialGases ;
+    probs:processName "ukf:AceticAcidSynthesis" ;
+    probs:produces ukf:AceticAcid,
+        ukf:OtherIndustrialGases,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 4.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:MethylAlcohol ;
+                    rec:quantity 5.4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:AceticAcid ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 1e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 1e-02 ] ] .
+
+ukf:AceticAcid_Market a probs:Process ;
+    rdfs:label "Acetic acid" ;
+    probs:marketForObject ukf:AceticAcid .
+
+ukf:Acrylonitrile_Market a probs:Process ;
+    rdfs:label "ukf:Acrylonitrile" ;
+    probs:marketForObject ukf:Acrylonitrile .
+
+ukf:AdipicAcidSynthesis a probs:Process ;
+    rdfs:label "ukf:AdipicAcidSynthesis" ;
+    probs:consumes ukf:Cyclohexane,
+        ukf:InorganicAcids,
+        ukf:NitricAcid,
+        ukf:PureOxygen,
+        ukf:Water ;
+    probs:processName "ukf:AdipicAcidSynthesis" ;
+    probs:produces ukf:AdipicAcid,
+        ukf:Air,
+        ukf:OtherIndustrialGases,
+        ukf:WasteOtherChemicals,
+        ukf:Water ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 2.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NitricAcid ;
+                    rec:quantity 5.4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Cyclohexane ;
+                    rec:quantity 7.2e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 1.5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Air ;
+                    rec:quantity 5e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:AdipicAcid ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 3e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 3.3e-01 ] ] .
+
+ukf:AdipicAcid_Market a probs:Process ;
+    rdfs:label "Adipic acid" ;
+    probs:marketForObject ukf:AdipicAcid .
+
+ukf:Air_Market a probs:Process ;
+    rdfs:label "ukf:Air" ;
+    probs:marketForObject ukf:Air .
+
+ukf:Ammonia_Market a probs:Process ;
+    rdfs:label "ukf:Ammonia" ;
+    probs:marketForObject ukf:Ammonia .
+
+ukf:Benzene_Market a probs:Process ;
+    rdfs:label "ukf:Benzene" ;
+    probs:marketForObject ukf:Benzene .
+
+ukf:Butadiene_Market a probs:Process ;
+    rdfs:label "ukf:Butadiene" ;
+    probs:marketForObject ukf:Butadiene .
+
+ukf:Butane_Market a probs:Process ;
+    rdfs:label "ukf:Butane" ;
+    probs:marketForObject ukf:Butane .
+
+ukf:Butylenes_Market a probs:Process ;
+    rdfs:label "ukf:Butylenes" ;
+    probs:marketForObject ukf:Butylenes .
+
+ukf:ChemicalAndFertiliserMinerals_Market a probs:Process ;
+    rdfs:label "ukf:ChemicalAndFertiliserMinerals" ;
+    probs:marketForObject ukf:ChemicalAndFertiliserMinerals .
+
+ukf:Chlorine_Market a probs:Process ;
+    rdfs:label "ukf:Chlorine" ;
+    probs:marketForObject ukf:Chlorine .
+
+ukf:Coal_Market a probs:Process ;
+    rdfs:label "ukf:Coal" ;
+    probs:marketForObject ukf:Coal .
+
+ukf:CrudeOil_Market a probs:Process ;
+    rdfs:label "ukf:CrudeOil" ;
+    probs:marketForObject ukf:CrudeOil .
+
+ukf:CyclohexaneSynthesis a probs:Process ;
+    rdfs:label "ukf:CyclohexaneSynthesis" ;
+    probs:consumes ukf:Benzene,
+        ukf:OtherIndustrialGases ;
+    probs:processName "ukf:CyclohexaneSynthesis" ;
+    probs:produces ukf:Cyclohexane,
+        ukf:OtherIndustrialGases ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 9.4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 1e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Cyclohexane ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:Cyclohexane_Market a probs:Process ;
+    rdfs:label "ukf:Cyclohexane" ;
+    probs:marketForObject ukf:Cyclohexane .
+
+ukf:Ethane_Market a probs:Process ;
+    rdfs:label "ukf:Ethane" ;
+    probs:marketForObject ukf:Ethane .
+
+ukf:EthyleneGlycolSynthesis a probs:Process ;
+    rdfs:label "ukf:EthyleneGlycolSynthesis" ;
+    probs:consumes ukf:Ethylene,
+        ukf:PureOxygen,
+        ukf:Water ;
+    probs:processName "ukf:EthyleneGlycolSynthesis" ;
+    probs:produces ukf:Air,
+        ukf:EthyleneGlycol,
+        ukf:WasteOtherChemicals,
+        ukf:Water ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 3.9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 3.4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:EthyleneGlycol ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 1.5e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 1e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Air ;
+                    rec:quantity 8e-02 ] ] .
+
+ukf:EthyleneGlycol_Market a probs:Process ;
+    rdfs:label "Ethylene glycol" ;
+    probs:marketForObject ukf:EthyleneGlycol .
+
+ukf:Ethylene_Market a probs:Process ;
+    rdfs:label "ukf:Ethylene" ;
+    probs:marketForObject ukf:Ethylene .
+
+ukf:HDPEPolyethylene_Market a probs:Process ;
+    rdfs:label "HDPE, Polyethylene" ;
+    probs:marketForObject ukf:HDPEPolyethylene .
+
+ukf:Hexamethylenediamine_Market a probs:Process ;
+    rdfs:label "ukf:Hexamethylenediamine" ;
+    probs:marketForObject ukf:Hexamethylenediamine .
+
+ukf:InorganicAcids_Market a probs:Process ;
+    rdfs:label "ukf:InorganicAcids" ;
+    probs:marketForObject ukf:InorganicAcids .
+
+ukf:LDPEPolyethylene_Market a probs:Process ;
+    rdfs:label "LDPE, Polyethylene" ;
+    probs:marketForObject ukf:LDPEPolyethylene .
+
+ukf:Maize_Market a probs:Process ;
+    rdfs:label "ukf:Maize" ;
+    probs:marketForObject ukf:Maize .
+
+ukf:MakingInorganicAcids a probs:Process ;
+    rdfs:label "ukf:MakingInorganicAcids" ;
+    probs:consumes ukf:ChemicalAndFertiliserMinerals ;
+    probs:processName "ukf:MakingInorganicAcids" ;
+    probs:produces ukf:InorganicAcids ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:ChemicalAndFertiliserMinerals ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:MakingOtherInorganicPrimaryChemicals a probs:Process ;
+    rdfs:label "ukf:MakingOtherInorganicPrimaryChemicals" ;
+    probs:consumes ukf:ChemicalAndFertiliserMinerals ;
+    probs:processName "ukf:MakingOtherInorganicPrimaryChemicals" ;
+    probs:produces ukf:OtherInorganicPrimaryChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:ChemicalAndFertiliserMinerals ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:MethylAlcohol_Market a probs:Process ;
+    rdfs:label "Methyl alcohol" ;
+    probs:marketForObject ukf:MethylAlcohol .
+
+ukf:MiscRefineryProducts_Market a probs:Process ;
+    rdfs:label "ukf:MiscRefineryProducts" ;
+    probs:marketForObject ukf:MiscRefineryProducts .
+
+ukf:Naphtha_Market a probs:Process ;
+    rdfs:label "ukf:Naphtha" ;
+    probs:marketForObject ukf:Naphtha .
+
+ukf:NaturalGas_Market a probs:Process ;
+    rdfs:label "ukf:NaturalGas" ;
+    probs:marketForObject ukf:NaturalGas .
+
+ukf:NitricAcid_Market a probs:Process ;
+    rdfs:label "ukf:NitricAcid" ;
+    probs:marketForObject ukf:NitricAcid .
+
+ukf:Nitrogen_Market a probs:Process ;
+    rdfs:label "ukf:Nitrogen" ;
+    probs:marketForObject ukf:Nitrogen .
+
+ukf:OilRefiningButane a probs:Process ;
+    rdfs:label "ukf:OilRefiningButane" ;
+    probs:consumes ukf:CrudeOil ;
+    probs:processName "ukf:OilRefiningButane" ;
+    probs:produces ukf:Butane ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:CrudeOil ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butane ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:OilRefiningEthane a probs:Process ;
+    rdfs:label "ukf:OilRefiningEthane" ;
+    probs:consumes ukf:CrudeOil ;
+    probs:processName "ukf:OilRefiningEthane" ;
+    probs:produces ukf:Ethane ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:CrudeOil ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethane ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:OilRefiningNaphtha a probs:Process ;
+    rdfs:label "ukf:OilRefiningNaphtha" ;
+    probs:consumes ukf:CrudeOil ;
+    probs:processName "ukf:OilRefiningNaphtha" ;
+    probs:produces ukf:Naphtha ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:CrudeOil ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Naphtha ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:OilRefiningPropane a probs:Process ;
+    rdfs:label "ukf:OilRefiningPropane" ;
+    probs:consumes ukf:CrudeOil ;
+    probs:processName "ukf:OilRefiningPropane" ;
+    probs:produces ukf:Propane ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:CrudeOil ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propane ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:OtherIndustrialGases_Market a probs:Process ;
+    rdfs:label "ukf:OtherIndustrialGases" ;
+    probs:marketForObject ukf:OtherIndustrialGases .
+
+ukf:OtherInorganicPrimaryChemicals_Market a probs:Process ;
+    rdfs:label "ukf:OtherInorganicPrimaryChemicals" ;
+    probs:marketForObject ukf:OtherInorganicPrimaryChemicals .
+
+ukf:OtherIntermediateOrganicChemicals_Market a probs:Process ;
+    rdfs:label "Other intermediate organic chemicals" ;
+    probs:marketForObject ukf:OtherIntermediateOrganicChemicals .
+
+ukf:OtherOrganicChemicalsSynthesis a probs:Process ;
+    rdfs:label "ukf:OtherOrganicChemicalsSynthesis" ;
+    probs:consumes ukf:Benzene,
+        ukf:Butadiene,
+        ukf:Butylenes,
+        ukf:Ethylene,
+        ukf:Propylene,
+        ukf:Toluene,
+        ukf:Xylenes ;
+    probs:processName "ukf:OtherOrganicChemicalsSynthesis" ;
+    probs:produces ukf:OtherIntermediateOrganicChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butylenes ;
+                    rec:quantity 1.428571e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 1.428571e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Toluene ;
+                    rec:quantity 1.428571e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 1.428571e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butadiene ;
+                    rec:quantity 1.428571e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 1.428571e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Xylenes ;
+                    rec:quantity 1.428571e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIntermediateOrganicChemicals ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:OtherPolymers_Market a probs:Process ;
+    rdfs:label "Other polymers" ;
+    probs:marketForObject ukf:OtherPolymers .
+
+ukf:PETPolyethyleneTerephthalatePolyesters_Market a probs:Process ;
+    rdfs:label "PET, Polyethylene terephthalate, polyesters" ;
+    probs:marketForObject ukf:PETPolyethyleneTerephthalatePolyesters .
+
+ukf:PPPolypropylene_Market a probs:Process ;
+    rdfs:label "PP, Polypropylene" ;
+    probs:marketForObject ukf:PPPolypropylene .
+
+ukf:PSPolystyrene_Market a probs:Process ;
+    rdfs:label "PS, Polystyrene" ;
+    probs:marketForObject ukf:PSPolystyrene .
+
+ukf:PVCPolyvinylChloride_Market a probs:Process ;
+    rdfs:label "PVC, Polyvinyl chloride" ;
+    probs:marketForObject ukf:PVCPolyvinylChloride .
+
+ukf:Polyurethane_Market a probs:Process ;
+    rdfs:label "Polyurethane" ;
+    probs:marketForObject ukf:Polyurethane .
+
+ukf:Propane_Market a probs:Process ;
+    rdfs:label "ukf:Propane" ;
+    probs:marketForObject ukf:Propane .
+
+ukf:Propylene_Market a probs:Process ;
+    rdfs:label "ukf:Propylene" ;
+    probs:marketForObject ukf:Propylene .
+
+ukf:PureOxygen_Market a probs:Process ;
+    rdfs:label "ukf:PureOxygen" ;
+    probs:marketForObject ukf:PureOxygen .
+
+ukf:Salt_Market a probs:Process ;
+    rdfs:label "ukf:Salt" ;
+    probs:marketForObject ukf:Salt .
+
+ukf:StyreneSynthesis a probs:Process ;
+    rdfs:label "ukf:StyreneSynthesis" ;
+    probs:consumes ukf:Benzene,
+        ukf:Ethylene ;
+    probs:processName "ukf:StyreneSynthesis" ;
+    probs:produces ukf:OtherIndustrialGases,
+        ukf:Styrene,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Benzene ;
+                    rec:quantity 7.9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 2.8e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 5e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Styrene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 2e-02 ] ] .
+
+ukf:Styrene_Market a probs:Process ;
+    rdfs:label "ukf:Styrene" ;
+    probs:marketForObject ukf:Styrene .
+
+ukf:SugarCane_Market a probs:Process ;
+    rdfs:label "ukf:SugarCane" ;
+    probs:marketForObject ukf:SugarCane .
+
+ukf:Syngas_Market a probs:Process ;
+    rdfs:label "ukf:Syngas" ;
+    probs:marketForObject ukf:Syngas .
+
+ukf:SyntheticRubbers_Market a probs:Process ;
+    rdfs:label "Synthetic rubbers" ;
+    probs:marketForObject ukf:SyntheticRubbers .
+
+ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate_Market a probs:Process ;
+    rdfs:label "Terephthalic acid, phthalic anhydride, dioctyl phthalate" ;
+    probs:marketForObject ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate .
+
+ukf:TerephthalicAcidSynthesis a probs:Process ;
+    rdfs:label "ukf:TerephthalicAcidSynthesis" ;
+    probs:consumes ukf:PureOxygen,
+        ukf:Xylenes ;
+    probs:processName "ukf:TerephthalicAcidSynthesis" ;
+    probs:produces ukf:Air,
+        ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate,
+        ukf:WasteOtherChemicals,
+        ukf:Water ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 6.1e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Xylenes ;
+                    rec:quantity 6.7e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Air ;
+                    rec:quantity 8e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 2.2e-01 ] ] .
+
+ukf:Toluene_Market a probs:Process ;
+    rdfs:label "ukf:Toluene" ;
+    probs:marketForObject ukf:Toluene .
+
+ukf:VinylChlorideSynthesis a probs:Process ;
+    rdfs:label "ukf:VinylChlorideSynthesis" ;
+    probs:consumes ukf:Chlorine,
+        ukf:Ethylene,
+        ukf:InorganicAcids,
+        ukf:PureOxygen ;
+    probs:processName "ukf:VinylChlorideSynthesis" ;
+    probs:produces ukf:Air,
+        ukf:InorganicAcids,
+        ukf:OtherIndustrialGases,
+        ukf:VinylChloride,
+        ukf:WasteOtherChemicals,
+        ukf:Water ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Chlorine ;
+                    rec:quantity 6.2e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 4.9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 1.4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 6.4e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 1.4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:VinylChloride ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 6.4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Air ;
+                    rec:quantity 1e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 4e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIndustrialGases ;
+                    rec:quantity 9e-02 ] ] .
+
+ukf:VinylChloride_Market a probs:Process ;
+    rdfs:label "Vinyl chloride" ;
+    probs:marketForObject ukf:VinylChloride .
+
+ukf:WasteBiomass_Market a probs:Process ;
+    rdfs:label "ukf:WasteBiomass" ;
+    probs:marketForObject ukf:WasteBiomass .
+
+ukf:WasteOtherChemicals_Market a probs:Process ;
+    rdfs:label "ukf:WasteOtherChemicals" ;
+    probs:marketForObject ukf:WasteOtherChemicals .
+
+ukf:Water_Market a probs:Process ;
+    rdfs:label "ukf:Water" ;
+    probs:marketForObject ukf:Water .
+
+ukf:Xylenes_Market a probs:Process ;
+    rdfs:label "ukf:Xylenes" ;
+    probs:marketForObject ukf:Xylenes .
+
+sys:CleaningAgents a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "CleaningAgents" ;
+    probs:objectName "CleaningAgents" .
+
+sys:CornStoverGasificationToSyngas a probs:Process ;
+    rdfs:label "CornStoverGasificationToSyngas" ;
+    probs:consumes sys:CornStover,
+        ukf:PureOxygen ;
+    probs:processName "CornStoverGasificationToSyngas" ;
+    probs:produces ukf:Syngas ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 6.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:CornStover ;
+                    rec:quantity 1.674e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Syngas ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:EOLProcessingBuildingsAndConstructionProducts a probs:Process ;
+    rdfs:label "EOLProcessingBuildingsAndConstructionProducts" ;
+    probs:consumes sys:EOLBuildingsAndConstructionProducts ;
+    probs:processName "EOLProcessingBuildingsAndConstructionProducts" ;
+    probs:produces sys:HDPEPolyethyleneAtEOL,
+        sys:LDPEPolyethyleneAtEOL,
+        sys:LLDPEAtEOL,
+        sys:OtherPolymersAtEOL,
+        sys:PPPolypropyleneAtEOL,
+        sys:PSPolystyreneAtEOL,
+        sys:PVCPolyvinylChlorideAtEOL,
+        sys:PolyurethaneAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLBuildingsAndConstructionProducts ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PVCPolyvinylChlorideAtEOL ;
+                    rec:quantity 5.61e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PSPolystyreneAtEOL ;
+                    rec:quantity 5e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PPPolypropyleneAtEOL ;
+                    rec:quantity 5.2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPEAtEOL ;
+                    rec:quantity 3.2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherPolymersAtEOL ;
+                    rec:quantity 7.8e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PolyurethaneAtEOL ;
+                    rec:quantity 5.8e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HDPEPolyethyleneAtEOL ;
+                    rec:quantity 1.88e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LDPEPolyethyleneAtEOL ;
+                    rec:quantity 2.6e-02 ] ] .
+
+sys:EOLProcessingConsumerAndInstitutionalProducts a probs:Process ;
+    rdfs:label "EOLProcessingConsumerAndInstitutionalProducts" ;
+    probs:consumes sys:EOLConsumerAndInstitutionalProducts ;
+    probs:processName "EOLProcessingConsumerAndInstitutionalProducts" ;
+    probs:produces sys:HDPEPolyethyleneAtEOL,
+        sys:LDPEPolyethyleneAtEOL,
+        sys:LLDPEAtEOL,
+        sys:OtherPolymersAtEOL,
+        sys:PPPolypropyleneAtEOL,
+        sys:PSPolystyreneAtEOL,
+        sys:PVCPolyvinylChlorideAtEOL,
+        sys:SyntheticRubbersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLConsumerAndInstitutionalProducts ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LDPEPolyethyleneAtEOL ;
+                    rec:quantity 4.6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PPPolypropyleneAtEOL ;
+                    rec:quantity 3.66e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPEAtEOL ;
+                    rec:quantity 2.11e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HDPEPolyethyleneAtEOL ;
+                    rec:quantity 1.59e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PVCPolyvinylChlorideAtEOL ;
+                    rec:quantity 6.8e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PSPolystyreneAtEOL ;
+                    rec:quantity 8.9e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherPolymersAtEOL ;
+                    rec:quantity 3.9e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:SyntheticRubbersAtEOL ;
+                    rec:quantity 2.1e-02 ] ] .
+
+sys:EOLProcessingElectricalAndElectronicProducts a probs:Process ;
+    rdfs:label "EOLProcessingElectricalAndElectronicProducts" ;
+    probs:consumes sys:EOLElectricalAndElectronicProducts ;
+    probs:processName "EOLProcessingElectricalAndElectronicProducts" ;
+    probs:produces sys:HDPEPolyethyleneAtEOL,
+        sys:LDPEPolyethyleneAtEOL,
+        sys:LLDPEAtEOL,
+        sys:OtherPolymersAtEOL,
+        sys:PPPolypropyleneAtEOL,
+        sys:PSPolystyreneAtEOL,
+        sys:PVCPolyvinylChlorideAtEOL,
+        sys:PolyurethaneAtEOL,
+        sys:SyntheticRubbersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLElectricalAndElectronicProducts ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HDPEPolyethyleneAtEOL ;
+                    rec:quantity 1.4e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PolyurethaneAtEOL ;
+                    rec:quantity 3.4e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PVCPolyvinylChlorideAtEOL ;
+                    rec:quantity 1.41e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LDPEPolyethyleneAtEOL ;
+                    rec:quantity 2.2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherPolymersAtEOL ;
+                    rec:quantity 4.71e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PPPolypropyleneAtEOL ;
+                    rec:quantity 1.16e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PSPolystyreneAtEOL ;
+                    rec:quantity 6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:SyntheticRubbersAtEOL ;
+                    rec:quantity 1.01e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPEAtEOL ;
+                    rec:quantity 4.2e-02 ] ] .
+
+sys:EOLProcessingIndustrialMachinery a probs:Process ;
+    rdfs:label "EOLProcessingIndustrialMachinery" ;
+    probs:consumes sys:EOLIndustrialMachinery ;
+    probs:processName "EOLProcessingIndustrialMachinery" ;
+    probs:produces sys:HDPEPolyethyleneAtEOL,
+        sys:LDPEPolyethyleneAtEOL,
+        sys:LLDPEAtEOL,
+        sys:OtherPolymersAtEOL,
+        sys:PPPolypropyleneAtEOL,
+        sys:PVCPolyvinylChlorideAtEOL,
+        sys:PolyurethaneAtEOL,
+        sys:SyntheticRubbersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLIndustrialMachinery ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:SyntheticRubbersAtEOL ;
+                    rec:quantity 3.83e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LDPEPolyethyleneAtEOL ;
+                    rec:quantity 7.1e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPEAtEOL ;
+                    rec:quantity 2.5e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherPolymersAtEOL ;
+                    rec:quantity 1.71e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PVCPolyvinylChlorideAtEOL ;
+                    rec:quantity 3.6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PPPolypropyleneAtEOL ;
+                    rec:quantity 1.52e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HDPEPolyethyleneAtEOL ;
+                    rec:quantity 9.7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PolyurethaneAtEOL ;
+                    rec:quantity 6.6e-02 ] ] .
+
+sys:EOLProcessingOtherProducts a probs:Process ;
+    rdfs:label "EOLProcessingOtherProducts" ;
+    probs:consumes sys:EOLOtherProducts ;
+    probs:processName "EOLProcessingOtherProducts" ;
+    probs:produces sys:FibrePPAAtEOL,
+        sys:HDPEPolyethyleneAtEOL,
+        sys:LDPEPolyethyleneAtEOL,
+        sys:LLDPEAtEOL,
+        sys:OtherPolymersAtEOL,
+        sys:PPPolypropyleneAtEOL,
+        sys:PSPolystyreneAtEOL,
+        sys:PVCPolyvinylChlorideAtEOL,
+        sys:PolyurethaneAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLOtherProducts ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPEAtEOL ;
+                    rec:quantity 4e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PPPolypropyleneAtEOL ;
+                    rec:quantity 1.89e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPAAtEOL ;
+                    rec:quantity 3.44e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherPolymersAtEOL ;
+                    rec:quantity 3.09e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HDPEPolyethyleneAtEOL ;
+                    rec:quantity 7e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PolyurethaneAtEOL ;
+                    rec:quantity 4.1e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PVCPolyvinylChlorideAtEOL ;
+                    rec:quantity 7.3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PSPolystyreneAtEOL ;
+                    rec:quantity 8e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LDPEPolyethyleneAtEOL ;
+                    rec:quantity 2.7e-02 ] ] .
+
+sys:EOLProcessingPackagingProducts a probs:Process ;
+    rdfs:label "EOLProcessingPackagingProducts" ;
+    probs:consumes sys:EOLPackagingProducts ;
+    probs:processName "EOLProcessingPackagingProducts" ;
+    probs:produces sys:HDPEPolyethyleneAtEOL,
+        sys:LDPEPolyethyleneAtEOL,
+        sys:LLDPEAtEOL,
+        sys:OtherPolymersAtEOL,
+        sys:PETPolyethyleneTerephthalatePolyestersAtEOL,
+        sys:PPPolypropyleneAtEOL,
+        sys:PSPolystyreneAtEOL,
+        sys:PVCPolyvinylChlorideAtEOL,
+        sys:PolyurethaneAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLPackagingProducts ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LDPEPolyethyleneAtEOL ;
+                    rec:quantity 9.7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPEAtEOL ;
+                    rec:quantity 1.84e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PPPolypropyleneAtEOL ;
+                    rec:quantity 2.14e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HDPEPolyethyleneAtEOL ;
+                    rec:quantity 2.14e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherPolymersAtEOL ;
+                    rec:quantity 9e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PVCPolyvinylChlorideAtEOL ;
+                    rec:quantity 2.6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PETPolyethyleneTerephthalatePolyestersAtEOL ;
+                    rec:quantity 2.3e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PSPolystyreneAtEOL ;
+                    rec:quantity 2.5e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PolyurethaneAtEOL ;
+                    rec:quantity 2e-03 ] ] .
+
+sys:EOLProcessingTextileProducts a probs:Process ;
+    rdfs:label "EOLProcessingTextileProducts" ;
+    probs:consumes sys:EOLTextileProducts ;
+    probs:processName "EOLProcessingTextileProducts" ;
+    probs:produces sys:FibrePPAAtEOL,
+        sys:PolyurethaneAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLTextileProducts ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPAAtEOL ;
+                    rec:quantity 9.99e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PolyurethaneAtEOL ;
+                    rec:quantity 1e-03 ] ] .
+
+sys:EOLProcessingTransportationProducts a probs:Process ;
+    rdfs:label "EOLProcessingTransportationProducts" ;
+    probs:consumes sys:EOLTransportationProducts ;
+    probs:processName "EOLProcessingTransportationProducts" ;
+    probs:produces sys:FibrePPAAtEOL,
+        sys:HDPEPolyethyleneAtEOL,
+        sys:LLDPEAtEOL,
+        sys:OtherPolymersAtEOL,
+        sys:PPPolypropyleneAtEOL,
+        sys:PVCPolyvinylChlorideAtEOL,
+        sys:PolyurethaneAtEOL,
+        sys:SyntheticRubbersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLTransportationProducts ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PolyurethaneAtEOL ;
+                    rec:quantity 3.3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPAAtEOL ;
+                    rec:quantity 1.68e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherPolymersAtEOL ;
+                    rec:quantity 2.44e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HDPEPolyethyleneAtEOL ;
+                    rec:quantity 5e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:SyntheticRubbersAtEOL ;
+                    rec:quantity 2.55e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PVCPolyvinylChlorideAtEOL ;
+                    rec:quantity 2.7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPEAtEOL ;
+                    rec:quantity 1e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PPPolypropyleneAtEOL ;
+                    rec:quantity 2.21e-01 ] ] .
+
+sys:EOLProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EOLProducts" ;
+    probs:objectComposedOf sys:EOLBuildingsAndConstructionProducts,
+        sys:EOLConsumerAndInstitutionalProducts,
+        sys:EOLElectricalAndElectronicProducts,
+        sys:EOLIndustrialMachinery,
+        sys:EOLOtherProducts,
+        sys:EOLPackagingProducts,
+        sys:EOLTextileProducts,
+        sys:EOLTransportationProducts ;
+    probs:objectName "EOLProducts" .
+
+sys:EthylAlcoholSynthesisFromCornStover a probs:Process ;
+    rdfs:label "EthylAlcoholSynthesisFromCornStover" ;
+    probs:consumes sys:CornStover,
+        ukf:Ammonia,
+        ukf:InorganicAcids,
+        ukf:OtherInorganicPrimaryChemicals ;
+    probs:processName "EthylAlcoholSynthesisFromCornStover" ;
+    probs:produces sys:EthylAlcohol,
+        ukf:WasteBiomass ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ammonia ;
+                    rec:quantity 1.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 5.7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 5.1e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:CornStover ;
+                    rec:quantity 5.5e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EthylAlcohol ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteBiomass ;
+                    rec:quantity 1.5e+00 ] ] .
+
+sys:EthylAlcoholSynthesisFromMaize a probs:Process ;
+    rdfs:label "EthylAlcoholSynthesisFromMaize" ;
+    probs:consumes ukf:Ammonia,
+        ukf:InorganicAcids,
+        ukf:Maize,
+        ukf:OtherInorganicPrimaryChemicals ;
+    probs:processName "EthylAlcoholSynthesisFromMaize" ;
+    probs:produces sys:EthylAlcohol,
+        ukf:WasteBiomass ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ammonia ;
+                    rec:quantity 8e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 5e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 8e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Maize ;
+                    rec:quantity 4e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteBiomass ;
+                    rec:quantity 1.1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EthylAlcohol ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:EthylAlcoholSynthesisFromRiceStraw a probs:Process ;
+    rdfs:label "EthylAlcoholSynthesisFromRiceStraw" ;
+    probs:consumes sys:Nutrients,
+        sys:RiceStraw,
+        ukf:InorganicAcids,
+        ukf:OtherInorganicPrimaryChemicals ;
+    probs:processName "EthylAlcoholSynthesisFromRiceStraw" ;
+    probs:produces sys:EthylAlcohol ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 2e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:RiceStraw ;
+                    rec:quantity 6.038362e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Nutrients ;
+                    rec:quantity 1e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 2e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EthylAlcohol ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:EthylAlcoholSynthesisFromSugarcane a probs:Process ;
+    rdfs:label "EthylAlcoholSynthesisFromSugarcane" ;
+    probs:consumes ukf:OtherInorganicPrimaryChemicals,
+        ukf:SugarCane ;
+    probs:processName "EthylAlcoholSynthesisFromSugarcane" ;
+    probs:produces sys:EthylAlcohol,
+        ukf:WasteBiomass ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:SugarCane ;
+                    rec:quantity 3.5e+01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 1.2e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EthylAlcohol ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteBiomass ;
+                    rec:quantity 2.5e+00 ] ] .
+
+sys:EthylAlcoholSynthesisFromSugarcaneBagasse a probs:Process ;
+    rdfs:label "EthylAlcoholSynthesisFromSugarcaneBagasse" ;
+    probs:consumes sys:Nutrients,
+        sys:SugarCaneBagasse,
+        ukf:InorganicAcids,
+        ukf:OtherInorganicPrimaryChemicals ;
+    probs:processName "EthylAlcoholSynthesisFromSugarcaneBagasse" ;
+    probs:produces sys:EthylAlcohol ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:SugarCaneBagasse ;
+                    rec:quantity 4.5e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 5.3e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 1.8e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Nutrients ;
+                    rec:quantity 7e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EthylAlcohol ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:EthylAlcoholSynthesisFromWheatStraw a probs:Process ;
+    rdfs:label "EthylAlcoholSynthesisFromWheatStraw" ;
+    probs:consumes sys:Nutrients,
+        sys:WheatStraw,
+        ukf:InorganicAcids,
+        ukf:OtherInorganicPrimaryChemicals ;
+    probs:processName "EthylAlcoholSynthesisFromWheatStraw" ;
+    probs:produces sys:EthylAlcohol ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:InorganicAcids ;
+                    rec:quantity 1.9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:WheatStraw ;
+                    rec:quantity 5.6e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 1.9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Nutrients ;
+                    rec:quantity 1e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EthylAlcohol ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:Incineration a probs:Process ;
+    rdfs:label "Incineration" ;
+    probs:consumes sys:MixedPolymersAtEOL ;
+    probs:processName "Incineration" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:Landfilling a probs:Process ;
+    rdfs:label "Landfilling" ;
+    probs:consumes sys:MixedPolymersAtEOL ;
+    probs:processName "Landfilling" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MechanicalRecyclingOfFibrePPAAtEOL a probs:Process ;
+    rdfs:label "MechanicalRecyclingOfFibrePPAAtEOL" ;
+    probs:consumes sys:FibrePPAAtEOL ;
+    probs:processName "MechanicalRecyclingOfFibrePPAAtEOL" ;
+    probs:produces sys:FibrePPA,
+        sys:Waste ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPAAtEOL ;
+                    rec:quantity 1.6e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPA ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Waste ;
+                    rec:quantity 6e-01 ] ] .
+
+sys:MechanicalRecyclingOfHDPEPolyethyleneAtEOL a probs:Process ;
+    rdfs:label "MechanicalRecyclingOfHDPEPolyethyleneAtEOL" ;
+    probs:consumes sys:HDPEPolyethyleneAtEOL ;
+    probs:processName "MechanicalRecyclingOfHDPEPolyethyleneAtEOL" ;
+    probs:produces sys:Waste,
+        ukf:HDPEPolyethylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HDPEPolyethyleneAtEOL ;
+                    rec:quantity 1.6e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:HDPEPolyethylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Waste ;
+                    rec:quantity 6e-01 ] ] .
+
+sys:MechanicalRecyclingOfLDPEPolyethyleneAtEOL a probs:Process ;
+    rdfs:label "MechanicalRecyclingOfLDPEPolyethyleneAtEOL" ;
+    probs:consumes sys:LDPEPolyethyleneAtEOL ;
+    probs:processName "MechanicalRecyclingOfLDPEPolyethyleneAtEOL" ;
+    probs:produces sys:Waste,
+        ukf:LDPEPolyethylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LDPEPolyethyleneAtEOL ;
+                    rec:quantity 1.6e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:LDPEPolyethylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Waste ;
+                    rec:quantity 6e-01 ] ] .
+
+sys:MechanicalRecyclingOfLLDPEAtEOL a probs:Process ;
+    rdfs:label "MechanicalRecyclingOfLLDPEAtEOL" ;
+    probs:consumes sys:LLDPEAtEOL ;
+    probs:processName "MechanicalRecyclingOfLLDPEAtEOL" ;
+    probs:produces sys:LLDPE,
+        sys:Waste ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPEAtEOL ;
+                    rec:quantity 1.6e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Waste ;
+                    rec:quantity 6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPE ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MechanicalRecyclingOfPETPolyethyleneTerephthalatePolyestersAtEOL a probs:Process ;
+    rdfs:label "MechanicalRecyclingOfPETPolyethyleneTerephthalatePolyestersAtEOL" ;
+    probs:consumes sys:PETPolyethyleneTerephthalatePolyestersAtEOL ;
+    probs:processName "MechanicalRecyclingOfPETPolyethyleneTerephthalatePolyestersAtEOL" ;
+    probs:produces sys:Waste,
+        ukf:PETPolyethyleneTerephthalatePolyesters ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PETPolyethyleneTerephthalatePolyestersAtEOL ;
+                    rec:quantity 1.6e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PETPolyethyleneTerephthalatePolyesters ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Waste ;
+                    rec:quantity 6e-01 ] ] .
+
+sys:MechanicalRecyclingOfPPPolypropyleneAtEOL a probs:Process ;
+    rdfs:label "MechanicalRecyclingOfPPPolypropyleneAtEOL" ;
+    probs:consumes sys:PPPolypropyleneAtEOL ;
+    probs:processName "MechanicalRecyclingOfPPPolypropyleneAtEOL" ;
+    probs:produces sys:Waste,
+        ukf:PPPolypropylene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PPPolypropyleneAtEOL ;
+                    rec:quantity 1.6e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PPPolypropylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Waste ;
+                    rec:quantity 6e-01 ] ] .
+
+sys:MechanicalRecyclingOfPSPolystyreneAtEOL a probs:Process ;
+    rdfs:label "MechanicalRecyclingOfPSPolystyreneAtEOL" ;
+    probs:consumes sys:PSPolystyreneAtEOL ;
+    probs:processName "MechanicalRecyclingOfPSPolystyreneAtEOL" ;
+    probs:produces sys:Waste,
+        ukf:PSPolystyrene ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PSPolystyreneAtEOL ;
+                    rec:quantity 1.6e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Waste ;
+                    rec:quantity 6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PSPolystyrene ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MechanicalRecyclingOfPVCPolyvinylChlorideAtEOL a probs:Process ;
+    rdfs:label "MechanicalRecyclingOfPVCPolyvinylChlorideAtEOL" ;
+    probs:consumes sys:PVCPolyvinylChlorideAtEOL ;
+    probs:processName "MechanicalRecyclingOfPVCPolyvinylChlorideAtEOL" ;
+    probs:produces sys:Waste,
+        ukf:PVCPolyvinylChloride ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PVCPolyvinylChlorideAtEOL ;
+                    rec:quantity 1.6e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Waste ;
+                    rec:quantity 6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PVCPolyvinylChloride ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:Mismanagement a probs:Process ;
+    rdfs:label "Mismanagement" ;
+    probs:consumes sys:MixedPolymersAtEOL ;
+    probs:processName "Mismanagement" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingFibrePPAAtEOL a probs:Process ;
+    rdfs:label "MixingFibrePPAAtEOL" ;
+    probs:consumes sys:FibrePPAAtEOL ;
+    probs:processName "MixingFibrePPAAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPAAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingHDPEPolyethyleneAtEOL a probs:Process ;
+    rdfs:label "MixingHDPEPolyethyleneAtEOL" ;
+    probs:consumes sys:HDPEPolyethyleneAtEOL ;
+    probs:processName "MixingHDPEPolyethyleneAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:HDPEPolyethyleneAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingLDPEPolyethyleneAtEOL a probs:Process ;
+    rdfs:label "MixingLDPEPolyethyleneAtEOL" ;
+    probs:consumes sys:LDPEPolyethyleneAtEOL ;
+    probs:processName "MixingLDPEPolyethyleneAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LDPEPolyethyleneAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingLLDPEAtEOL a probs:Process ;
+    rdfs:label "MixingLLDPEAtEOL" ;
+    probs:consumes sys:LLDPEAtEOL ;
+    probs:processName "MixingLLDPEAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPEAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingOtherPolymersAtEOL a probs:Process ;
+    rdfs:label "MixingOtherPolymersAtEOL" ;
+    probs:consumes sys:OtherPolymersAtEOL ;
+    probs:processName "MixingOtherPolymersAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingPETPolyethyleneTerephthalatePolyestersAtEOL a probs:Process ;
+    rdfs:label "MixingPETPolyethyleneTerephthalatePolyestersAtEOL" ;
+    probs:consumes sys:PETPolyethyleneTerephthalatePolyestersAtEOL ;
+    probs:processName "MixingPETPolyethyleneTerephthalatePolyestersAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PETPolyethyleneTerephthalatePolyestersAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingPPPolypropyleneAtEOL a probs:Process ;
+    rdfs:label "MixingPPPolypropyleneAtEOL" ;
+    probs:consumes sys:PPPolypropyleneAtEOL ;
+    probs:processName "MixingPPPolypropyleneAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PPPolypropyleneAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingPSPolystyreneAtEOL a probs:Process ;
+    rdfs:label "MixingPSPolystyreneAtEOL" ;
+    probs:consumes sys:PSPolystyreneAtEOL ;
+    probs:processName "MixingPSPolystyreneAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PSPolystyreneAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingPVCPolyvinylChlorideAtEOL a probs:Process ;
+    rdfs:label "MixingPVCPolyvinylChlorideAtEOL" ;
+    probs:consumes sys:PVCPolyvinylChlorideAtEOL ;
+    probs:processName "MixingPVCPolyvinylChlorideAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PVCPolyvinylChlorideAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingPolyurethaneAtEOL a probs:Process ;
+    rdfs:label "MixingPolyurethaneAtEOL" ;
+    probs:consumes sys:PolyurethaneAtEOL ;
+    probs:processName "MixingPolyurethaneAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PolyurethaneAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:MixingSyntheticRubbersAtEOL a probs:Process ;
+    rdfs:label "MixingSyntheticRubbersAtEOL" ;
+    probs:consumes sys:SyntheticRubbersAtEOL ;
+    probs:processName "MixingSyntheticRubbersAtEOL" ;
+    probs:produces sys:MixedPolymersAtEOL ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:SyntheticRubbersAtEOL ;
+                    rec:quantity 1e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:MixedPolymersAtEOL ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:NaturalGasSteamMethaneReformingToHydrogen a probs:Process ;
+    rdfs:label "NaturalGasSteamMethaneReformingToHydrogen" ;
+    probs:consumes ukf:NaturalGas ;
+    probs:processName "NaturalGasSteamMethaneReformingToHydrogen" ;
+    probs:produces sys:PureHydrogen ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 2.3e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PureHydrogen ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:NaturalGasSteamMethaneReformingWithCCSToHydrogen a probs:Process ;
+    rdfs:label "NaturalGasSteamMethaneReformingWithCCSToHydrogen" ;
+    probs:consumes ukf:NaturalGas ;
+    probs:processName "NaturalGasSteamMethaneReformingWithCCSToHydrogen" ;
+    probs:produces sys:PureHydrogen ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:NaturalGas ;
+                    rec:quantity 2.3e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PureHydrogen ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:NitrogenFertiliser a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "NitrogenFertiliser" ;
+    probs:objectComposedOf sys:AmmoniaFertiliser,
+        sys:AmmoniumNitrate,
+        sys:AmmoniumPhosphate,
+        sys:AmmoniumSulphate,
+        sys:CalciumAmmoniumNitrate,
+        sys:NKCompound,
+        sys:NPKCompound,
+        sys:OtherFertiliserN,
+        sys:OtherFertiliserNP,
+        sys:Urea,
+        sys:UreaAmmoniumNitrate ;
+    probs:objectName "NitrogenFertiliser" .
+
+sys:PolymerisationOfFibrePPA a probs:Process ;
+    rdfs:label "PolymerisationOfFibrePPA" ;
+    probs:consumes sys:IsophthalicAcid,
+        ukf:AdipicAcid,
+        ukf:Hexamethylenediamine,
+        ukf:OtherInorganicPrimaryChemicals,
+        ukf:OtherIntermediateOrganicChemicals,
+        ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate,
+        ukf:Water ;
+    probs:processName "PolymerisationOfFibrePPA" ;
+    probs:produces sys:FibrePPA ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate ;
+                    rec:quantity 4.4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIntermediateOrganicChemicals ;
+                    rec:quantity 5e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Hexamethylenediamine ;
+                    rec:quantity 4.8e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherInorganicPrimaryChemicals ;
+                    rec:quantity 2e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:AdipicAcid ;
+                    rec:quantity 6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:IsophthalicAcid ;
+                    rec:quantity 1.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 4.6e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPA ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:PolymerisationOfLLDPE a probs:Process ;
+    rdfs:label "PolymerisationOfLLDPE" ;
+    probs:consumes ukf:Butylenes,
+        ukf:Ethylene ;
+    probs:processName "PolymerisationOfLLDPE" ;
+    probs:produces sys:LLDPE ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 9.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butylenes ;
+                    rec:quantity 8e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPE ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:PolymerisationOfOtherPolymers a probs:Process ;
+    rdfs:label "PolymerisationOfOtherPolymers" ;
+    probs:consumes ukf:Acrylonitrile,
+        ukf:Butadiene,
+        ukf:Styrene ;
+    probs:processName "PolymerisationOfOtherPolymers" ;
+    probs:produces ukf:OtherPolymers ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butadiene ;
+                    rec:quantity 2e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Styrene ;
+                    rec:quantity 5.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Acrylonitrile ;
+                    rec:quantity 2.5e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherPolymers ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:PolymerisationOfPUR a probs:Process ;
+    rdfs:label "PolymerisationOfPUR" ;
+    probs:consumes sys:Polyols,
+        sys:TolueneDiisocyanate,
+        ukf:OtherIntermediateOrganicChemicals ;
+    probs:processName "PolymerisationOfPUR" ;
+    probs:produces ukf:Polyurethane ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:TolueneDiisocyanate ;
+                    rec:quantity 3.9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Polyols ;
+                    rec:quantity 6.6e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherIntermediateOrganicChemicals ;
+                    rec:quantity 1e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Polyurethane ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:Polymers a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Polymers" ;
+    probs:objectComposedOf sys:FibrePPA,
+        sys:LLDPE,
+        ukf:HDPEPolyethylene,
+        ukf:LDPEPolyethylene,
+        ukf:OtherPolymers,
+        ukf:PETPolyethyleneTerephthalatePolyesters,
+        ukf:PPPolypropylene,
+        ukf:PSPolystyrene,
+        ukf:PVCPolyvinylChloride,
+        ukf:Polyurethane,
+        ukf:SyntheticRubbers ;
+    probs:objectName "Polymers" .
+
+sys:PolymersAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PolymersAtEOL" ;
+    probs:objectComposedOf sys:FibrePPAAtEOL,
+        sys:HDPEPolyethyleneAtEOL,
+        sys:LDPEPolyethyleneAtEOL,
+        sys:LLDPEAtEOL,
+        sys:OtherPolymersAtEOL,
+        sys:PETPolyethyleneTerephthalatePolyestersAtEOL,
+        sys:PPPolypropyleneAtEOL,
+        sys:PSPolystyreneAtEOL,
+        sys:PVCPolyvinylChlorideAtEOL,
+        sys:PolyurethaneAtEOL,
+        sys:SyntheticRubbersAtEOL ;
+    probs:objectName "PolymersAtEOL" .
+
+sys:ProductionOfAmmoniaFertiliser a probs:Process ;
+    rdfs:label "ProductionOfAmmoniaFertiliser" ;
+    probs:processName "ProductionOfAmmoniaFertiliser" ;
+    probs:produces sys:AmmoniaFertiliser ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:AmmoniaFertiliser ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfAmmoniumNitrate a probs:Process ;
+    rdfs:label "ProductionOfAmmoniumNitrate" ;
+    probs:processName "ProductionOfAmmoniumNitrate" ;
+    probs:produces sys:AmmoniumNitrate ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:AmmoniumNitrate ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfAmmoniumPhosphate a probs:Process ;
+    rdfs:label "ProductionOfAmmoniumPhosphate" ;
+    probs:processName "ProductionOfAmmoniumPhosphate" ;
+    probs:produces sys:AmmoniumPhosphate ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:AmmoniumPhosphate ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfAmmoniumSulphate a probs:Process ;
+    rdfs:label "ProductionOfAmmoniumSulphate" ;
+    probs:processName "ProductionOfAmmoniumSulphate" ;
+    probs:produces sys:AmmoniumSulphate ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:AmmoniumSulphate ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfBuildingsAndConstructionProducts a probs:Process ;
+    rdfs:label "ProductionOfBuildingsAndConstructionProducts" ;
+    probs:consumes sys:LLDPE,
+        ukf:HDPEPolyethylene,
+        ukf:LDPEPolyethylene,
+        ukf:OtherPolymers,
+        ukf:PPPolypropylene,
+        ukf:PSPolystyrene,
+        ukf:PVCPolyvinylChloride,
+        ukf:Polyurethane ;
+    probs:processName "ProductionOfBuildingsAndConstructionProducts" ;
+    probs:produces sys:BuildingsAndConstructionProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Polyurethane ;
+                    rec:quantity 5.8e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PPPolypropylene ;
+                    rec:quantity 5.2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:HDPEPolyethylene ;
+                    rec:quantity 1.88e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PSPolystyrene ;
+                    rec:quantity 5e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PVCPolyvinylChloride ;
+                    rec:quantity 5.61e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:LDPEPolyethylene ;
+                    rec:quantity 2.6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherPolymers ;
+                    rec:quantity 7.8e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPE ;
+                    rec:quantity 3.2e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:BuildingsAndConstructionProducts ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:ProductionOfCalciumAmmoniumNitrate a probs:Process ;
+    rdfs:label "ProductionOfCalciumAmmoniumNitrate" ;
+    probs:processName "ProductionOfCalciumAmmoniumNitrate" ;
+    probs:produces sys:CalciumAmmoniumNitrate ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:CalciumAmmoniumNitrate ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfConsumerAndInstitutionalProducts a probs:Process ;
+    rdfs:label "ProductionOfConsumerAndInstitutionalProducts" ;
+    probs:consumes sys:LLDPE,
+        ukf:HDPEPolyethylene,
+        ukf:LDPEPolyethylene,
+        ukf:OtherPolymers,
+        ukf:PPPolypropylene,
+        ukf:PSPolystyrene,
+        ukf:PVCPolyvinylChloride,
+        ukf:SyntheticRubbers ;
+    probs:processName "ProductionOfConsumerAndInstitutionalProducts" ;
+    probs:produces sys:ConsumerAndInstitutionalProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:LDPEPolyethylene ;
+                    rec:quantity 4.6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:SyntheticRubbers ;
+                    rec:quantity 2.1e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PPPolypropylene ;
+                    rec:quantity 3.66e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PSPolystyrene ;
+                    rec:quantity 8.9e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherPolymers ;
+                    rec:quantity 3.9e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:HDPEPolyethylene ;
+                    rec:quantity 1.59e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPE ;
+                    rec:quantity 2.11e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PVCPolyvinylChloride ;
+                    rec:quantity 6.8e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:ConsumerAndInstitutionalProducts ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:ProductionOfElectricalAndElectronicProducts a probs:Process ;
+    rdfs:label "ProductionOfElectricalAndElectronicProducts" ;
+    probs:consumes sys:LLDPE,
+        ukf:HDPEPolyethylene,
+        ukf:LDPEPolyethylene,
+        ukf:OtherPolymers,
+        ukf:PPPolypropylene,
+        ukf:PSPolystyrene,
+        ukf:PVCPolyvinylChloride,
+        ukf:Polyurethane,
+        ukf:SyntheticRubbers ;
+    probs:processName "ProductionOfElectricalAndElectronicProducts" ;
+    probs:produces sys:ElectricalAndElectronicProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:SyntheticRubbers ;
+                    rec:quantity 1.01e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PSPolystyrene ;
+                    rec:quantity 6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:LDPEPolyethylene ;
+                    rec:quantity 2.2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Polyurethane ;
+                    rec:quantity 3.4e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPE ;
+                    rec:quantity 4.2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherPolymers ;
+                    rec:quantity 4.71e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PVCPolyvinylChloride ;
+                    rec:quantity 1.41e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:HDPEPolyethylene ;
+                    rec:quantity 1.4e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PPPolypropylene ;
+                    rec:quantity 1.16e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:ElectricalAndElectronicProducts ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:ProductionOfIndustrialMachinery a probs:Process ;
+    rdfs:label "ProductionOfIndustrialMachinery" ;
+    probs:consumes sys:LLDPE,
+        ukf:HDPEPolyethylene,
+        ukf:LDPEPolyethylene,
+        ukf:OtherPolymers,
+        ukf:PPPolypropylene,
+        ukf:PVCPolyvinylChloride,
+        ukf:Polyurethane,
+        ukf:SyntheticRubbers ;
+    probs:processName "ProductionOfIndustrialMachinery" ;
+    probs:produces sys:IndustrialMachinery ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherPolymers ;
+                    rec:quantity 1.71e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PVCPolyvinylChloride ;
+                    rec:quantity 3.6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:HDPEPolyethylene ;
+                    rec:quantity 9.7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Polyurethane ;
+                    rec:quantity 6.6e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PPPolypropylene ;
+                    rec:quantity 1.52e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:SyntheticRubbers ;
+                    rec:quantity 3.83e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:LDPEPolyethylene ;
+                    rec:quantity 7.1e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPE ;
+                    rec:quantity 2.5e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:IndustrialMachinery ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:ProductionOfNKCompound a probs:Process ;
+    rdfs:label "ProductionOfNKCompound" ;
+    probs:processName "ProductionOfNKCompound" ;
+    probs:produces sys:NKCompound ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:NKCompound ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfNPKCompound a probs:Process ;
+    rdfs:label "ProductionOfNPKCompound" ;
+    probs:processName "ProductionOfNPKCompound" ;
+    probs:produces sys:NPKCompound ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:NPKCompound ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfOtherFertiliserN a probs:Process ;
+    rdfs:label "ProductionOfOtherFertiliserN" ;
+    probs:processName "ProductionOfOtherFertiliserN" ;
+    probs:produces sys:OtherFertiliserN ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherFertiliserN ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfOtherFertiliserNP a probs:Process ;
+    rdfs:label "ProductionOfOtherFertiliserNP" ;
+    probs:processName "ProductionOfOtherFertiliserNP" ;
+    probs:produces sys:OtherFertiliserNP ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherFertiliserNP ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfOtherProducts a probs:Process ;
+    rdfs:label "ProductionOfOtherProducts" ;
+    probs:consumes sys:FibrePPA,
+        sys:LLDPE,
+        ukf:HDPEPolyethylene,
+        ukf:LDPEPolyethylene,
+        ukf:OtherPolymers,
+        ukf:PPPolypropylene,
+        ukf:PSPolystyrene,
+        ukf:PVCPolyvinylChloride,
+        ukf:Polyurethane ;
+    probs:processName "ProductionOfOtherProducts" ;
+    probs:produces sys:OtherProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PVCPolyvinylChloride ;
+                    rec:quantity 7.3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:LDPEPolyethylene ;
+                    rec:quantity 2.7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPE ;
+                    rec:quantity 4e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherPolymers ;
+                    rec:quantity 3.09e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:HDPEPolyethylene ;
+                    rec:quantity 7e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PSPolystyrene ;
+                    rec:quantity 8e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PPPolypropylene ;
+                    rec:quantity 1.89e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPA ;
+                    rec:quantity 3.44e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Polyurethane ;
+                    rec:quantity 4.1e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherProducts ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:ProductionOfPackagingProducts a probs:Process ;
+    rdfs:label "ProductionOfPackagingProducts" ;
+    probs:consumes sys:LLDPE,
+        ukf:HDPEPolyethylene,
+        ukf:LDPEPolyethylene,
+        ukf:OtherPolymers,
+        ukf:PETPolyethyleneTerephthalatePolyesters,
+        ukf:PPPolypropylene,
+        ukf:PSPolystyrene,
+        ukf:PVCPolyvinylChloride,
+        ukf:Polyurethane ;
+    probs:processName "ProductionOfPackagingProducts" ;
+    probs:produces sys:PackagingProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPE ;
+                    rec:quantity 1.84e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PETPolyethyleneTerephthalatePolyesters ;
+                    rec:quantity 2.3e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PSPolystyrene ;
+                    rec:quantity 2.5e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:LDPEPolyethylene ;
+                    rec:quantity 9.7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherPolymers ;
+                    rec:quantity 9e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Polyurethane ;
+                    rec:quantity 2e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PPPolypropylene ;
+                    rec:quantity 2.14e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:HDPEPolyethylene ;
+                    rec:quantity 2.14e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PVCPolyvinylChloride ;
+                    rec:quantity 2.6e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PackagingProducts ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:ProductionOfTextileProducts a probs:Process ;
+    rdfs:label "ProductionOfTextileProducts" ;
+    probs:consumes sys:FibrePPA,
+        ukf:Polyurethane ;
+    probs:processName "ProductionOfTextileProducts" ;
+    probs:produces sys:TextileProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Polyurethane ;
+                    rec:quantity 1e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPA ;
+                    rec:quantity 9.99e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:TextileProducts ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:ProductionOfTransportationProducts a probs:Process ;
+    rdfs:label "ProductionOfTransportationProducts" ;
+    probs:consumes sys:FibrePPA,
+        sys:LLDPE,
+        ukf:HDPEPolyethylene,
+        ukf:OtherPolymers,
+        ukf:PPPolypropylene,
+        ukf:PVCPolyvinylChloride,
+        ukf:Polyurethane,
+        ukf:SyntheticRubbers ;
+    probs:processName "ProductionOfTransportationProducts" ;
+    probs:produces sys:TransportationProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PVCPolyvinylChloride ;
+                    rec:quantity 2.7e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:LLDPE ;
+                    rec:quantity 1e-03 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:SyntheticRubbers ;
+                    rec:quantity 2.55e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Polyurethane ;
+                    rec:quantity 3.3e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:FibrePPA ;
+                    rec:quantity 1.68e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:OtherPolymers ;
+                    rec:quantity 2.44e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PPPolypropylene ;
+                    rec:quantity 2.21e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:HDPEPolyethylene ;
+                    rec:quantity 5e-02 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:TransportationProducts ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:ProductionOfUrea a probs:Process ;
+    rdfs:label "ProductionOfUrea" ;
+    probs:processName "ProductionOfUrea" ;
+    probs:produces sys:Urea ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Urea ;
+                    rec:quantity 1 ] ] .
+
+sys:ProductionOfUreaAmmoniumNitrate a probs:Process ;
+    rdfs:label "ProductionOfUreaAmmoniumNitrate" ;
+    probs:processName "ProductionOfUreaAmmoniumNitrate" ;
+    probs:produces sys:UreaAmmoniumNitrate ;
+    rec:hasRecipe [ rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:UreaAmmoniumNitrate ;
+                    rec:quantity 1 ] ] .
+
+sys:Products a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Products" ;
+    probs:objectComposedOf sys:BuildingsAndConstructionProducts,
+        sys:ConsumerAndInstitutionalProducts,
+        sys:ElectricalAndElectronicProducts,
+        sys:IndustrialMachinery,
+        sys:OtherProducts,
+        sys:PackagingProducts,
+        sys:TextileProducts,
+        sys:TransportationProducts ;
+    probs:objectName "Products" .
+
+sys:RiceStrawGasificationToSyngas a probs:Process ;
+    rdfs:label "RiceStrawGasificationToSyngas" ;
+    probs:consumes sys:RiceStraw,
+        ukf:PureOxygen ;
+    probs:processName "RiceStrawGasificationToSyngas" ;
+    probs:produces ukf:Syngas ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:RiceStraw ;
+                    rec:quantity 1.674e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 6.7e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Syngas ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:SugarCaneBagasseGasificationToSyngas a probs:Process ;
+    rdfs:label "SugarCaneBagasseGasificationToSyngas" ;
+    probs:consumes sys:SugarCaneBagasse,
+        ukf:PureOxygen ;
+    probs:processName "SugarCaneBagasseGasificationToSyngas" ;
+    probs:produces ukf:Syngas ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:SugarCaneBagasse ;
+                    rec:quantity 1.674e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 6.7e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Syngas ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:UseOfAmmoniaFertiliser a probs:Process ;
+    rdfs:label "UseOfAmmoniaFertiliser" ;
+    probs:consumes sys:AmmoniaFertiliser ;
+    probs:processName "UseOfAmmoniaFertiliser" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:AmmoniaFertiliser ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfAmmoniumNitrateFertiliser a probs:Process ;
+    rdfs:label "UseOfAmmoniumNitrateFertiliser" ;
+    probs:consumes sys:AmmoniumNitrate ;
+    probs:processName "UseOfAmmoniumNitrateFertiliser" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:AmmoniumNitrate ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfAmmoniumPhosphateFertiliser a probs:Process ;
+    rdfs:label "UseOfAmmoniumPhosphateFertiliser" ;
+    probs:consumes sys:AmmoniumPhosphate ;
+    probs:processName "UseOfAmmoniumPhosphateFertiliser" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:AmmoniumPhosphate ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfAmmoniumSulphateFertiliser a probs:Process ;
+    rdfs:label "UseOfAmmoniumSulphateFertiliser" ;
+    probs:consumes sys:AmmoniumSulphate ;
+    probs:processName "UseOfAmmoniumSulphateFertiliser" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:AmmoniumSulphate ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfBuildingsAndConstructionProducts a probs:Process ;
+    rdfs:label "UseOfBuildingsAndConstructionProducts" ;
+    probs:consumes sys:BuildingsAndConstructionProducts ;
+    probs:processName "UseOfBuildingsAndConstructionProducts" ;
+    probs:produces sys:EOLBuildingsAndConstructionProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:BuildingsAndConstructionProducts ;
+                    rec:quantity 1 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLBuildingsAndConstructionProducts ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfCalciumAmmoniumNitrateFertiliser a probs:Process ;
+    rdfs:label "UseOfCalciumAmmoniumNitrateFertiliser" ;
+    probs:consumes sys:CalciumAmmoniumNitrate ;
+    probs:processName "UseOfCalciumAmmoniumNitrateFertiliser" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:CalciumAmmoniumNitrate ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfConsumerAndInstitutionalProducts a probs:Process ;
+    rdfs:label "UseOfConsumerAndInstitutionalProducts" ;
+    probs:consumes sys:ConsumerAndInstitutionalProducts ;
+    probs:processName "UseOfConsumerAndInstitutionalProducts" ;
+    probs:produces sys:EOLConsumerAndInstitutionalProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:ConsumerAndInstitutionalProducts ;
+                    rec:quantity 1 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLConsumerAndInstitutionalProducts ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfElectricalAndElectronicProducts a probs:Process ;
+    rdfs:label "UseOfElectricalAndElectronicProducts" ;
+    probs:consumes sys:ElectricalAndElectronicProducts ;
+    probs:processName "UseOfElectricalAndElectronicProducts" ;
+    probs:produces sys:EOLElectricalAndElectronicProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:ElectricalAndElectronicProducts ;
+                    rec:quantity 1 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLElectricalAndElectronicProducts ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfIndustrialMachinery a probs:Process ;
+    rdfs:label "UseOfIndustrialMachinery" ;
+    probs:consumes sys:IndustrialMachinery ;
+    probs:processName "UseOfIndustrialMachinery" ;
+    probs:produces sys:EOLIndustrialMachinery ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:IndustrialMachinery ;
+                    rec:quantity 1 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLIndustrialMachinery ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfNKCompoundFertiliser a probs:Process ;
+    rdfs:label "UseOfNKCompoundFertiliser" ;
+    probs:consumes sys:NKCompound ;
+    probs:processName "UseOfNKCompoundFertiliser" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:NKCompound ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfNPKCompoundFertiliser a probs:Process ;
+    rdfs:label "UseOfNPKCompoundFertiliser" ;
+    probs:consumes sys:NPKCompound ;
+    probs:processName "UseOfNPKCompoundFertiliser" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:NPKCompound ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfOtherFertiliserN a probs:Process ;
+    rdfs:label "UseOfOtherFertiliserN" ;
+    probs:consumes sys:OtherFertiliserN ;
+    probs:processName "UseOfOtherFertiliserN" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherFertiliserN ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfOtherFertiliserNP a probs:Process ;
+    rdfs:label "UseOfOtherFertiliserNP" ;
+    probs:consumes sys:OtherFertiliserNP ;
+    probs:processName "UseOfOtherFertiliserNP" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherFertiliserNP ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfOtherProducts a probs:Process ;
+    rdfs:label "UseOfOtherProducts" ;
+    probs:consumes sys:OtherProducts ;
+    probs:processName "UseOfOtherProducts" ;
+    probs:produces sys:EOLOtherProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:OtherProducts ;
+                    rec:quantity 1 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLOtherProducts ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfPackagingProducts a probs:Process ;
+    rdfs:label "UseOfPackagingProducts" ;
+    probs:consumes sys:PackagingProducts ;
+    probs:processName "UseOfPackagingProducts" ;
+    probs:produces sys:EOLPackagingProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PackagingProducts ;
+                    rec:quantity 1 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLPackagingProducts ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfTextileProducts a probs:Process ;
+    rdfs:label "UseOfTextileProducts" ;
+    probs:consumes sys:TextileProducts ;
+    probs:processName "UseOfTextileProducts" ;
+    probs:produces sys:EOLTextileProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:TextileProducts ;
+                    rec:quantity 1 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLTextileProducts ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfTransportationProducts a probs:Process ;
+    rdfs:label "UseOfTransportationProducts" ;
+    probs:consumes sys:TransportationProducts ;
+    probs:processName "UseOfTransportationProducts" ;
+    probs:produces sys:EOLTransportationProducts ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:TransportationProducts ;
+                    rec:quantity 1 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:EOLTransportationProducts ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfUreaAmmoniumNitrateFertiliser a probs:Process ;
+    rdfs:label "UseOfUreaAmmoniumNitrateFertiliser" ;
+    probs:consumes sys:UreaAmmoniumNitrate ;
+    probs:processName "UseOfUreaAmmoniumNitrateFertiliser" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:UreaAmmoniumNitrate ;
+                    rec:quantity 1 ] ] .
+
+sys:UseOfUreaFertiliser a probs:Process ;
+    rdfs:label "UseOfUreaFertiliser" ;
+    probs:consumes sys:Urea ;
+    probs:processName "UseOfUreaFertiliser" ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:Urea ;
+                    rec:quantity 1 ] ] .
+
+sys:WaterElectrolysisForHydrogen a probs:Process ;
+    rdfs:label "WaterElectrolysisForHydrogen" ;
+    probs:consumes ukf:Water ;
+    probs:processName "WaterElectrolysisForHydrogen" ;
+    probs:produces sys:PureHydrogen ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 9e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:PureHydrogen ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:WheatStrawGasificationToSyngas a probs:Process ;
+    rdfs:label "WheatStrawGasificationToSyngas" ;
+    probs:consumes sys:WheatStraw,
+        ukf:PureOxygen ;
+    probs:processName "WheatStrawGasificationToSyngas" ;
+    probs:produces ukf:Syngas ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object sys:WheatStraw ;
+                    rec:quantity 1.674e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PureOxygen ;
+                    rec:quantity 6.7e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Syngas ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:PolymerisationOfHDPE a probs:Process ;
+    rdfs:label "ukf:PolymerisationOfHDPE" ;
+    probs:consumes ukf:Ethylene ;
+    probs:processName "ukf:PolymerisationOfHDPE" ;
+    probs:produces ukf:HDPEPolyethylene,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 1.05e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:HDPEPolyethylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 3e-02 ] ] .
+
+ukf:PolymerisationOfLDPE a probs:Process ;
+    rdfs:label "ukf:PolymerisationOfLDPE" ;
+    probs:consumes ukf:Ethylene ;
+    probs:processName "ukf:PolymerisationOfLDPE" ;
+    probs:produces ukf:LDPEPolyethylene,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Ethylene ;
+                    rec:quantity 1.03e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:LDPEPolyethylene ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 3e-02 ] ] .
+
+ukf:PolymerisationOfPET a probs:Process ;
+    rdfs:label "ukf:PolymerisationOfPET" ;
+    probs:consumes ukf:EthyleneGlycol,
+        ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate ;
+    probs:processName "ukf:PolymerisationOfPET" ;
+    probs:produces ukf:PETPolyethyleneTerephthalatePolyesters,
+        ukf:WasteOtherChemicals,
+        ukf:Water ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:EthyleneGlycol ;
+                    rec:quantity 3.4e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate ;
+                    rec:quantity 8.7e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Water ;
+                    rec:quantity 1.9e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PETPolyethyleneTerephthalatePolyesters ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 2e-02 ] ] .
+
+ukf:PolymerisationOfPP a probs:Process ;
+    rdfs:label "ukf:PolymerisationOfPP" ;
+    probs:consumes ukf:Propylene ;
+    probs:processName "ukf:PolymerisationOfPP" ;
+    probs:produces ukf:PPPolypropylene,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Propylene ;
+                    rec:quantity 1.02e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PPPolypropylene ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:PolymerisationOfPVC a probs:Process ;
+    rdfs:label "ukf:PolymerisationOfPVC" ;
+    probs:consumes ukf:VinylChloride ;
+    probs:processName "ukf:PolymerisationOfPVC" ;
+    probs:produces ukf:PVCPolyvinylChloride,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:VinylChloride ;
+                    rec:quantity 1.03e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PVCPolyvinylChloride ;
+                    rec:quantity 1e+00 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 3e-02 ] ] .
+
+ukf:PolymerisationOfPolystyrene a probs:Process ;
+    rdfs:label "ukf:PolymerisationOfPolystyrene" ;
+    probs:consumes ukf:Styrene ;
+    probs:processName "ukf:PolymerisationOfPolystyrene" ;
+    probs:produces ukf:PSPolystyrene,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Styrene ;
+                    rec:quantity 1.02e+00 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:PSPolystyrene ;
+                    rec:quantity 1e+00 ] ] .
+
+ukf:PolymerisationOfStyreneButadiene a probs:Process ;
+    rdfs:label "ukf:PolymerisationOfStyreneButadiene" ;
+    probs:consumes ukf:Butadiene,
+        ukf:Styrene ;
+    probs:processName "ukf:PolymerisationOfStyreneButadiene" ;
+    probs:produces ukf:SyntheticRubbers,
+        ukf:WasteOtherChemicals ;
+    rec:hasRecipe [ rec:consumes [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Butadiene ;
+                    rec:quantity 7.7e-01 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:Styrene ;
+                    rec:quantity 2.5e-01 ] ;
+            rec:produces [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:WasteOtherChemicals ;
+                    rec:quantity 2e-02 ],
+                [ rec:metric <http://qudt.org/vocab/quantitykind/Mass> ;
+                    rec:object ukf:SyntheticRubbers ;
+                    rec:quantity 1e+00 ] ] .
+
+sys:CapturedCarbonDioxide a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "CapturedCarbonDioxide" ;
+    probs:objectName "CapturedCarbonDioxide" .
+
+sys:GasOil a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "GasOil" ;
+    probs:objectName "GasOil" .
+
+sys:PyrolysisResidue a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PyrolysisResidue" ;
+    probs:objectName "PyrolysisResidue" .
+
+ukf:Coal a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Coal" ;
+    probs:objectName "ukf:Coal" .
+
+ukf:Maize a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Maize" ;
+    probs:objectName "ukf:Maize" .
+
+ukf:Salt a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Salt" ;
+    probs:objectName "ukf:Salt" .
+
+ukf:SugarCane a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:SugarCane" ;
+    probs:objectName "ukf:SugarCane" .
+
+sys:CornStover a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "CornStover" ;
+    probs:objectName "CornStover" .
+
+sys:EthyleneOxide a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EthyleneOxide" ;
+    probs:objectName "EthyleneOxide" .
+
+sys:IsophthalicAcid a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "IsophthalicAcid" ;
+    probs:objectName "IsophthalicAcid" .
+
+sys:Polyols a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Polyols" ;
+    probs:objectName "Polyols" .
+
+sys:PropyleneOxide a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PropyleneOxide" ;
+    probs:objectName "PropyleneOxide" .
+
+sys:PyrolysisGasoline a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PyrolysisGasoline" ;
+    probs:objectName "PyrolysisGasoline" .
+
+sys:RiceStraw a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "RiceStraw" ;
+    probs:objectName "RiceStraw" .
+
+sys:SugarCaneBagasse a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "SugarCaneBagasse" ;
+    probs:objectName "SugarCaneBagasse" .
+
+sys:TolueneDiisocyanate a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "TolueneDiisocyanate" ;
+    probs:objectName "TolueneDiisocyanate" .
+
+sys:WheatStraw a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "WheatStraw" ;
+    probs:objectName "WheatStraw" .
+
+ukf:AceticAcid a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Acetic acid" ;
+    probs:objectName "Acetic acid" .
+
+ukf:Acrylonitrile a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Acrylonitrile" ;
+    probs:objectName "ukf:Acrylonitrile" .
+
+ukf:AdipicAcid a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Adipic acid" ;
+    probs:objectName "Adipic acid" .
+
+ukf:Butane a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Butane" ;
+    probs:objectName "ukf:Butane" .
+
+ukf:ChemicalAndFertiliserMinerals a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:ChemicalAndFertiliserMinerals" ;
+    probs:objectName "ukf:ChemicalAndFertiliserMinerals" .
+
+ukf:Cyclohexane a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Cyclohexane" ;
+    probs:objectName "ukf:Cyclohexane" .
+
+ukf:EthyleneGlycol a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Ethylene glycol" ;
+    probs:objectName "Ethylene glycol" .
+
+ukf:Hexamethylenediamine a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Hexamethylenediamine" ;
+    probs:objectName "ukf:Hexamethylenediamine" .
+
+ukf:Nitrogen a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Nitrogen" ;
+    probs:objectName "ukf:Nitrogen" .
+
+ukf:VinylChloride a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Vinyl chloride" ;
+    probs:objectName "Vinyl chloride" .
+
+sys:AmmoniaFertiliser a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "AmmoniaFertiliser" ;
+    probs:objectName "AmmoniaFertiliser" .
+
+sys:AmmoniumNitrate a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "AmmoniumNitrate" ;
+    probs:objectName "AmmoniumNitrate" .
+
+sys:AmmoniumPhosphate a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "AmmoniumPhosphate" ;
+    probs:objectName "AmmoniumPhosphate" .
+
+sys:AmmoniumSulphate a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "AmmoniumSulphate" ;
+    probs:objectName "AmmoniumSulphate" .
+
+sys:BuildingsAndConstructionProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "BuildingsAndConstructionProducts" ;
+    probs:objectName "BuildingsAndConstructionProducts" .
+
+sys:CalciumAmmoniumNitrate a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "CalciumAmmoniumNitrate" ;
+    probs:objectName "CalciumAmmoniumNitrate" .
+
+sys:ConsumerAndInstitutionalProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ConsumerAndInstitutionalProducts" ;
+    probs:objectName "ConsumerAndInstitutionalProducts" .
+
+sys:EOLBuildingsAndConstructionProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EOLBuildingsAndConstructionProducts" ;
+    probs:objectName "EOLBuildingsAndConstructionProducts" .
+
+sys:EOLConsumerAndInstitutionalProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EOLConsumerAndInstitutionalProducts" ;
+    probs:objectName "EOLConsumerAndInstitutionalProducts" .
+
+sys:EOLElectricalAndElectronicProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EOLElectricalAndElectronicProducts" ;
+    probs:objectName "EOLElectricalAndElectronicProducts" .
+
+sys:EOLIndustrialMachinery a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EOLIndustrialMachinery" ;
+    probs:objectName "EOLIndustrialMachinery" .
+
+sys:EOLOtherProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EOLOtherProducts" ;
+    probs:objectName "EOLOtherProducts" .
+
+sys:EOLPackagingProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EOLPackagingProducts" ;
+    probs:objectName "EOLPackagingProducts" .
+
+sys:EOLTextileProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EOLTextileProducts" ;
+    probs:objectName "EOLTextileProducts" .
+
+sys:EOLTransportationProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EOLTransportationProducts" ;
+    probs:objectName "EOLTransportationProducts" .
+
+sys:ElectricalAndElectronicProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ElectricalAndElectronicProducts" ;
+    probs:objectName "ElectricalAndElectronicProducts" .
+
+sys:IndustrialMachinery a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "IndustrialMachinery" ;
+    probs:objectName "IndustrialMachinery" .
+
+sys:NKCompound a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "NKCompound" ;
+    probs:objectName "NKCompound" .
+
+sys:NPKCompound a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "NPKCompound" ;
+    probs:objectName "NPKCompound" .
+
+sys:OtherFertiliserN a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "OtherFertiliserN" ;
+    probs:objectName "OtherFertiliserN" .
+
+sys:OtherFertiliserNP a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "OtherFertiliserNP" ;
+    probs:objectName "OtherFertiliserNP" .
+
+sys:OtherProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "OtherProducts" ;
+    probs:objectName "OtherProducts" .
+
+sys:PackagingProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PackagingProducts" ;
+    probs:objectName "PackagingProducts" .
+
+sys:TextileProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "TextileProducts" ;
+    probs:objectName "TextileProducts" .
+
+sys:TransportationProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "TransportationProducts" ;
+    probs:objectName "TransportationProducts" .
+
+sys:Urea a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Urea" ;
+    probs:objectName "Urea" .
+
+sys:UreaAmmoniumNitrate a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "UreaAmmoniumNitrate" ;
+    probs:objectName "UreaAmmoniumNitrate" .
+
+sys:HydrogenCyanide a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "HydrogenCyanide" ;
+    probs:objectName "HydrogenCyanide" .
+
+sys:Nutrients a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Nutrients" ;
+    probs:objectName "Nutrients" .
+
+ukf:Chlorine a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Chlorine" ;
+    probs:objectName "ukf:Chlorine" .
+
+ukf:Ethane a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Ethane" ;
+    probs:objectName "ukf:Ethane" .
+
+ukf:NitricAcid a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:NitricAcid" ;
+    probs:objectName "ukf:NitricAcid" .
+
+ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Terephthalic acid, phthalic anhydride, dioctyl phthalate" ;
+    probs:objectName "Terephthalic acid, phthalic anhydride, dioctyl phthalate" .
+
+ukf:WasteBiomass a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:WasteBiomass" ;
+    probs:objectName "ukf:WasteBiomass" .
+
+sys:PETPolyethyleneTerephthalatePolyestersAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PETPolyethyleneTerephthalatePolyestersAtEOL" ;
+    probs:objectName "PETPolyethyleneTerephthalatePolyestersAtEOL" .
+
+ukf:PETPolyethyleneTerephthalatePolyesters a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PET, Polyethylene terephthalate, polyesters" ;
+    probs:objectName "PET, Polyethylene terephthalate, polyesters" .
+
+ukf:CrudeOil a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:CrudeOil" ;
+    probs:objectName "ukf:CrudeOil" .
+
+ukf:OtherIntermediateOrganicChemicals a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Other intermediate organic chemicals" ;
+    probs:objectName "Other intermediate organic chemicals" .
+
+ukf:Propane a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Propane" ;
+    probs:objectName "ukf:Propane" .
+
+ukf:Styrene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Styrene" ;
+    probs:objectName "ukf:Styrene" .
+
+ukf:Air a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Air" ;
+    probs:objectName "ukf:Air" .
+
+ukf:Naphtha a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Naphtha" ;
+    probs:objectName "ukf:Naphtha" .
+
+sys:FibrePPA a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "FibrePPA" ;
+    probs:objectName "FibrePPA" .
+
+sys:FibrePPAAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "FibrePPAAtEOL" ;
+    probs:objectName "FibrePPAAtEOL" .
+
+sys:SyntheticRubbersAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "SyntheticRubbersAtEOL" ;
+    probs:objectName "SyntheticRubbersAtEOL" .
+
+ukf:SyntheticRubbers a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Synthetic rubbers" ;
+    probs:objectName "Synthetic rubbers" .
+
+ukf:Ammonia a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Ammonia" ;
+    probs:objectName "ukf:Ammonia" .
+
+sys:EthylAlcohol a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "EthylAlcohol" ;
+    probs:objectName "EthylAlcohol" .
+
+ukf:Butadiene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Butadiene" ;
+    probs:objectName "ukf:Butadiene" .
+
+ukf:Butylenes a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Butylenes" ;
+    probs:objectName "ukf:Butylenes" .
+
+ukf:MethylAlcohol a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Methyl alcohol" ;
+    probs:objectName "Methyl alcohol" .
+
+sys:PSPolystyreneAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PSPolystyreneAtEOL" ;
+    probs:objectName "PSPolystyreneAtEOL" .
+
+ukf:PSPolystyrene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PS, Polystyrene" ;
+    probs:objectName "PS, Polystyrene" .
+
+sys:PureHydrogen a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PureHydrogen" ;
+    probs:objectName "PureHydrogen" .
+
+sys:Waste a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Waste" ;
+    probs:objectName "Waste" .
+
+ukf:Toluene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Toluene" ;
+    probs:objectName "ukf:Toluene" .
+
+ukf:Xylenes a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Xylenes" ;
+    probs:objectName "ukf:Xylenes" .
+
+sys:LDPEPolyethyleneAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "LDPEPolyethyleneAtEOL" ;
+    probs:objectName "LDPEPolyethyleneAtEOL" .
+
+sys:OtherPolymersAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "OtherPolymersAtEOL" ;
+    probs:objectName "OtherPolymersAtEOL" .
+
+sys:PolyurethaneAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PolyurethaneAtEOL" ;
+    probs:objectName "PolyurethaneAtEOL" .
+
+ukf:LDPEPolyethylene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "LDPE, Polyethylene" ;
+    probs:objectName "LDPE, Polyethylene" .
+
+ukf:OtherPolymers a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Other polymers" ;
+    probs:objectName "Other polymers" .
+
+ukf:Polyurethane a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "Polyurethane" ;
+    probs:objectName "Polyurethane" .
+
+ukf:MiscRefineryProducts a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:MiscRefineryProducts" ;
+    probs:objectName "ukf:MiscRefineryProducts" .
+
+ukf:Syngas a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Syngas" ;
+    probs:objectName "ukf:Syngas" .
+
+sys:HDPEPolyethyleneAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "HDPEPolyethyleneAtEOL" ;
+    probs:objectName "HDPEPolyethyleneAtEOL" .
+
+sys:LLDPE a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "LLDPE" ;
+    probs:objectName "LLDPE" .
+
+sys:LLDPEAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "LLDPEAtEOL" ;
+    probs:objectName "LLDPEAtEOL" .
+
+sys:PPPolypropyleneAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PPPolypropyleneAtEOL" ;
+    probs:objectName "PPPolypropyleneAtEOL" .
+
+sys:PVCPolyvinylChlorideAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PVCPolyvinylChlorideAtEOL" ;
+    probs:objectName "PVCPolyvinylChlorideAtEOL" .
+
+ukf:HDPEPolyethylene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "HDPE, Polyethylene" ;
+    probs:objectName "HDPE, Polyethylene" .
+
+ukf:PPPolypropylene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PP, Polypropylene" ;
+    probs:objectName "PP, Polypropylene" .
+
+ukf:PVCPolyvinylChloride a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "PVC, Polyvinyl chloride" ;
+    probs:objectName "PVC, Polyvinyl chloride" .
+
+ukf:Benzene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Benzene" ;
+    probs:objectName "ukf:Benzene" .
+
+ukf:Propylene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Propylene" ;
+    probs:objectName "ukf:Propylene" .
+
+ukf:InorganicAcids a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:InorganicAcids" ;
+    probs:objectName "ukf:InorganicAcids" .
+
+ukf:NaturalGas a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:NaturalGas" ;
+    probs:objectName "ukf:NaturalGas" .
+
+ukf:PureOxygen a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:PureOxygen" ;
+    probs:objectName "ukf:PureOxygen" .
+
+ukf:Water a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Water" ;
+    probs:objectName "ukf:Water" .
+
+sys:MixedPolymersAtEOL a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "MixedPolymersAtEOL" ;
+    probs:objectName "MixedPolymersAtEOL" .
+
+ukf:Ethylene a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:Ethylene" ;
+    probs:objectName "ukf:Ethylene" .
+
+ukf:OtherIndustrialGases a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:OtherIndustrialGases" ;
+    probs:objectName "ukf:OtherIndustrialGases" .
+
+ukf:OtherInorganicPrimaryChemicals a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:OtherInorganicPrimaryChemicals" ;
+    probs:objectName "ukf:OtherInorganicPrimaryChemicals" .
+
+ukf:WasteOtherChemicals a probs:Object,
+        probs:ReferenceObject ;
+    rdfs:label "ukf:WasteOtherChemicals" ;
+    probs:objectName "ukf:WasteOtherChemicals" .
+

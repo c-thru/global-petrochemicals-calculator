@@ -10,454 +10,464 @@
     ]
   },
   {
+    "objectID": "system-definitions.html",
+    "href": "system-definitions.html",
+    "title": "2  System definitions",
+    "section": "",
+    "text": "The “system definitions” include definitions for the process and object types used in the model, and the quantitative recipes for process inputs and outputs.\nSee the generated documentation here.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System definitions</span>"
+    ]
+  },
+  {
     "objectID": "lever/fertiliser_demand.html",
     "href": "lever/fertiliser_demand.html",
-    "title": "2  fertiliser_demand",
+    "title": "3  fertiliser_demand",
     "section": "",
-    "text": "2.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
+    "text": "3.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
     "crumbs": [
       "Fertilisers",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>fertiliser_demand</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>fertiliser_demand</span>"
     ]
   },
   {
     "objectID": "lever/fertiliser_demand.html#parameter-data",
     "href": "lever/fertiliser_demand.html#parameter-data",
-    "title": "2  fertiliser_demand",
+    "title": "3  fertiliser_demand",
     "section": "",
-    "text": "(a) Production of AmmoniaFertiliser\n\n\n\n\n\n\n\n\n\n\n\n(b) Production of AmmoniumSulphate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Production of AmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n(d) Production of CalciumAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(e) Production of AmmoniumPhosphate\n\n\n\n\n\n\n\n\n\n\n\n(f) Production of NKCompound\n\n\n\n\n\n\n\nFigure 2.1: fertiliser_demand parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Production of NPKCompound\n\n\n\n\n\n\n\n\n\n\n\n(b) Production of UreaAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Production of OtherFertiliserN\n\n\n\n\n\n\n\n\n\n\n\n(d) Production of OtherFertiliserNP\n\n\n\n\n\n\n\nFigure 2.2: fertiliser_demand parameter data (part 2)\n\n\n\n\n\n\n\nFAO. 2022. “Synthetic Fertilizers.” https://www.fao.org/faostat/en/#data/GY.\n\n\nGao, Yunhu, and André Cabrera Serrenho. 2023. “Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.” Nature Food 4 (2): 170–78. https://doi.org/10.1038/s43016-023-00698-w.",
+    "text": "(a) Production of AmmoniaFertiliser\n\n\n\n\n\n\n\n\n\n\n\n(b) Production of AmmoniumSulphate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Production of AmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n(d) Production of CalciumAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(e) Production of AmmoniumPhosphate\n\n\n\n\n\n\n\n\n\n\n\n(f) Production of NKCompound\n\n\n\n\n\n\n\nFigure 3.1: fertiliser_demand parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Production of NPKCompound\n\n\n\n\n\n\n\n\n\n\n\n(b) Production of UreaAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Production of OtherFertiliserN\n\n\n\n\n\n\n\n\n\n\n\n(d) Production of OtherFertiliserNP\n\n\n\n\n\n\n\nFigure 3.2: fertiliser_demand parameter data (part 2)\n\n\n\n\n\n\n\nFAO. 2022. “Synthetic Fertilizers.” https://www.fao.org/faostat/en/#data/GY.\n\n\nGao, Yunhu, and André Cabrera Serrenho. 2023. “Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.” Nature Food 4 (2): 170–78. https://doi.org/10.1038/s43016-023-00698-w.",
     "crumbs": [
       "Fertilisers",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>fertiliser_demand</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>fertiliser_demand</span>"
     ]
   },
   {
     "objectID": "lever/fertiliser_production.html",
     "href": "lever/fertiliser_production.html",
-    "title": "3  fertiliser_production",
+    "title": "4  fertiliser_production",
     "section": "",
-    "text": "3.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
+    "text": "4.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
     "crumbs": [
       "Fertilisers",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>fertiliser_production</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>fertiliser_production</span>"
     ]
   },
   {
     "objectID": "lever/fertiliser_production.html#parameter-data",
     "href": "lever/fertiliser_production.html#parameter-data",
-    "title": "3  fertiliser_production",
+    "title": "4  fertiliser_production",
     "section": "",
-    "text": "(a) Production of AmmoniaFertiliser\n\n\n\n\n\n\n\n\n\n\n\n(b) Production of AmmoniumSulphate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Production of AmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n(d) Production of CalciumAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(e) Production of AmmoniumPhosphate\n\n\n\n\n\n\n\n\n\n\n\n(f) Production of NKCompound\n\n\n\n\n\n\n\nFigure 3.1: fertiliser_production parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Production of NPKCompound\n\n\n\n\n\n\n\n\n\n\n\n(b) Production of UreaAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Production of OtherFertiliserN\n\n\n\n\n\n\n\n\n\n\n\n(d) Production of OtherFertiliserNP\n\n\n\n\n\n\n\nFigure 3.2: fertiliser_production parameter data (part 2)\n\n\n\n\n\n\n\nGao, Yunhu, and André Cabrera Serrenho. 2023. “Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.” Nature Food 4 (2): 170–78. https://doi.org/10.1038/s43016-023-00698-w.",
+    "text": "(a) Production of AmmoniaFertiliser\n\n\n\n\n\n\n\n\n\n\n\n(b) Production of AmmoniumSulphate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Production of AmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n(d) Production of CalciumAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(e) Production of AmmoniumPhosphate\n\n\n\n\n\n\n\n\n\n\n\n(f) Production of NKCompound\n\n\n\n\n\n\n\nFigure 4.1: fertiliser_production parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Production of NPKCompound\n\n\n\n\n\n\n\n\n\n\n\n(b) Production of UreaAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Production of OtherFertiliserN\n\n\n\n\n\n\n\n\n\n\n\n(d) Production of OtherFertiliserNP\n\n\n\n\n\n\n\nFigure 4.2: fertiliser_production parameter data (part 2)\n\n\n\n\n\n\n\nGao, Yunhu, and André Cabrera Serrenho. 2023. “Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.” Nature Food 4 (2): 170–78. https://doi.org/10.1038/s43016-023-00698-w.",
     "crumbs": [
       "Fertilisers",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>fertiliser_production</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>fertiliser_production</span>"
     ]
   },
   {
     "objectID": "lever/fertiliser_use_phase.html",
     "href": "lever/fertiliser_use_phase.html",
-    "title": "4  fertiliser_use_phase",
+    "title": "5  fertiliser_use_phase",
     "section": "",
-    "text": "4.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
+    "text": "5.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
     "crumbs": [
       "Fertilisers",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>fertiliser_use_phase</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>fertiliser_use_phase</span>"
     ]
   },
   {
     "objectID": "lever/fertiliser_use_phase.html#parameter-data",
     "href": "lever/fertiliser_use_phase.html#parameter-data",
-    "title": "4  fertiliser_use_phase",
+    "title": "5  fertiliser_use_phase",
     "section": "",
-    "text": "(a) Use of AmmoniaFertiliser\n\n\n\n\n\n\n\n\n\n\n\n(b) Use of AmmoniumSulphate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Use of AmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n(d) Use of CalciumAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(e) Use of AmmoniumPhosphate\n\n\n\n\n\n\n\n\n\n\n\n(f) Use of NKCompound\n\n\n\n\n\n\n\nFigure 4.1: fertiliser_use_phase parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Use of NPKCompound\n\n\n\n\n\n\n\n\n\n\n\n(b) Use of UreaAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Use of OtherFertiliserN\n\n\n\n\n\n\n\n\n\n\n\n(d) Use of OtherFertiliserNP\n\n\n\n\n\n\n\nFigure 4.2: fertiliser_use_phase parameter data (part 2)\n\n\n\n\n\n\n\nGao, Yunhu, and André Cabrera Serrenho. 2023. “Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.” Nature Food 4 (2): 170–78. https://doi.org/10.1038/s43016-023-00698-w.",
+    "text": "(a) Use of AmmoniaFertiliser\n\n\n\n\n\n\n\n\n\n\n\n(b) Use of AmmoniumSulphate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Use of AmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n(d) Use of CalciumAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(e) Use of AmmoniumPhosphate\n\n\n\n\n\n\n\n\n\n\n\n(f) Use of NKCompound\n\n\n\n\n\n\n\nFigure 5.1: fertiliser_use_phase parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Use of NPKCompound\n\n\n\n\n\n\n\n\n\n\n\n(b) Use of UreaAmmoniumNitrate\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Use of OtherFertiliserN\n\n\n\n\n\n\n\n\n\n\n\n(d) Use of OtherFertiliserNP\n\n\n\n\n\n\n\nFigure 5.2: fertiliser_use_phase parameter data (part 2)\n\n\n\n\n\n\n\nGao, Yunhu, and André Cabrera Serrenho. 2023. “Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.” Nature Food 4 (2): 170–78. https://doi.org/10.1038/s43016-023-00698-w.",
     "crumbs": [
       "Fertilisers",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>fertiliser_use_phase</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>fertiliser_use_phase</span>"
     ]
   },
   {
     "objectID": "lever/product_demand.html",
     "href": "lever/product_demand.html",
-    "title": "5  product_demand",
+    "title": "6  product_demand",
     "section": "",
-    "text": "5.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
+    "text": "6.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>product_demand</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>product_demand</span>"
     ]
   },
   {
     "objectID": "lever/product_demand.html#parameter-data",
     "href": "lever/product_demand.html#parameter-data",
-    "title": "5  product_demand",
+    "title": "6  product_demand",
     "section": "",
-    "text": "(a) Demand for Packaging\n\n\n\n\n\n\n\n\n\n\n\n(b) Demand for Transportation\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Demand for BuildingsAndConstruction\n\n\n\n\n\n\n\n\n\n\n\n(d) Demand for ElectricalAndElectronic\n\n\n\n\n\n\n\nFigure 5.1: product_demand parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Demand for ConsumerAndInstitutional\n\n\n\n\n\n\n\n\n\n\n\n(b) Demand for IndustrialMachinery\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Demand for Textile\n\n\n\n\n\n\n\n\n\n\n\n(d) Demand for Other\n\n\n\n\n\n\n\nFigure 5.2: product_demand parameter data (part 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) EOL from Packaging\n\n\n\n\n\n\n\n\n\n\n\n(b) EOL from Transportation\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) EOL from BuildingsAndConstruction\n\n\n\n\n\n\n\n\n\n\n\n(d) EOL from ElectricalAndElectronic\n\n\n\n\n\n\n\nFigure 5.3: product_demand parameter data (part 3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) EOL from ConsumerAndInstitutional\n\n\n\n\n\n\n\n\n\n\n\n(b) EOL from IndustrialMachinery\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) EOL from Textile\n\n\n\n\n\n\n\n\n\n\n\n(d) EOL from Other\n\n\n\n\n\n\n\nFigure 5.4: product_demand parameter data (part 4)\n\n\n\n\n\n\n\nCrespo Cuaresma, Jesús. 2017. “Income Projections for Climate Change Research: A Framework Based on Human Capital Dynamics.” Global Environmental Change 42: 226–36. https://doi.org/https://doi.org/10.1016/j.gloenvcha.2015.02.012.\n\n\nUN. 2022. “World Population Prospects 2022.” https://population.un.org/wpp/.",
+    "text": "(a) Demand for Packaging\n\n\n\n\n\n\n\n\n\n\n\n(b) Demand for Transportation\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Demand for BuildingsAndConstruction\n\n\n\n\n\n\n\n\n\n\n\n(d) Demand for ElectricalAndElectronic\n\n\n\n\n\n\n\nFigure 6.1: product_demand parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Demand for ConsumerAndInstitutional\n\n\n\n\n\n\n\n\n\n\n\n(b) Demand for IndustrialMachinery\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Demand for Textile\n\n\n\n\n\n\n\n\n\n\n\n(d) Demand for Other\n\n\n\n\n\n\n\nFigure 6.2: product_demand parameter data (part 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) EOL from Packaging\n\n\n\n\n\n\n\n\n\n\n\n(b) EOL from Transportation\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) EOL from BuildingsAndConstruction\n\n\n\n\n\n\n\n\n\n\n\n(d) EOL from ElectricalAndElectronic\n\n\n\n\n\n\n\nFigure 6.3: product_demand parameter data (part 3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) EOL from ConsumerAndInstitutional\n\n\n\n\n\n\n\n\n\n\n\n(b) EOL from IndustrialMachinery\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) EOL from Textile\n\n\n\n\n\n\n\n\n\n\n\n(d) EOL from Other\n\n\n\n\n\n\n\nFigure 6.4: product_demand parameter data (part 4)\n\n\n\n\n\n\n\nCrespo Cuaresma, Jesús. 2017. “Income Projections for Climate Change Research: A Framework Based on Human Capital Dynamics.” Global Environmental Change 42: 226–36. https://doi.org/https://doi.org/10.1016/j.gloenvcha.2015.02.012.\n\n\nUN. 2022. “World Population Prospects 2022.” https://population.un.org/wpp/.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>product_demand</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>product_demand</span>"
     ]
   },
   {
     "objectID": "lever/recycling.html",
     "href": "lever/recycling.html",
-    "title": "6  recycling",
+    "title": "7  recycling",
     "section": "",
-    "text": "6.1 Possible recycling routes\nFirst the possible recycling routes in different scenarios are set for 3 levels of ambition, as summarised in Table 6.1.",
+    "text": "7.1 Possible recycling routes\nFirst the possible recycling routes in different scenarios are set for 3 levels of ambition, as summarised in Table 7.1.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>recycling</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>recycling</span>"
     ]
   },
   {
     "objectID": "lever/recycling.html#possible-recycling-routes",
     "href": "lever/recycling.html#possible-recycling-routes",
-    "title": "6  recycling",
+    "title": "7  recycling",
     "section": "",
-    "text": "Table 6.1: Current, improved and ambitious options for recycling routes by polymer. “M” indicates suitability for mechanical recycling, “C” for chemical recycling.\n\n\n\n\n\n\n\n\n\n\n\nPolymer type\nCurrent\nPractical\nAmbitious\n\n\n\n\nLDPE\nM / _\nM / _\nM / C\n\n\nHDPE\nM / _\nM / _\nM / C\n\n\nLLDPE\n_ / _\nM / _\nM / C\n\n\nPET\nM / _\nM / C\nM / C\n\n\nPP\nM / _\nM / _\nM / C\n\n\nPVC\n_ / _\nM / _\nM / C\n\n\nPS\n_ / _\nM / C\nM / C\n\n\nFibre PPA\n_ / _\n_ / C\nM / C\n\n\nPUR\n_ / _\n_ / C\n_ / C\n\n\nSynthetic rubber\n_ / _\n_ / _\n_ / C\n\n\nOther polymers\n_ / _\n_ / _\n_ / C\n\n\n\n\n\n\n\n6.1.1 Current routes\nCurrently the possibilities for recycling polymers are as follows:\n\nLDPE, HDPE, and PET are widely recycled (OECD 2018). There is virtually no chemical recycling today (Van Geem 2023): all current recycling is mechanical.\nPP can be mechanically recycled, but only 1% of the world production is recycled. Majority of the discarded PP goes to landfills and oceans (Basham 2019). There is also misconception that waste PP from health sector cannot be recycled, hence, majority are incinerated without recovering the energy (Healthcare 2019).\nLLDPE can be mechanically and chemically recycled. Because it is often blended with other types of plastics that make its recycling challenging, consequently, its recycling rate is generally low (Arkema 2023). This is also compounded with the dwindling demand for LLDPE and about 60% is for single-use applications, investments on recycling LLDPE needs to be economically justified (Richardson 2018).\nMechanical recycling is recommended for PVC, but this is not happening now as it is mistaken to have low thermal stability and to generate toxic degradation products, which are misconceptions as it can be widely recycled (Lewandowski and Skórczewska 2022).\nPS can be mechanically and chemically recycled (Maharana, Negi, and Mohanty 2007). Despite being so, PS recycling is not done globally at present, because it is not economically feasible (Marquez et al. 2023) and it is logistically difficult (Waring 2018). Hence, it makes more sense to produce virgin PS than recycle it.\nPUR recycling is not predominantly done, despite the effort from manufacturers and legislators. Most PUR wastes end up in landfills (Kemona and Piotrowska 2020).\nWith tire industry representing 65% of the global rubber production, most rubber wastes go to landfills (Fazli and Rodrigue 2020).\nPPA is generally mixed with other plastics, hence, it there is limited recycling, with most going to incineration and land filling (Hirschberg and Rodrigue 2023).\n\n\n\n6.1.2 Future routes\nExpectations for future improvements for each polymer are:\n\nFollowing from the current practice: LDPE, HDPE, and PET will continue to be mechanically recycled (OECD 2018).\nLLDPE, PP and PVC can be recycled more, via mechanical recycling Lewandowski and Skórczewska (2022).\nPS and PET can be both mechanically and chemically recycled.\nMechanical recycling degrades the polymer properties of thermosettting PURs (Rossignolo, Malucelli, and Lorenzetti 2024) and PPA (Hirschberg and Rodrigue 2023), so chemical recycling is most appropriate.\n\nThis forms the “practical limit” level.\nBeyond this, all the rest of the polymers can be chemically recycled provided the technologies became technically, economically and environmentally feasible. This forms the Ambitious level.",
+    "text": "Table 7.1: Current, improved and ambitious options for recycling routes by polymer. “M” indicates suitability for mechanical recycling, “C” for chemical recycling.\n\n\n\n\n\n\n\n\n\n\n\nPolymer type\nCurrent\nPractical\nAmbitious\n\n\n\n\nLDPE\nM / _\nM / _\nM / C\n\n\nHDPE\nM / _\nM / _\nM / C\n\n\nLLDPE\n_ / _\nM / _\nM / C\n\n\nPET\nM / _\nM / C\nM / C\n\n\nPP\nM / _\nM / _\nM / C\n\n\nPVC\n_ / _\nM / _\nM / C\n\n\nPS\n_ / _\nM / C\nM / C\n\n\nFibre PPA\n_ / _\n_ / C\nM / C\n\n\nPUR\n_ / _\n_ / C\n_ / C\n\n\nSynthetic rubber\n_ / _\n_ / _\n_ / C\n\n\nOther polymers\n_ / _\n_ / _\n_ / C\n\n\n\n\n\n\n\n7.1.1 Current routes\nCurrently the possibilities for recycling polymers are as follows:\n\nLDPE, HDPE, and PET are widely recycled (OECD 2018). There is virtually no chemical recycling today (Van Geem 2023): all current recycling is mechanical.\nPP can be mechanically recycled, but only 1% of the world production is recycled. Majority of the discarded PP goes to landfills and oceans (Basham 2019). There is also misconception that waste PP from health sector cannot be recycled, hence, majority are incinerated without recovering the energy (Healthcare 2019).\nLLDPE can be mechanically and chemically recycled. Because it is often blended with other types of plastics that make its recycling challenging, consequently, its recycling rate is generally low (Arkema 2023). This is also compounded with the dwindling demand for LLDPE and about 60% is for single-use applications, investments on recycling LLDPE needs to be economically justified (Richardson 2018).\nMechanical recycling is recommended for PVC, but this is not happening now as it is mistaken to have low thermal stability and to generate toxic degradation products, which are misconceptions as it can be widely recycled (Lewandowski and Skórczewska 2022).\nPS can be mechanically and chemically recycled (Maharana, Negi, and Mohanty 2007). Despite being so, PS recycling is not done globally at present, because it is not economically feasible (Marquez et al. 2023) and it is logistically difficult (Waring 2018). Hence, it makes more sense to produce virgin PS than recycle it.\nPUR recycling is not predominantly done, despite the effort from manufacturers and legislators. Most PUR wastes end up in landfills (Kemona and Piotrowska 2020).\nWith tire industry representing 65% of the global rubber production, most rubber wastes go to landfills (Fazli and Rodrigue 2020).\nPPA is generally mixed with other plastics, hence, it there is limited recycling, with most going to incineration and land filling (Hirschberg and Rodrigue 2023).\n\n\n\n7.1.2 Future routes\nExpectations for future improvements for each polymer are:\n\nFollowing from the current practice: LDPE, HDPE, and PET will continue to be mechanically recycled (OECD 2018).\nLLDPE, PP and PVC can be recycled more, via mechanical recycling Lewandowski and Skórczewska (2022).\nPS and PET can be both mechanically and chemically recycled.\nMechanical recycling degrades the polymer properties of thermosettting PURs (Rossignolo, Malucelli, and Lorenzetti 2024) and PPA (Hirschberg and Rodrigue 2023), so chemical recycling is most appropriate.\n\nThis forms the “practical limit” level.\nBeyond this, all the rest of the polymers can be chemically recycled provided the technologies became technically, economically and environmentally feasible. This forms the Ambitious level.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>recycling</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>recycling</span>"
     ]
   },
   {
     "objectID": "lever/recycling.html#quantifying-recycling-rates",
     "href": "lever/recycling.html#quantifying-recycling-rates",
-    "title": "6  recycling",
-    "section": "6.2 Quantifying recycling rates",
-    "text": "6.2 Quantifying recycling rates\nThe baseline overall global recycling rate is 9% according to OECD (2022). This is distributed across the relevant polymers for each level Table 6.1 based on the mass flow quantities of each polymer in the baseline model. The recycling rate for PP is 1% (Basham 2019), and equal recycling rates for HDPE, LDPE and PET of 30% was assumed to give an overall mass-weighted recycling rate of 9%.\nThe reference business-as-usual projection in recycling rate growth from OECD (2022) reaches 16% by 2050. We assume growth in mechanical recycling rates on the polymers already recycled to 15% and 35% respectively. Additional growth in recycling is distributed across the other recycling routes added in this level of Table 6.1 at 15% for LLDPE and 5% for others.\nThe more ambitious scenario from OECD (2022) reaches 47% overall recycling rate by 2050. This increase is achieved by increasing recycling rates to 50% for all polymers which can be mechanically recycled in Table 6.1, together with 15% chemical recycling of all polymers.",
+    "title": "7  recycling",
+    "section": "7.2 Quantifying recycling rates",
+    "text": "7.2 Quantifying recycling rates\nThe baseline overall global recycling rate is 9% according to OECD (2022). This is distributed across the relevant polymers for each level Table 7.1 based on the mass flow quantities of each polymer in the baseline model. The recycling rate for PP is 1% (Basham 2019), and equal recycling rates for HDPE, LDPE and PET of 30% was assumed to give an overall mass-weighted recycling rate of 9%.\nThe reference business-as-usual projection in recycling rate growth from OECD (2022) reaches 16% by 2050. We assume growth in mechanical recycling rates on the polymers already recycled to 15% and 35% respectively. Additional growth in recycling is distributed across the other recycling routes added in this level of Table 7.1 at 15% for LLDPE and 5% for others.\nThe more ambitious scenario from OECD (2022) reaches 47% overall recycling rate by 2050. This increase is achieved by increasing recycling rates to 50% for all polymers which can be mechanically recycled in Table 7.1, together with 15% chemical recycling of all polymers.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>recycling</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>recycling</span>"
     ]
   },
   {
     "objectID": "lever/recycling.html#parameter-data",
     "href": "lever/recycling.html#parameter-data",
-    "title": "6  recycling",
-    "section": "6.3 Parameter data",
-    "text": "6.3 Parameter data\nThe plots below show the change in recycling rates over time for each polymer affected by this lever.\n\n\n\n\n\n\n\n\n\n\n\n(a) LDPEPolyethylene\n\n\n\n\n\n\n\n\n\n\n\n(b) HDPEPolyethylene\n\n\n\n\n\n\n\n\n\n\n\n(c) PPPolypropylene\n\n\n\n\n\n\n\n\n\n\n\n(d) PSPolystyrene\n\n\n\n\n\n\nFigure 6.1: recycling parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) PVCPolyvinylChloride\n\n\n\n\n\n\n\n\n\n\n\n(b) PETPolyethyleneTerephthalatePolyesters\n\n\n\n\n\n\n\n\n\n\n\n(c) Polyurethane\n\n\n\n\n\n\n\n\n\n\n\n(d) SyntheticRubbers\n\n\n\n\n\n\nFigure 6.2: recycling parameter data (part 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) OtherPolymers\n\n\n\n\n\n\n\n\n\n\n\n(b) LLDPE\n\n\n\n\n\n\n\n\n\n\n\n(c) FibrePPA\n\n\n\n\n\n\nFigure 6.3: recycling parameter data (part 3)\n\n\n\n\n\n\n\n\nArkema. 2023. “How to Improve the LLDPE Mechanical Recycling Process?” Web Page. Arkema. https://hpp.arkema.com/en/resources/post/hpp/hhp.arkema/article-how-to-improve-LLDPE-mechanical-recycling-process/#:~:text=There%20are%20several%20ways%20to,to%20produce%20new%20polymer%20products.\n\n\nBasham, Kevin. 2019. “How Is PP Plastic Recycled?” Web Page. plastic expert. https://www.plasticexpert.co.uk/how-is-pp-plastic-recycled/.\n\n\nFazli, Ali, and Denis Rodrigue. 2020. “Waste Rubber Recycling: A Review on the Evolution and Properties of Thermoplastic Elastomers.” Journal Article. Materials 13 (3): 782. https://www.mdpi.com/1996-1944/13/3/782.\n\n\nHealthcare, Interweave. 2019. “Is Polypropylene Recyclable?” Web Page. Interweave Textiles Ltd,. https://www.interweavetextiles.com/is-polypropylene-recyclable/.\n\n\nHirschberg, Valerian, and Denis Rodrigue. 2023. “Recycling of Polyamides: Processes and Conditions.” Journal Article. Journal of Polymer Science 61 (17): 1937–58. https://doi.org/10.1002/pol.20230154.\n\n\nKemona, Aleksandra, and Małgorzata Piotrowska. 2020. “Polyurethane Recycling and Disposal: Methods and Prospects.” Journal Article. Polymers 12 (8): 1752. https://www.mdpi.com/2073-4360/12/8/1752.\n\n\nLewandowski, Krzysztof, and Katarzyna Skórczewska. 2022. “A Brief Review of Poly(vinyl Chloride) (PVC) Recycling.” Journal Article. Polymers 14 (15): 3035. https://www.mdpi.com/2073-4360/14/15/3035.\n\n\nMaharana, T., Y. S. Negi, and B. Mohanty. 2007. “Review Article: Recycling of Polystyrene.” Journal Article. Polymer-Plastics Technology and Engineering 46 (7): 729–36. https://doi.org/10.1080/03602550701273963.\n\n\nMarquez, Carlos, Cristina Martin, Noemi Linares, and Dirk De Vos. 2023. “Catalytic Routes Towards Polystyrene Recycling.” Journal Article. Materials Horizons 10 (5): 1625–40. https://doi.org/10.1039/D2MH01215D.\n\n\nOECD. 2018. “Improving Markets for Recycled Plastics: Trends, Prospects and Policy Responses.” Report. Organisation for Economic Co-operation; Development (OECD). https://doi.org/10.1787/9789264301016-en.\n\n\n———. 2022. “Global Plastics Outlook: Policy Scenarios to 2060.” https://doi.org/10.1787/aa1edf33-en.\n\n\nRichardson, John. 2018. “LLDPE Faces Unique Challenge in Plastic Waste Debate.” Web Page. International Commodity Intelligence Services (ICIS). https://www.icis.com/explore/resources/news/2018/11/22/10285294/lldpe-faces-unique-challenge-in-plastic-waste-debate/.\n\n\nRossignolo, Gabriele, Giulio Malucelli, and Alessandra Lorenzetti. 2024. “Recycling of Polyurethanes: Where We Are and Where We Are Going.” Journal Article. Green Chemistry 26 (3): 1132–52. https://doi.org/10.1039/D3GC02091F.\n\n\nVan Geem, Kevin M. 2023. “Plastic Waste Recycling Is Gaining Momentum.” Journal Article. Science 381 (6658): 607–8. https://doi.org/10.1126/science.adj2807.\n\n\nWaring, Olivia. 2018. “Can You Recycle Polystyrene? Here’s What You Should Do with It.” Web Page. Associated Newspaper Limited. https://metro.co.uk/2018/04/18/can-recycle-polystyrene-7478185/.",
+    "title": "7  recycling",
+    "section": "7.3 Parameter data",
+    "text": "7.3 Parameter data\nThe plots below show the change in recycling rates over time for each polymer affected by this lever.\n\n\n\n\n\n\n\n\n\n\n\n(a) LDPEPolyethylene\n\n\n\n\n\n\n\n\n\n\n\n(b) HDPEPolyethylene\n\n\n\n\n\n\n\n\n\n\n\n(c) PPPolypropylene\n\n\n\n\n\n\n\n\n\n\n\n(d) PSPolystyrene\n\n\n\n\n\n\nFigure 7.1: recycling parameter data (part 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) PVCPolyvinylChloride\n\n\n\n\n\n\n\n\n\n\n\n(b) PETPolyethyleneTerephthalatePolyesters\n\n\n\n\n\n\n\n\n\n\n\n(c) Polyurethane\n\n\n\n\n\n\n\n\n\n\n\n(d) SyntheticRubbers\n\n\n\n\n\n\nFigure 7.2: recycling parameter data (part 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) OtherPolymers\n\n\n\n\n\n\n\n\n\n\n\n(b) LLDPE\n\n\n\n\n\n\n\n\n\n\n\n(c) FibrePPA\n\n\n\n\n\n\nFigure 7.3: recycling parameter data (part 3)\n\n\n\n\n\n\n\n\nArkema. 2023. “How to Improve the LLDPE Mechanical Recycling Process?” Web Page. Arkema. https://hpp.arkema.com/en/resources/post/hpp/hhp.arkema/article-how-to-improve-LLDPE-mechanical-recycling-process/#:~:text=There%20are%20several%20ways%20to,to%20produce%20new%20polymer%20products.\n\n\nBasham, Kevin. 2019. “How Is PP Plastic Recycled?” Web Page. plastic expert. https://www.plasticexpert.co.uk/how-is-pp-plastic-recycled/.\n\n\nFazli, Ali, and Denis Rodrigue. 2020. “Waste Rubber Recycling: A Review on the Evolution and Properties of Thermoplastic Elastomers.” Journal Article. Materials 13 (3): 782. https://www.mdpi.com/1996-1944/13/3/782.\n\n\nHealthcare, Interweave. 2019. “Is Polypropylene Recyclable?” Web Page. Interweave Textiles Ltd,. https://www.interweavetextiles.com/is-polypropylene-recyclable/.\n\n\nHirschberg, Valerian, and Denis Rodrigue. 2023. “Recycling of Polyamides: Processes and Conditions.” Journal Article. Journal of Polymer Science 61 (17): 1937–58. https://doi.org/10.1002/pol.20230154.\n\n\nKemona, Aleksandra, and Małgorzata Piotrowska. 2020. “Polyurethane Recycling and Disposal: Methods and Prospects.” Journal Article. Polymers 12 (8): 1752. https://www.mdpi.com/2073-4360/12/8/1752.\n\n\nLewandowski, Krzysztof, and Katarzyna Skórczewska. 2022. “A Brief Review of Poly(vinyl Chloride) (PVC) Recycling.” Journal Article. Polymers 14 (15): 3035. https://www.mdpi.com/2073-4360/14/15/3035.\n\n\nMaharana, T., Y. S. Negi, and B. Mohanty. 2007. “Review Article: Recycling of Polystyrene.” Journal Article. Polymer-Plastics Technology and Engineering 46 (7): 729–36. https://doi.org/10.1080/03602550701273963.\n\n\nMarquez, Carlos, Cristina Martin, Noemi Linares, and Dirk De Vos. 2023. “Catalytic Routes Towards Polystyrene Recycling.” Journal Article. Materials Horizons 10 (5): 1625–40. https://doi.org/10.1039/D2MH01215D.\n\n\nOECD. 2018. “Improving Markets for Recycled Plastics: Trends, Prospects and Policy Responses.” Report. Organisation for Economic Co-operation; Development (OECD). https://doi.org/10.1787/9789264301016-en.\n\n\n———. 2022. “Global Plastics Outlook: Policy Scenarios to 2060.” https://doi.org/10.1787/aa1edf33-en.\n\n\nRichardson, John. 2018. “LLDPE Faces Unique Challenge in Plastic Waste Debate.” Web Page. International Commodity Intelligence Services (ICIS). https://www.icis.com/explore/resources/news/2018/11/22/10285294/lldpe-faces-unique-challenge-in-plastic-waste-debate/.\n\n\nRossignolo, Gabriele, Giulio Malucelli, and Alessandra Lorenzetti. 2024. “Recycling of Polyurethanes: Where We Are and Where We Are Going.” Journal Article. Green Chemistry 26 (3): 1132–52. https://doi.org/10.1039/D3GC02091F.\n\n\nVan Geem, Kevin M. 2023. “Plastic Waste Recycling Is Gaining Momentum.” Journal Article. Science 381 (6658): 607–8. https://doi.org/10.1126/science.adj2807.\n\n\nWaring, Olivia. 2018. “Can You Recycle Polystyrene? Here’s What You Should Do with It.” Web Page. Associated Newspaper Limited. https://metro.co.uk/2018/04/18/can-recycle-polystyrene-7478185/.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>recycling</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>recycling</span>"
     ]
   },
   {
     "objectID": "lever/final_treatment.html",
     "href": "lever/final_treatment.html",
-    "title": "7  final_treatment",
+    "title": "8  final_treatment",
     "section": "",
-    "text": "7.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
+    "text": "8.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>final_treatment</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>final_treatment</span>"
     ]
   },
   {
     "objectID": "lever/final_treatment.html#parameter-data",
     "href": "lever/final_treatment.html#parameter-data",
-    "title": "7  final_treatment",
+    "title": "8  final_treatment",
     "section": "",
-    "text": "(a) Incineration\n\n\n\n\n\n\n\n\n\n\n\n(b) Landfilling\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Mismanagement\n\n\n\n\n\n\n\nFigure 7.1: final_treatment parameter data\n\n\n\n\n\n\n\nOECD. 2022. “Global Plastics Outlook: Policy Scenarios to 2060.” https://doi.org/10.1787/aa1edf33-en.",
+    "text": "(a) Incineration\n\n\n\n\n\n\n\n\n\n\n\n(b) Landfilling\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Mismanagement\n\n\n\n\n\n\n\nFigure 8.1: final_treatment parameter data\n\n\n\n\n\n\n\nOECD. 2022. “Global Plastics Outlook: Policy Scenarios to 2060.” https://doi.org/10.1787/aa1edf33-en.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>final_treatment</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>final_treatment</span>"
     ]
   },
   {
     "objectID": "lever/extra_demand.html",
     "href": "lever/extra_demand.html",
-    "title": "8  extra_demand",
+    "title": "9  extra_demand",
     "section": "",
-    "text": "8.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
+    "text": "9.1 Parameter data\nThe plots below show the value over time of each parameter affected by this lever.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>extra_demand</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>extra_demand</span>"
     ]
   },
   {
     "objectID": "lever/extra_demand.html#parameter-data",
     "href": "lever/extra_demand.html#parameter-data",
-    "title": "8  extra_demand",
+    "title": "9  extra_demand",
     "section": "",
-    "text": "(a) Benzene\n\n\n\n\n\n\n\n\n\n\n\n(b) Toluene\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Xylenes\n\n\n\n\n\n\n\n\n\n\n\n(d) MethylAlcohol\n\n\n\n\n\n\n\nFigure 8.1: extra_demand parameter data\n\n\n\n\n\n\n\nGao, Yunhu, and André Cabrera Serrenho. 2023. “Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.” Nature Food 4 (2): 170–78. https://doi.org/10.1038/s43016-023-00698-w.\n\n\nInstitute, Methanol. 2023. “MMSA Global Methanol Supply and Demand Balance 2018 - 2023E.” Dataset. https://www.methanol.org/wp-content/uploads/2023/05/MMSA-World-Supply-and-Demand-Summary-for-Methanol-Institute-2.xlsx.",
+    "text": "(a) Benzene\n\n\n\n\n\n\n\n\n\n\n\n(b) Toluene\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Xylenes\n\n\n\n\n\n\n\n\n\n\n\n(d) MethylAlcohol\n\n\n\n\n\n\n\nFigure 9.1: extra_demand parameter data\n\n\n\n\n\n\n\nGao, Yunhu, and André Cabrera Serrenho. 2023. “Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.” Nature Food 4 (2): 170–78. https://doi.org/10.1038/s43016-023-00698-w.\n\n\nInstitute, Methanol. 2023. “MMSA Global Methanol Supply and Demand Balance 2018 - 2023E.” Dataset. https://www.methanol.org/wp-content/uploads/2023/05/MMSA-World-Supply-and-Demand-Summary-for-Methanol-Institute-2.xlsx.",
     "crumbs": [
       "Demand model levers",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>extra_demand</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>extra_demand</span>"
     ]
   },
   {
     "objectID": "lever/ethylene_methanol_capacity.html",
     "href": "lever/ethylene_methanol_capacity.html",
-    "title": "9  ethylene_methanol_capacity",
+    "title": "10  ethylene_methanol_capacity",
     "section": "",
-    "text": "9.1 Parameter data",
+    "text": "10.1 Parameter data",
     "crumbs": [
       "Petrochemical production levers",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ethylene_methanol_capacity</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ethylene_methanol_capacity</span>"
     ]
   },
   {
     "objectID": "lever/ethylene_methanol_capacity.html#parameter-data",
     "href": "lever/ethylene_methanol_capacity.html#parameter-data",
-    "title": "9  ethylene_methanol_capacity",
+    "title": "10  ethylene_methanol_capacity",
     "section": "",
     "text": "Institute, Methanol. 2023. “MMSA Global Methanol Supply and Demand Balance 2018 - 2023E.” Dataset. https://www.methanol.org/wp-content/uploads/2023/05/MMSA-World-Supply-and-Demand-Summary-for-Methanol-Institute-2.xlsx.",
     "crumbs": [
       "Petrochemical production levers",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ethylene_methanol_capacity</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ethylene_methanol_capacity</span>"
     ]
   },
   {
     "objectID": "lever/xylenes_methyl_alcohol_capacity.html",
     "href": "lever/xylenes_methyl_alcohol_capacity.html",
-    "title": "10  xylenes_methyl_alcohol_capacity",
+    "title": "11  xylenes_methyl_alcohol_capacity",
     "section": "",
-    "text": "10.1 Parameter data",
+    "text": "11.1 Parameter data",
     "crumbs": [
       "Petrochemical production levers",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>xylenes_methyl_alcohol_capacity</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>xylenes_methyl_alcohol_capacity</span>"
     ]
   },
   {
     "objectID": "lever/xylenes_methyl_alcohol_capacity.html#parameter-data",
     "href": "lever/xylenes_methyl_alcohol_capacity.html#parameter-data",
-    "title": "10  xylenes_methyl_alcohol_capacity",
+    "title": "11  xylenes_methyl_alcohol_capacity",
     "section": "",
     "text": "Pales, Araceli Fernandez, Peter G. Levi, Simon Bennett, Jason Elliott, Tae-Yoon Kim, Kristine Petrosyan, Joe Ritchie, et al. 2018a. “The Future of Petrochemicals: Towards More Sustainable Plastics and Fertilisers.” Report. International Energy Agency (IEA). https://iea.blob.core.windows.net/assets/bee4ef3a-8876-4566-98cf-7a130c013805/The_Future_of_Petrochemicals.pdf.\n\n\n———, et al. 2018b. “The Future of Petrochemicals: Towards More Sustainable Plastics and Fertilisers - Methodological Annex.” Report. International Energy Agency (IEA). https://iea.blob.core.windows.net/assets/bde8f9aa-d14e-412b-a8c2-fc90f6650eff/The_Future_of_Petrochemicals_Methodological_Annex.pdf.",
     "crumbs": [
       "Petrochemical production levers",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>xylenes_methyl_alcohol_capacity</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>xylenes_methyl_alcohol_capacity</span>"
     ]
   },
   {
     "objectID": "lever/bioethanol_capacity.html",
     "href": "lever/bioethanol_capacity.html",
-    "title": "11  bioethanol_capacity",
+    "title": "12  bioethanol_capacity",
     "section": "",
-    "text": "11.1 Parameter data",
+    "text": "12.1 Parameter data",
     "crumbs": [
       "Petrochemical production levers",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>bioethanol_capacity</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>bioethanol_capacity</span>"
     ]
   },
   {
     "objectID": "lever/biosyngas_capacity.html",
     "href": "lever/biosyngas_capacity.html",
-    "title": "12  biosyngas_capacity",
+    "title": "13  biosyngas_capacity",
     "section": "",
-    "text": "12.1 Parameter data",
+    "text": "13.1 Parameter data",
     "crumbs": [
       "Petrochemical production levers",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>biosyngas_capacity</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>biosyngas_capacity</span>"
     ]
   },
   {
     "objectID": "lever/frac_of_biomass_feedstock.html",
     "href": "lever/frac_of_biomass_feedstock.html",
-    "title": "13  frac_of_biomass_feedstock",
+    "title": "14  frac_of_biomass_feedstock",
     "section": "",
-    "text": "13.1 Parameter data",
+    "text": "14.1 Parameter data",
     "crumbs": [
       "Petrochemical production levers",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>frac_of_biomass_feedstock</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>frac_of_biomass_feedstock</span>"
     ]
   },
   {
     "objectID": "lever/olefins_paraffins_mix.html",
     "href": "lever/olefins_paraffins_mix.html",
-    "title": "14  olefins_paraffins_mix",
+    "title": "15  olefins_paraffins_mix",
     "section": "",
-    "text": "14.1 Parameter data",
+    "text": "15.1 Parameter data",
     "crumbs": [
       "Petrochemical production levers",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>olefins_paraffins_mix</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>olefins_paraffins_mix</span>"
     ]
   },
   {
     "objectID": "lever/olefins_paraffins_mix.html#parameter-data",
     "href": "lever/olefins_paraffins_mix.html#parameter-data",
-    "title": "14  olefins_paraffins_mix",
+    "title": "15  olefins_paraffins_mix",
     "section": "",
     "text": "Pales, Araceli Fernandez, Peter G. Levi, Simon Bennett, Jason Elliott, Tae-Yoon Kim, Kristine Petrosyan, Joe Ritchie, et al. 2018. “The Future of Petrochemicals: Towards More Sustainable Plastics and Fertilisers - Methodological Annex.” Report. International Energy Agency (IEA). https://iea.blob.core.windows.net/assets/bde8f9aa-d14e-412b-a8c2-fc90f6650eff/The_Future_of_Petrochemicals_Methodological_Annex.pdf.",
     "crumbs": [
       "Petrochemical production levers",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>olefins_paraffins_mix</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>olefins_paraffins_mix</span>"
     ]
   },
   {
     "objectID": "lever/green_hydrogen_capacity.html",
     "href": "lever/green_hydrogen_capacity.html",
-    "title": "15  green_hydrogen_capacity",
+    "title": "16  green_hydrogen_capacity",
     "section": "",
-    "text": "15.1 Parameter data",
+    "text": "16.1 Parameter data",
     "crumbs": [
       "Hydrogen levers",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>green_hydrogen_capacity</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>green_hydrogen_capacity</span>"
     ]
   },
   {
     "objectID": "lever/blue_hydrogen_capacity.html",
     "href": "lever/blue_hydrogen_capacity.html",
-    "title": "16  blue_hydrogen_capacity",
+    "title": "17  blue_hydrogen_capacity",
     "section": "",
-    "text": "16.1 Parameter data",
+    "text": "17.1 Parameter data",
     "crumbs": [
       "Hydrogen levers",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>blue_hydrogen_capacity</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>blue_hydrogen_capacity</span>"
     ]
   },
   {
     "objectID": "lever/ccs_incineration.html",
     "href": "lever/ccs_incineration.html",
-    "title": "17  ccs_incineration",
+    "title": "18  ccs_incineration",
     "section": "",
-    "text": "17.1 Parameter data",
+    "text": "18.1 Parameter data",
     "crumbs": [
       "Abatement levers",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>ccs_incineration</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>ccs_incineration</span>"
     ]
   },
   {
     "objectID": "lever/ccs_process_emissions.html",
     "href": "lever/ccs_process_emissions.html",
-    "title": "18  ccs_process_emissions",
+    "title": "19  ccs_process_emissions",
     "section": "",
-    "text": "18.1 Parameter data",
+    "text": "19.1 Parameter data",
     "crumbs": [
       "Abatement levers",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>ccs_process_emissions</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>ccs_process_emissions</span>"
     ]
   },
   {
     "objectID": "lever/ccs_utility_combustion.html",
     "href": "lever/ccs_utility_combustion.html",
-    "title": "19  ccs_utility_combustion",
+    "title": "20  ccs_utility_combustion",
     "section": "",
-    "text": "19.1 Parameter data",
+    "text": "20.1 Parameter data",
     "crumbs": [
       "Abatement levers",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>ccs_utility_combustion</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>ccs_utility_combustion</span>"
     ]
   },
   {
     "objectID": "lever/electricity_requirements.html",
     "href": "lever/electricity_requirements.html",
-    "title": "20  electricity_requirements",
+    "title": "21  electricity_requirements",
     "section": "",
-    "text": "20.1 Parameter data",
+    "text": "21.1 Parameter data",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>electricity_requirements</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>electricity_requirements</span>"
     ]
   },
   {
     "objectID": "lever/electricity_requirements.html#parameter-data",
     "href": "lever/electricity_requirements.html#parameter-data",
-    "title": "20  electricity_requirements",
+    "title": "21  electricity_requirements",
     "section": "",
     "text": "/opt/homebrew/Caskroom/miniconda/base/envs/cthru-calculator/lib/python3.10/site-packages/pandas/plotting/_matplotlib/core.py:512: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.\n  fig = self.plt.figure(figsize=self.figsize)",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>electricity_requirements</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>electricity_requirements</span>"
     ]
   },
   {
     "objectID": "lever/natural_gas_requirements.html",
     "href": "lever/natural_gas_requirements.html",
-    "title": "21  natural_gas_requirements",
+    "title": "22  natural_gas_requirements",
     "section": "",
-    "text": "21.1 Parameter data",
+    "text": "22.1 Parameter data",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>natural_gas_requirements</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>natural_gas_requirements</span>"
     ]
   },
   {
     "objectID": "lever/natural_gas_requirements.html#parameter-data",
     "href": "lever/natural_gas_requirements.html#parameter-data",
-    "title": "21  natural_gas_requirements",
+    "title": "22  natural_gas_requirements",
     "section": "",
     "text": "/opt/homebrew/Caskroom/miniconda/base/envs/cthru-calculator/lib/python3.10/site-packages/pandas/plotting/_matplotlib/core.py:512: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.\n  fig = self.plt.figure(figsize=self.figsize)",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>natural_gas_requirements</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>natural_gas_requirements</span>"
     ]
   },
   {
     "objectID": "lever/electricity_emission_factor.html",
     "href": "lever/electricity_emission_factor.html",
-    "title": "22  electricity_emission_factor",
+    "title": "23  electricity_emission_factor",
     "section": "",
-    "text": "22.1 Parameter data",
+    "text": "23.1 Parameter data",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>electricity_emission_factor</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>electricity_emission_factor</span>"
     ]
   },
   {
     "objectID": "lever/natural_gas_emission_factor.html",
     "href": "lever/natural_gas_emission_factor.html",
-    "title": "23  natural_gas_emission_factor",
+    "title": "24  natural_gas_emission_factor",
     "section": "",
-    "text": "23.1 Parameter data",
+    "text": "24.1 Parameter data",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>natural_gas_emission_factor</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>natural_gas_emission_factor</span>"
     ]
   },
   {
     "objectID": "lever/direct_process_emissions.html",
     "href": "lever/direct_process_emissions.html",
-    "title": "24  direct_process_emissions",
+    "title": "25  direct_process_emissions",
     "section": "",
-    "text": "24.1 Process emissions\nSteam cracking has significant CO2 emissions from combustion, as described by the IPCC emissions factors, but these are already accounted for by utility energy inputs in our model, so are reported as utility emissions rather than direct process emissions. CH4 emissions are calculated based on IPCC emissions factor estimates.\nFor production of methanol, we model syngas production and methanol production as separate processes, whereas IPCC emissions factors include both steps together, and due to the integrated nature of the processes it can be different to allocate emissions to specific stages. Based on a carbon balance of the processes, most CO2 comes from the syngas production stage, so IPCC emissions factors by feedstock are allocated to those processes, accounting for a 1 kg methanol yield from 1.5 kg syngas. Direct CH4 emissions from methanol synthesis based on IPCC emissions factors are included.\nEmissions factors for direct process emissions from adipic acid synthesis, ethylene oxide synthesis and acrylonitrile synthesis are used directly.",
+    "text": "25.1 Process emissions\nSteam cracking has significant CO2 emissions from combustion, as described by the IPCC emissions factors, but these are already accounted for by utility energy inputs in our model, so are reported as utility emissions rather than direct process emissions. CH4 emissions are calculated based on IPCC emissions factor estimates.\nFor production of methanol, we model syngas production and methanol production as separate processes, whereas IPCC emissions factors include both steps together, and due to the integrated nature of the processes it can be different to allocate emissions to specific stages. Based on a carbon balance of the processes, most CO2 comes from the syngas production stage, so IPCC emissions factors by feedstock are allocated to those processes, accounting for a 1 kg methanol yield from 1.5 kg syngas. Direct CH4 emissions from methanol synthesis based on IPCC emissions factors are included.\nEmissions factors for direct process emissions from adipic acid synthesis, ethylene oxide synthesis and acrylonitrile synthesis are used directly.",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>direct_process_emissions</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>direct_process_emissions</span>"
     ]
   },
   {
     "objectID": "lever/direct_process_emissions.html#biogenic-carbon-sequestration",
     "href": "lever/direct_process_emissions.html#biogenic-carbon-sequestration",
-    "title": "24  direct_process_emissions",
-    "section": "24.2 Biogenic carbon sequestration",
-    "text": "24.2 Biogenic carbon sequestration\nSince the chemical sector can potentially act as a sink for carbon emissions (meng_planet_2023?) it is important to clearly model and report negative sequestered carbon from biomass feedstocks as well as positive end-of-life incineration emissions. To simplify modelling of biomass production, sequestration is modelled as happening at the point of conversion to a bio-based chemical (i.e. syngas or ethanol) rather than further upstream, based on the assumption that other biogenic carbon is released back to the atmosphere in the short term.\nThe carbon content of syngas is assumed to be 30% by mass, giving 1.1 kg CO2 sequestered per kg syngas.\nThe carbon content of ethyl alcohol is assumed to be 52% by mass, giving 1.9 kg CO2 sequestered per kg ethyl alcohol.\nThese are included as negative emissions linked to the bio-syngas and bio-ethyl-alcohol production processes.",
+    "title": "25  direct_process_emissions",
+    "section": "25.2 Biogenic carbon sequestration",
+    "text": "25.2 Biogenic carbon sequestration\nSince the chemical sector can potentially act as a sink for carbon emissions (meng_planet_2023?) it is important to clearly model and report negative sequestered carbon from biomass feedstocks as well as positive end-of-life incineration emissions. To simplify modelling of biomass production, sequestration is modelled as happening at the point of conversion to a bio-based chemical (i.e. syngas or ethanol) rather than further upstream, based on the assumption that other biogenic carbon is released back to the atmosphere in the short term.\nThe carbon content of syngas is assumed to be 30% by mass, giving 1.1 kg CO2 sequestered per kg syngas.\nThe carbon content of ethyl alcohol is assumed to be 52% by mass, giving 1.9 kg CO2 sequestered per kg ethyl alcohol.\nThese are included as negative emissions linked to the bio-syngas and bio-ethyl-alcohol production processes.",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>direct_process_emissions</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>direct_process_emissions</span>"
     ]
   },
   {
     "objectID": "lever/direct_process_emissions.html#parameter-data",
     "href": "lever/direct_process_emissions.html#parameter-data",
-    "title": "24  direct_process_emissions",
-    "section": "24.3 Parameter data",
-    "text": "24.3 Parameter data\n\n/opt/homebrew/Caskroom/miniconda/base/envs/cthru-calculator/lib/python3.10/site-packages/pandas/plotting/_matplotlib/core.py:512: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.\n  fig = self.plt.figure(figsize=self.figsize)",
+    "title": "25  direct_process_emissions",
+    "section": "25.3 Parameter data",
+    "text": "25.3 Parameter data\n\n/opt/homebrew/Caskroom/miniconda/base/envs/cthru-calculator/lib/python3.10/site-packages/pandas/plotting/_matplotlib/core.py:512: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.\n  fig = self.plt.figure(figsize=self.figsize)",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>direct_process_emissions</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>direct_process_emissions</span>"
     ]
   },
   {
     "objectID": "lever/feedstock_emission_factor.html",
     "href": "lever/feedstock_emission_factor.html",
-    "title": "25  feedstock_emission_factor",
+    "title": "26  feedstock_emission_factor",
     "section": "",
-    "text": "25.1 Parameter data",
+    "text": "26.1 Parameter data",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>feedstock_emission_factor</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>feedstock_emission_factor</span>"
     ]
   },
   {
     "objectID": "lever/final_treatment_emission_factor.html",
     "href": "lever/final_treatment_emission_factor.html",
-    "title": "26  final_treatment_emission_factor",
+    "title": "27  final_treatment_emission_factor",
     "section": "",
-    "text": "26.1 Parameter data",
+    "text": "27.1 Parameter data",
     "crumbs": [
       "Utilities & emissions data",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>final_treatment_emission_factor</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>final_treatment_emission_factor</span>"
     ]
   },
   {
