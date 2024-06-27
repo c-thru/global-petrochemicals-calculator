@@ -13,10 +13,9 @@ The polymers from end of life processes can be recycled. The thermoplastics poly
 ---
 consumes: |
     LDPEPolyethyleneAtEOL                      = 1.6 kg
-    CleaningAgents                             = 0.01 kg
 produces: |
     ukf:LDPEPolyethylene                       = 1 kg
-    Waste                                      = 0.5 kg
+    Waste                                      = 0.6 kg
 ---
 A yield of approximately 63% is assumed.
 ```
@@ -25,10 +24,9 @@ A yield of approximately 63% is assumed.
 ---
 consumes: |
     LLDPEAtEOL                                 = 1.6 kg
-    CleaningAgents                             = 0.01 kg
 produces: |
     LLDPE                                      = 1 kg
-    Waste                                      = 0.5 kg
+    Waste                                      = 0.6 kg
 ---
 A yield of approximately 63% is assumed.
 ```
@@ -37,10 +35,9 @@ A yield of approximately 63% is assumed.
 ---
 consumes: |
     HDPEPolyethyleneAtEOL                      = 1.6 kg
-    CleaningAgents                             = 0.01 kg
 produces: |
     ukf:HDPEPolyethylene                       = 1 kg
-    Waste                                      = 0.5 kg
+    Waste                                      = 0.6 kg
 ---
 A yield of approximately 63% is assumed.
 ```
@@ -49,10 +46,9 @@ A yield of approximately 63% is assumed.
 ---
 consumes: |
     PPPolypropyleneAtEOL                       = 1.6 kg
-    CleaningAgents                             = 0.01 kg
 produces: |
     ukf:PPPolypropylene                        = 1 kg
-    Waste                                      = 0.5 kg
+    Waste                                      = 0.6 kg
 ---
 A yield of approximately 63% is assumed.
 ```
@@ -61,10 +57,9 @@ A yield of approximately 63% is assumed.
 ---
 consumes: |
     PSPolystyreneAtEOL                         = 1.6 kg
-    CleaningAgents                             = 0.01 kg             
 produces: |
     ukf:PSPolystyrene                          = 1 kg
-    Waste                                      = 0.5 kg
+    Waste                                      = 0.6 kg
 ---
 A yield of approximately 63% is assumed.
 ```
@@ -73,10 +68,9 @@ A yield of approximately 63% is assumed.
 ---
 consumes: |
     PVCPolyvinylChlorideAtEOL                  = 1.6 kg
-    CleaningAgents                             = 0.01 kg             
 produces: |
     ukf:PVCPolyvinylChloride                   = 1 kg
-    Waste                                      = 0.5 kg
+    Waste                                      = 0.6 kg
 ---
 A yield of approximately 63% is assumed.
 ```
@@ -85,10 +79,9 @@ A yield of approximately 63% is assumed.
 ---
 consumes: |
     PETPolyethyleneTerephthalatePolyestersAtEOL    = 1.6 kg
-    CleaningAgents                                 = 0.01 kg
 produces: |
     ukf:PETPolyethyleneTerephthalatePolyesters     = 1 kg
-    Waste                                          = 0.5 kg
+    Waste                                          = 0.6 kg
 ---
 A yield of approximately 63% is assumed.
 ```
@@ -97,10 +90,9 @@ A yield of approximately 63% is assumed.
 ---
 consumes: |
     FibrePPAAtEOL                              = 1.6 kg
-    CleaningAgents                             = 0.01 kg             
 produces: |
     FibrePPA                                   = 1 kg
-    Waste                                      = 0.5 kg
+    Waste                                      = 0.6 kg
 ---
 A yield of approximately 63% is assumed.
 ```
