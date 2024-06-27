@@ -1,0 +1,44 @@
+---
+execute:
+  echo: false
+---
+
+# direct_process_emissions
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("direct_process_emissions")
+```
+
+This lever sets the baseline direct process emissions from reactions and internal non-utility combustion (consistent with the IPCC definition).
+
+The default direct process emissions from the IPCC guidelines (Harnisch et al. 2006) were used as a starting point, unless modifications were needed as described below.
+
+## Process emissions
+
+Steam cracking has significant CO~2~ emissions from combustion, as described by the IPCC emissions factors, but these are already accounted for by utility energy inputs in our model, so are reported as utility emissions rather than direct process emissions.  CH~4~ emissions are calculated based on IPCC emissions factor estimates.
+
+For production of methanol, we model syngas production and methanol production as separate processes, whereas IPCC emissions factors include both steps together, and due to the integrated nature of the processes it can be different to allocate emissions to specific stages. Based on a carbon balance of the processes, most CO~2~ comes from the syngas production stage, so IPCC emissions factors by feedstock are allocated to those processes, accounting for a 1 kg methanol yield from 1.5 kg syngas. Direct CH~4~ emissions from methanol synthesis based on IPCC emissions factors are included.
+
+Emissions factors for direct process emissions from adipic acid synthesis, ethylene oxide synthesis and acrylonitrile synthesis are used directly.
+
+## Biogenic carbon sequestration
+
+Since the chemical sector can potentially act as a sink for carbon emissions [@meng_planet_2023] it is important to clearly model and report negative sequestered carbon from biomass feedstocks as well as positive end-of-life incineration emissions. To simplify modelling of biomass production, sequestration is modelled as happening at the point of conversion to a bio-based chemical (i.e. syngas or ethanol) rather than further upstream, based on the assumption that other biogenic carbon is released back to the atmosphere in the short term.
+
+The carbon content of syngas is assumed to be 30% by mass, giving 1.1 kg CO~2~ sequestered per kg syngas.
+
+The carbon content of ethyl alcohol is assumed to be 52% by mass, giving 1.9 kg CO~2~ sequestered per kg ethyl alcohol.
+
+These are included as negative emissions linked to the bio-syngas and bio-ethyl-alcohol production processes.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("direct_process_emissions", param_descriptions={})
+```

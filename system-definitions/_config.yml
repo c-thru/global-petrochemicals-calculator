@@ -1,0 +1,40 @@
+# Book settings
+title: C-THRU Calculator system
+author: Rick Lupton
+copyright: "2023"
+# logo: logo.png
+
+# html:
+#   favicon: "favicon.png"
+
+# These files are generated content which are included in other files
+exclude_patterns:
+  - production_recipes_generated.md
+
+bibtex_bibfiles:
+  - references_en.bib
+  - references.bib
+
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - dollarmath
+  myst_dmath_double_inline: true
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+sphinx:
+  extra_extensions:
+    - sphinx_probs_rdf
+    - sphinx.ext.intersphinx
+  config:
+    probs_rdf_system_prefix: "http://c-thru.org/analyses/calculator/system/"
+    probs_rdf_extra_prefixes:
+      ukf: "http://ukfires.org/probs/system/"
+    bibtex_reference_style: author_year
+
+# We are not using executable notebooks at the moment, so turn off to save time
+execute:
+  execute_notebooks: "off"

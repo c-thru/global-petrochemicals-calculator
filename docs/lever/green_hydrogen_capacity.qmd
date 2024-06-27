@@ -1,0 +1,32 @@
+---
+execute:
+  echo: false
+---
+
+# green_hydrogen_capacity {#sec-green-hydrogen-capacity}
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("green_hydrogen_capacity")
+```
+
+This lever controls production capacity for "green" hydrogen, i.e. from water electrolysis.
+
+Currently this route is not used, so the baseline capacity remains at zero.
+
+Growth scenarios are based on the Hydrogen Council and McKinsey & Company (2023) Hydrogen Outlook.  They project total "clean hydrogen" (i.e. including green and blue) capacity in different scenarios, as well as the amount of hydrogen used by the chemical sector in 2035 and 2050.  This is used to estimate the fraction of all hydrogen projection which is used by the chemical sector in each scenario, which ranges from 18% (highest growth in hydrogen, in 2050) to 53% (lowest growth, in 2035).
+
+These fractions of capacity used for the chemical sector are assumed to apply to the green and blue hydrogen capacity available in each scenario, leading to the capacity levels set by this lever.
+
+The maximum capacity found this way is 54 Mt/year in 2050, which is insufficient to supply all potential demand for hydrogen in the model. To allow exploration of scenarios fully supplied by green hydrogen, an additional "full hydrogen" level was added with greater hypothetical capacity.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("green_hydrogen_capacity", param_descriptions={})
+```

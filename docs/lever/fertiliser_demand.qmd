@@ -1,0 +1,58 @@
+---
+execute:
+  echo: false
+---
+
+# fertiliser_demand
+
+```{python}
+#| output: false
+%load_ext autoreload
+%autoreload 2
+
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("fertiliser_demand")
+```
+
+This lever controls the level of demand for fertilisers globally, based on @gao_greenhouse_2023.
+
+The regional total demand for synthetic nitrogen fertilisers in the BAU scenario in 2050 is extracted from the forecast made by the @fao_syntheticfertilizers_2022. The fractions of various nitrogen fertiliser are estimated using the regional fractions in 2019. 
+
+The regional total demand for synthetic nitrogen fertilisers in the demand reduction scenario is calculated by the authors, considering optimistic nitrogen use efficiency. More details are be found in @gao_greenhouse_2023. Again, the fractions of nitrogen fertilizers are estimated using the regional fractions in 2019.
+
+The regional total demand for synthetic nitrogen fertilizers in the demand reduction and fertiliser substitution scenario is the same as the demand reduction scenario, while the fractions are different. To gradually get rid of high-emitting nitrogen fertilisers, the fractions of urea, urea ammonium nitrate (UAN) and other nitrogen fertilisers (represented by ammonium bicarbonate in the study), are linearly interpolated from current values in 2020 to zero in 2050. Their contributions are made up by ammonium nitrate (AN).
+
+
+## Parameter data
+
+The plots below show the value over time of each parameter affected by this lever.
+
+```{python}
+#| label: fig-fertiliser-demand-1
+#| layout-ncol: 2
+#| fig-cap: "`fertiliser_demand` parameter data (part 1)"
+#| fig-subcap:
+#|  - "Production of AmmoniaFertiliser"
+#|  - "Production of AmmoniumSulphate"
+#|  - "Production of AmmoniumNitrate"
+#|  - "Production of CalciumAmmoniumNitrate"
+#|  - "Production of AmmoniumPhosphate"
+#|  - "Production of NKCompound"
+plot_lever("fertiliser_demand", subset=range(0, 6))
+```
+
+```{python}
+#| label: fig-fertiliser-demand-2
+#| layout-ncol: 2
+#| fig-cap: "`fertiliser_demand` parameter data (part 2)"
+#| fig-subcap:
+#|  - "Production of NPKCompound"
+#|  - "Production of UreaAmmoniumNitrate"
+#|  - "Production of OtherFertiliserN"
+#|  - "Production of OtherFertiliserNP"
+#|  - "Production of Urea"
+plot_lever("fertiliser_demand", subset=range(7, 11))
+```

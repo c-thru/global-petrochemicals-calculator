@@ -1,0 +1,32 @@
+---
+execute:
+  echo: false
+---
+
+# feedstock_emission_factor
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("feedstock_emission_factor")
+```
+
+This lever controls the emissions factor for upstream production of the feedstocks that enter the model.
+
+Emissions factors for natural gas, coal, gas oil, propane and butane were taken from DEFRA (2023) scope 3 emissions factors data.
+
+Approximate emissions factors for naphtha and ethane supply were based on the study by Nanthachatchavankul et al. (2011) for ethylene production in Thailand.
+
+<!-- Question: is this representative enough? -->
+
+Biomass feedstocks are from Yuttitham et al. (2018) for sugarcane production in Thailand, and Farag et al. (2018) for corn production in Egypt.  Crop residues are represented by DEFRA (2023) scope 3 emissions for generic straw/grass biomass.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("feedstock_emission_factor", param_descriptions={})
+```

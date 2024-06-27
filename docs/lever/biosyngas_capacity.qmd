@@ -1,0 +1,28 @@
+---
+execute:
+  echo: false
+---
+
+# biosyngas_capacity
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("biosyngas_capacity")
+```
+
+This lever controls the available capacity for producing syngas from biomass via gasification, measured by the syngas production capacity.
+
+Based on figures from @barton_gstc_2021, global capacity for syngas production from biomass is about 1.3 Mt/year, with 94 Mt/year from "other" sources which is assumed to be wastes that are gasified in a similar way to biomass.  However, only a fraction of this syngas is for chemical production (largely methanol and ammonia).  Production of methanol from biomass is only 0.2 Mt/year [@irena_innovation_2021], requiring about 0.3 Mt/year syngas.  Syngas for ammonia is largely out of scope of this model as fertiliser production and emissions are accounted for separately, although some ammonia synthesis is included for non-fertiliser downstream uses.  The baseline bio-syngas capacity is therefore taken as 1.3 Mt/year.
+
+In the absence of specific projections for growth in this route, further levels are extrapolated to explore the potential role of biosyngas in the wider system.  The potential growth in biomass consumption is derived from the projections made from bioethanol (see @sec-bioethanol-capacity), adjusting for the significantly higher yield of syngas than ethanol per unit mass of biomass.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("biosyngas_capacity", param_descriptions={})
+```

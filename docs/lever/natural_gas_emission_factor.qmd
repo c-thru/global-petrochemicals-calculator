@@ -1,0 +1,26 @@
+---
+execute:
+  echo: false
+---
+
+# natural_gas_emission_factor
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("natural_gas_emission_factor")
+```
+
+This lever controls the emissions factor for natural gas production and combustion as a utility.
+
+The value is based on DEFRA (2023) scope 1 emissions factors.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("natural_gas_emission_factor", param_descriptions={})
+```

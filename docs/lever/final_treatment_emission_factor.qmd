@@ -1,0 +1,30 @@
+---
+execute:
+  echo: false
+---
+
+# final_treatment_emission_factor
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("final_treatment_emission_factor")
+```
+
+This lever controls the emissions factors for end-of-life final treatments.
+
+Emissions from incineration are based on data from Vlasopoulos et al. (2023) for incineration of mixed plastic waste in Europe.
+
+Emissions from landfilling are based on data from OECD (2023) for sanitary landfill, global scope.
+
+According to OECD (2022), mismanaged waste is "Waste that is not captured by any state-of-the-art waste collection or treatment facilities. It includes waste that is burned in open pits, dumped into seas or open waters, or disposed of in unsanitary landfills and dumpsites." Emissions are assumed to be the average of incineration and landfilling.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("final_treatment_emission_factor", param_descriptions={})
+```

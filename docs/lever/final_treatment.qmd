@@ -1,0 +1,36 @@
+---
+execute:
+  echo: false
+---
+
+# final_treatment
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("final_treatment")
+```
+
+This lever controls how much non-recycled end-of-life material is sent to different destinations.
+
+The current data and reference projection are from @oecd_globalplastics_2022.
+
+To consider different possible end-of-life options which effect GHG emissions, additional lever levels are added with very high incineration and landfilling shares respectively.  A residual 10% share for mismanagement is assumed to persist.
+
+## Parameter data
+
+The plots below show the value over time of each parameter affected by this lever.
+
+```{python}
+#| label: fig-final-treatment
+#| layout-ncol: 2
+#| fig-cap: "`final_treatment` parameter data"
+#| fig-subcap:
+#|  - "Incineration"
+#|  - "Landfilling"
+#|  - "Mismanagement"
+plot_lever("final_treatment")
+```

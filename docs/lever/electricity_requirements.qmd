@@ -1,0 +1,26 @@
+---
+execute:
+  echo: false
+---
+
+# electricity_requirements
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("electricity_requirements")
+```
+
+This lever sets the baseline values for electricity utility requirements for all processes.
+
+Data was sourced from Zhao et al. (2021),  Jiang et al. (2020),  Rosental et al. (2020),  Oni et al. (2022), IEA (2021), and cross-checked against data from IHS (XXX) to estimate indicative electricity requirements for each process.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("electricity_requirements", param_descriptions={})
+```

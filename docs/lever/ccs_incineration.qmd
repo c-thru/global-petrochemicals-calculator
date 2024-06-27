@@ -1,0 +1,28 @@
+---
+execute:
+  echo: false
+---
+
+# ccs_incineration
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("ccs_incineration")
+```
+
+This lever controls the level of emissions abatement on end-of-life incineration.
+
+Currently practically no Carbon Capture and Storage (CCS) is in use, so the baseline level has no capacity applied.
+
+To allow exploring different levels of CCS applied to incineration emissions specifically, hypothetical higher levels are included.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("ccs_incineration", param_descriptions={})
+```

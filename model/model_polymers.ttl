@@ -1,0 +1,307 @@
+
+# This file defines which processes should be included in the calculator model,
+# and which objects should be given "markets" (i.e. mass balanced).
+#
+# Objects that occur in the process recipes but which don't have "markets" are
+# like elementary flows in LCA -- they can come and go, but a process consuming
+# them doesn't have any knock-on implications for other processes in the model.
+
+@prefix model: <http://c-thru.org/analyses/calculator/model/> .
+@prefix sys: <http://c-thru.org/analyses/calculator/system/> .
+@prefix probs: <https://ukfires.org/probs/ontology/> .
+@prefix ukf: <http://ukfires.org/probs/system/> .
+
+model:Model probs:hasProcess
+    ukf:PolymerisationOfLDPE, # started checking here # done 1
+    ukf:PolymerisationOfHDPE, # done 2
+    ukf:PolymerisationOfPP, # done 3
+    ukf:PolymerisationOfPolystyrene, # done 4
+    ukf:PolymerisationOfPVC, # done 5
+    ukf:PolymerisationOfPET, # done 6
+    # ukf:PolymerisationOfPolyurethane, # done 7
+    sys:PolymerisationOfPUR,
+    ukf:PolymerisationOfStyreneButadiene, # done 8
+    sys:PolymerisationOfOtherPolymers, # done 9
+    sys:PolymerisationOfLLDPE, # I cannot find in ukf # done 10
+    sys:PolymerisationOfFibrePPA, # I cannot find in ukf # done 11
+
+    sys:ProductionOfPackagingProducts,
+    sys:ProductionOfTransportationProducts,
+    sys:ProductionOfBuildingsAndConstructionProducts,
+    sys:ProductionOfElectricalAndElectronicProducts,
+    sys:ProductionOfConsumerAndInstitutionalProducts,
+    sys:ProductionOfIndustrialMachinery,
+    sys:ProductionOfTextileProducts,
+    sys:ProductionOfOtherProducts,
+
+    sys:UseOfPackagingProducts,
+    sys:UseOfTransportationProducts,
+    sys:UseOfBuildingsAndConstructionProducts,
+    sys:UseOfElectricalAndElectronicProducts,
+    sys:UseOfConsumerAndInstitutionalProducts,
+    sys:UseOfIndustrialMachinery,
+    sys:UseOfTextileProducts,
+    sys:UseOfOtherProducts,
+
+    sys:EOLProcessingPackagingProducts,
+    sys:EOLProcessingTransportationProducts,
+    sys:EOLProcessingBuildingsAndConstructionProducts,
+    sys:EOLProcessingElectricalAndElectronicProducts,
+    sys:EOLProcessingConsumerAndInstitutionalProducts,
+    sys:EOLProcessingIndustrialMachinery,
+    sys:EOLProcessingTextileProducts,
+    sys:EOLProcessingOtherProducts,
+
+    # Recycling of polymers at EOL
+    sys:MechanicalRecyclingOfLDPEPolyethyleneAtEOL,
+    sys:MechanicalRecyclingOfLLDPEAtEOL,
+    sys:MechanicalRecyclingOfHDPEPolyethyleneAtEOL,
+    sys:MechanicalRecyclingOfPPPolypropyleneAtEOL,
+    sys:MechanicalRecyclingOfPSPolystyreneAtEOL,
+    sys:MechanicalRecyclingOfPVCPolyvinylChlorideAtEOL,
+    sys:MechanicalRecyclingOfPETPolyethyleneTerephthalatePolyestersAtEOL,
+    sys:MechanicalRecyclingOfFibrePPAAtEOL,
+    sys:ChemicalRecyclingOfMixedPolymersAtEOL,
+
+    # Mixing processes
+    sys:MixingLDPEPolyethyleneAtEOL,
+    sys:MixingLLDPEAtEOL,
+    sys:MixingHDPEPolyethyleneAtEOL,
+    sys:MixingPPPolypropyleneAtEOL,
+    sys:MixingPSPolystyreneAtEOL,
+    sys:MixingPVCPolyvinylChlorideAtEOL,
+    sys:MixingPETPolyethyleneTerephthalatePolyestersAtEOL,
+    sys:MixingPolyurethaneAtEOL,
+    sys:MixingSyntheticRubbersAtEOL,
+    sys:MixingFibrePPAAtEOL,
+    sys:MixingOtherPolymersAtEOL,
+
+    # Final treament of polymers at EOL
+    sys:Landfilling,
+    sys:Incineration,
+    sys:Mismanagement,
+
+    # Additional demand for BTX
+    sys:OtherConsumptionOfBenzene,
+    sys:OtherConsumptionOfToluene,
+    sys:OtherConsumptionOfXylenes,
+    sys:OtherConsumptionOfMethylAlcohol,
+
+    # Next step back
+    # Organic chemicals production
+    ukf:OtherOrganicChemicalsSynthesis,
+    ukf:AdipicAcidSynthesis,
+    # ukf:HexamethylenediamineSynthesis,
+    sys:HexamethylenediamineSynthesisFromButadiene,
+    sys:HydrogenCyanideSynthesis,
+    sys:IsophthalicAcidSynthesis,
+    ukf:AceticAcidSynthesis,
+    # ukf:MethyleneDiphenylDiisocyanateSynthesis,
+    sys:TolueneDiisocyanateSynthesis,
+    ukf:StyreneSynthesis,
+    ukf:VinylChlorideSynthesis,
+    # ukf:DimethylTerephthalateSynthesis,
+    ukf:EthyleneGlycolSynthesis,
+    ukf:TerephthalicAcidSynthesis,
+    # ukf:FormaldehydeSynthesis,
+    # ukf:AnilineSynthesis,
+    sys:PolyolsSynthesis,
+    sys:PropyleneOxideSynthesis,
+    sys:EthyleneOxideSynthesis,
+    ukf:CyclohexaneSynthesis,
+    # ukf:AdiponitrileSynthesis,
+    sys:AcrylonitrileSynthesis,    
+
+    #Inorganic chemicals production
+    ukf:MakingInorganicAcids,
+    sys:ProducingNitricAcid,
+    sys:AirSeparation,
+    sys:SodiumChlorideElectrolysisForChlorine,
+    ukf:MakingOtherInorganicPrimaryChemicals,
+
+    # Primary chemicals production
+    # ukf:SteamCracking,
+    sys:SteamCrackingOfNaphtha,
+    sys:SteamCrackingOfEthane,
+    sys:MethylAlcoholToOlefins,
+    sys:DehydrationOfEthylAlcohol,
+    sys:FluidCatalyticCrackingOfGasOil,
+    sys:DehydrogenationOfPropane,
+    sys:MethylAlcoholToPropylene,
+    sys:FischerTropschSynthesisOfOlefinsFromSyngas,
+    sys:DistillationOfButylenesForButadiene,
+    sys:DehydrogenationOfButaneForButadiene,
+    # ukf:SteamMethaneReforming,
+    sys:NaturalGasSteamMethaneReformingToSyngas,
+    sys:CoalGasificationToSyngas,
+    sys:SugarCaneBagasseGasificationToSyngas,
+    sys:CornStoverGasificationToSyngas,
+    sys:WheatStrawGasificationToSyngas,
+    sys:RiceStrawGasificationToSyngas,
+    sys:MethylAlcoholSynthesis,
+    sys:CarbonDioxideHydrogenationToMethylAlcohol,
+    sys:SyngasToAmmoniaProduction,
+    sys:DistillationOfPyrolysisGasolineForBTX,
+    sys:CatalyticReformingOfNaphthaForToluene,
+    sys:CatalyticReformingOfNaphthaForXylenes,
+    sys:DisproportionationOfTolueneForXylenes,
+    sys:DealkylationOfTolueneForBenzene,
+    sys:MethylAlcoholToAromatics,
+    sys:EthylAlcoholSynthesisFromSugarcane,
+    sys:EthylAlcoholSynthesisFromSugarcaneBagasse,
+    sys:EthylAlcoholSynthesisFromMaize,
+    sys:EthylAlcoholSynthesisFromCornStover,
+    sys:EthylAlcoholSynthesisFromWheatStraw,
+    sys:EthylAlcoholSynthesisFromRiceStraw,
+    sys:NaturalGasSteamMethaneReformingToHydrogen,
+    sys:NaturalGasSteamMethaneReformingWithCCSToHydrogen,
+    sys:WaterElectrolysisForHydrogen,
+
+    # Oil refining
+    ukf:OilRefiningButane, ukf:OilRefiningPropane,
+    ukf:OilRefiningEthane, ukf:OilRefiningNaphtha
+
+    # Fossil fuel extraction
+    # ukf:NaturalGasExtraction,
+    # ukf:CrudeOilExtraction,
+
+    # Other mining
+    # ukf:ChemFertMinMining,
+    # ukf:SaltMining,
+
+    .
+
+model:Model probs:hasMarketForObject
+    sys:PackagingProducts,
+    sys:TransportationProducts,
+    sys:BuildingsAndConstructionProducts,
+    sys:ElectricalAndElectronicProducts,
+    sys:ConsumerAndInstitutionalProducts,
+    sys:IndustrialMachinery,
+    sys:TextileProducts,
+    sys:OtherProducts,
+
+    sys:EOLPackagingProducts,
+    sys:EOLTransportationProducts,
+    sys:EOLBuildingsAndConstructionProducts,
+    sys:EOLElectricalAndElectronicProducts,
+    sys:EOLConsumerAndInstitutionalProducts,
+    sys:EOLIndustrialMachinery,
+    sys:EOLTextileProducts,
+    sys:EOLOtherProducts,
+
+    ukf:LDPEPolyethylene,
+    ukf:HDPEPolyethylene,
+    ukf:PPPolypropylene,
+    ukf:PSPolystyrene,
+    ukf:PVCPolyvinylChloride,
+    ukf:PETPolyethyleneTerephthalatePolyesters,
+    ukf:Polyurethane,
+    ukf:SyntheticRubbers,
+    ukf:OtherPolymers,
+    sys:LLDPE,
+    sys:FibrePPA,
+
+    sys:LDPEPolyethyleneAtEOL,
+    sys:LLDPEAtEOL,
+    sys:HDPEPolyethyleneAtEOL,
+    sys:PPPolypropyleneAtEOL,
+    sys:PSPolystyreneAtEOL,
+    sys:PVCPolyvinylChlorideAtEOL,
+    sys:PETPolyethyleneTerephthalatePolyestersAtEOL,
+    sys:PolyurethaneAtEOL,
+    sys:SyntheticRubbersAtEOL,
+    sys:OtherPolymersAtEOL,
+    sys:FibrePPAAtEOL,
+    sys:MixedPolymersAtEOL,
+    sys:LanfilledMixedPolymersAtEOL,
+    sys:IncineratedMixedPolymersAtEOL,
+    sys:MismanagedMixedPolymersAtEOL,
+
+    # Next step back
+    # Organic chemicals
+    # ukf:Diisocyanates, # done 12
+    ukf:OtherIntermediateOrganicChemicals, # Consumed during polymerisation into polyurethane # done 13
+    ukf:AdipicAcid, # done 14
+    ukf:Hexamethylenediamine, # done 15
+    sys:HydrogenCyanide,
+    sys:IsophthalicAcid,
+    ukf:AceticAcid,
+    ukf:Styrene, # done 16
+    ukf:VinylChloride, # done 17
+    # ukf:DimethylTerephthalateOrIsophthalicAcid, # Not sure which process is consuming or producing this, so commented out # done 18
+    ukf:EthyleneGlycol, # done 18
+    ukf:TerephthalicAcidPhthalicAnhydrideDioctylPhthalate, # done 19
+    # ukf:Formaldehyde, # done 20
+    # ukf:Aniline, # done 21
+    sys:TolueneDiisocyanate,
+    sys:Polyols,
+    sys:PropyleneOxide,
+    sys:EthyleneOxide,
+    ukf:Cyclohexane, # done 22
+    # ukf:Adiponitrile, # done 23
+    ukf:Acrylonitrile,
+
+    # Inorganic chemicals
+    # ukf:InorganicAcids, # done 24
+    # ukf:NitricAcid, # done 25
+    # ukf:PureOxygen, # Produced via air separation # done 26
+    # ukf:OtherIndustrialGases,  # Produced via air separation # done 27
+    # ukf:Chlorine, # Produced via electrolysis of sodium chloride # done 28
+    # ukf:OtherInorganicPrimaryChemicals, # Produced via making other inorganic primary chemicals # done 29
+    # ukf:SodiumHydroxide, # Produced via electrochemical decomposition # done 30
+    # ukf:Nitrogen, # Produced via syngas to ammonia production
+
+    # Other non-metal minerals
+    # ukf:ChemicalAndFertiliserMinerals, # done 31
+    # ukf:Salt, # done 32
+
+    # Primary chemicals
+    ukf:Ethylene, # done 33
+    ukf:Propylene, # done 34
+    # ukf:Buadiene, # Buadine must be a wrongly spelled Butadiene, commented out
+    ukf:Xylenes, # done 35
+    ukf:Benzene, # done 36
+    ukf:Toluene, # done 37
+    ukf:Butylenes, # done 38
+    ukf:Syngas, # done 39
+    ukf:Butadiene, # Previously under organic chemicals, transferred under Primary chemicals
+    ukf:MethylAlcohol, # done 40
+    ukf:Ammonia, # Can be produced by Ammonia synthesis and Polymerisation of Melamine but only the former was considered # done 41
+    sys:EthylAlcohol,
+    sys:PureHydrogen,
+
+    # We are not modelling the capture of CO2, just treat it as a resource
+    # sys:CapturedCarbonDioxide,
+    
+    # ukf:MiscRefineryProducts,
+
+    # Refinery products
+    # ukf:Butane, # done 42
+    # ukf:Propane, # done 43
+    # ukf:Ethane, # done 44
+    # ukf:Naphtha, # done 45
+    # sys:GasOil,
+
+    sys:PyrolysisGasoline,
+
+    # Fossil fuels
+    ukf:NaturalGas # Based on UK production system map, natural gas can be produced by Natural gas extraction and Steam cracking #done 46
+
+    # Oil
+    # ukf:CrudeOil, # done 47
+
+    # Natural environment -- these are not listed here because we don't mind
+    # about balancing production and consumption (they can just be an input)
+    #ukf:Water, # No primary production process # done 48
+    #ukf:Air, # No primary production process # done 49
+    
+    # Inputs during recycling of polymers at end-of-life
+    # sys:CleaningAgents,
+
+    # Waste
+    # sys:Waste
+    # sys:PyrolysisResidue,
+    # sys:WastePolyolefins,
+    # ukf:WasteOtherChemicals    
+    .

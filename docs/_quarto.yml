@@ -1,0 +1,67 @@
+project:
+  type: book
+
+execute:
+  echo: false
+  cache: true
+
+book:
+  title: "Lever data and descriptions"
+  author:
+  - Stephen Doliente
+  - Rick Lupton
+  date: "12/01/2024"
+  chapters:
+  - index.md
+  - part: "Fertilisers"
+    chapters:
+    - lever/fertiliser_demand.qmd
+    - lever/fertiliser_production.qmd
+    - lever/fertiliser_use_phase.qmd
+  - part: "Demand model levers"
+    chapters:
+    - lever/product_demand.qmd
+    - lever/recycling.qmd
+    - lever/final_treatment.qmd
+    - lever/extra_demand.qmd
+  - part: "Petrochemical production levers"
+    chapters:
+    - lever/ethylene_methanol_capacity.qmd
+    - lever/xylenes_methyl_alcohol_capacity.qmd
+    - lever/bioethanol_capacity.qmd
+    - lever/biosyngas_capacity.qmd
+    - lever/frac_of_biomass_feedstock.qmd
+    - lever/olefins_paraffins_mix.qmd
+  - part: "Hydrogen levers"
+    chapters:
+    - lever/green_hydrogen_capacity.qmd
+    - lever/blue_hydrogen_capacity.qmd
+  - part: "Abatement levers"
+    chapters:
+    - lever/ccs_incineration.qmd
+    - lever/ccs_process_emissions.qmd
+    - lever/ccs_utility_combustion.qmd
+  - part: "Utilities & emissions data"
+    chapters:
+    - lever/electricity_requirements.qmd
+    - lever/natural_gas_requirements.qmd
+    - lever/electricity_emission_factor.qmd
+    - lever/natural_gas_emission_factor.qmd
+    - lever/direct_process_emissions.qmd
+    - lever/feedstock_emission_factor.qmd
+    - lever/final_treatment_emission_factor.qmd
+  - references.md
+
+bibliography:
+  - bibliography.bib
+  - bibliography_en.bib
+
+format:
+  html:
+    theme: cosmo
+    fig-width: 4
+    fig-height: 2
+  pdf:
+    documentclass: scrreport
+  epub:
+    cover-image: cover.png

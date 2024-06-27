@@ -1,0 +1,10 @@
+/.doit.db*
+.ipynb_checkpoints
+__pycache__
+/system-definitions/_build
+*.egg-info/
+.DS_Store
+/model/sankey_data/
+/model/rdf_data_store/
+.jupyter_cache/
+.auctex-auto/

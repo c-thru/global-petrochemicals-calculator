@@ -1,0 +1,41 @@
+---
+execute:
+  echo: false
+---
+
+# extra_demand
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("extra_demand")
+```
+
+This lever controls reductions in the additional demand for primary chemicals which is not driven by the main model's demand for polymers, nor the demand of primary chemicals for fertilisers covered by the model of @gao_greenhouse_2023.
+
+The baseline level of extra demand has been calibrated based on total global demand for BTX and methyl alcohol [@icis_supply_XXX], .
+
+The reference projection is based on projected growth in demand for BTX [@icis_supply_XXX], minus the baseline demand in the model of these chemicals for polymers, assuming that the share of this demand which is for non-polymer applications remains constant over time.  Methyl alcohol is similar based on projections from @methanol_mmsa_2023.
+
+The demand-reduction scenarios then scale down from this projected demand proportionally, to illustrate how different supply-side scenarios are affected by changes in demand levels.
+
+<!-- Beyond this, @meng_planet_2023 consider projected additional demand for BTX and methyl alcohol due to new low-carbon technologies such as wind turbines and solar PV. -->
+
+## Parameter data
+
+The plots below show the value over time of each parameter affected by this lever.
+
+```{python}
+#| label: fig-extra-demand
+#| layout-ncol: 2
+#| fig-cap: "`extra_demand` parameter data"
+#| fig-subcap:
+#|  - Benzene
+#|  - Toluene
+#|  - Xylenes
+#|  - MethylAlcohol
+plot_lever("extra_demand")
+```

@@ -1,0 +1,50 @@
+---
+execute:
+  echo: false
+---
+
+# fertiliser_use_phase
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("fertiliser_use_phase")
+```
+
+This lever controls the emissions factor for fertilisers use, based on @gao_greenhouse_2023.
+
+The use-phase emission factors of various nitrogen fertilisers are constant in the BAU scenario. In the nitrification inhibitor scenario, the use-phase emission factors in 2050 are calculated in our previous study [@gao_greenhouse_2023]. The use-phase emission factors are linearly interpolated from 2020 to 2050.
+
+## Parameter data
+
+The plots below show the value over time of each parameter affected by this lever.
+
+```{python}
+#| label: fig-fertiliser-use-phase-1
+#| layout-ncol: 2
+#| fig-cap: "`fertiliser_use_phase` parameter data (part 1)"
+#| fig-subcap:
+#|  - "Use of AmmoniaFertiliser"
+#|  - "Use of AmmoniumSulphate"
+#|  - "Use of AmmoniumNitrate"
+#|  - "Use of CalciumAmmoniumNitrate"
+#|  - "Use of AmmoniumPhosphate"
+#|  - "Use of NKCompound"
+plot_lever("fertiliser_use_phase", subset=range(0, 6))
+```
+
+```{python}
+#| label: fig-fertiliser-use-phase-2
+#| layout-ncol: 2
+#| fig-cap: "`fertiliser_use_phase` parameter data (part 2)"
+#| fig-subcap:
+#|  - "Use of NPKCompound"
+#|  - "Use of UreaAmmoniumNitrate"
+#|  - "Use of OtherFertiliserN"
+#|  - "Use of OtherFertiliserNP"
+#|  - "Use of Urea"
+plot_lever("fertiliser_use_phase", subset=range(7, 11))
+```

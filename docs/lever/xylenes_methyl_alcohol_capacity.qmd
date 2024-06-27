@@ -1,0 +1,30 @@
+---
+execute:
+  echo: false
+---
+
+# xylenes_methyl_alcohol_capacity
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("xylenes_methyl_alcohol_capacity")
+```
+
+This lever controls the available capacity for producing BTX from methyl alcohol ("Methanol-to-aromatics", or MTA), measured by the Xylene production capacity.
+
+The MTA process is demonstration level, according to @pales_future_2018.
+
+Capacities are estimated based on data from @pales_future_2018_annex, who report projections for MTA and MTO (methanol-to-olefins) together.  They report capacity will peak by 2030 and then decline, due to decline in coal-based methanol after 2030.  However, we assume MTO/MTA will continue due to the emergence of renewable methanol, which is expected to be cost-competitive by 2050 given the right policies [@irena_innovation_2021]. Using only the increasing trend from @pales_future_2018_annex to project MTO/MTA growth to 2050 and then subtracting the projected MTO growth (see @sec-ethylene-methanol-capacity), we obtained the MTA growth. The values are comparable in magnitude to the existing size of the MTA demonstration plants reported by @wang_methanol_2023.
+
+Since this is currently a route with limited capacity, further hypothetical levels were added reflecting greater growth rates, to allow exploration of what would happen if this route made a larger contribution in future.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("xylenes_methyl_alcohol_capacity", param_descriptions={})
+```

@@ -1,0 +1,50 @@
+---
+execute:
+  echo: false
+---
+
+# fertiliser_production
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("fertiliser_production")
+```
+
+This lever controls the emissions factor for fertilisers production, based on @gao_greenhouse_2023.
+
+The production emission factors of various nitrogen fertilisers are constant in the BAU scenario. The production emission factors of each nitrogen fertiliser in water electrolysis, electrical heating and CCS scenarios in 2050 are estimated in our previous study [@gao_greenhouse_2023]. Note that the electrolysis scenario also includes electrical heating, while the CCS scenario is independent of other scenarios. The emission factors are linearly interpolated from 2020 to 2050.
+
+## Parameter data
+
+The plots below show the value over time of each parameter affected by this lever.
+
+```{python}
+#| label: fig-fertiliser-production-1
+#| layout-ncol: 2
+#| fig-cap: "`fertiliser_production` parameter data (part 1)"
+#| fig-subcap:
+#|  - "Production of AmmoniaFertiliser"
+#|  - "Production of AmmoniumSulphate"
+#|  - "Production of AmmoniumNitrate"
+#|  - "Production of CalciumAmmoniumNitrate"
+#|  - "Production of AmmoniumPhosphate"
+#|  - "Production of NKCompound"
+plot_lever("fertiliser_production", subset=range(0, 6))
+```
+
+```{python}
+#| label: fig-fertiliser-production-2
+#| layout-ncol: 2
+#| fig-cap: "`fertiliser_production` parameter data (part 2)"
+#| fig-subcap:
+#|  - "Production of NPKCompound"
+#|  - "Production of UreaAmmoniumNitrate"
+#|  - "Production of OtherFertiliserN"
+#|  - "Production of OtherFertiliserNP"
+#|  - "Production of Urea"
+plot_lever("fertiliser_production", subset=range(7, 11))
+```

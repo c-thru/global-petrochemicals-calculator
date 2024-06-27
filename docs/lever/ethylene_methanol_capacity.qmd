@@ -1,0 +1,30 @@
+---
+execute:
+  echo: false
+---
+
+# ethylene_methanol_capacity {#sec-ethylene-methanol-capacity}
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("ethylene_methanol_capacity")
+```
+
+This lever controls the available capacity of MTO (Methanol-to-Olefins), measured by the ethylene production capacity.
+
+Currently, this is a route with small capacity, and the *Baseline* level assumes this remains constant.
+
+The reference projection is based on the trend from @methanol_mmsa_2023.
+
+Since this is currently a route with limited capacity, further hypothetical levels were added reflecting greater growth rates, to allow exploration of what would happen if this route made a larger contribution in future.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("ethylene_methanol_capacity", param_descriptions={})
+```

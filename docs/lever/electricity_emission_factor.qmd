@@ -1,0 +1,26 @@
+---
+execute:
+  echo: false
+---
+
+# electricity_emission_factor
+
+```{python}
+#| output: false
+from plot_levers import plot_lever, describe_lever_levels, param_units
+```
+
+```{python}
+describe_lever_levels("electricity_emission_factor")
+```
+
+This lever controls the emissions factor for grid electricity production.
+
+A range of levels is provided, from [current global average](https://www.iea.org/data-and-statistics/charts/carbon-intensity-of-electricity-generation-in-selected-countries-and-regions-2000-2020) to the low value for wind energy used by @meys_achieving_2021 in their plastics decarbonisation scenarios.
+
+## Parameter data
+
+```{python}
+#| layout-ncol: 2
+plot_lever("electricity_emission_factor", param_descriptions={})
+```

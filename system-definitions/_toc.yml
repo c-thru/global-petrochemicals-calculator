@@ -1,0 +1,18 @@
+format: jb-book
+root: intro
+options:
+  caption: System structure
+  numbered: true
+chapters:
+- file: fertilisers
+- file: upstream
+- file: primary-chemicals
+- file: organic-chemicals
+- file: polymers
+- file: products
+- file: end-of-life-processes
+- file: recycling-processes
+- file: final-treatment-processes
+- file: other-chemical-demand
+- file: misc-processes
+- file: references
