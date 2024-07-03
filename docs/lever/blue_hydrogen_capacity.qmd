@@ -14,7 +14,7 @@ from plot_levers import plot_lever, describe_lever_levels, param_units
 describe_lever_levels("blue_hydrogen_capacity")
 ```
 
-This lever controls production capacity for "blue" hydrogen, i.e. from steam methane reforming of natural gas, with CCS (carbon capture and storage).
+This lever controls production capacity for "blue" hydrogen, i.e. from steam methane reforming of natural gas, with carbon capture and storage (CCS).
 
 The values were derived as described in @sec-green-hydrogen-capacity.
 

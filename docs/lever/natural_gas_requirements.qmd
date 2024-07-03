@@ -16,7 +16,7 @@ describe_lever_levels("natural_gas_requirements")
 
 This lever sets the baseline values for natural gas utility requirements for all processes.
 
-Data was sourced from Zhao et al. (2021),  Jiang et al. (2020),  Rosental et al. (2020),  Oni et al. (2022), IEA (2021), and cross-checked against data from IHS (XXX) to estimate indicative natural gas requirements for each process.
+Data was sourced from @zhao_economic_2021, @jiang_comparative_2020,  @rosental_life_2020,  @oni_comparative_2022, @iea_world_2021, and cross-checked against data from @ihs_process_2021 to estimate indicative natural gas requirements for each process.
 
 Where steam utility requirements were known for processes, these were converted into equivalent natural gas requirements to better indicate the total energy requirements of the process.
 

@@ -18,7 +18,7 @@ This lever controls production capacity for "green" hydrogen, i.e. from water el
 
 Currently this route is not used, so the baseline capacity remains at zero.
 
-Growth scenarios are based on the Hydrogen Council and McKinsey & Company (2023) Hydrogen Outlook.  They project total "clean hydrogen" (i.e. including green and blue) capacity in different scenarios, as well as the amount of hydrogen used by the chemical sector in 2035 and 2050.  This is used to estimate the fraction of all hydrogen projection which is used by the chemical sector in each scenario, which ranges from 18% (highest growth in hydrogen, in 2050) to 53% (lowest growth, in 2035).
+Growth scenarios are based on the hydrogen outlook by @gulli_global_2024. They projected total "clean hydrogen" (i.e. including green and blue) capacity in different scenarios, as well as the amount of hydrogen used by the chemical sector in 2035 and 2050. This is used to estimate the fraction of all hydrogen projection which is used by the chemical sector in each scenario, which ranges from 18% (highest growth in hydrogen, in 2050) to 53% (lowest growth, in 2035).
 
 These fractions of capacity used for the chemical sector are assumed to apply to the green and blue hydrogen capacity available in each scenario, leading to the capacity levels set by this lever.
 

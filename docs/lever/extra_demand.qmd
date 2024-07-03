@@ -14,11 +14,11 @@ from plot_levers import plot_lever, describe_lever_levels, param_units
 describe_lever_levels("extra_demand")
 ```
 
-This lever controls reductions in the additional demand for primary chemicals which is not driven by the main model's demand for polymers, nor the demand of primary chemicals for fertilisers covered by the model of @gao_greenhouse_2023.
+This lever controls reductions in the additional demand for primary chemicals, which is not driven by the main model's demand for polymers, nor the demand of primary chemicals for fertilisers covered by the model of @gao_greenhouse_2023.
 
-The baseline level of extra demand has been calibrated based on total global demand for BTX and methyl alcohol [@icis_supply_XXX], .
+The baseline level of extra demand has been calibrated based on total global demand for BTX [@icis_supply_2021] and methyl alcohol [@methanol_mmsa_2023].
 
-The reference projection is based on projected growth in demand for BTX [@icis_supply_XXX], minus the baseline demand in the model of these chemicals for polymers, assuming that the share of this demand which is for non-polymer applications remains constant over time.  Methyl alcohol is similar based on projections from @methanol_mmsa_2023.
+The reference projection is based on projected growth in demand for BTX [@icis_supply_2021], minus the baseline demand in the model of these chemicals for polymers, assuming that the share of this demand which is for non-polymer applications remains constant over time.  Methyl alcohol is similar based on projections from @methanol_mmsa_2023.
 
 The demand-reduction scenarios then scale down from this projected demand proportionally, to illustrate how different supply-side scenarios are affected by changes in demand levels.
 
@@ -26,16 +26,12 @@ The demand-reduction scenarios then scale down from this projected demand propor
 
 ## Parameter data
 
-The plots below show the value over time of each parameter affected by this lever.
-
 ```{python}
-#| label: fig-extra-demand
 #| layout-ncol: 2
-#| fig-cap: "`extra_demand` parameter data"
-#| fig-subcap:
-#|  - Benzene
-#|  - Toluene
-#|  - Xylenes
-#|  - MethylAlcohol
-plot_lever("extra_demand")
+plot_lever("extra_demand", param_descriptions={
+    "Z_extra__0": "Benzene",
+    "Z_extra__1": "Toluene",
+    "Z_extra__2": "Xylenes",
+    "Z_extra__3": "MethylAlcohol",
+})
 ```

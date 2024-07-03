@@ -14,7 +14,7 @@ from plot_levers import plot_lever, describe_lever_levels
 describe_lever_levels("product_demand")
 ```
 
-This lever describes demand for polymers and end-of-life flows, based on a separate study by @gao_evaluating_2024.
+This lever describes demand for polymers and end-of-life flows, based on @gao_evaluating_2024 stock modelling.
 
 This uses a Dynamic Material Flow Analysis approach based on the assumption that, for durable goods, the per-capita stock of material in use is the more fundamental driver of material demand and waste flows. In the BAU scenario, the historical regional per-capita stock in each sector is correlated with regional GDP per-capita, then forecast to increase as GDP per capita increases per the second Shared Socioeconomic Pathway [@crespocuaresma_income_2017]. Coupled with the forecasted population growth by the United Nations [@un_population_2022], the regional sectoral demand is calculated by adding the yearly change of stock and waste generation. 
 

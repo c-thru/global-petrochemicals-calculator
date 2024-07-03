@@ -16,13 +16,13 @@ describe_lever_levels("feedstock_emission_factor")
 
 This lever controls the emissions factor for upstream production of the feedstocks that enter the model.
 
-Emissions factors for natural gas, coal, gas oil, propane and butane were taken from DEFRA (2023) scope 3 emissions factors data.
+Emissions factors for natural gas, coal, gas oil, propane and butane were taken from @desnzdefra_ghgconversionfactors_2023 scope 3 emissions factors data.
 
-Approximate emissions factors for naphtha and ethane supply were based on the study by Nanthachatchavankul et al. (2011) for ethylene production in Thailand.
+Approximate emissions factors for naphtha and ethane supply were based on the study by @nanthachatchavankul_specific_2012 for ethylene production in Thailand, which was assumed to be the mean value between reported values by @bousted_ecoprofiles_2005 (assumed minimum) and @desnzdefra_ghgconversionfactors_2023 (assumed maximum).
 
-<!-- Question: is this representative enough? -->
+<!-- Question: is this representative enough? The value above was the assumed mean given the limited data available. -->
 
-Biomass feedstocks are from Yuttitham et al. (2018) for sugarcane production in Thailand, and Farag et al. (2018) for corn production in Egypt.  Crop residues are represented by DEFRA (2023) scope 3 emissions for generic straw/grass biomass.
+Biomass crop feedstocks are from @yuttitham_carbon_2011 for sugarcane production in Thailand (assumed mean value between the reported values by @sanches_towards_2023 as the assumed minimum and @chandra_life_2018 as the assumed maximum), and @farag_carbon_2018 for corn production in Egypt (assumed mean between the reported values by @giusti_environmental_2023 as the assumed minimum and @zhang_carbon_2017 as the assumed maximum).  Crop residues are represented by @desnzdefra_ghgconversionfactors_2023 scope 3 emissions for generic straw/grass biomass.
 
 ## Parameter data
 

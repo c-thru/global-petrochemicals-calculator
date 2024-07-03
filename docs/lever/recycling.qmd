@@ -18,9 +18,11 @@ This lever controls recycling rates for each polymer at end-of-life.
 
 Plastics are made of two types of polymers: thermoplastics and thermosets.
 
-- Thermoplastics are made up of single long chains of molecules such as HDPE, LDPE, LLDPE, PP, PS, PET, PVC, and Fibre PPA. They can be melted and formed again to original state with little to no loss in properties. It makes sense to mechanically recycle them.
+- Thermoplastics are made up of single long chains of molecules such as low density polyethylene (LDPE), linear low-density polyethylene (LLDPE), high-density polyethylene (HDPE), polypropylene (PP), polystyrene (PS), polyvinyl chloride (PVC), polyethylene terephthalate (PET), and fibre polyphthalamide (PPA). They can be melted and formed again to original state with little to no loss in properties [@wikipedia_thermoplastic_2024]. It makes sense to mechanically recycle them.
 
-- Thermosets involve crosslinking such as PUR and Styrene-Butadiene Rubber. Other polymers were placed under this category for simplicity. Melting them tend to induce curing and can change their properties. It does not make sense to mechanical recycle them. There is in literature mentioning cutting them up and re-using them, which is not mechanical recycling in the sense we want them back to their original form and purpose. Hence, chemical recycling that break down to their feedstock and/or monomer makes sense as these can be used to produce the original polymer back.
+- Thermosets involve cross-linking such as polyurethane (PUR) and styrene-butadiene rubber (SBR) or synthetic rubbers. Other polymers were placed under this category for simplicity. Melting them tends to induce curing and can change their properties [@wikipedia_thermosetting_2024]. It does not make sense to mechanical recycle them. They can be downcycled by cutting them up and re-using them, which is not mechanical recycling in this sense as we want them back to their original form and purpose. Hence, chemical recycling that breaks them down to their feedstock and/or monomer makes more sense as these can be used to produce the original polymer back.
+
+Chemical recycling covers both more targeted processes to return polymers to monomers, and broader pyrolysis processes.
 
 ## Possible recycling routes
 
@@ -47,7 +49,7 @@ First the possible recycling routes in different scenarios are set for 3 levels 
 
   PUR                     _ / _      _ / C         _ / C         
                                                                  
-  Synthetic rubber        _ / _      _ / _         _ / C         
+  SBR                     _ / _      _ / _         _ / C         
                                                                  
   Other polymers          _ / _      _ / _         _ / C         
   ---------------------------------------------------------------
@@ -60,9 +62,9 @@ Currently the possibilities for recycling polymers are as follows:
 
 -   LDPE, HDPE, and PET are widely recycled [@oecd_improving_2018]. There is virtually no chemical recycling today [@vangeem_plastic_2023]: all current recycling is mechanical.
 
--   PP can be mechanically recycled, but only 1% of the world production is recycled. Majority of the discarded PP goes to landfills and oceans [@basham_how_2019]. There is also misconception that waste PP from health sector cannot be recycled, hence, majority are incinerated without recovering the energy [@interweave_polypropylene_2019].
+-   PP can be mechanically recycled, but only 1% of the world production is recycled. Majority of the discarded PP goes to landfills and oceans [@basham_how_2019]. There is also a misconception that waste PP from health sector cannot be recycled, hence, majority are incinerated without recovering the energy [@interweave_polypropylene_2019].
 
--   LLDPE can be mechanically and chemically recycled. Because it is often blended with other types of plastics that make its recycling challenging, consequently, its recycling rate is generally low [@arkema_how_2023]. This is also compounded with the dwindling demand for LLDPE and about 60% is for single-use applications, investments on recycling LLDPE needs to be economically justified [@richardson_lldpe_2018].
+-   LLDPE can be mechanically and chemically recycled. Because it is often blended with other types of plastics that make its recycling challenging, consequently, its recycling rate is generally low [@arkema_how_2023]. This is also compounded with the dwindling demand for LLDPE and about 60% is for single-use applications, hence, investments on recycling LLDPE needs to be economically justified [@richardson_lldpe_2018].
 
 -   Mechanical recycling is recommended for PVC, but this is not happening now as it is mistaken to have low thermal stability and to generate toxic degradation products, which are misconceptions as it can be widely recycled [@lewandowski_brief_2022].
 
@@ -72,7 +74,7 @@ Currently the possibilities for recycling polymers are as follows:
 
 -   With tire industry representing 65% of the global rubber production, most rubber wastes go to landfills [@fazli_waste_2020].
 
--   PPA is generally mixed with other plastics, hence, it there is limited recycling, with most going to incineration and land filling [@hirschberg_recycling_2023].
+-   PPA is generally mixed with other plastics, hence, there is limited recycling, with most going to incineration and land filling [@hirschberg_recycling_2023].
 
 ### Future routes
 
@@ -80,15 +82,15 @@ Expectations for future improvements for each polymer are:
 
 -   Following from the current practice: LDPE, HDPE, and PET will continue to be mechanically recycled [@oecd_improving_2018].
 
--   LLDPE, PP and PVC can be recycled more, via mechanical recycling [@oecd_improving_2018,@lewandowski_brief_2022].
+-   LLDPE, PP and PVC can be recycled more, via mechanical recycling [@oecd_improving_2018;@lewandowski_brief_2022].
 
--   PS and PET can be both mechanically and chemically recycled.
+-   PS and PET can be both mechanically and chemically recycled [@maharana_review_2017;@gao_evaluating_2024].
 
--   Mechanical recycling degrades the polymer properties of thermosettting PURs [@rossingnolo_recycling_2024] and PPA [@hirschberg_recycling_2023], so chemical recycling is most appropriate.
+-   Mechanical recycling degrades the polymer properties of PUR [@rossingnolo_recycling_2024] and PPA [@hirschberg_recycling_2023], so chemical recycling is most appropriate.
 
-This forms the "practical limit" level.
+This forms the "practical limit" level. 
 
-Beyond this, all the rest of the polymers can be chemically recycled provided the technologies became technically, economically and environmentally feasible.  This forms the **Ambitious** level.
+Beyond this, all the rest of the polymers can be chemically recycled provided the technologies became technically, economically, and environmentally feasible.  This forms the "ambitious" level.
 
 ## Quantifying recycling rates
 

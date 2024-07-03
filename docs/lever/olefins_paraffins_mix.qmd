@@ -14,9 +14,9 @@ from plot_levers import plot_lever, describe_lever_levels, param_units
 describe_lever_levels("olefins_paraffins_mix")
 ```
 
-This lever controls the split of ethane vs naphtha as the feedstock for fossil production of olefins via steam cracking.  It is intended to reflect the geographical split of demand into regions that have each feedstock available.
+This lever controls the split of ethane vs naphtha as the feedstock for fossil production of olefins via steam cracking. It is intended to reflect the geographical split of demand into regions that have each feedstock available.
 
-The baseline shares were derived from data on steam cracker feeds from @icis_supply_XXX. Our model has only two representative varieties of steam cracker, from ethane and naphtha feedstocks, so the ICIS data was aggregated into lighter and heavier feeds, giving a baseline fraction of 46% of ethylene from ethane.  This is slightly higher than the share of 39% for lighter-feed steam cracking reported for 2017 by @pales_future_2018_annex.
+The baseline shares were derived from data on steam cracker feeds from @icis_supply_2021. Our model has only two representative varieties of steam cracker, from ethane and naphtha feedstocks, so the ICIS data was aggregated into lighter and heavier feeds, giving a baseline fraction of 46% of ethylene from ethane. This is slightly higher than the share of 39% for lighter-feed steam cracking reported for 2017 by @pales_future_2018_annex.
 
 To explore what effect shifts in feedstock have on the overall system, an additional level was added representing a shift towards naphtha.
 

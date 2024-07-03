@@ -16,11 +16,11 @@ describe_lever_levels("bioethanol_capacity")
 
 This lever controls the available capacity for producing ethylene from bio-ethyl-alcohol, measured by the ethyl alcohol production capacity.
 
-Baseline total bioethanol production is reported by @opec_world_2022 and agrees well with @doe_global_2022 (3% difference).  Of this, the majority is used as fuel, with 0.3% used for ethylene production [@mohsenzadeh_bioethylene_2017].  This gives the baseline bioethylene capacity.
+Baseline total bioethanol production is reported by @opec_world_2022 and agrees well with @doe_global_2022 (3% difference). Of this, the majority is used as fuel, with 0.3% used for ethylene production [@mohsenzadeh_bioethylene_2017]. This gives the baseline bioethylene capacity.
 
-In the absence of specific projections for growth in bioethanol-to-ethylene capacity, we estimate order-of-magnitude possible growth in this route by taking projected growth in total bioethanol and dedicating it increasing chemicals production rather than increasing supply of ethanol for fuel.  This gives a similar result to increasing the share of total bioethanol used for chemicals from 0.3% to 50% in 2050.  Forecast production of fuel ethanol from 2020 to 2050 was obtained from @opec_world_2022.
+In the absence of specific projections for growth in bioethanol-to-ethylene capacity, we estimate 'order-of-magnitude' possible growth in this route by taking projected growth in total bioethanol and dedicating it to increasing chemicals production rather than increasing supply of ethanol for fuel. This gives a similar result to increasing the share of total bioethanol used for chemicals from 0.3% to 50% in 2050. Forecast production of fuel ethanol from 2020 to 2050 was obtained from @opec_world_2022.
 
-Since the quantity of bioethanol in this scenario is still small compared to potential demand for ethylene, we add additional hypothetical levels of capacity to explore the effect of dedicating very large amounts of biomass to this route.
+Since the quantity of bioethanol in this scenario is still small compared to potential demand for ethylene, we added additional hypothetical levels of capacity to explore the effect of dedicating very large amounts of biomass to this route.
 
 ## Parameter data
 

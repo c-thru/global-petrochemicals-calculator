@@ -16,13 +16,13 @@ describe_lever_levels("frac_of_biomass_feedstock")
 
 This lever controls the mix of biomass sources used when producing bioethanol and biosyngas.
 
-Currently about two-thirds of bioethanol comes from starch-based biomass (maize) with the rest from sugar-based biomass (sugarcane).  Accounting for the ethanol yield from each biomass feedstock gives a baseline share of 72% ethanol from maize, 28% from sugarcane.
+Currently about two-thirds of bioethanol comes from starch-based biomass (maize) with the rest from sugar-based biomass (sugarcane) [doe_global_2022]. Accounting for the ethanol yield from each biomass feedstock gives a baseline share of 72% ethanol from maize, 28% from sugarcane.
 
-Historical global production of sugar cane, maize, [paddy] rice, and wheat were obtained from FAO (2024), and the trendline used to project production from 2020 to 2050.  Using typical sugarcane bagasse to sugarcane ratio by Nikodinovic-Runic et al. (2013), corn stover to maize ratio by Ruan et al. (2019), rice straw to paddy rice ratio (IRRI 2018), and wheat straw to wheat ratio by Song et al. (2013), corresponding production of these residues can also be estimated.
+Historical global production of sugar cane, maize, [paddy] rice, and wheat were obtained from @fao_faostat_2024, and the trendlines were used to project production of each crop from 2020 to 2050.  Using typical sugarcane bagasse to sugarcane ratio by @nikodinovicrunic_carbonrichwastes_2013, corn stover to maize ratio by @ruan_corn_2019, rice straw to paddy rice ratio by irri_value_2018, and wheat straw to wheat ratio by @song_quantitative_2013, corresponding production of these residues can also be estimated from 2020 to 2050.
 
-The fraction of the biomass available for ethanol production is 26% of the total sugar cane production and 14% of the total maize production using the data from (FAO 2024), (Gro Intelligence 2019), and (USDA 2023). Similar to the work of Meng et al. (2023), 20% of the total crop residues produced are assumed to be available for chemical production.
+The fraction of the biomass available for ethanol production is 26% of the total sugar cane production and 14% of the total maize production using the data from @grointelligence_howbigethanol_2019 and @usda_feedgrains_2023, respectively. Similar to the work of @meng_planet_2023, 20% of the total crop residues produced are assumed to be available for chemical production.
 
-In future the balance of ethanol from edible sugars vs lignocellulosic biomass is expected to shift. Lash et al (2022) projected the future contributions of these to total fuel from 2020 to 2050, which is assumed to also apply to ethanol for chemicals.  Together, after adjusting for ethanol yields, these give the projected shares of biomass contributing to bioethanol.
+In future the balance of ethanol from edible sugars versus lignocellulosic biomass is expected to shift. @lash_charting_2022 projected the future contributions of these to total fuel from 2020 to 2050, which is assumed to also apply to ethanol for chemicals. Together, after adjusting for ethanol yields, these give the projected shares of biomass contributing to bioethanol.
 
 Feedstock shares used for biosyngas are assumed to be the same as for the lignocellulosic biomass used for bioethanol.
 

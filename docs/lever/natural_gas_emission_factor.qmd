@@ -16,7 +16,7 @@ describe_lever_levels("natural_gas_emission_factor")
 
 This lever controls the emissions factor for natural gas production and combustion as a utility.
 
-The value is based on DEFRA (2023) scope 1 emissions factors.
+The value is based on @desnzdefra_ghgconversionfactors_2023 scope 1 emissions factors.
 
 ## Parameter data
 

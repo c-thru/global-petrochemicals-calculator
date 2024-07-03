@@ -16,7 +16,7 @@ describe_lever_levels("ccs_process_emissions")
 
 This lever controls the level of emissions abatement on process emissions (excluding end-of-life incineration).
 
-Currently practically no Carbon Capture and Storage (CCS) is in use, so the baseline level has no capacity applied.
+Currently practically no CCS is in use [@meng_planet_2023], so the baseline level has no capacity applied.
 
 To allow exploring different levels of CCS applied to production process emissions specifically, hypothetical higher levels are included.
 
