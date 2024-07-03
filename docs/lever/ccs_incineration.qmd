@@ -22,7 +22,11 @@ To allow exploring different levels of CCS applied to incineration emissions spe
 
 ## Parameter data
 
+@fig-ccs-incineration shows the value over time of each parameter affected by this lever.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("ccs_incineration", param_descriptions={})
+#| label: fig-ccs-incineration
+#| layout-ncol: 1
+#| fig-cap: "`ccs_incineration` parameter data"
+plot_lever("ccs_incineration")
 ```

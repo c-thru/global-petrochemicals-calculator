@@ -22,7 +22,11 @@ To allow exploring different levels of CCS applied to production process emissio
 
 ## Parameter data
 
+@fig-ccs-process-emissions shows the value over time of each parameter affected by this lever.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("ccs_process_emissions", param_descriptions={})
+#| label: fig-ccs-process-emissions
+#| layout-ncol: 1
+#| fig-cap: "`ccs_process_emissions` parameter data"
+plot_lever("ccs_process_emissions")
 ```

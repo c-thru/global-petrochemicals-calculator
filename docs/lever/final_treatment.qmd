@@ -22,7 +22,7 @@ To consider different possible end-of-life options which affect GHG emissions, a
 
 ## Parameter data
 
-The plots below show the value over time of each parameter affected by this lever.
+@fig-final-treatment shows the value over time of each parameter affected by this lever.
 
 ```{python}
 #| label: fig-final-treatment

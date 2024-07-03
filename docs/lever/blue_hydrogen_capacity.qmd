@@ -20,7 +20,11 @@ The values were derived as described in @sec-green-hydrogen-capacity.
 
 ## Parameter data
 
+@fig-blue-hydrogen-capacity shows the value over time of each parameter affected by this lever.
+
 ```{python}
-#| layout-ncol: 2
+#| label: fig-blue-hydrogen-capacity
+#| layout-ncol: 1
+#| fig-cap: "`blue_hydrogen_capacity` parameter data"
 plot_lever("blue_hydrogen_capacity", param_descriptions={})
 ```

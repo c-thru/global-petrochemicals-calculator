@@ -28,18 +28,30 @@ Feedstock shares used for biosyngas are assumed to be the same as for the lignoc
 
 ## Parameter data
 
+@fig-frac-of-biomass-feedstock-1 and @fig-frac-of-biomass-feedstock-2 show the value over time of each parameter affected by this lever.
+
 ```{python}
+#| label: fig-frac-of-biomass-feedstock-1
 #| layout-ncol: 2
-plot_lever("frac_of_biomass_feedstock", param_descriptions={
-    "k_ethyl_alcohol_biomass_feedstock_fraction__0": "CornStover",
-    "k_ethyl_alcohol_biomass_feedstock_fraction__1": "Maize",
-    "k_ethyl_alcohol_biomass_feedstock_fraction__2": "Sugarcane",
-    "k_ethyl_alcohol_biomass_feedstock_fraction__3": "SugarcaneBagasse",
-    "k_ethyl_alcohol_biomass_feedstock_fraction__4": "WheatStraw",
-    "k_ethyl_alcohol_biomass_feedstock_fraction__5": "RiceStraw",
-    "k_syngas_biomass_feedstock_fraction__0": "CornStover",
-    "k_syngas_biomass_feedstock_fraction__1": "SugarcaneBagasse",
-    "k_syngas_biomass_feedstock_fraction__2": "WheatStraw",
-    "k_syngas_biomass_feedstock_fraction__3": "RiceStraw",
-})
+#| fig-cap: "`frac_of_biomass_feedstock` parameter data (ethyl alcohol feedstocks)"
+#| fig-subcap:
+#|  - "CornStover"
+#|  - "Maize"
+#|  - "Sugarcane"
+#|  - "SugarcaneBagasse"
+#|  - "WheatStraw"
+#|  - "RiceStraw"
+plot_lever("frac_of_biomass_feedstock", subset=range(0, 6))
+```
+
+```{python}
+#| label: fig-frac-of-biomass-feedstock-2
+#| layout-ncol: 2
+#| fig-cap: "`frac_of_biomass_feedstock` parameter data (bio-syngas feedstocks)"
+#| fig-subcap:
+#|  - "CornStover"
+#|  - "SugarcaneBagasse"
+#|  - "WheatStraw"
+#|  - "RiceStraw"
+plot_lever("frac_of_biomass_feedstock", subset=range(6, 10))
 ```

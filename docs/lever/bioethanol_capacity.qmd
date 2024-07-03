@@ -24,7 +24,11 @@ Since the quantity of bioethanol in this scenario is still small compared to pot
 
 ## Parameter data
 
+@fig-bioethanol-capacity shows the value over time of each parameter affected by this lever.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("bioethanol_capacity", param_descriptions={})
+#| label: fig-bioethanol-capacity
+#| layout-ncol: 1
+#| fig-cap: "`bioethanol_capacity` parameter data"
+plot_lever("bioethanol_capacity")
 ```

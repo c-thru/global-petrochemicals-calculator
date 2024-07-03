@@ -22,6 +22,10 @@ To explore what effect shifts in feedstock have on the overall system, an additi
 
 ## Parameter data
 
+@fig-olefins-paraffins-mix shows the value over time of each parameter affected by this lever.
+
 ```{python}
+#| label: fig-olefins-paraffins-mix
+#| fig-cap: "`olefins_paraffins_mix` parameter data"
 plot_lever("olefins_paraffins_mix", param_descriptions={})
 ```

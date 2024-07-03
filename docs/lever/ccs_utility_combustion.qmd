@@ -22,7 +22,11 @@ To allow exploring different levels of CCS applied to combustion emissions speci
 
 ## Parameter data
 
+@fig-ccs-utility-combustion shows the value over time of each parameter affected by this lever.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("ccs_utility_combustion", param_descriptions={})
+#| label: fig-ccs-utility-combustion
+#| layout-ncol: 1
+#| fig-cap: "`ccs_utility_combustion` parameter data"
+plot_lever("ccs_utility_combustion")
 ```

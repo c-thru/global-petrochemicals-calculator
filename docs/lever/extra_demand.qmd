@@ -26,12 +26,16 @@ The demand-reduction scenarios then scale down from this projected demand propor
 
 ## Parameter data
 
+@fig-extra-demand shows the value over time of each parameter affected by this lever.
+
 ```{python}
+#| label: fig-extra-demand
 #| layout-ncol: 2
-plot_lever("extra_demand", param_descriptions={
-    "Z_extra__0": "Benzene",
-    "Z_extra__1": "Toluene",
-    "Z_extra__2": "Xylenes",
-    "Z_extra__3": "MethylAlcohol",
-})
+#| fig-cap: "`extra_demand` parameter data"
+#| fig-subcap:
+#|  - "Benzene"
+#|  - "Toluene"
+#|  - "Xylenes"
+#|  - "MethylAlcohol"
+plot_lever("extra_demand")
 ```
