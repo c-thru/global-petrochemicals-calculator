@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -376,7 +396,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="7f13685c" class="cell" data-execution_count="3">
+<div id="685537be" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -397,55 +417,61 @@ Emission factor of the mixed polymers after they underwent the final treatment o
 </div>
 </div>
 <p>This lever controls the emissions factors for end-of-life final treatments.</p>
-<p>Emissions from incineration are based on data from Vlasopoulos et al.&nbsp;(2023) for incineration of mixed plastic waste in Europe.</p>
-<p>Emissions from landfilling are based on data from OECD (2023) for sanitary landfill, global scope.</p>
-<p>According to OECD (2022), mismanaged waste is “Waste that is not captured by any state-of-the-art waste collection or treatment facilities. It includes waste that is burned in open pits, dumped into seas or open waters, or disposed of in unsanitary landfills and dumpsites.” Emissions are assumed to be the average of incineration and landfilling.</p>
+<p>Emissions from incineration are based on data from <span class="citation" data-cites="vlasopoulos_life_2023">Vlasopoulos et al. (<a href="../references.html#ref-vlasopoulos_life_2023" role="doc-biblioref">2023</a>)</span> for incineration of mixed plastic waste in Europe.</p>
+<p>Emissions from landfilling are based on data from <span class="citation" data-cites="oecd_globalplastics_2022">OECD (<a href="../references.html#ref-oecd_globalplastics_2022" role="doc-biblioref">2022</a>)</span> for sanitary landfill, global scope.</p>
+<p>According to <span class="citation" data-cites="oecd_globalplastics_2022">OECD (<a href="../references.html#ref-oecd_globalplastics_2022" role="doc-biblioref">2022</a>)</span>, mismanaged waste is “Waste that is not captured by any state-of-the-art waste collection or treatment facilities. It includes waste that is burned in open pits, dumped into seas or open waters, or disposed of in unsanitary landfills and dumpsites.” Emissions are assumed to be the average of incineration and landfilling.</p>
 <section id="parameter-data" class="level2" data-number="27.1">
 <h2 data-number="27.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">27.1</span> Parameter data</h2>
-<div>
-
+<p><a href="#tbl-final-treatment-emission-factor" class="quarto-xref">Table&nbsp;<span>27.1</span></a> shows parameter values for emissions from final treatment processes.</p>
+<div class="cell" data-execution_count="4">
+<div id="tbl-final-treatment-emission-factor" class="cell quarto-float anchored" data-execution_count="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-final-treatment-emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;27.1: <code>final_treatment_emission_factor</code> parameter data. Values in tonnes of GHG per tonne product.
+</figcaption>
+<div aria-describedby="tbl-final-treatment-emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: right;">Level 1</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CO2_Incineration</td>
+<td style="text-align: right;">2.593</td>
+<td style="text-align: left;">t CO2/t plastic</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CO2_Landfilling</td>
+<td style="text-align: right;">0.076</td>
+<td style="text-align: left;">t CO2/t plastic</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CO2_Mismanagement</td>
+<td style="text-align: right;">1.335</td>
+<td style="text-align: left;">t CO2/t plastic</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="4058e153" class="cell quarto-layout-panel" data-execution_count="4" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="final_treatment_emission_factor_files/figure-html/cell-4-output-1.png" width="369" height="228"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="final_treatment_emission_factor_files/figure-html/cell-4-output-2.png" width="397" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="final_treatment_emission_factor_files/figure-html/cell-4-output-3.png" width="397" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="final_treatment_emission_factor_files/figure-html/cell-4-output-4.png" width="386" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="final_treatment_emission_factor_files/figure-html/cell-4-output-5.png" width="397" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="final_treatment_emission_factor_files/figure-html/cell-4-output-6.png" width="397" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="final_treatment_emission_factor_files/figure-html/cell-4-output-7.png" width="378" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="final_treatment_emission_factor_files/figure-html/cell-4-output-8.png" width="397" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="final_treatment_emission_factor_files/figure-html/cell-4-output-9.png" width="397" height="228"></p>
-</div>
+</figure>
 </div>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-oecd_globalplastics_2022" class="csl-entry" role="listitem">
+OECD. 2022. <span>“Global Plastics Outlook: Policy Scenarios to 2060.”</span> <a href="https://doi.org/10.1787/aa1edf33-en">https://doi.org/10.1787/aa1edf33-en</a>.
+</div>
+<div id="ref-vlasopoulos_life_2023" class="csl-entry" role="listitem">
+Vlasopoulos, Antonis, Jurgita Malinauskaite, Alina Żabnieńska-Góra, and Hussam Jouhara. 2023. <span>“Life Cycle Assessment of Plastic Waste and Energy Recovery.”</span> Journal Article. <em>Energy</em> 277: 127576. <a href="https://doi.org/10.1016/j.energy.2023.127576">https://doi.org/10.1016/j.energy.2023.127576</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

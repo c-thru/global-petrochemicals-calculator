@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -378,7 +398,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="ee8199c2" class="cell" data-execution_count="3">
+<div id="d9b93c34" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -399,246 +419,162 @@ Direct process emissions of steam cracking, methyl alcohol synthesis, adipic aci
 </div>
 </div>
 <p>This lever sets the baseline direct process emissions from reactions and internal non-utility combustion (consistent with the IPCC definition).</p>
-<p>The default direct process emissions from the IPCC guidelines (Harnisch et al.&nbsp;2006) were used as a starting point, unless modifications were needed as described below.</p>
+<p>The default direct process emissions from the IPCC guidelines <span class="citation" data-cites="harnisch_chemical_2006">(<a href="../references.html#ref-harnisch_chemical_2006" role="doc-biblioref">Harnisch et al. 2006</a>)</span> were used as a starting point, unless modifications were needed as described below.</p>
 <section id="process-emissions" class="level2" data-number="25.1">
 <h2 data-number="25.1" class="anchored" data-anchor-id="process-emissions"><span class="header-section-number">25.1</span> Process emissions</h2>
 <p>Steam cracking has significant CO<sub>2</sub> emissions from combustion, as described by the IPCC emissions factors, but these are already accounted for by utility energy inputs in our model, so are reported as utility emissions rather than direct process emissions. CH<sub>4</sub> emissions are calculated based on IPCC emissions factor estimates.</p>
-<p>For production of methanol, we model syngas production and methanol production as separate processes, whereas IPCC emissions factors include both steps together, and due to the integrated nature of the processes it can be different to allocate emissions to specific stages. Based on a carbon balance of the processes, most CO<sub>2</sub> comes from the syngas production stage, so IPCC emissions factors by feedstock are allocated to those processes, accounting for a 1 kg methanol yield from 1.5 kg syngas. Direct CH<sub>4</sub> emissions from methanol synthesis based on IPCC emissions factors are included.</p>
+<p>For production of methanol, we model syngas production and methanol production as separate processes, whereas IPCC emissions factors include both steps together, and due to the integrated nature of the processes it can be difficult to allocate emissions to specific stages. Based on a carbon balance of the processes, most CO<sub>2</sub> comes from the syngas production stage, so IPCC emissions factors by feedstock are allocated to those processes, accounting for a 1 kg methanol yield from 1.5 kg syngas. Direct CH<sub>4</sub> emissions from methanol synthesis based on IPCC emissions factors are included.</p>
 <p>Emissions factors for direct process emissions from adipic acid synthesis, ethylene oxide synthesis and acrylonitrile synthesis are used directly.</p>
 </section>
 <section id="biogenic-carbon-sequestration" class="level2" data-number="25.2">
 <h2 data-number="25.2" class="anchored" data-anchor-id="biogenic-carbon-sequestration"><span class="header-section-number">25.2</span> Biogenic carbon sequestration</h2>
-<p>Since the chemical sector can potentially act as a sink for carbon emissions <span class="citation" data-cites="meng_planet_2023">(<a href="../references.html#ref-meng_planet_2023" role="doc-biblioref"><strong>meng_planet_2023?</strong></a>)</span> it is important to clearly model and report negative sequestered carbon from biomass feedstocks as well as positive end-of-life incineration emissions. To simplify modelling of biomass production, sequestration is modelled as happening at the point of conversion to a bio-based chemical (i.e.&nbsp;syngas or ethanol) rather than further upstream, based on the assumption that other biogenic carbon is released back to the atmosphere in the short term.</p>
+<p>Since the chemical sector can potentially act as a sink for carbon emissions <span class="citation" data-cites="meng_planet_2023">(<a href="../references.html#ref-meng_planet_2023" role="doc-biblioref">Meng et al. 2023</a>)</span> it is important to clearly model and report negative sequestered carbon from biomass feedstocks. To simplify modelling of biomass production, sequestration is modelled as happening at the point of conversion to a bio-based chemical (i.e.&nbsp;syngas or ethanol) rather than further upstream, based on the assumption that other biogenic carbon is released back to the atmosphere in the short term.</p>
 <p>The carbon content of syngas is assumed to be 30% by mass, giving 1.1 kg CO<sub>2</sub> sequestered per kg syngas.</p>
 <p>The carbon content of ethyl alcohol is assumed to be 52% by mass, giving 1.9 kg CO<sub>2</sub> sequestered per kg ethyl alcohol.</p>
 <p>These are included as negative emissions linked to the bio-syngas and bio-ethyl-alcohol production processes.</p>
 </section>
 <section id="parameter-data" class="level2" data-number="25.3">
 <h2 data-number="25.3" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">25.3</span> Parameter data</h2>
-<div class="cell-output cell-output-stderr">
-<pre><code>/opt/homebrew/Caskroom/miniconda/base/envs/cthru-calculator/lib/python3.10/site-packages/pandas/plotting/_matplotlib/core.py:512: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
-  fig = self.plt.figure(figsize=self.figsize)</code></pre>
-</div>
-<div id="596dbbfd" class="cell quarto-layout-panel" data-layout-ncol="2" data-execution_count="4">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-2.png" width="419" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-3.png" width="422" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-4.png" width="423" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-5.png" width="413" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-6.png" width="416" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-7.png" width="417" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-8.png" width="533" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-9.png" width="533" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-10.png" width="534" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-11.png" width="420" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-12.png" width="392" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-13.png" width="421" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-14.png" width="410" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-15.png" width="413" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-16.png" width="413" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-17.png" width="398" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-18.png" width="398" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-19.png" width="379" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-20.png" width="421" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-21.png" width="396" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-22.png" width="416" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-23.png" width="419" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-24.png" width="385" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-25.png" width="405" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-26.png" width="489" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-27.png" width="489" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-28.png" width="490" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-29.png" width="447" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-30.png" width="447" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-31.png" width="448" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-32.png" width="451" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-33.png" width="451" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-34.png" width="452" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-35.png" width="443" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-36.png" width="442" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-37.png" width="443" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-38.png" width="466" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-39.png" width="468" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-40.png" width="469" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-41.png" width="533" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-42.png" width="533" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-43.png" width="534" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-44.png" width="441" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-45.png" width="449" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-46.png" width="449" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-47.png" width="470" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-48.png" width="470" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-49.png" width="471" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-50.png" width="479" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-51.png" width="478" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-52.png" width="479" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-53.png" width="461" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-54.png" width="466" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="direct_process_emissions_files/figure-html/cell-4-output-55.png" width="466" height="228"></p>
-</div>
+<p><a href="#tbl-direct-process-emissions" class="quarto-xref">Table&nbsp;<span>25.1</span></a> shows parameter values for direct process emissions.</p>
+<div class="cell" data-execution_count="4">
+<div id="tbl-direct-process-emissions" class="cell quarto-float anchored" data-execution_count="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-direct-process-emissions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;25.1: <code>direct_process_emissions</code> parameter data. Values in tonnes of GHG per tonne product.
+</figcaption>
+<div aria-describedby="tbl-direct-process-emissions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 62%">
+<col style="width: 11%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: right;">Level 1</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CH4_AcrylonitrileSynthesis</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: left;">t CH4/t acrylonitrile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CH4_EthyleneOxideSynthesis</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: left;">t CH4/t ethylene oxide</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CH4_MethylAlcoholSynthesis</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: left;">t CH4/t methyl alcohol</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CH4_SteamCrackingOfEthane</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: left;">t CH4/t ethylene</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CH4_SteamCrackingOfNaphtha</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: left;">t CH4/t ethylene</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CO2_AcrylonitrileSynthesis</td>
+<td style="text-align: right;">0.790</td>
+<td style="text-align: left;">t CO2/t acrylonitrile</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CO2_CoalGasificationToSyngas</td>
+<td style="text-align: right;">3.513</td>
+<td style="text-align: left;">t CO2/t syngas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CO2_CornStoverGasificationToSyngas</td>
+<td style="text-align: right;">-1.096</td>
+<td style="text-align: left;">t CO2/t syngas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CO2_EthylAlcoholSynthesisFromCornStover</td>
+<td style="text-align: right;">-1.912</td>
+<td style="text-align: left;">t CO2/t ethyl alcohol</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CO2_EthylAlcoholSynthesisFromMaize</td>
+<td style="text-align: right;">-1.912</td>
+<td style="text-align: left;">t CO2/t ethyl alcohol</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CO2_EthylAlcoholSynthesisFromRiceStraw</td>
+<td style="text-align: right;">-1.912</td>
+<td style="text-align: left;">t CO2/t ethyl alcohol</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CO2_EthylAlcoholSynthesisFromSugarcane</td>
+<td style="text-align: right;">-1.912</td>
+<td style="text-align: left;">t CO2/t ethyl alcohol</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CO2_EthylAlcoholSynthesisFromSugarcaneBagasse</td>
+<td style="text-align: right;">-1.912</td>
+<td style="text-align: left;">t CO2/t ethyl alcohol</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CO2_EthylAlcoholSynthesisFromWheatStraw</td>
+<td style="text-align: right;">-1.912</td>
+<td style="text-align: left;">t CO2/t ethyl alcohol</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CO2_EthyleneOxideSynthesis</td>
+<td style="text-align: right;">0.663</td>
+<td style="text-align: left;">t CO2/t ethylene oxide</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CO2_NaturalGasSteamMethaneReformingToSyngas</td>
+<td style="text-align: right;">0.445</td>
+<td style="text-align: left;">t CO2/t syngas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CO2_RiceStrawGasificationToSyngas</td>
+<td style="text-align: right;">-1.096</td>
+<td style="text-align: left;">t CO2/t syngas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_CO2_SugarCaneBagasseGasificationToSyngas</td>
+<td style="text-align: right;">-1.096</td>
+<td style="text-align: left;">t CO2/t syngas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DirProcEmis_CO2_WheatStrawGasificationToSyngas</td>
+<td style="text-align: right;">-1.096</td>
+<td style="text-align: left;">t CO2/t syngas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DirProcEmis_N2O_AdipicAcidSynthesis</td>
+<td style="text-align: right;">0.300</td>
+<td style="text-align: left;">t N2O/t adipic acid</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
 </div>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-harnisch_chemical_2006" class="csl-entry" role="listitem">
+Harnisch, Jochen, Charles Jubb, Alexander Nakhutin, Virginia Carla Sena Cianci, Thomas Martinsen, Abdul Karim W. Mohammad, Maruo M. O. Santos, et al. 2006. <span>“Chemical Industry Emissions.”</span> Book Section. In <em>2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 3, Industrial Processes and Product Use</em>, edited by H. S. Eggleston, 3.1–110. Hayama, Japan: Intergovernmental Panel on Climate Change National Greenhouse Gas Inventories Programme (IPCC). <a href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/3_Volume3/V3_3_Ch3_Chemical_Industry.pdf">https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/3_Volume3/V3_3_Ch3_Chemical_Industry.pdf</a>.
+</div>
+<div id="ref-meng_planet_2023" class="csl-entry" role="listitem">
+Meng, Fanran, Andreas Wagner, Alexandre B. Kremer, Daisuke Kanazawa, Jane J. Leung, Peter Goult, Min Guan, et al. 2023. <span>“Planet-Compatible Pathways for Transitioning the Chemical Industry.”</span> Journal Article. <em>Proceedings of the National Academy of Sciences</em> 120 (8): e2218294120. <a href="https://doi.org/10.1073/pnas.2218294120">https://doi.org/10.1073/pnas.2218294120</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

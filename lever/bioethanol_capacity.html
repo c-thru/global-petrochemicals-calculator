@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -376,7 +396,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="535050c2" class="cell" data-execution_count="3">
+<div id="00fa54e1" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -400,23 +420,44 @@ Increase capacity for producing ethyl alcohol from bio-based feedstocks.
 </div>
 </div>
 <p>This lever controls the available capacity for producing ethylene from bio-ethyl-alcohol, measured by the ethyl alcohol production capacity.</p>
-<p>Baseline total bioethanol production is reported by <span class="citation" data-cites="opec_world_2022">(<a href="../references.html#ref-opec_world_2022" role="doc-biblioref"><strong>opec_world_2022?</strong></a>)</span> and agrees well with <span class="citation" data-cites="doe_global_2022">(<a href="../references.html#ref-doe_global_2022" role="doc-biblioref"><strong>doe_global_2022?</strong></a>)</span> (3% difference). Of this, the majority is used as fuel, with 0.3% used for ethylene production <span class="citation" data-cites="mohsenzadeh_bioethylene_2017">(<a href="../references.html#ref-mohsenzadeh_bioethylene_2017" role="doc-biblioref"><strong>mohsenzadeh_bioethylene_2017?</strong></a>)</span>. This gives the baseline bioethylene capacity.</p>
-<p>In the absence of specific projections for growth in bioethanol-to-ethylene capacity, we estimate order-of-magnitude possible growth in this route by taking projected growth in total bioethanol and dedicating it increasing chemicals production rather than increasing supply of ethanol for fuel. This gives a similar result to increasing the share of total bioethanol used for chemicals from 0.3% to 50% in 2050. Forecast production of fuel ethanol from 2020 to 2050 was obtained from <span class="citation" data-cites="opec_world_2022">(<a href="../references.html#ref-opec_world_2022" role="doc-biblioref"><strong>opec_world_2022?</strong></a>)</span>.</p>
-<p>Since the quantity of bioethanol in this scenario is still small compared to potential demand for ethylene, we add additional hypothetical levels of capacity to explore the effect of dedicating very large amounts of biomass to this route.</p>
+<p>Baseline total bioethanol production is reported by <span class="citation" data-cites="opec_world_2022">OPEC (<a href="../references.html#ref-opec_world_2022" role="doc-biblioref">2022</a>)</span> and agrees well with <span class="citation" data-cites="doe_global_2022">DOE (<a href="../references.html#ref-doe_global_2022" role="doc-biblioref">2022</a>)</span> (3% difference). Of this, the majority is used as fuel, with 0.3% used for ethylene production <span class="citation" data-cites="mohsenzadeh_bioethylene_2017">(<a href="../references.html#ref-mohsenzadeh_bioethylene_2017" role="doc-biblioref">Mohsenzadeh, Zamani, and Taherzadeh 2017</a>)</span>. This gives the baseline bioethylene capacity.</p>
+<p>In the absence of specific projections for growth in bioethanol-to-ethylene capacity, we estimate ‘order-of-magnitude’ possible growth in this route by taking projected growth in total bioethanol and dedicating it to increasing chemicals production rather than increasing supply of ethanol for fuel. This gives a similar result to increasing the share of total bioethanol used for chemicals from 0.3% to 50% in 2050. Forecast production of fuel ethanol from 2020 to 2050 was obtained from <span class="citation" data-cites="opec_world_2022">OPEC (<a href="../references.html#ref-opec_world_2022" role="doc-biblioref">2022</a>)</span>.</p>
+<p>Since the quantity of bioethanol in this scenario is still small compared to potential demand for ethylene, we added additional hypothetical levels of capacity to explore the effect of dedicating very large amounts of biomass to this route.</p>
 <section id="parameter-data" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">12.1</span> Parameter data</h2>
+<p><a href="#fig-bioethanol-capacity" class="quarto-xref">Figure&nbsp;<span>12.1</span></a> shows the value over time of each parameter affected by this lever.</p>
 <div>
 
 </div>
-<div id="ec700f59" class="cell quarto-layout-panel" data-layout-ncol="2" data-execution_count="4">
+<div id="cell-fig-bioethanol-capacity" class="cell quarto-layout-panel" data-execution_count="4" data-layout-ncol="1">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="bioethanol_capacity_files/figure-html/cell-4-output-1.png" width="369" height="228"></p>
+<div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-bioethanol-capacity" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bioethanol-capacity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="bioethanol_capacity_files/figure-html/fig-bioethanol-capacity-output-1.png" width="369" height="228" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bioethanol-capacity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: <code>bioethanol_capacity</code> parameter data
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-doe_global_2022" class="csl-entry" role="listitem">
+DOE, US. 2022. <span>“Global Ethanol Production by Country or Region.”</span> Dataset. Vehicles Technologies Office, United States Department of Energy (US DOE). <a href="https://afdc.energy.gov/data/10331">https://afdc.energy.gov/data/10331</a>.
+</div>
+<div id="ref-mohsenzadeh_bioethylene_2017" class="csl-entry" role="listitem">
+Mohsenzadeh, Abas, Akram Zamani, and Mohammad J. Taherzadeh. 2017. <span>“Bioethylene Production from Ethanol: A Review and Techno-Economical Evaluation.”</span> Journal Article. <em>ChemBioEng Reviews</em> 4 (2): 75–91. <a href="https://doi.org/10.1002/cben.201600025">https://doi.org/10.1002/cben.201600025</a>.
+</div>
+<div id="ref-opec_world_2022" class="csl-entry" role="listitem">
+OPEC. 2022. <span>“2022 World Oil Outlook 2045.”</span> Report. Organization of the Petroleum Exporting Countries (OPEC). <a href="https://www.opec.org/opec_web/static_files_project/media/downloads/WOO_2022.pdf">https://www.opec.org/opec_web/static_files_project/media/downloads/WOO_2022.pdf</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -376,7 +396,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="9e5cc05b" class="cell" data-execution_count="3">
+<div id="b5a94065" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -401,23 +421,38 @@ Sets the total capacity to produce “green” hydrogen via water electrolysis u
 </div>
 <p>This lever controls production capacity for “green” hydrogen, i.e.&nbsp;from water electrolysis.</p>
 <p>Currently this route is not used, so the baseline capacity remains at zero.</p>
-<p>Growth scenarios are based on the Hydrogen Council and McKinsey &amp; Company (2023) Hydrogen Outlook. They project total “clean hydrogen” (i.e.&nbsp;including green and blue) capacity in different scenarios, as well as the amount of hydrogen used by the chemical sector in 2035 and 2050. This is used to estimate the fraction of all hydrogen projection which is used by the chemical sector in each scenario, which ranges from 18% (highest growth in hydrogen, in 2050) to 53% (lowest growth, in 2035).</p>
+<p>Growth scenarios are based on the hydrogen outlook by <span class="citation" data-cites="gulli_global_2024">Gulli et al. (<a href="../references.html#ref-gulli_global_2024" role="doc-biblioref">2024</a>)</span>. They projected total “clean hydrogen” (i.e.&nbsp;including green and blue) capacity in different scenarios, as well as the amount of hydrogen used by the chemical sector in 2035 and 2050. This is used to estimate the fraction of all hydrogen projection which is used by the chemical sector in each scenario, which ranges from 18% (highest growth in hydrogen, in 2050) to 53% (lowest growth, in 2035).</p>
 <p>These fractions of capacity used for the chemical sector are assumed to apply to the green and blue hydrogen capacity available in each scenario, leading to the capacity levels set by this lever.</p>
 <p>The maximum capacity found this way is 54 Mt/year in 2050, which is insufficient to supply all potential demand for hydrogen in the model. To allow exploration of scenarios fully supplied by green hydrogen, an additional “full hydrogen” level was added with greater hypothetical capacity.</p>
 <section id="parameter-data" class="level2" data-number="16.1">
 <h2 data-number="16.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">16.1</span> Parameter data</h2>
+<p><a href="#fig-green-hydrogen-capacity" class="quarto-xref">Figure&nbsp;<span>16.1</span></a> shows the value over time of each parameter affected by this lever.</p>
 <div>
 
 </div>
-<div id="7d905533" class="cell quarto-layout-panel" data-layout-ncol="2" data-execution_count="4">
+<div id="cell-fig-green-hydrogen-capacity" class="cell quarto-layout-panel" data-layout-ncol="1" data-execution_count="4">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="green_hydrogen_capacity_files/figure-html/cell-4-output-1.png" width="378" height="228"></p>
+<div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-green-hydrogen-capacity" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-green-hydrogen-capacity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="green_hydrogen_capacity_files/figure-html/fig-green-hydrogen-capacity-output-1.png" width="378" height="228" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-green-hydrogen-capacity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.1: <code>green_hydrogen_capacity</code> parameter data
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-gulli_global_2024" class="csl-entry" role="listitem">
+Gulli, Chiara, Bernd Heid, Jesse Noffsinger, and Maurtis Waardenburg. 2024. <span>“Global Energy Perspective 2023: Hydrogen Outlook.”</span> Report. McKinsey &amp; Company. <a href="https://www.mckinsey.com/industries/oil-and-gas/our-insights/global-energy-perspective-2023-hydrogen-outlook#/">https://www.mckinsey.com/industries/oil-and-gas/our-insights/global-energy-perspective-2023-hydrogen-outlook#/</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

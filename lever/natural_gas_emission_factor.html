@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -376,7 +396,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="1ace6e7f" class="cell" data-execution_count="3">
+<div id="492a599b" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -396,22 +416,32 @@ Emission factor of natural gas when it is combusted on-site for power and/or ste
 </dl>
 </div>
 </div>
-<p>This lever controls the emissions factor for natural gas production and combustion as a utility.</p>
-<p>The value is based on DEFRA (2023) scope 1 emissions factors.</p>
+<p>This lever controls the emissions factor for natural gas combustion as a utility.</p>
+<p>The value is based on <span class="citation" data-cites="desnzdefra_ghgconversionfactors_2023">DESNZ and DEFRA (<a href="../references.html#ref-desnzdefra_ghgconversionfactors_2023" role="doc-biblioref">2023</a>)</span> scope 1 emissions factors.</p>
 <section id="parameter-data" class="level2" data-number="24.1">
 <h2 data-number="24.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">24.1</span> Parameter data</h2>
-<div>
+<p><a href="#fig-natural-gas-emission-factor" class="quarto-xref">Figure&nbsp;<span>24.1</span></a> shows the value over time of each parameter affected by this lever.</p>
+<div id="cell-fig-natural-gas-emission-factor" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="fig-natural-gas-emission-factor" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-natural-gas-emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="natural_gas_emission_factor_files/figure-html/fig-natural-gas-emission-factor-output-1.png" width="386" height="228" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-natural-gas-emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;24.1: <code>natural_gas_emission_factor</code> parameter data
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 
-</div>
-<div id="bc044b0f" class="cell quarto-layout-panel" data-layout-ncol="2" data-execution_count="4">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_emission_factor_files/figure-html/cell-4-output-1.png" width="386" height="228"></p>
-</div>
-</div>
-</div>
 
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-desnzdefra_ghgconversionfactors_2023" class="csl-entry" role="listitem">
+DESNZ, UK, and DEFRA. 2023. <span>“UK Government GHG Conversion Factors for Company Reporting.”</span> Dataset. <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2023">https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2023</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

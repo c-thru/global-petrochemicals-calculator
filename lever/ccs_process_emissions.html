@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -376,7 +396,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="69c6ac51" class="cell" data-execution_count="3">
+<div id="98f788e4" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -400,22 +420,37 @@ Level of emissions abatement on process emissions (excluding incineration)
 </div>
 </div>
 <p>This lever controls the level of emissions abatement on process emissions (excluding end-of-life incineration).</p>
-<p>Currently practically no Carbon Capture and Storage (CCS) is in use, so the baseline level has no capacity applied.</p>
+<p>Currently practically no CCS is in use <span class="citation" data-cites="meng_planet_2023">(<a href="../references.html#ref-meng_planet_2023" role="doc-biblioref">Meng et al. 2023</a>)</span>, so the baseline level has no capacity applied.</p>
 <p>To allow exploring different levels of CCS applied to production process emissions specifically, hypothetical higher levels are included.</p>
 <section id="parameter-data" class="level2" data-number="19.1">
 <h2 data-number="19.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">19.1</span> Parameter data</h2>
+<p><a href="#fig-ccs-process-emissions" class="quarto-xref">Figure&nbsp;<span>19.1</span></a> shows the value over time of each parameter affected by this lever.</p>
 <div>
 
 </div>
-<div id="f7f3a24a" class="cell quarto-layout-panel" data-layout-ncol="2" data-execution_count="4">
+<div id="cell-fig-ccs-process-emissions" class="cell quarto-layout-panel" data-execution_count="4" data-layout-ncol="1">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ccs_process_emissions_files/figure-html/cell-4-output-1.png" width="369" height="228"></p>
+<div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-ccs-process-emissions" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ccs-process-emissions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ccs_process_emissions_files/figure-html/fig-ccs-process-emissions-output-1.png" width="369" height="228" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ccs-process-emissions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19.1: <code>ccs_process_emissions</code> parameter data
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-meng_planet_2023" class="csl-entry" role="listitem">
+Meng, Fanran, Andreas Wagner, Alexandre B. Kremer, Daisuke Kanazawa, Jane J. Leung, Peter Goult, Min Guan, et al. 2023. <span>“Planet-Compatible Pathways for Transitioning the Chemical Industry.”</span> Journal Article. <em>Proceedings of the National Academy of Sciences</em> 120 (8): e2218294120. <a href="https://doi.org/10.1073/pnas.2218294120">https://doi.org/10.1073/pnas.2218294120</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

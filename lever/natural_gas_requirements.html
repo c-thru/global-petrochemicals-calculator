@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -376,7 +396,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="4f45ae0f" class="cell" data-execution_count="3">
+<div id="4b6a3b7c" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -397,303 +417,417 @@ natural_gas_requirements
 </div>
 </div>
 <p>This lever sets the baseline values for natural gas utility requirements for all processes.</p>
-<p>Data was sourced from Zhao et al.&nbsp;(2021), Jiang et al.&nbsp;(2020), Rosental et al.&nbsp;(2020), Oni et al.&nbsp;(2022), IEA (2021), and cross-checked against data from IHS (XXX) to estimate indicative natural gas requirements for each process.</p>
+<p>Data was sourced from <span class="citation" data-cites="zhao_economic_2021">Zhao, Jiang, and Wang (<a href="../references.html#ref-zhao_economic_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="jiang_comparative_2020">Jiang et al. (<a href="../references.html#ref-jiang_comparative_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="rosental_life_2020">Rosental, Fröhlich, and Liebich (<a href="../references.html#ref-rosental_life_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="oni_comparative_2022">Oni et al. (<a href="../references.html#ref-oni_comparative_2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="iea_world_2021">IEA (<a href="../references.html#ref-iea_world_2021" role="doc-biblioref">2021</a>)</span>, and cross-checked against data from <span class="citation" data-cites="ihs_process_2021">Markit (<a href="../references.html#ref-ihs_process_2021" role="doc-biblioref">2021</a>)</span> to estimate indicative natural gas requirements for each process.</p>
 <p>Where steam utility requirements were known for processes, these were converted into equivalent natural gas requirements to better indicate the total energy requirements of the process.</p>
 <section id="parameter-data" class="level2" data-number="22.1">
 <h2 data-number="22.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">22.1</span> Parameter data</h2>
-<div class="cell-output cell-output-stderr">
-<pre><code>/opt/homebrew/Caskroom/miniconda/base/envs/cthru-calculator/lib/python3.10/site-packages/pandas/plotting/_matplotlib/core.py:512: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
-  fig = self.plt.figure(figsize=self.figsize)</code></pre>
-</div>
-<div id="63c383ba" class="cell quarto-layout-panel" data-execution_count="4" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-2.png" width="390" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-3.png" width="390" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-4.png" width="382" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-5.png" width="382" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-6.png" width="386" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-7.png" width="382" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-8.png" width="390" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-9.png" width="452" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-10.png" width="406" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-11.png" width="430" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-12.png" width="411" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-13.png" width="432" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-14.png" width="433" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-15.png" width="428" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-16.png" width="398" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-17.png" width="382" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-18.png" width="373" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-19.png" width="459" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-20.png" width="427" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-21.png" width="453" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-22.png" width="400" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-23.png" width="422" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-24.png" width="433" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-25.png" width="424" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-26.png" width="460" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-27.png" width="397" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-28.png" width="438" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-29.png" width="406" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-30.png" width="410" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-31.png" width="401" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-32.png" width="397" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-33.png" width="470" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-34.png" width="538" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-35.png" width="397" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-36.png" width="390" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-37.png" width="382" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-38.png" width="382" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-39.png" width="390" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-40.png" width="471" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-41.png" width="397" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-42.png" width="382" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-43.png" width="397" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-44.png" width="390" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-45.png" width="390" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-46.png" width="382" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-47.png" width="390" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-48.png" width="397" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-49.png" width="382" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-50.png" width="390" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-51.png" width="403" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-52.png" width="373" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-53.png" width="397" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-54.png" width="397" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-55.png" width="382" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-56.png" width="365" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-57.png" width="382" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-58.png" width="382" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-59.png" width="397" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-60.png" width="409" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-61.png" width="382" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-62.png" width="380" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-63.png" width="467" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-64.png" width="465" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-65.png" width="418" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-66.png" width="459" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-67.png" width="640" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-68.png" width="450" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-69.png" width="484" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-70.png" width="427" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-71.png" width="445" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="natural_gas_requirements_files/figure-html/cell-4-output-72.png" width="415" height="228"></p>
-</div>
+<p><a href="#tbl-natural-gas-requirements" class="quarto-xref">Table&nbsp;<span>22.1</span></a> shows parameter values for natural gas utility requirements.</p>
+<div class="cell" data-execution_count="4">
+<div id="tbl-natural-gas-requirements" class="cell quarto-float anchored" data-execution_count="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-natural-gas-requirements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;22.1: <code>natural_gas_requirements</code> parameter data. Values in MJ per tonne product.
+</figcaption>
+<div aria-describedby="tbl-natural-gas-requirements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 78%">
+<col style="width: 11%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: right;">Level 1</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NGReq_AceticAcidSynthesis</td>
+<td style="text-align: right;">2200</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_AcrylonitrileSynthesis</td>
+<td style="text-align: right;">11000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_AdipicAcidSynthesis</td>
+<td style="text-align: right;">37000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_CarbonDioxideHydrogenationToMethylAlcohol</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_CatalyticReformingOfNaphthaForToluene</td>
+<td style="text-align: right;">21000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_CatalyticReformingOfNaphthaForXylenes</td>
+<td style="text-align: right;">18000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_ChemicalRecyclingOfMixedPolymersAtEOL</td>
+<td style="text-align: right;">9800</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_CoalGasificationToSyngas</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_CornStoverGasificationToSyngas</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_CyclohexaneSynthesis</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_DealkylationOfTolueneForBenzene</td>
+<td style="text-align: right;">2600</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_DehydrationOfEthylAlcohol</td>
+<td style="text-align: right;">8500</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_DehydrogenationOfButaneForButadiene</td>
+<td style="text-align: right;">23000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_DehydrogenationOfPropane</td>
+<td style="text-align: right;">8500</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_DisproportionationOfTolueneForXylenes</td>
+<td style="text-align: right;">14000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_DistillationOfButylenesForButadiene</td>
+<td style="text-align: right;">4300</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_DistillationOfPyrolysisGasolineForBTX</td>
+<td style="text-align: right;">9400</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_EthylAlcoholSynthesisFromCornStover</td>
+<td style="text-align: right;">46000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_EthylAlcoholSynthesisFromMaize</td>
+<td style="text-align: right;">16000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_EthylAlcoholSynthesisFromRiceStraw</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_EthylAlcoholSynthesisFromSugarcane</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_EthylAlcoholSynthesisFromSugarcaneBagasse</td>
+<td style="text-align: right;">25000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_EthylAlcoholSynthesisFromWheatStraw</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_EthyleneGlycolSynthesis</td>
+<td style="text-align: right;">9600</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_EthyleneOxideSynthesis</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_FischerTropschSynthesisOfOlefinsFromSyngas</td>
+<td style="text-align: right;">38000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_FluidCatalyticCrackingOfGasOil</td>
+<td style="text-align: right;">4300</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_HexamethylenediamineSynthesisFromButadiene</td>
+<td style="text-align: right;">25000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_HydrogenCyanideSynthesis</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_IsophthalicAcidSynthesis</td>
+<td style="text-align: right;">9500</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_MechanicalRecyclingOfFibrePPAAtEOL</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_MechanicalRecyclingOfHDPEPolyethyleneAtEOL</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_MechanicalRecyclingOfLDPEPolyethyleneAtEOL</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_MechanicalRecyclingOfLLDPEAtEOL</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_MechanicalRecyclingOfPETPolyethyleneTerephthalatePolyestersAtEOL</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_MechanicalRecyclingOfPPPolypropyleneAtEOL</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_MechanicalRecyclingOfPSPolystyreneAtEOL</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_MechanicalRecyclingOfPVCPolyvinylChlorideAtEOL</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_MethylAlcoholSynthesis</td>
+<td style="text-align: right;">450</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_MethylAlcoholToAromatics</td>
+<td style="text-align: right;">2275</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_MethylAlcoholToOlefins</td>
+<td style="text-align: right;">8900</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_MethylAlcoholToPropylene</td>
+<td style="text-align: right;">14000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_NaturalGasSteamMethaneReformingToHydrogen</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_NaturalGasSteamMethaneReformingToSyngas</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_NaturalGasSteamMethaneReformingWithCCSToHydrogen</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_OtherOrganicChemicalsSynthesis</td>
+<td style="text-align: right;">13000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_PolymerisationOfFibrePPA</td>
+<td style="text-align: right;">1800</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_PolymerisationOfHDPE</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_PolymerisationOfLDPE</td>
+<td style="text-align: right;">430</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_PolymerisationOfLLDPE</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_PolymerisationOfOtherPolymers</td>
+<td style="text-align: right;">620</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_PolymerisationOfPET</td>
+<td style="text-align: right;">2900</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_PolymerisationOfPP</td>
+<td style="text-align: right;">1200</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_PolymerisationOfPUR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_PolymerisationOfPVC</td>
+<td style="text-align: right;">1400</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_PolymerisationOfPolystyrene</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_PolymerisationOfStyreneButadiene</td>
+<td style="text-align: right;">12000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_PolyolsSynthesis</td>
+<td style="text-align: right;">1100</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_PropyleneOxideSynthesis</td>
+<td style="text-align: right;">36000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_RiceStrawGasificationToSyngas</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_SodiumChlorideElectrolysisForChlorine</td>
+<td style="text-align: right;">9000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_SteamCrackingOfEthane</td>
+<td style="text-align: right;">14000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_SteamCrackingOfNaphtha</td>
+<td style="text-align: right;">21000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_StyreneSynthesis</td>
+<td style="text-align: right;">9000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_SugarCaneBagasseGasificationToSyngas</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_SyngasToAmmoniaProduction</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_TerephthalicAcidSynthesis</td>
+<td style="text-align: right;">9000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_TolueneDiisocyanateSynthesis</td>
+<td style="text-align: right;">40000</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_VinylChlorideSynthesis</td>
+<td style="text-align: right;">4700</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NGReq_WaterElectrolysisForHydrogen</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NGReq_WheatStrawGasificationToSyngas</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">MJ/t</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
 </div>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-iea_world_2021" class="csl-entry" role="listitem">
+IEA. 2021. <span>“World Energy Model Documentation.”</span> Report. International Energy Agency (IEA). <a href="https://iea.blob.core.windows.net/assets/932ea201-0972-4231-8d81-356300e9fc43/WEM_Documentation_WEO2021.pdf">https://iea.blob.core.windows.net/assets/932ea201-0972-4231-8d81-356300e9fc43/WEM_Documentation_WEO2021.pdf</a>.
+</div>
+<div id="ref-jiang_comparative_2020" class="csl-entry" role="listitem">
+Jiang, Jianrong, Xiao Feng, Minbo Yang, and Yufei Wang. 2020. <span>“Comparative Technoeconomic Analysis and Life Cycle Assessment of Aromatics Production from Methanol and Naphtha.”</span> Journal Article. <em>Journal of Cleaner Production</em> 277: 123525. <a href="https://doi.org/10.1016/j.jclepro.2020.123525">https://doi.org/10.1016/j.jclepro.2020.123525</a>.
+</div>
+<div id="ref-ihs_process_2021" class="csl-entry" role="listitem">
+Markit, IHS. 2021. <span>“Process Economics Program.”</span> Dataset. <a href="https://ihsmarkit.com/products/chemical-technology-pep-index.html">https://ihsmarkit.com/products/chemical-technology-pep-index.html</a>.
+</div>
+<div id="ref-oni_comparative_2022" class="csl-entry" role="listitem">
+Oni, A. O., K. Anaya, T. Giwa, G. Di Lullo, and A. Kumar. 2022. <span>“Comparative Assessment of Blue Hydrogen from Steam Methane Reforming, Autothermal Reforming, and Natural Gas Decomposition Technologies for Natural Gas-Producing Regions.”</span> Journal Article. <em>Energy Conversion and Management</em> 254: 115245. <a href="https://doi.org/10.1016/j.enconman.2022.115245">https://doi.org/10.1016/j.enconman.2022.115245</a>.
+</div>
+<div id="ref-rosental_life_2020" class="csl-entry" role="listitem">
+Rosental, M., T. Fröhlich, and A. Liebich. 2020. <span>“Life Cycle Assessment of Carbon Capture and Utilization for the Production of Large Volume Organic Chemicals.”</span> Journal Article. <em>Frontiers in Climate</em> 2. <a href="https://doi.org/10.3389/fclim.2020.586199">https://doi.org/10.3389/fclim.2020.586199</a>.
+</div>
+<div id="ref-zhao_economic_2021" class="csl-entry" role="listitem">
+Zhao, Zhitong, Jingyang Jiang, and Feng Wang. 2021. <span>“An Economic Analysis of Twenty Light Olefin Production Pathways.”</span> Journal Article. <em>Journal of Energy Chemistry</em> 56: 193–202. <a href="https://doi.org/10.1016/j.jechem.2020.04.021">https://doi.org/10.1016/j.jechem.2020.04.021</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

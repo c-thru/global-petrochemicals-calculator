@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -376,7 +396,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="afb6d75f" class="cell" data-execution_count="3">
+<div id="7bbebd9c" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -400,21 +420,31 @@ Reduce emissions of electricity drawn from the grid
 </div>
 </div>
 <p>This lever controls the emissions factor for grid electricity production.</p>
-<p>A range of levels is provided, from <a href="https://www.iea.org/data-and-statistics/charts/carbon-intensity-of-electricity-generation-in-selected-countries-and-regions-2000-2020">current global average</a> to the low value for wind energy used by <span class="citation" data-cites="meys_achieving_2021">(<a href="../references.html#ref-meys_achieving_2021" role="doc-biblioref"><strong>meys_achieving_2021?</strong></a>)</span> in their plastics decarbonisation scenarios.</p>
+<p>A range of levels is provided, from <a href="https://www.iea.org/data-and-statistics/charts/carbon-intensity-of-electricity-generation-in-selected-countries-and-regions-2000-2020">current global average</a> to the low value for wind energy used by <span class="citation" data-cites="meys_achieving_2021">Meys et al. (<a href="../references.html#ref-meys_achieving_2021" role="doc-biblioref">2021</a>)</span> in their plastics decarbonisation scenarios.</p>
 <section id="parameter-data" class="level2" data-number="23.1">
 <h2 data-number="23.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">23.1</span> Parameter data</h2>
-<div>
+<p><a href="#fig-electricity-emission-factor" class="quarto-xref">Figure&nbsp;<span>23.1</span></a> shows the value over time of each parameter affected by this lever.</p>
+<div id="cell-fig-electricity-emission-factor" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="fig-electricity-emission-factor" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-electricity-emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="electricity_emission_factor_files/figure-html/fig-electricity-emission-factor-output-1.png" width="369" height="228" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-electricity-emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;23.1: <code>electricity_emission_factor</code> parameter data
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 
-</div>
-<div id="fef8b0e9" class="cell quarto-layout-panel" data-layout-ncol="2" data-execution_count="4">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="electricity_emission_factor_files/figure-html/cell-4-output-1.png" width="369" height="228"></p>
-</div>
-</div>
-</div>
 
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-meys_achieving_2021" class="csl-entry" role="listitem">
+Meys, Raoul, Arne Kätelhön, Marvin Bachmann, Benedikt Winter, Christian Zibunas, Sangwon Suh, and André Bardow. 2021. <span>“Achieving Net-Zero Greenhouse Gas Emission Plastics by a Circular Carbon Economy.”</span> Journal Article. <em>Science</em> 374 (6563): 71–76. <a href="https://doi.org/10.1126/science.abg9853">https://doi.org/10.1126/science.abg9853</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

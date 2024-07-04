@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -376,7 +396,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="9695eaa6" class="cell" data-execution_count="3">
+<div id="b6d46a40" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -397,72 +417,133 @@ Emission factor of the feedstocks which must account for during their extraction
 </div>
 </div>
 <p>This lever controls the emissions factor for upstream production of the feedstocks that enter the model.</p>
-<p>Emissions factors for natural gas, coal, gas oil, propane and butane were taken from DEFRA (2023) scope 3 emissions factors data.</p>
-<p>Approximate emissions factors for naphtha and ethane supply were based on the study by Nanthachatchavankul et al.&nbsp;(2011) for ethylene production in Thailand.</p>
-<!-- Question: is this representative enough? -->
-<p>Biomass feedstocks are from Yuttitham et al.&nbsp;(2018) for sugarcane production in Thailand, and Farag et al.&nbsp;(2018) for corn production in Egypt. Crop residues are represented by DEFRA (2023) scope 3 emissions for generic straw/grass biomass.</p>
+<p>Emissions factors for natural gas, coal, gas oil, propane and butane were taken from <span class="citation" data-cites="desnzdefra_ghgconversionfactors_2023">DESNZ and DEFRA (<a href="../references.html#ref-desnzdefra_ghgconversionfactors_2023" role="doc-biblioref">2023</a>)</span> scope 3 emissions factors data.</p>
+<p>Approximate emissions factors for naphtha and ethane supply were based on the study by <span class="citation" data-cites="nanthachatchavankul_specific_2012">Nanthachatchavankul, Gridsdanurak, and Chiarakorn (<a href="../references.html#ref-nanthachatchavankul_specific_2012" role="doc-biblioref">2012</a>)</span> for ethylene production in Thailand, which was assumed to be the mean value between reported values by <span class="citation" data-cites="bousted_ecoprofiles_2005">Bousted (<a href="../references.html#ref-bousted_ecoprofiles_2005" role="doc-biblioref">2005</a>)</span> (assumed minimum) and <span class="citation" data-cites="desnzdefra_ghgconversionfactors_2023">DESNZ and DEFRA (<a href="../references.html#ref-desnzdefra_ghgconversionfactors_2023" role="doc-biblioref">2023</a>)</span> (assumed maximum).</p>
+<!-- Question: is this representative enough? The value above was the assumed mean given the limited data available. -->
+<p>Biomass crop feedstocks are from <span class="citation" data-cites="yuttitham_carbon_2011">Yuttitham, Gheewala, and Chidthaisong (<a href="../references.html#ref-yuttitham_carbon_2011" role="doc-biblioref">2011</a>)</span> for sugarcane production in Thailand (assumed mean value between the reported values by <span class="citation" data-cites="sanches_towards_2023">Sanches et al. (<a href="../references.html#ref-sanches_towards_2023" role="doc-biblioref">2023</a>)</span> as the assumed minimum and <span class="citation" data-cites="chandra_life_2018">Chandra et al. (<a href="../references.html#ref-chandra_life_2018" role="doc-biblioref">2018</a>)</span> as the assumed maximum), and <span class="citation" data-cites="farag_carbon_2018">Farag et al. (<a href="../references.html#ref-farag_carbon_2018" role="doc-biblioref">2018</a>)</span> for corn production in Egypt (assumed mean between the reported values by <span class="citation" data-cites="giusti_environmental_2023">Giusti et al. (<a href="../references.html#ref-giusti_environmental_2023" role="doc-biblioref">2023</a>)</span> as the assumed minimum and <span class="citation" data-cites="zhang_carbon_2017">Zhang et al. (<a href="../references.html#ref-zhang_carbon_2017" role="doc-biblioref">2017</a>)</span> as the assumed maximum). Crop residues are represented by <span class="citation" data-cites="desnzdefra_ghgconversionfactors_2023">DESNZ and DEFRA (<a href="../references.html#ref-desnzdefra_ghgconversionfactors_2023" role="doc-biblioref">2023</a>)</span> scope 3 emissions for generic straw/grass biomass.</p>
 <section id="parameter-data" class="level2" data-number="26.1">
 <h2 data-number="26.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">26.1</span> Parameter data</h2>
-<div>
+<p><a href="natural_gas_requirements.html#tbl-natural-gas-requirements" class="quarto-xref">Table&nbsp;<span>22.1</span></a> shows parameter values for natural gas utility requirements.</p>
+<div class="cell" data-execution_count="4">
+<div id="tbl-feedstock_emission-factor" class="cell quarto-float anchored" data-execution_count="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-feedstock_emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;26.1: <code>feedstock_emission_factor</code> parameter data. Values in kgCO<sub>2e</sub> per tonne product.
+</figcaption>
+<div aria-describedby="tbl-feedstock_emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: right;">Level 1</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">EF_Feedstock_Butane</td>
+<td style="text-align: right;">344</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EF_Feedstock_Coal</td>
+<td style="text-align: right;">418</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EF_Feedstock_CornStover</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EF_Feedstock_Ethane</td>
+<td style="text-align: right;">992</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EF_Feedstock_GasOil</td>
+<td style="text-align: right;">744</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EF_Feedstock_Maize</td>
+<td style="text-align: right;">307</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EF_Feedstock_Naphtha</td>
+<td style="text-align: right;">501</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EF_Feedstock_NaturalGas</td>
+<td style="text-align: right;">423</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EF_Feedstock_Propane</td>
+<td style="text-align: right;">353</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EF_Feedstock_RiceStraw</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EF_Feedstock_SugarCane</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EF_Feedstock_SugarCaneBagasse</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EF_Feedstock_WheatStraw</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: left;">kgCO2e/t</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
 
-</div>
-<div id="c04f0301" class="cell quarto-layout-panel" data-execution_count="4" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-1.png" width="373" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-2.png" width="373" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-3.png" width="373" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-4.png" width="382" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-5.png" width="373" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-6.png" width="373" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-7.png" width="365" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-8.png" width="373" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-9.png" width="365" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-10.png" width="365" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-11.png" width="365" height="228"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-12.png" width="365" height="228"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="feedstock_emission_factor_files/figure-html/cell-4-output-13.png" width="373" height="228"></p>
-</div>
-</div>
-</div>
 
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bousted_ecoprofiles_2005" class="csl-entry" role="listitem">
+Bousted, I. 2005. <span>“Eco-Profiles of the European Plastics Industry: Naphtha.”</span> Report. Plastics Europe. <a href="https://plasticseurope.org/sustainability/circularity/life-cycle-thinking/eco-profiles-set/">https://plasticseurope.org/sustainability/circularity/life-cycle-thinking/eco-profiles-set/</a>.
+</div>
+<div id="ref-chandra_life_2018" class="csl-entry" role="listitem">
+Chandra, V. V., S. L. Hemstock, O. N. Mwabonje, A. De Ramon N’Yeurt, and J. Woods. 2018. <span>“Life Cycle Assessment of Sugarcane Growing Process in Fiji.”</span> Journal Article. <em>Sugar Tech</em> 20 (6): 692–99. <a href="https://doi.org/10.1007/s12355-018-0607-1">https://doi.org/10.1007/s12355-018-0607-1</a>.
+</div>
+<div id="ref-desnzdefra_ghgconversionfactors_2023" class="csl-entry" role="listitem">
+DESNZ, UK, and DEFRA. 2023. <span>“UK Government GHG Conversion Factors for Company Reporting.”</span> Dataset. <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2023">https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2023</a>.
+</div>
+<div id="ref-farag_carbon_2018" class="csl-entry" role="listitem">
+Farag, A. A., M. M. H. El-Moula, M. M. Maze, R. A. El Gendy, and H. A. Radwan. 2018. <span>“Carbon Footprint for Wheat and Corn Under Egyptian Conditions.”</span> Journal Article. <em>Future of Food: Journal on Food, Agriculture and Society</em> 6 (2): 41–54. <a href="https://doi.org/10.17170/kobra-2018122070">https://doi.org/10.17170/kobra-2018122070</a>.
+</div>
+<div id="ref-giusti_environmental_2023" class="csl-entry" role="listitem">
+Giusti, G., G. F. de Almeida, M. J. de F. de Apresentação, L. S. Galvão, M. T. Knudsen, S. N. Djomo, and D. A. L. Silva. 2023. <span>“Environmental Impacts Management of Grain and Sweet Maize Through Life Cycle Assessment in São Paulo, Brazil.”</span> Journal Article. <em>International Journal of Environmental Science and Technology</em> 20 (6): 6559–74. <a href="https://doi.org/10.1007/s13762-022-04418-y">https://doi.org/10.1007/s13762-022-04418-y</a>.
+</div>
+<div id="ref-nanthachatchavankul_specific_2012" class="csl-entry" role="listitem">
+Nanthachatchavankul, Papondhanai, Nurak Gridsdanurak, and Siriluk Chiarakorn. 2012. <span>“Specific CO2 Emission Factors for Ethylene Production in Thailand.”</span> Conference Paper. ThaiScience. <a href="https://www.thaiscience.info/Article%20for%20ThaiScience/Article/61/10023480.pdf">https://www.thaiscience.info/Article%20for%20ThaiScience/Article/61/10023480.pdf</a>.
+</div>
+<div id="ref-sanches_towards_2023" class="csl-entry" role="listitem">
+Sanches, Guilherme Martineli, Ricardo de Oliveira Bordonal, Paulo Sérgio Graziano Magalhães, Rafael Otto, Mateus Ferreira Chagas, Terezinha de Fátima Cardoso, and Ana Cláudia dos Santos Luciano. 2023. <span>“Towards Greater Sustainability of Sugarcane Production by Precision Agriculture to Meet Ethanol Demands in South-Central Brazil Based on a Life Cycle Assessment.”</span> Journal Article. <em>Biosystems Engineering</em> 229: 57–68. <a href="https://doi.org/10.1016/j.biosystemseng.2023.03.013">https://doi.org/10.1016/j.biosystemseng.2023.03.013</a>.
+</div>
+<div id="ref-yuttitham_carbon_2011" class="csl-entry" role="listitem">
+Yuttitham, M., Shabbir H. Gheewala, and A. Chidthaisong. 2011. <span>“Carbon Footprint of Sugar Produced from Sugarcane in Eastern Thailand.”</span> Journal Article. <em>Journal of Cleaner Production</em> 19 (17-18): 2119–27. <a href="https://doi.org/10.1016/j.jclepro.2011.07.017">https://doi.org/10.1016/j.jclepro.2011.07.017</a>.
+</div>
+<div id="ref-zhang_carbon_2017" class="csl-entry" role="listitem">
+Zhang, Dan, Jianbo Shen, Fusuo Zhang, Yu’e Li, and Weifeng Zhang. 2017. <span>“Carbon Footprint of Grain Production in China.”</span> Journal Article. <em>Scientific Reports</em> 7 (1): 1–11. <a href="https://doi.org/10.1038/s41598-017-04182-x">https://doi.org/10.1038/s41598-017-04182-x</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
