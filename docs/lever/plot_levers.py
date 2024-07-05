@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from IPython.display import Markdown, display
+from IPython.display import Markdown, display, HTML, Latex
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -88,6 +88,29 @@ def plot_lever(lever_id, subset=None, param_descriptions=None, **kwargs):
         )
         units = param_units.get(param, "")
         df.plot(marker="o", xlabel="Year", ylabel=units, title=title, **kwargs)
+
+def tabulate_lever(lever_id, time_index=0, subset=None, skip_zero=False, **kwargs):
+    lever = levers_by_id[lever_id]
+
+    # Re-group by parameter
+    param_data = {}
+    for level in lever.levels:
+        for k, v in level.params.items():
+            if k not in param_data:
+                param_data[k] = {}
+            param_data[k][f"Level {level.level_id}"] = v[time_index]
+
+    df = pd.DataFrame.from_records(
+        param_data,
+    ).T
+    df.columns.name = "Level"
+    df.index.name = "Parameter"
+    if subset is not None:
+        df = df.iloc[subset]
+    if skip_zero:
+        df = df[df.sum(axis=1) != 0]
+    df["Units"] = [param_units.get(param, "") for param in df.index]
+    return Markdown(df.to_markdown(**kwargs))
 
 
 def describe_lever_levels(lever_id):

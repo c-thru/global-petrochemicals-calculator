@@ -11,6 +11,7 @@ dependencies:
   - jupyter-book=0.13.*
   - jupyterlab=3.*
   - matplotlib=3.*
+  - seaborn=0.13.*
   - bqplot=0.12.*
   - notebook=6.*
   - jupytext=1.14.*
@@ -18,6 +19,7 @@ dependencies:
   - voila=0.3.*
   - tqdm=4.*
   - pyarrow=16.*
+  - tabulate=0.9.*
   - pip=23.*
   - pip:
       - git+https://github.com/ricklupton/floweaver.git@38215850519d08cd791145cde3c1e8fa0cfe928b#egg=floweaver

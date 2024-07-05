@@ -9,3 +9,4 @@ __pycache__
 .jupyter_cache/
 .auctex-auto/
 /outputs/
+/docs/lever/*_files/

@@ -20,7 +20,10 @@ A range of levels is provided, from [current global average](https://www.iea.org
 
 ## Parameter data
 
+@fig-electricity-emission-factor shows the value over time of each parameter affected by this lever.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("electricity_emission_factor", param_descriptions={})
+#| label: fig-electricity-emission-factor
+#| fig-cap: "`electricity_emission_factor` parameter data"
+plot_lever("electricity_emission_factor")
 ```

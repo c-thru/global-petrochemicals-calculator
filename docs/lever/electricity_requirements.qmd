@@ -7,7 +7,7 @@ execute:
 
 ```{python}
 #| output: false
-from plot_levers import plot_lever, describe_lever_levels, param_units
+from plot_levers import tabulate_lever, describe_lever_levels, param_units
 ```
 
 ```{python}
@@ -20,7 +20,10 @@ Data was sourced from @zhao_economic_2021, @jiang_comparative_2020,  @rosental_l
 
 ## Parameter data
 
+@tbl-electricity-requirements shows parameter values for process electricity requirements.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("electricity_requirements", param_descriptions={})
+#| label: tbl-electricity-requirements
+#| tbl-cap: "`electricity_requirements` parameter data. Values in kWh per tonne product."
+tabulate_lever("electricity_requirements")
 ```

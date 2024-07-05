@@ -7,7 +7,7 @@ execute:
 
 ```{python}
 #| output: false
-from plot_levers import plot_lever, describe_lever_levels, param_units
+from plot_levers import tabulate_lever, describe_lever_levels, param_units
 ```
 
 ```{python}
@@ -24,7 +24,10 @@ According to @oecd_globalplastics_2022, mismanaged waste is "Waste that is not c
 
 ## Parameter data
 
+@tbl-final-treatment-emission-factor shows parameter values for emissions from final treatment processes.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("final_treatment_emission_factor", param_descriptions={})
+#| label: tbl-final-treatment-emission-factor
+#| tbl-cap: "`final_treatment_emission_factor` parameter data. Values in tonnes of GHG per tonne product."
+tabulate_lever("final_treatment_emission_factor", floatfmt=".3f", skip_zero=True)
 ```

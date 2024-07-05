@@ -7,7 +7,7 @@ execute:
 
 ```{python}
 #| output: false
-from plot_levers import plot_lever, describe_lever_levels, param_units
+from plot_levers import tabulate_lever, describe_lever_levels, param_units
 ```
 
 ```{python}
@@ -22,7 +22,10 @@ Where steam utility requirements were known for processes, these were converted 
 
 ## Parameter data
 
+@tbl-natural-gas-requirements shows parameter values for natural gas utility requirements.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("natural_gas_requirements", param_descriptions={})
+#| label: tbl-natural-gas-requirements
+#| tbl-cap: "`natural_gas_requirements` parameter data. Values in MJ per tonne product."
+tabulate_lever("natural_gas_requirements")
 ```

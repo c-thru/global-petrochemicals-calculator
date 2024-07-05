@@ -7,7 +7,7 @@ execute:
 
 ```{python}
 #| output: false
-from plot_levers import plot_lever, describe_lever_levels, param_units
+from plot_levers import tabulate_lever, describe_lever_levels
 ```
 
 ```{python}
@@ -38,7 +38,10 @@ These are included as negative emissions linked to the bio-syngas and bio-ethyl-
 
 ## Parameter data
 
+@tbl-direct-process-emissions shows parameter values for direct process emissions.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("direct_process_emissions", param_descriptions={})
+#| label: tbl-direct-process-emissions
+#| tbl-cap: "`direct_process_emissions` parameter data. Values in tonnes of GHG per tonne product."
+tabulate_lever("direct_process_emissions", skip_zero=True, floatfmt=".3f")
 ```

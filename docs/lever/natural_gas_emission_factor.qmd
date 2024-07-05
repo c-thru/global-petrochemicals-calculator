@@ -14,13 +14,16 @@ from plot_levers import plot_lever, describe_lever_levels, param_units
 describe_lever_levels("natural_gas_emission_factor")
 ```
 
-This lever controls the emissions factor for natural gas production and combustion as a utility.
+This lever controls the emissions factor for natural gas combustion as a utility.
 
 The value is based on @desnzdefra_ghgconversionfactors_2023 scope 1 emissions factors.
 
 ## Parameter data
 
+@fig-natural-gas-emission-factor shows the value over time of each parameter affected by this lever.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("natural_gas_emission_factor", param_descriptions={})
+#| label: fig-natural-gas-emission-factor
+#| fig-cap: "`natural_gas_emission_factor` parameter data"
+plot_lever("natural_gas_emission_factor")
 ```

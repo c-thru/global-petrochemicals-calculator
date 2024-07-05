@@ -7,7 +7,7 @@ execute:
 
 ```{python}
 #| output: false
-from plot_levers import plot_lever, describe_lever_levels, param_units
+from plot_levers import tabulate_lever, describe_lever_levels
 ```
 
 ```{python}
@@ -26,7 +26,10 @@ Biomass crop feedstocks are from @yuttitham_carbon_2011 for sugarcane production
 
 ## Parameter data
 
+@tbl-natural-gas-requirements shows parameter values for natural gas utility requirements.
+
 ```{python}
-#| layout-ncol: 2
-plot_lever("feedstock_emission_factor", param_descriptions={})
+#| label: tbl-feedstock_emission-factor
+#| tbl-cap: "`feedstock_emission_factor` parameter data. Values in kgCO~2e~ per tonne product."
+tabulate_lever("feedstock_emission_factor", floatfmt=".0f")
 ```
