@@ -1,5 +1,9 @@
 # Model logic {#sec-model-logic}
 
+The model first calculates the operation of each process based on balancing mass flows (@sec-model-logic-mass).  From this, utility requirements (@sec-model-logic-utility-requirements) are calculated, and hence emissions and other metrics are calculated (@sec-model-logic-emissions).
+
+## Mass-flow process model {#sec-model-logic-mass}
+
 ::: {#fig-logic-steps}
 ![](model-structure.png)
 
@@ -52,3 +56,38 @@ The processes described in @sec-system-definitions need to be deployed in suitab
 Overall, this model logic ensures that any setting of the demand and production capacity parameters results in a pattern of process deployment that is mass balanced and broadly technically plausible, considering the mix of process co-products and routes, even when demand patterns change dramatically and assumptions about allocation factors of chemicals to applications are no longer valid.
 
 
+## Utility requirements {#sec-model-logic-utility-requirements}
+
+Utility requirements (natural gas and electricity) are calculated for each process by multiplying the process operation, calculated from the mass flow logic above, with utility requirement parameters (see [@sec-electricity-requirements;@sec-natural-gas-requirements]).
+
+
+## Emissions calculation {#sec-model-logic-emissions}
+
+Emissions from electricity use are based on the parameter `EF_Utility_Electricity` (see [@sec-electricity-emission-factor]), with one exception: electricity used for green hydrogen production is assumed to be always supplied by low-carbon electricity at an emissions factor of 7 gCO~2e~/kWh [@meys_achieving_2021].
+
+Emissions from natural gas use are based on the parameter `EF_Utility_NaturalGas` (see [@sec-natural-gas-emission-factor]), reduced by a combustion emissions abatement factor (see [@sec-ccs-utility-combustion]).
+
+Emissions from process reactions are based on emissions factors for CO~2~, CH~4~ and N~2~O (see [@sec-direct-process-emissions;@sec-final-treatment-emission-factor]), converted to GWP using IPCC AR5 factors of 1, 28 and 265 respectively.  Emissions are reduced by a direct process emissions abatement factor (see [@sec-ccs-process-emissions]), with two exceptions: end-of-life incineration emissions abatement is controlled by a separate lever (@sec-ccs-incineration), and emissions from end-of-life 'mismanagement' are never abated.
+
+The total quantity of emissions abatement capacity that has been used is accumulated and reported as an additional model output.
+
+Upstream emissions associated with feedstock production are calculated using emissions factors (see [@sec-feedstock-emission-factor]).
+
+Finally, processes are grouped according to @tbl-process-groups for reporting emissions totals.
+
+```{python}
+#| label: tbl-process-groups
+#| tbl-cap: Process groups for emissions reporting.
+from IPython.display import Markdown
+import pandas as pd
+import sys
+sys.path.append("../model")
+from load_model_polymers import PROCESS_GROUPS
+Markdown(pd.DataFrame([
+    {"Group": k, "Process": p}
+    for k, processes in PROCESS_GROUPS.items()
+    for p in processes
+]).set_index("Group").sort_values(["Group", "Process"]).to_markdown())
+```
+
+Emissions from fertiliser production are calculated directly from the production quantity of each fertiliser type (see [@sec-fertiliser-demand]), and production & use-phase emissions factors (see [@sec-fertiliser-production;@sec-fertiliser-use-phase]).

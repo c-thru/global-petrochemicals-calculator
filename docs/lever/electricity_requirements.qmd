@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# electricity_requirements
+# electricity_requirements {#sec-electricity-requirements}
 
 ```{python}
 #| output: false

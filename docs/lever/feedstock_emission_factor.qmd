@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# feedstock_emission_factor
+# feedstock_emission_factor {#sec-feedstock-emission-factor}
 
 ```{python}
 #| output: false

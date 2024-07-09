@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# natural_gas_emission_factor
+# natural_gas_emission_factor {#sec-natural-gas-emission-factor}
 
 ```{python}
 #| output: false

@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# direct_process_emissions
+# direct_process_emissions {#sec-direct-process-emissions}
 
 ```{python}
 #| output: false

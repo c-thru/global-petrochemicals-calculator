@@ -19,7 +19,7 @@ book:
   chapters:
   - index.md
   - system-definitions.md
-  - model-logic.md
+  - model-logic.qmd
   - part: "Fertilisers"
     chapters:
     - lever/fertiliser_demand.qmd

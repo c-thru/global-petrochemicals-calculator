@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# ccs_utility_combustion
+# ccs_utility_combustion {#sec-ccs-utility-combustion}
 
 ```{python}
 #| output: false
@@ -16,7 +16,7 @@ describe_lever_levels("ccs_utility_combustion")
 
 This lever controls the level of emissions abatement on utility combustion emissions.
 
-Currently practically no CCS is in use [meng_planet_2023], so the baseline level has no capacity applied.
+Currently practically no CCS is in use [@meng_planet_2023], so the baseline level has no capacity applied.
 
 To allow exploring different levels of CCS applied to combustion emissions specifically, hypothetical higher levels are included.
 

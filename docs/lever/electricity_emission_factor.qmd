@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# electricity_emission_factor
+# electricity_emission_factor {#sec-electricity-emission-factor}
 
 ```{python}
 #| output: false

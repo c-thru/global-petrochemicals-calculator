@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# natural_gas_requirements
+# natural_gas_requirements {#sec-natural-gas-requirements}
 
 ```{python}
 #| output: false
