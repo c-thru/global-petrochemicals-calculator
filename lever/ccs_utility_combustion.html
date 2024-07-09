@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -365,7 +385,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lever/ccs_incineration.html">Abatement levers</a></li><li class="breadcrumb-item"><a href="../lever/ccs_utility_combustion.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ccs_utility_combustion</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ccs_utility_combustion</span></h1>
+<h1 class="title"><span id="sec-ccs-utility-combustion" class="quarto-section-identifier"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ccs_utility_combustion</span></span></h1>
 </div>
 
 
@@ -406,7 +426,7 @@ Level of emissions abatement on combustion of natural gas utility
 </div>
 </div>
 <p>This lever controls the level of emissions abatement on utility combustion emissions.</p>
-<p>Currently practically no CCS is in use [meng_planet_2023], so the baseline level has no capacity applied.</p>
+<p>Currently practically no CCS is in use <span class="citation" data-cites="meng_planet_2023">(<a href="../references.html#ref-meng_planet_2023" role="doc-biblioref">Meng et al. 2023</a>)</span>, so the baseline level has no capacity applied.</p>
 <p>To allow exploring different levels of CCS applied to combustion emissions specifically, hypothetical higher levels are included.</p>
 <section id="parameter-data" class="level2" data-number="21.1">
 <h2 data-number="21.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">21.1</span> Parameter data</h2>
@@ -432,6 +452,11 @@ Figure&nbsp;21.1: <code>ccs_utility_combustion</code> parameter data
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-meng_planet_2023" class="csl-entry" role="listitem">
+Meng, Fanran, Andreas Wagner, Alexandre B. Kremer, Daisuke Kanazawa, Jane J. Leung, Peter Goult, Min Guan, et al. 2023. <span>“Planet-Compatible Pathways for Transitioning the Chemical Industry.”</span> Journal Article. <em>Proceedings of the National Academy of Sciences</em> 120 (8): e2218294120. <a href="https://doi.org/10.1073/pnas.2218294120">https://doi.org/10.1073/pnas.2218294120</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

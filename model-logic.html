@@ -372,7 +372,15 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-model-logic-mass" id="toc-sec-model-logic-mass" class="nav-link active" data-scroll-target="#sec-model-logic-mass"><span class="header-section-number">3.1</span> Mass-flow process model</a></li>
+  <li><a href="#sec-model-logic-utility-requirements" id="toc-sec-model-logic-utility-requirements" class="nav-link" data-scroll-target="#sec-model-logic-utility-requirements"><span class="header-section-number">3.2</span> Utility requirements</a></li>
+  <li><a href="#sec-model-logic-emissions" id="toc-sec-model-logic-emissions" class="nav-link" data-scroll-target="#sec-model-logic-emissions"><span class="header-section-number">3.3</span> Emissions calculation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -396,6 +404,9 @@ div.csl-indent {
 </header>
 
 
+<p>The model first calculates the operation of each process based on balancing mass flows (<a href="#sec-model-logic-mass" class="quarto-xref"><span>Section 3.1</span></a>). From this, utility requirements (<a href="#sec-model-logic-utility-requirements" class="quarto-xref"><span>Section 3.2</span></a>) are calculated, and hence emissions and other metrics are calculated (<a href="#sec-model-logic-emissions" class="quarto-xref"><span>Section 3.3</span></a>).</p>
+<section id="sec-model-logic-mass" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-model-logic-mass"><span class="header-section-number">3.1</span> Mass-flow process model</h2>
 <div id="fig-logic-steps" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-logic-steps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -444,13 +455,354 @@ Figure&nbsp;3.1: Model structure and logic steps
 <li><p>Separately, fertiliser use is determined according to the scenarios of <span class="citation" data-cites="gao_greenhouse_2023">Gao and Cabrera Serrenho (<a href="references.html#ref-gao_greenhouse_2023" role="doc-biblioref">2023</a>)</span> (see <a href="lever/fertiliser_demand.html" class="quarto-xref"><span>Chapter 4</span></a>, <a href="lever/fertiliser_production.html" class="quarto-xref"><span>Chapter 5</span></a>, <a href="lever/fertiliser_use_phase.html" class="quarto-xref"><span>Chapter 6</span></a>).</p></li>
 </ol>
 <p>Overall, this model logic ensures that any setting of the demand and production capacity parameters results in a pattern of process deployment that is mass balanced and broadly technically plausible, considering the mix of process co-products and routes, even when demand patterns change dramatically and assumptions about allocation factors of chemicals to applications are no longer valid.</p>
+</section>
+<section id="sec-model-logic-utility-requirements" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-model-logic-utility-requirements"><span class="header-section-number">3.2</span> Utility requirements</h2>
+<p>Utility requirements (natural gas and electricity) are calculated for each process by multiplying the process operation, calculated from the mass flow logic above, with utility requirement parameters (see <a href="lever/electricity_requirements.html" class="quarto-xref"><span>Chapter 22</span></a>, <a href="lever/natural_gas_requirements.html" class="quarto-xref"><span>Chapter 23</span></a>).</p>
+</section>
+<section id="sec-model-logic-emissions" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-model-logic-emissions"><span class="header-section-number">3.3</span> Emissions calculation</h2>
+<p>Emissions from electricity use are based on the parameter <code>EF_Utility_Electricity</code> (see <a href="lever/electricity_emission_factor.html" class="quarto-xref"><span>Chapter 24</span></a>), with one exception: electricity used for green hydrogen production is assumed to be always supplied by low-carbon electricity at an emissions factor of 7 gCO<sub>2e</sub>/kWh <span class="citation" data-cites="meys_achieving_2021">(<a href="references.html#ref-meys_achieving_2021" role="doc-biblioref">Meys et al. 2021</a>)</span>.</p>
+<p>Emissions from natural gas use are based on the parameter <code>EF_Utility_NaturalGas</code> (see <a href="lever/natural_gas_emission_factor.html" class="quarto-xref"><span>Chapter 25</span></a>), reduced by a combustion emissions abatement factor (see <a href="lever/ccs_utility_combustion.html" class="quarto-xref"><span>Chapter 21</span></a>).</p>
+<p>Emissions from process reactions are based on emissions factors for CO<sub>2</sub>, CH<sub>4</sub> and N<sub>2</sub>O (see <a href="lever/direct_process_emissions.html" class="quarto-xref"><span>Chapter 26</span></a>, <a href="lever/final_treatment_emission_factor.html" class="quarto-xref"><span>Chapter 28</span></a>), converted to GWP using IPCC AR5 factors of 1, 28 and 265 respectively. Emissions are reduced by a direct process emissions abatement factor (see <a href="lever/ccs_process_emissions.html" class="quarto-xref"><span>Chapter 20</span></a>), with two exceptions: end-of-life incineration emissions abatement is controlled by a separate lever (<a href="lever/ccs_incineration.html" class="quarto-xref"><span>Chapter 19</span></a>), and emissions from end-of-life ‘mismanagement’ are never abated.</p>
+<p>The total quantity of emissions abatement capacity that has been used is accumulated and reported as an additional model output.</p>
+<p>Upstream emissions associated with feedstock production are calculated using emissions factors (see <a href="lever/feedstock_emission_factor.html" class="quarto-xref"><span>Chapter 27</span></a>).</p>
+<p>Finally, processes are grouped according to <a href="#tbl-process-groups" class="quarto-xref">Table&nbsp;<span>3.1</span></a> for reporting emissions totals.</p>
+<div class="cell" data-execution_count="2">
+<div id="tbl-process-groups" class="cell quarto-float anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-process-groups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: Process groups for emissions reporting.
+</figcaption>
+<div aria-describedby="tbl-process-groups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="10">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Group</th>
+<th style="text-align: left;">Process</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">CornStoverGasificationToSyngas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">EthylAlcoholSynthesisFromCornStover</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">EthylAlcoholSynthesisFromMaize</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">EthylAlcoholSynthesisFromRiceStraw</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">EthylAlcoholSynthesisFromSugarcane</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">EthylAlcoholSynthesisFromSugarcaneBagasse</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">EthylAlcoholSynthesisFromWheatStraw</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">RiceStrawGasificationToSyngas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">SugarCaneBagasseGasificationToSyngas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">biomass</td>
+<td style="text-align: left;">WheatStrawGasificationToSyngas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfFibrePPA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfHDPE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfLDPE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfLLDPE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfOtherPolymers</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfPET</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfPP</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfPUR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfPVC</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfPolystyrene</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">downstream</td>
+<td style="text-align: left;">PolymerisationOfStyreneButadiene</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">ChemicalRecyclingOfMixedPolymersAtEOL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">Incineration</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">Landfilling</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">MechanicalRecyclingOfFibrePPAAtEOL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">MechanicalRecyclingOfHDPEPolyethyleneAtEOL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">MechanicalRecyclingOfLDPEPolyethyleneAtEOL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">MechanicalRecyclingOfLLDPEAtEOL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">MechanicalRecyclingOfPETPolyethyleneTerephthalatePolyestersAtEOL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">MechanicalRecyclingOfPPPolypropyleneAtEOL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">MechanicalRecyclingOfPSPolystyreneAtEOL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">MechanicalRecyclingOfPVCPolyvinylChlorideAtEOL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">end_of_life</td>
+<td style="text-align: left;">Mismanagement</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">green_hydrogen</td>
+<td style="text-align: left;">WaterElectrolysisForHydrogen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">AceticAcidSynthesis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">AcrylonitrileSynthesis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">AdipicAcidSynthesis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">CyclohexaneSynthesis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">EthyleneGlycolSynthesis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">EthyleneOxideSynthesis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">HexamethylenediamineSynthesisFromButadiene</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">HydrogenCyanideSynthesis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">IsophthalicAcidSynthesis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">OtherOrganicChemicalsSynthesis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">PolyolsSynthesis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">PropyleneOxideSynthesis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">StyreneSynthesis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">TerephthalicAcidSynthesis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">TolueneDiisocyanateSynthesis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organic_synthesis</td>
+<td style="text-align: left;">VinylChlorideSynthesis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">other_hydrogen</td>
+<td style="text-align: left;">NaturalGasSteamMethaneReformingToHydrogen</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">other_hydrogen</td>
+<td style="text-align: left;">NaturalGasSteamMethaneReformingWithCCSToHydrogen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">CarbonDioxideHydrogenationToMethylAlcohol</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">CatalyticReformingOfNaphthaForToluene</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">CatalyticReformingOfNaphthaForXylenes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">CoalGasificationToSyngas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">DealkylationOfTolueneForBenzene</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">DehydrationOfEthylAlcohol</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">DehydrogenationOfButaneForButadiene</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">DehydrogenationOfPropane</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">DisproportionationOfTolueneForXylenes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">DistillationOfButylenesForButadiene</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">DistillationOfPyrolysisGasolineForBTX</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">FischerTropschSynthesisOfOlefinsFromSyngas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">FluidCatalyticCrackingOfGasOil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">MethylAlcoholSynthesis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">MethylAlcoholToAromatics</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">MethylAlcoholToOlefins</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">MethylAlcoholToPropylene</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">NaturalGasSteamMethaneReformingToSyngas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">SodiumChlorideElectrolysisForChlorine</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">SteamCrackingOfEthane</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">SteamCrackingOfNaphtha</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">primary_production</td>
+<td style="text-align: left;">SyngasToAmmoniaProduction</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Emissions from fertiliser production are calculated directly from the production quantity of each fertiliser type (see <a href="lever/fertiliser_demand.html" class="quarto-xref"><span>Chapter 4</span></a>), and production &amp; use-phase emissions factors (see <a href="lever/fertiliser_production.html" class="quarto-xref"><span>Chapter 5</span></a>, <a href="lever/fertiliser_use_phase.html" class="quarto-xref"><span>Chapter 6</span></a>).</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-gao_greenhouse_2023" class="csl-entry" role="listitem">
 Gao, Yunhu, and André Cabrera Serrenho. 2023. <span>“Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.”</span> <em>Nature Food</em> 4 (2): 170–78. <a href="https://doi.org/10.1038/s43016-023-00698-w">https://doi.org/10.1038/s43016-023-00698-w</a>.
 </div>
+<div id="ref-meys_achieving_2021" class="csl-entry" role="listitem">
+Meys, Raoul, Arne Kätelhön, Marvin Bachmann, Benedikt Winter, Christian Zibunas, Sangwon Suh, and André Bardow. 2021. <span>“Achieving Net-Zero Greenhouse Gas Emission Plastics by a Circular Carbon Economy.”</span> Journal Article. <em>Science</em> 374 (6563): 71–76. <a href="https://doi.org/10.1126/science.abg9853">https://doi.org/10.1126/science.abg9853</a>.
 </div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
