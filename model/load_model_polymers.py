@@ -558,7 +558,10 @@ def methyl_alcohol_production(model):
             model.object_production_deficit("Syngas"),
             allocate_backwards={
                 "Syngas": {
-                    # FIXME hard-coded ratios here
+                    # Current baseline syngas supply is currently approximately
+                    # equally from coal and natural gas
+                    # (https://pubs.acs.org/doi/10.1021/acssuschemeng.2c05390).
+                    # This could be adjusted by a lever in future.
                     "CoalGasificationToSyngas": 0.5,
                     "NaturalGasSteamMethaneReformingToSyngas": 0.5,
                 },
