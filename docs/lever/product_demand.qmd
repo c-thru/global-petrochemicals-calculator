@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# product_demand
+# product_demand {#sec-product-demand}
 
 ```{python}
 #| output: false

@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# recycling
+# recycling {#sec-recycling}
 
 ```{python}
 #| output: false

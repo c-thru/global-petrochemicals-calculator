@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# extra_demand
+# extra_demand {#sec-extra-demand}
 
 ```{python}
 #| output: false

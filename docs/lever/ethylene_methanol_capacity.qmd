@@ -28,7 +28,6 @@ Since this is currently a route with limited capacity, further hypothetical leve
 
 ```{python}
 #| label: fig-ethylene-methanol-capacity
-#| layout-ncol: 2
 #| fig-cap: "`ethylene_methanol_capacity` parameter data"
 plot_lever("ethylene_methanol_capacity")
 ```

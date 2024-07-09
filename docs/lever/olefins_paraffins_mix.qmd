@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# olefins_paraffins_mix
+# olefins_paraffins_mix {#sec-olefins-paraffins-mix}
 
 ```{python}
 #| output: false

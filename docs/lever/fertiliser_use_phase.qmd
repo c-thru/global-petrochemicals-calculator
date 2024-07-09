@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# fertiliser_use_phase
+# fertiliser_use_phase {#sec-fertiliser-use-phase}
 
 ```{python}
 #| output: false

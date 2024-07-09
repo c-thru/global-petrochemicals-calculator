@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# final_treatment
+# final_treatment {#sec-final-treatment}
 
 ```{python}
 #| output: false

@@ -10,14 +10,16 @@ execute:
   cache: true
 
 book:
-  title: "Lever data and descriptions"
+  title: "Petrochemicals Calculator model documentation"
   author:
-  - Stephen Doliente
   - Rick Lupton
-  date: "12/01/2024"
+  - Stephen Doliente
+  - Yunhu Gao
+  date: "1 July 2024"
   chapters:
   - index.md
   - system-definitions.md
+  - model-logic.md
   - part: "Fertilisers"
     chapters:
     - lever/fertiliser_demand.qmd

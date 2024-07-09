@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# xylenes_methyl_alcohol_capacity
+# xylenes_methyl_alcohol_capacity {#sec-xylenes-methyl-alcohol-capacity}
 
 ```{python}
 #| output: false
@@ -28,7 +28,6 @@ Since this is currently a route with limited capacity, further hypothetical leve
 
 ```{python}
 #| label: fig-xylenes-methyl-alcohol-capacity
-#| layout-ncol: 2
 #| fig-cap: "`xylenes_methyl_alcohol_capacity` parameter data"
 plot_lever("xylenes_methyl_alcohol_capacity")
 ```

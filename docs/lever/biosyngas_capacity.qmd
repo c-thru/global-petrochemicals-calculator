@@ -3,7 +3,7 @@ execute:
   echo: false
 ---
 
-# biosyngas_capacity
+# biosyngas_capacity {#sec-biosyngas-capacity}
 
 ```{python}
 #| output: false
