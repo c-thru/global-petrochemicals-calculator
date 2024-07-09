@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Petrochemicals Calculator model documentation - 10&nbsp; extra_demand</title>
+<title>Petrochemicals Calculator model documentation - 3&nbsp; Model logic</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,24 +43,24 @@ div.csl-indent {
 }</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../lever/ethylene_methanol_capacity.html" rel="next">
-<link href="../lever/final_treatment.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./lever/fertiliser_demand.html" rel="next">
+<link href="./system-definitions.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lever/product_demand.html">Demand model levers</a></li><li class="breadcrumb-item"><a href="../lever/extra_demand.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">extra_demand</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./model-logic.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Model logic</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -116,7 +116,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Petrochemicals Calculator model documentation</a> 
+      <a href="./">Petrochemicals Calculator model documentation</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -128,19 +128,19 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../system-definitions.html" class="sidebar-item-text sidebar-link">
+  <a href="./system-definitions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System definitions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../model-logic.html" class="sidebar-item-text sidebar-link">
+  <a href="./model-logic.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Model logic</span></span></a>
   </div>
 </li>
@@ -155,19 +155,19 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/fertiliser_demand.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/fertiliser_demand.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">fertiliser_demand</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/fertiliser_production.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/fertiliser_production.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">fertiliser_production</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/fertiliser_use_phase.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/fertiliser_use_phase.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">fertiliser_use_phase</span></span></a>
   </div>
 </li>
@@ -184,25 +184,25 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/product_demand.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/product_demand.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">product_demand</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/recycling.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/recycling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">recycling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/final_treatment.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/final_treatment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">final_treatment</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/extra_demand.html" class="sidebar-item-text sidebar-link active">
+  <a href="./lever/extra_demand.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">extra_demand</span></span></a>
   </div>
 </li>
@@ -219,37 +219,37 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/ethylene_methanol_capacity.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/ethylene_methanol_capacity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ethylene_methanol_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/xylenes_methyl_alcohol_capacity.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/xylenes_methyl_alcohol_capacity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">xylenes_methyl_alcohol_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/bioethanol_capacity.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/bioethanol_capacity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">bioethanol_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/biosyngas_capacity.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/biosyngas_capacity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">biosyngas_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/frac_of_biomass_feedstock.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/frac_of_biomass_feedstock.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">frac_of_biomass_feedstock</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/olefins_paraffins_mix.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/olefins_paraffins_mix.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">olefins_paraffins_mix</span></span></a>
   </div>
 </li>
@@ -266,13 +266,13 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/green_hydrogen_capacity.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/green_hydrogen_capacity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">green_hydrogen_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/blue_hydrogen_capacity.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/blue_hydrogen_capacity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">blue_hydrogen_capacity</span></span></a>
   </div>
 </li>
@@ -289,19 +289,19 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/ccs_incineration.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/ccs_incineration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">ccs_incineration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/ccs_process_emissions.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/ccs_process_emissions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ccs_process_emissions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/ccs_utility_combustion.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/ccs_utility_combustion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ccs_utility_combustion</span></span></a>
   </div>
 </li>
@@ -318,43 +318,43 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/electricity_requirements.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/electricity_requirements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">electricity_requirements</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/natural_gas_requirements.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/natural_gas_requirements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">natural_gas_requirements</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/electricity_emission_factor.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/electricity_emission_factor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">electricity_emission_factor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/natural_gas_emission_factor.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/natural_gas_emission_factor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">natural_gas_emission_factor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/direct_process_emissions.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/direct_process_emissions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">direct_process_emissions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/feedstock_emission_factor.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/feedstock_emission_factor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">feedstock_emission_factor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lever/final_treatment_emission_factor.html" class="sidebar-item-text sidebar-link">
+  <a href="./lever/final_treatment_emission_factor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">final_treatment_emission_factor</span></span></a>
   </div>
 </li>
@@ -362,7 +362,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../references.html" class="sidebar-item-text sidebar-link">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -372,20 +372,14 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#parameter-data" id="toc-parameter-data" class="nav-link active" data-scroll-target="#parameter-data"><span class="header-section-number">10.1</span> Parameter data</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lever/product_demand.html">Demand model levers</a></li><li class="breadcrumb-item"><a href="../lever/extra_demand.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">extra_demand</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-extra-demand" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">extra_demand</span></span></h1>
+<h1 class="title"><span id="sec-model-logic" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Model logic</span></span></h1>
 </div>
 
 
@@ -402,112 +396,61 @@ div.csl-indent {
 </header>
 
 
-<div id="47d425fb" class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display cell-output-markdown">
-<dl>
-<dt>Lever ID</dt>
-<dd>
-extra_demand
-</dd>
-<dt>Description</dt>
-<dd>
-Reduce other demands of benzene, toluene, xylenes, and methyl alcohol, not related to polymer production.
-</dd>
-<dt>Levels</dt>
-<dd>
-<ul>
-<li><em>Level 1:</em> Reference projected extra demand</li>
-<li><em>Level 2:</em> Demand reduced to 50% of the current</li>
-<li><em>Level 3:</em> Demand reduced to 30% of the current</li>
-<li><em>Level 4:</em> Demand reduced to 10% of the current</li>
-</ul>
-</dd>
-</dl>
-</div>
-</div>
-<p>This lever controls reductions in the additional demand for primary chemicals, which is not driven by the main model’s demand for polymers, nor the demand of primary chemicals for fertilisers covered by the model of <span class="citation" data-cites="gao_greenhouse_2023">Gao and Cabrera Serrenho (<a href="../references.html#ref-gao_greenhouse_2023" role="doc-biblioref">2023</a>)</span>.</p>
-<p>The baseline level of extra demand has been calibrated based on total global demand for BTX <span class="citation" data-cites="icis_supply_2021">(<a href="../references.html#ref-icis_supply_2021" role="doc-biblioref">ICIS 2021</a>)</span> and methyl alcohol <span class="citation" data-cites="methanol_mmsa_2023">(<a href="../references.html#ref-methanol_mmsa_2023" role="doc-biblioref">Methanol Institute 2023</a>)</span>.</p>
-<p>The reference projection is based on projected growth in demand for BTX <span class="citation" data-cites="icis_supply_2021">(<a href="../references.html#ref-icis_supply_2021" role="doc-biblioref">ICIS 2021</a>)</span>, minus the baseline demand in the model of these chemicals for polymers, assuming that the share of this demand which is for non-polymer applications remains constant over time. Methyl alcohol is similar based on projections from <span class="citation" data-cites="methanol_mmsa_2023">Methanol Institute (<a href="../references.html#ref-methanol_mmsa_2023" role="doc-biblioref">2023</a>)</span>.</p>
-<p>The demand-reduction scenarios then scale down from this projected demand proportionally, to illustrate how different supply-side scenarios are affected by changes in demand levels.</p>
-<!-- Beyond this, @meng_planet_2023 consider projected additional demand for BTX and methyl alcohol due to new low-carbon technologies such as wind turbines and solar PV. -->
-<section id="parameter-data" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">10.1</span> Parameter data</h2>
-<p><a href="#fig-extra-demand" class="quarto-xref">Figure&nbsp;<span>10.1</span></a> shows the value over time of each parameter affected by this lever.</p>
-<div id="fig-extra-demand" class="quarto-layout-panel">
+<div id="fig-logic-steps" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-extra-demand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-extra-demand" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-extra-demand-1" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-extra-demand-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="extra_demand_files/figure-html/fig-extra-demand-output-1.png" data-ref-parent="fig-extra-demand" width="356" height="227" class="figure-img">
+<div aria-describedby="fig-logic-steps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="model-structure.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-extra-demand-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Benzene
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-logic-steps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Model structure and logic steps
 </figcaption>
 </figure>
 </div>
-</div>
-<div class="cell-output cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-extra-demand" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-extra-demand-2" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-extra-demand-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="extra_demand_files/figure-html/fig-extra-demand-output-2.png" data-ref-parent="fig-extra-demand" width="369" height="227" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-extra-demand-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Toluene
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-extra-demand" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-extra-demand-3" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-extra-demand-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="extra_demand_files/figure-html/fig-extra-demand-output-3.png" data-ref-parent="fig-extra-demand" width="369" height="227" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-extra-demand-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(c) Xylenes
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-extra-demand" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-extra-demand-4" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-extra-demand-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="extra_demand_files/figure-html/fig-extra-demand-output-4.png" data-ref-parent="fig-extra-demand" width="356" height="227" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-extra-demand-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(d) MethylAlcohol
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-extra-demand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.1: <code>extra_demand</code> parameter data
-</figcaption>
-</figure>
-</div>
+<p>The processes described in <a href="system-definitions.html" class="quarto-xref"><span>Chapter 2</span></a> need to be deployed in suitable combinations to meet demand within the available supply and/or capacity constraints. Generally, there are multiple ways that this could plausibly happen, especially when there are multiple technologies available to produce the same chemical. The model “logic” sets out the mass-flow solutions corresponding to particular choices of model parameters (such as capacities or feedstock shares). This builds up the final pattern of process operation and mass flows step by step, as illustrated in <a href="#fig-logic-steps" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> and described below:</p>
+<ol type="1">
+<li><p>Determine demand and end-of-life flows of polymers from the stock model (see <a href="lever/product_demand.html" class="quarto-xref"><span>Chapter 7</span></a>).</p></li>
+<li><p>Allocate end-of-life polymers to mechanical recycling or chemical recycling based on the recycling rate parameters, with the residual allocated to final treatment options (see <a href="lever/recycling.html" class="quarto-xref"><span>Chapter 8</span></a>, <a href="lever/final_treatment.html" class="quarto-xref"><span>Chapter 9</span></a>).</p></li>
+<li><p>Determine required primary chemicals to satisfy the remaining demand for polymers that is not already covered by mechanical recycling. Mechanical recycling is assumed to perfectly substitute virgin polymer production.</p></li>
+<li><p>Add in additional demand for primary chemicals to non-polymer applications (see <a href="lever/extra_demand.html" class="quarto-xref"><span>Chapter 10</span></a>).</p></li>
+<li><p>Produce primary chemicals in turn using preferred routes first, until their capacity has been exhausted. First, ethylene demand is satisfied:</p>
+<ul>
+<li>Ethylene is produced from biomass via ethyl alcohol, where capacity is available (see <a href="lever/bioethanol_capacity.html" class="quarto-xref"><span>Chapter 13</span></a>).</li>
+<li>Ethylene is produced from methyl alcohol (methanol), where MTO capacity is available (see <a href="lever/ethylene_methanol_capacity.html" class="quarto-xref"><span>Chapter 11</span></a>).</li>
+<li>Any residual demand for ethylene is produced from steam cracking of fossil naphtha and ethane (see <a href="lever/olefins_paraffins_mix.html" class="quarto-xref"><span>Chapter 16</span></a>).</li>
+</ul>
+<p>These processes produce benzene, toluene, and xylenes (BTX) as by-products; if further demand for BTX remains, then it is satisfied as follows:</p>
+<ul>
+<li>Demand for xylenes is satisfied from methyl alcohol, where MTA capacity is available (see <a href="lever/xylenes_methyl_alcohol_capacity.html" class="quarto-xref"><span>Chapter 12</span></a>).</li>
+<li>Excess toluene production is converted to xylenes by disproportionation.</li>
+<li>Remaining demand for BTX is produced via catalytic reforming of naphtha, with dealkylation and disproportionation used to balance the mix of BTX as far as possible.</li>
+</ul>
+<p>Finally, on-purpose production of propylene and butadiene is deployed if insufficient supply has already been produced as by-products above:</p>
+<ul>
+<li>Propylene is produced from methanol (MTP) is additional capacity is still available (see <a href="lever/ethylene_methanol_capacity.html" class="quarto-xref"><span>Chapter 11</span></a>), falling back on dehydrogenation of propane.</li>
+<li>Butadiene is produced from distillation of excess butylenes supply as co-product of previous processes, if available, falling back on dehydrogenation of butane.</li>
+</ul></li>
+<li><p>Now upstream production is determined, starting with supply of methyl alcohol:</p>
+<ul>
+<li>Methyl alcohol is produced from green hydrogen when capacity is available (see <a href="lever/green_hydrogen_capacity.html" class="quarto-xref"><span>Chapter 17</span></a>).</li>
+<li>Any remaining demand for methyl alcohol is produced from syngas, as below.</li>
+</ul>
+<p>Syngas is produced from biomass or fossil feedstocks:</p>
+<ul>
+<li>Syngas is produced from gasification of crop residues where capacity is available (see <a href="lever/biosyngas_capacity.html" class="quarto-xref"><span>Chapter 14</span></a>).</li>
+<li>Any remaining demand for syngas is produced from natural gas and coal.</li>
+</ul>
+<p>Remaining demand for hydrogen is produced via green (<a href="lever/green_hydrogen_capacity.html" class="quarto-xref"><span>Chapter 17</span></a>), blue (<a href="lever/green_hydrogen_capacity.html" class="quarto-xref"><span>Chapter 17</span></a>), and grey routes in order of preference, up to capacity limits.</p>
+<p>Fossil paraffins are sourced from oil refining.</p></li>
+<li><p>Separately, fertiliser use is determined according to the scenarios of <span class="citation" data-cites="gao_greenhouse_2023">Gao and Cabrera Serrenho (<a href="references.html#ref-gao_greenhouse_2023" role="doc-biblioref">2023</a>)</span> (see <a href="lever/fertiliser_demand.html" class="quarto-xref"><span>Chapter 4</span></a>, <a href="lever/fertiliser_production.html" class="quarto-xref"><span>Chapter 5</span></a>, <a href="lever/fertiliser_use_phase.html" class="quarto-xref"><span>Chapter 6</span></a>).</p></li>
+</ol>
+<p>Overall, this model logic ensures that any setting of the demand and production capacity parameters results in a pattern of process deployment that is mass balanced and broadly technically plausible, considering the mix of process co-products and routes, even when demand patterns change dramatically and assumptions about allocation factors of chemicals to applications are no longer valid.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-gao_greenhouse_2023" class="csl-entry" role="listitem">
 Gao, Yunhu, and André Cabrera Serrenho. 2023. <span>“Greenhouse Gas Emissions from Nitrogen Fertilizers Could Be Reduced by up to One-Fifth of Current Levels by 2050 with Combined Interventions.”</span> <em>Nature Food</em> 4 (2): 170–78. <a href="https://doi.org/10.1038/s43016-023-00698-w">https://doi.org/10.1038/s43016-023-00698-w</a>.
 </div>
-<div id="ref-icis_supply_2021" class="csl-entry" role="listitem">
-ICIS. 2021. <span>“ICIS Supply and Demand Database.”</span> Dataset. <a href="https://www.icis.com/explore/services/analytics/supply-demand-data/ ">https://www.icis.com/explore/services/analytics/supply-demand-data/ </a>.
 </div>
-<div id="ref-methanol_mmsa_2023" class="csl-entry" role="listitem">
-Methanol Institute. 2023. <span>“MMSA Global Methanol Supply and Demand Balance 2018 - 2023E.”</span> Dataset. <a href="https://www.methanol.org/wp-content/uploads/2023/05/MMSA-World-Supply-and-Demand-Summary-for-Methanol-Institute-2.xlsx">https://www.methanol.org/wp-content/uploads/2023/05/MMSA-World-Supply-and-Demand-Summary-for-Methanol-Institute-2.xlsx</a>.
-</div>
-</div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -921,13 +864,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lever/final_treatment.html" class="pagination-link" aria-label="final_treatment">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">final_treatment</span></span>
+      <a href="./system-definitions.html" class="pagination-link" aria-label="System definitions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System definitions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lever/ethylene_methanol_capacity.html" class="pagination-link" aria-label="ethylene_methanol_capacity">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ethylene_methanol_capacity</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lever/fertiliser_demand.html" class="pagination-link" aria-label="fertiliser_demand">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">fertiliser_demand</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

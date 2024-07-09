@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lever data and descriptions - 26&nbsp; feedstock_emission_factor</title>
+<title>Petrochemicals Calculator model documentation - 27&nbsp; feedstock_emission_factor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lever/electricity_requirements.html">Utilities &amp; emissions data</a></li><li class="breadcrumb-item"><a href="../lever/feedstock_emission_factor.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">feedstock_emission_factor</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lever/electricity_requirements.html">Utilities &amp; emissions data</a></li><li class="breadcrumb-item"><a href="../lever/feedstock_emission_factor.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">feedstock_emission_factor</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -116,7 +116,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Lever data and descriptions</a> 
+      <a href="../">Petrochemicals Calculator model documentation</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -129,13 +129,19 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Overview of levers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../system-definitions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System definitions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../model-logic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Model logic</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -150,19 +156,19 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/fertiliser_demand.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">fertiliser_demand</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">fertiliser_demand</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/fertiliser_production.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">fertiliser_production</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">fertiliser_production</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/fertiliser_use_phase.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">fertiliser_use_phase</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">fertiliser_use_phase</span></span></a>
   </div>
 </li>
       </ul>
@@ -179,25 +185,25 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/product_demand.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">product_demand</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">product_demand</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/recycling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">recycling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">recycling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/final_treatment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">final_treatment</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">final_treatment</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/extra_demand.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">extra_demand</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">extra_demand</span></span></a>
   </div>
 </li>
       </ul>
@@ -214,37 +220,37 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/ethylene_methanol_capacity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">ethylene_methanol_capacity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ethylene_methanol_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/xylenes_methyl_alcohol_capacity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">xylenes_methyl_alcohol_capacity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">xylenes_methyl_alcohol_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/bioethanol_capacity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">bioethanol_capacity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">bioethanol_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/biosyngas_capacity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">biosyngas_capacity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">biosyngas_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/frac_of_biomass_feedstock.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">frac_of_biomass_feedstock</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">frac_of_biomass_feedstock</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/olefins_paraffins_mix.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">olefins_paraffins_mix</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">olefins_paraffins_mix</span></span></a>
   </div>
 </li>
       </ul>
@@ -261,13 +267,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/green_hydrogen_capacity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">green_hydrogen_capacity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">green_hydrogen_capacity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/blue_hydrogen_capacity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">blue_hydrogen_capacity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">blue_hydrogen_capacity</span></span></a>
   </div>
 </li>
       </ul>
@@ -284,19 +290,19 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/ccs_incineration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ccs_incineration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">ccs_incineration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/ccs_process_emissions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">ccs_process_emissions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ccs_process_emissions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/ccs_utility_combustion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ccs_utility_combustion</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ccs_utility_combustion</span></span></a>
   </div>
 </li>
       </ul>
@@ -313,43 +319,43 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/electricity_requirements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">electricity_requirements</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">electricity_requirements</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/natural_gas_requirements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">natural_gas_requirements</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">natural_gas_requirements</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/electricity_emission_factor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">electricity_emission_factor</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">electricity_emission_factor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/natural_gas_emission_factor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">natural_gas_emission_factor</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">natural_gas_emission_factor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/direct_process_emissions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">direct_process_emissions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">direct_process_emissions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/feedstock_emission_factor.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">feedstock_emission_factor</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">feedstock_emission_factor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lever/final_treatment_emission_factor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">final_treatment_emission_factor</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">final_treatment_emission_factor</span></span></a>
   </div>
 </li>
       </ul>
@@ -370,16 +376,16 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#parameter-data" id="toc-parameter-data" class="nav-link active" data-scroll-target="#parameter-data"><span class="header-section-number">26.1</span> Parameter data</a></li>
+  <li><a href="#parameter-data" id="toc-parameter-data" class="nav-link active" data-scroll-target="#parameter-data"><span class="header-section-number">27.1</span> Parameter data</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lever/electricity_requirements.html">Utilities &amp; emissions data</a></li><li class="breadcrumb-item"><a href="../lever/feedstock_emission_factor.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">feedstock_emission_factor</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lever/electricity_requirements.html">Utilities &amp; emissions data</a></li><li class="breadcrumb-item"><a href="../lever/feedstock_emission_factor.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">feedstock_emission_factor</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">feedstock_emission_factor</span></h1>
+<h1 class="title"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">feedstock_emission_factor</span></h1>
 </div>
 
 
@@ -396,7 +402,7 @@ div.csl-indent {
 </header>
 
 
-<div id="b6d46a40" class="cell" data-execution_count="3">
+<div id="99252aea" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown">
 <dl>
 <dt>Lever ID</dt>
@@ -421,14 +427,14 @@ Emission factor of the feedstocks which must account for during their extraction
 <p>Approximate emissions factors for naphtha and ethane supply were based on the study by <span class="citation" data-cites="nanthachatchavankul_specific_2012">Nanthachatchavankul, Gridsdanurak, and Chiarakorn (<a href="../references.html#ref-nanthachatchavankul_specific_2012" role="doc-biblioref">2012</a>)</span> for ethylene production in Thailand, which was assumed to be the mean value between reported values by <span class="citation" data-cites="bousted_ecoprofiles_2005">Bousted (<a href="../references.html#ref-bousted_ecoprofiles_2005" role="doc-biblioref">2005</a>)</span> (assumed minimum) and <span class="citation" data-cites="desnzdefra_ghgconversionfactors_2023">DESNZ and DEFRA (<a href="../references.html#ref-desnzdefra_ghgconversionfactors_2023" role="doc-biblioref">2023</a>)</span> (assumed maximum).</p>
 <!-- Question: is this representative enough? The value above was the assumed mean given the limited data available. -->
 <p>Biomass crop feedstocks are from <span class="citation" data-cites="yuttitham_carbon_2011">Yuttitham, Gheewala, and Chidthaisong (<a href="../references.html#ref-yuttitham_carbon_2011" role="doc-biblioref">2011</a>)</span> for sugarcane production in Thailand (assumed mean value between the reported values by <span class="citation" data-cites="sanches_towards_2023">Sanches et al. (<a href="../references.html#ref-sanches_towards_2023" role="doc-biblioref">2023</a>)</span> as the assumed minimum and <span class="citation" data-cites="chandra_life_2018">Chandra et al. (<a href="../references.html#ref-chandra_life_2018" role="doc-biblioref">2018</a>)</span> as the assumed maximum), and <span class="citation" data-cites="farag_carbon_2018">Farag et al. (<a href="../references.html#ref-farag_carbon_2018" role="doc-biblioref">2018</a>)</span> for corn production in Egypt (assumed mean between the reported values by <span class="citation" data-cites="giusti_environmental_2023">Giusti et al. (<a href="../references.html#ref-giusti_environmental_2023" role="doc-biblioref">2023</a>)</span> as the assumed minimum and <span class="citation" data-cites="zhang_carbon_2017">Zhang et al. (<a href="../references.html#ref-zhang_carbon_2017" role="doc-biblioref">2017</a>)</span> as the assumed maximum). Crop residues are represented by <span class="citation" data-cites="desnzdefra_ghgconversionfactors_2023">DESNZ and DEFRA (<a href="../references.html#ref-desnzdefra_ghgconversionfactors_2023" role="doc-biblioref">2023</a>)</span> scope 3 emissions for generic straw/grass biomass.</p>
-<section id="parameter-data" class="level2" data-number="26.1">
-<h2 data-number="26.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">26.1</span> Parameter data</h2>
-<p><a href="natural_gas_requirements.html#tbl-natural-gas-requirements" class="quarto-xref">Table&nbsp;<span>22.1</span></a> shows parameter values for natural gas utility requirements.</p>
+<section id="parameter-data" class="level2" data-number="27.1">
+<h2 data-number="27.1" class="anchored" data-anchor-id="parameter-data"><span class="header-section-number">27.1</span> Parameter data</h2>
+<p><a href="natural_gas_requirements.html#tbl-natural-gas-requirements" class="quarto-xref">Table&nbsp;<span>23.1</span></a> shows parameter values for natural gas utility requirements.</p>
 <div class="cell" data-execution_count="4">
 <div id="tbl-feedstock_emission-factor" class="cell quarto-float anchored" data-execution_count="4">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-feedstock_emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;26.1: <code>feedstock_emission_factor</code> parameter data. Values in kgCO<sub>2e</sub> per tonne product.
+Table&nbsp;27.1: <code>feedstock_emission_factor</code> parameter data. Values in kgCO<sub>2e</sub> per tonne product.
 </figcaption>
 <div aria-describedby="tbl-feedstock_emission-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
@@ -959,12 +965,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../lever/direct_process_emissions.html" class="pagination-link" aria-label="direct_process_emissions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">direct_process_emissions</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">direct_process_emissions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../lever/final_treatment_emission_factor.html" class="pagination-link" aria-label="final_treatment_emission_factor">
-        <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">final_treatment_emission_factor</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">final_treatment_emission_factor</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
