@@ -216,6 +216,8 @@ consumes: |
 produces: |
   ukf:Polyurethane                                       = 1.00 kg
 ---
+
+In general polyurethane is made from a combination of TDI (toluene diisocyanate) and MDI (methylene diphenyl diisocyanate), but for simplicity we represent both as "TDI" here.
 ```
 
 Similarly for polymerisation of "other polymers":
