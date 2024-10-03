@@ -725,7 +725,7 @@ def eol_polymer_treatment(model):
             )
 
 
-def polymer_from_primary_chemicals(model, object_id):
+def polymer_from_primary_chemicals(model, object_id, amount=None):
     """Product polymer `object_id` back as far as primary chemicals.
 
     Stops at HydrogenCyanide since that is a byproduct of AcrylonitrileSynthesis
@@ -748,12 +748,15 @@ def polymer_from_primary_chemicals(model, object_id):
     ]
     assert len(process_candidates) == 1
     process_id = process_candidates[0]
+    
+    if amount is None:
+        amount = model.object_production_deficit(object_id)
 
     model.add(
         model.pull_process_output(
             process_id,
             object_id,
-            model.object_production_deficit(object_id),
+            amount,
             until_objects=(
                 primary_chemicals
                 + [
@@ -1144,29 +1147,21 @@ def calc_emissions(model, utility_reqs, processes_with_direct_emissions):
     return results
 
 
-def define_polymer_model(
-    model,
-    recipe_data,
-    processes_with_elec_req=None,
-    processes_with_direct_emissions=None,
-):
-    # Configure Use processes to hold stocks
-    #
-    # TODO load this information from RDF
-    for p in model.processes:
-        if p.id.startswith("UseOf"):
-            p.has_stock = True
-
-    # Demand and EOL flows of products
-    stock_model_flows(model)
-
-    # Recycling
-    eol_polymer_treatment(model)
-
+def define_polymer_model_production(model, polymer_demand=None):
+    """Define the production part of the polymer model.
+    
+    This starts from demand for polymers, and works upstream.  This part can be used
+    in isolation from the main model (including use-phase and end-of-life) for testing.
+    """
     # Balance polymer production now that end-of-life recycling is known -- but only
     # as far as primary chemicals, which are more complicated and dealt with below.
-    for object_id in polymer_objects:
-        polymer_from_primary_chemicals(model, object_id)
+    for i, object_id in enumerate(polymer_objects):
+        polymer_from_primary_chemicals(
+            model, 
+            object_id, 
+            # Use deficit in model unless explicitly specified
+            amount=polymer_demand[i] if polymer_demand is not None else None
+        )
 
     # Add in extra demand for chemicals which have not been explicitly included
     # in the demand for polymers above
@@ -1224,6 +1219,30 @@ def define_polymer_model(
     # of pyrolysis could substitute other chemicals.
     fossil_paraffins_production(model)
 
+    
+
+def define_polymer_model(
+    model,
+    recipe_data,
+    processes_with_elec_req=None,
+    processes_with_direct_emissions=None,
+):
+    # Configure Use processes to hold stocks
+    #
+    # TODO load this information from RDF
+    for p in model.processes:
+        if p.id.startswith("UseOf"):
+            p.has_stock = True
+
+    # Demand and EOL flows of products
+    stock_model_flows(model)
+
+    # Recycling
+    eol_polymer_treatment(model)
+
+    # Production
+    define_polymer_model_production(model)
+
     ######## Calculate utility requirements and emissions ##########
 
     if processes_with_elec_req is None:
@@ -1237,3 +1256,15 @@ def define_polymer_model(
     other_results = {**flow_results, **utility_reqs, **emissions}
 
     return other_results
+
+
+###################################################################
+# Validation model
+###################################################################
+
+Z_polymer = def_vector_param()  # units: t
+
+def define_polymer_model_validation(model):
+    
+    # Define demand for polymers directly
+    define_polymer_model_production(model, polymer_demand=Z_polymer)
